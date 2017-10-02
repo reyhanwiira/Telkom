@@ -23,3 +23,11 @@ Route::get('/home', function () {
 Route::get('/table', function() {
 	return view('table');
 });
+
+Route::get('/detail', function() {
+	return view('detail');
+});
+
+Route::get('/chart', function() {
+	return view('chart');
+});
