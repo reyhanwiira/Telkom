@@ -190,7 +190,7 @@
                           <td>Materi awal sudah di sampaikan ke Kemendikbud. Saat ini sedang dibahas dan menunggu respon Kemendikbud.</td>
                           <td>Persiapan paparan ke pada staf ahli menteri pada Senin, 4 Sept 2017</td>
                           <td>Des & Dev</td>
-                          <td>--- --- ---</td>
+                          <td>--- --- --- ASD</td>
                           <td>Maret 2017</td>
                           <td>Sudah dilakukan paparan ke Staf Ahli Menteri, Staf ahli merespon positif  sebagai bagian dari penguatan pendidikan karakter.</td>
                           <td>
