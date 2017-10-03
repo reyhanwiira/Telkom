@@ -40,7 +40,7 @@
       
       <header class="main-header">
         <!-- Logo -->
-        <a href="index2.html" class="logo"><b>Solution</b>Management</a>
+        <a href="{{ url('home') }}" class="logo"><b>Solution</b>Management</a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
           <!-- Sidebar toggle button-->
@@ -54,13 +54,13 @@
               <!-- User Account: style can be found in dropdown.less -->
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image"/>
+                  <img src="dist/img/avatar04.png" class="user-image" alt="User Image"/>
                   <span class="hidden-xs">Dummy</span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- User image -->
                   <li class="user-header">
-                    <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" />
+                    <img src="dist/img/avatar04.png" class="img-circle" alt="User Image" />
                     <p>
                       Dummy - Web Developer
                       <small>Member since 2014</small>
@@ -90,7 +90,7 @@
           <!-- Sidebar user panel -->
           <div class="user-panel">
             <div class="pull-left image">
-              <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" />
+              <img src="dist/img/avatar04.png" class="img-circle" alt="User Image" />
             </div>
             <div class="pull-left info">
               <p>Dummy</p>
@@ -126,13 +126,13 @@
 
             <li>
               <a href="{{ url('detail') }}">
-                <i class="fa fa-table"></i> <span>Detail Project</span> <small class="fa fa pull-right"></small>
+                <i class="fa fa-pencil-square-o"></i> <span>Detail Project</span> <small class="fa fa pull-right"></small>
               </a>
             </li>
 
             <li>
               <a href="{{ url('chart') }}">
-                <i class="fa fa-table"></i> <span>Chart</span> <small class="fa fa pull-right"></small>
+                <i class="fa fa-pie-chart"></i> <span>Chart</span> <small class="fa fa pull-right"></small>
               </a>
             </li>
 
@@ -146,7 +146,7 @@
         <section class="content-header">
           <h1>
             Dashboard
-            <small>Control panel</small>
+            <small></small>
           </h1>
           <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
