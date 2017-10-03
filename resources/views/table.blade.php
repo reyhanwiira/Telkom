@@ -185,7 +185,7 @@
 		                 <div class="box-tools pull-right">
 		                   <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
 		                 </div>
-                     <td>------------------------</td>
+                     <td>------------------------ kocot</td>
 		               </div><!-- /.box-header -->
 	                <div class="box-body">
 	                  <div class="table-responsive">
