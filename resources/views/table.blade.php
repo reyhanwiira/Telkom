@@ -58,7 +58,11 @@
                       </thead>
                       <tbody>
                         <tr>
-                          <td><a href="{{ url('detail') }}">1</a></td>
+                          <td><a href="{{ url('detail') }}">1</a>
+                  <div class="box-tools pull-right">
+                    <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                  </div>
+                  </td>
                           <td>Solusi Manajemen Pengelolaan Sampah (Bank Sampah)</td>
                           <td>CGS</td>
                           <td>Aplikasi untuk pengelolaan bank sampah di sekolah</td>
@@ -190,7 +194,7 @@
                           <td>Materi awal sudah di sampaikan ke Kemendikbud. Saat ini sedang dibahas dan menunggu respon Kemendikbud.</td>
                           <td>Persiapan paparan ke pada staf ahli menteri pada Senin, 4 Sept 2017</td>
                           <td>Des & Dev</td>
-                          <td>--- --- --- ASD</td>
+                          <td>---</td>
                           <td>Maret 2017</td>
                           <td>Sudah dilakukan paparan ke Staf Ahli Menteri, Staf ahli merespon positif  sebagai bagian dari penguatan pendidikan karakter.</td>
                           <td>
@@ -310,7 +314,6 @@
 		                 <div class="box-tools pull-right">
 		                   <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
 		                 </div>
-                     <td>------------------------ kocot</td>
 		               </div><!-- /.box-header -->
 	                <div class="box-body">
 	                  <div class="table-responsive">
