@@ -136,6 +136,12 @@
               </a>
             </li>
 
+            <li>
+              <a href="{{ url('form') }}">
+                <i class="fa fa-tasks"></i> <span>Form</span> <small class="fa fa pull-right"></small>
+              </a>
+            </li>
+
         </section>
         <!-- /.sidebar -->
       </aside>

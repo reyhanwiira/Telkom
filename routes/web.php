@@ -31,3 +31,7 @@ Route::get('/detail', function() {
 Route::get('/chart', function() {
 	return view('chart');
 });
+
+Route::get('/form', function() {
+	return view('form');
+});

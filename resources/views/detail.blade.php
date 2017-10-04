@@ -26,64 +26,55 @@
     <link href="dist/css/skins/_all-skins.min.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-        <!-- Main content -->
-        <section class="invoice">
-          <!-- title row -->
-          <div class="row">
-            <div class="col-xs-12">
-              <h2 class="page-header">
-                <i class="fa fa-globe"></i> Detail Project
-                <small class="pull-right">Entry Project Date: 01/03/2017</small>
-              </h2>
+       <div class="row">
+          <div class="col-md-12">
+              <!-- TABLE: LATEST ORDERS -->
+              <div class="box box-info">
+                <div class="box-header with-border">
+                  <h3 class="box-title">Solusi Manajemen Pengelolaan Sampah</h3>
+                  <div class="box-tools pull-right">
+                    <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                  </div>
+                </div><!-- /.box-header -->
+                <div class="box-body">
+                  <div class="table-responsive">
+                    <table class="table no-margin">
+                      <thead>
+                        <tr>
+                          <th>No</th>
+                          <th>Project</th>
+                          <th>Segment</th>
+                          <th>Deskripsi</th>
+                          <th>Customer</th>
+                          <th>Last Action</th>
+                          <th>Next Action</th>
+                          <th>Status</th>
+                          <th>Keterangan</th>
+                          <th>Entry Project</th>
+                          <th>Note</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>Solusi Manajemen Pengelolaan Sampah (Bank Sampah)</td>
+                          <td>CGS</td>
+                          <td>Aplikasi untuk pengelolaan bank sampah di sekolah</td>
+                          <td>Kemendikbud</td>
+                          <td>Materi awal sudah di sampaikan ke Kemendikbud. Saat ini sedang dibahas dan menunggu respon Kemendikbud.</td>
+                          <td>Persiapan paparan ke pada staf ahli menteri pada Senin, 4 Sept 2017</td>
+                          <td>Des & Dev</td>
+                          <td>---</td>
+                          <td>Maret 2017</td>
+                          <td>Sudah dilakukan paparan ke Staf Ahli Menteri, Staf ahli merespon positif  sebagai bagian dari penguatan pendidikan karakter.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div><!-- /.table-responsive -->
+                </div><!-- /.box-body -->
+              </div><!-- /.box -->
             </div><!-- /.col -->
-          </div>
-
-          <!-- Table row -->
-          <div class="row">
-            <div class="col-xs-12 table-responsive">
-              <table class="table table-striped">
-                <thead>
-                  <tr>
-                    <th>Qty</th>
-                    <th>Product</th>
-                    <th>Serial #</th>
-                    <th>Description</th>
-                    <th>Subtotal</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>Call of Duty</td>
-                    <td>455-981-221</td>
-                    <td>El snort testosterone trophy driving gloves handsome</td>
-                    <td>$64.50</td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td>Need for Speed IV</td>
-                    <td>247-925-726</td>
-                    <td>Wes Anderson umami biodiesel</td>
-                    <td>$50.00</td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td>Monsters DVD</td>
-                    <td>735-845-642</td>
-                    <td>Terry Richardson helvetica tousled street art master</td>
-                    <td>$10.70</td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td>Grown Ups Blue Ray</td>
-                    <td>422-568-642</td>
-                    <td>Tousled lomo letterpress</td>
-                    <td>$25.99</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div><!-- /.col -->
-          </div><!-- /.row -->
+       </div>
 
     <!-- jQuery 2.1.3 -->
     <script src="../../plugins/jQuery/jQuery-2.1.3.min.js"></script>
