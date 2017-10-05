@@ -57,19 +57,23 @@
                           </tr>
                         </thead>
                         <tbody>
+                          <?php $no=1; ?>
+                          @foreach ($proactives as $proactive)
                           <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>{{ $no++ }}</td>
+                            <td>{{ $proactive-> projectName }}</td>
+                            <td>{{ $proactive-> segment }}</td>
+                            <td>{{ $proactive-> description }}</td>
+                            <td>{{ $proactive-> customer }}</td>
+                            <td>{{ $proactive-> lastAction }}</td>
+                            <td>{{ $proactive-> nextAction }}</td>
+                            <td>{{ $proactive-> status }}</td>
+                            <td>{{ $proactive-> information }}</td>
+                            <td>{{ $proactive-> startProject }}</td>
+                            <td>{{ $proactive-> finishProject }}</td>
+                            <td>{{ $proactive-> note }}</td>
+
+                            
                             <td>
                               <div class="btn-group-vertical">
                                 <button type="button" class="btn btn-success btn-flat"><i class='glyphicon glyphicon-zoom-in'></i></button>
@@ -78,7 +82,7 @@
                               </div>
                             </td>
                           </tr>
-
+                          @endforeach
                         </tbody>
                       </table>
                   </div><!-- /.table-responsive -->

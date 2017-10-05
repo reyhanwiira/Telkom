@@ -19,11 +19,6 @@ Route::get('/home', function () {
     return view('home');
 });
 
-
-Route::get('/table', function() {
-	return view('table.index');
-});
-
 Route::get('/detail', function() {
 	return view('detail');
 });
@@ -43,7 +38,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['middleware'=>'auth'], function(){
 
-Route::get('/table','TableController@read');
+Route::get('/table','ProactiveController@read');
 
 
 });
