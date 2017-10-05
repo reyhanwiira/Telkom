@@ -21,7 +21,7 @@ Route::get('/home', function () {
 
 
 Route::get('/table', function() {
-	return view('table');
+	return view('table.index');
 });
 
 Route::get('/detail', function() {
@@ -38,3 +38,12 @@ Route::get('/form', function() {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+Route::group(['middleware'=>'auth'], function(){
+
+Route::get('/table','TableController@read');
+
+
+});
