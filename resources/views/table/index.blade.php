@@ -88,8 +88,8 @@
                   </div><!-- /.table-responsive -->
                 </div><!-- /.box-body -->
                 <div class="box-footer clearfix">
-                  <a href="javascript::;" class="btn btn-sm btn-info btn-flat pull-left">Place New Order</a>
-                  <a href="javascript::;" class="btn btn-sm btn-default btn-flat pull-right">View All Orders</a>
+                  <a href="{{ url('form') }}" class="btn btn-sm btn-info btn-flat pull-left">Place New Project</a>
+                  <a href="javascript::;" class="btn btn-sm btn-default btn-flat pull-right">View All Project</a>
                 </div><!-- /.box-footer -->
               </div><!-- /.box -->
             </div><!-- /.col -->
@@ -161,8 +161,8 @@
                     </div><!-- /.table-responsive -->
                   </div><!-- /.box-body -->
                     <div class="box-footer clearfix">
-                      <a href="javascript::;" class="btn btn-sm btn-info btn-flat pull-left">Place New Order</a>
-                      <a href="javascript::;" class="btn btn-sm btn-default btn-flat pull-right">View All Orders</a>
+                      <a href="{{ url('form') }}" class="btn btn-sm btn-info btn-flat pull-left">Place New Project</a>
+                      <a href="javascript::;" class="btn btn-sm btn-default btn-flat pull-right">View All Project</a>
                     </div><!-- /.box-footer -->
                   </div><!-- /.box -->
 
@@ -222,8 +222,8 @@
                     </div><!-- /.table-responsive -->
                   </div><!-- /.box-body -->
                     <div class="box-footer clearfix">
-                      <a href="" class="btn btn-sm btn-info btn-flat pull-left">Place New Order</a>
-                      <a href="javascript::;" class="btn btn-sm btn-default btn-flat pull-right">View All Orders</a>
+                      <a href="{{ url('form') }}" class="btn btn-sm btn-info btn-flat pull-left">Place New Project</a>
+                      <a href="javascript::;" class="btn btn-sm btn-default btn-flat pull-right">View All Project</a>
                     </div><!-- /.box-footer -->
                   </div><!-- /.box -->
 
@@ -282,8 +282,8 @@
                     </div><!-- /.table-responsive -->
                   </div><!-- /.box-body -->
                     <div class="box-footer clearfix">
-                      <a href="javascript::;" class="btn btn-sm btn-info btn-flat pull-left">Place New Order</a>
-                      <a href="javascript::;" class="btn btn-sm btn-default btn-flat pull-right">View All Orders</a>
+                      <a href="{{ url('form') }}" class="btn btn-sm btn-info btn-flat pull-left">Place New Project</a>
+                      <a href="javascript::;" class="btn btn-sm btn-default btn-flat pull-right">View All Project</a>
                     </div><!-- /.box-footer -->
                   </div><!-- /.box -->
 
