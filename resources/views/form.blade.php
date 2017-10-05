@@ -47,15 +47,17 @@
                     <div class="form-group">
                       <label>Segment</label>
                       <select class="form-control">
+                        <option>...</option>
+                        <option>All</option>
                         <option>CGS</option>
-                        <option>LGS</option>
                         <option>GAS</option>
+                        <option>LGS</option>
                         <option>MPS</option>
                       </select>
                     </div>
 
                     <div class="form-group">
-                      <label>Deskripsi</label>
+                      <label>Description</label>
                       <textarea class="form-control" rows="3" placeholder="Enter ..."></textarea>
                     </div>
                     
@@ -88,12 +90,12 @@
                     </div>
 
                     <div class="form-group">
-                      <label>Keterangan</label>
+                      <label>Information</label>
                       <textarea class="form-control" rows="3" placeholder="Enter ..."></textarea>
                     </div>
 
                     <div class="form-group">
-	                  <label>Entry Project</label>
+	                  <label>Start Project</label>
 	                    <div class="input-group">
 		                   <div class="input-group-addon">
 		                     <i class="fa fa-calendar"></i>
@@ -103,7 +105,7 @@
                     </div><!-- /.form group -->
                  
                     <div class="form-group">
-	                  <label>Exit Project</label>
+	                  <label>Finish Project</label>
 	                    <div class="input-group">
 		                   <div class="input-group-addon">
 		                     <i class="fa fa-calendar"></i>
@@ -111,11 +113,6 @@
 	                      <input type="text" class="form-control pull-right" id="reservation"/>
 	                    </div><!-- /.input group -->
                     </div><!-- /.form group -->
-
-                    <div class="form-group">
-                      <label>Note</label>
-                      <input type="text" class="form-control" placeholder="Enter ..."/>
-                    </div>
 
                   </div><!-- /.box-body -->
 
