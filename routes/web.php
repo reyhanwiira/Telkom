@@ -40,15 +40,3 @@ Route::get('/form', function() {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-<<<<<<< HEAD
-=======
-
-Route::group(['middleware'=>'auth'], function(){
-
-Route::get('/table','TableController@index');
-
-
-});
-
->>>>>>> a71bd56e11b009abd956ddeeb063246902ea78f8
