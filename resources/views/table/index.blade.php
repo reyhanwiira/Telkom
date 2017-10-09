@@ -57,23 +57,19 @@
                           </tr>
                         </thead>
                         <tbody>
-                          <?php $no=1; ?>
-                          @foreach ($proactives as $proactive)
                           <tr>
-                            <td>{{ $no++ }}</td>
-                            <td>{{ $proactive-> projectName }}</td>
-                            <td>{{ $proactive-> segment }}</td>
-                            <td>{{ $proactive-> description }}</td>
-                            <td>{{ $proactive-> customer }}</td>
-                            <td>{{ $proactive-> lastAction }}</td>
-                            <td>{{ $proactive-> nextAction }}</td>
-                            <td>{{ $proactive-> status }}</td>
-                            <td>{{ $proactive-> information }}</td>
-                            <td>{{ $proactive-> startProject }}</td>
-                            <td>{{ $proactive-> finishProject }}</td>
-                            <td>{{ $proactive-> note }}</td>
-
-                            
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                             <td>
                               <div class="btn-group-vertical">
                                 <button type="button" class="btn btn-success btn-flat"><i class='glyphicon glyphicon-zoom-in'></i></button>
@@ -82,7 +78,7 @@
                               </div>
                             </td>
                           </tr>
-                          @endforeach
+
                         </tbody>
                       </table>
                   </div><!-- /.table-responsive -->
@@ -124,8 +120,10 @@
                             <th>Customer</th>
                             <th>Last Action</th>
                             <th>Next Action</th>
+                            <th>Current Progress</th>
                             <th>Status</th>
                             <th>Information</th>
+                            <th>Keterangan</th>
                             <th>Start Project</th>
                             <th>Finish Project</th>
                             <th>Note</th>
@@ -133,19 +131,23 @@
                           </tr>
                         </thead>
                         <tbody>
+                        <?php $no=1; ?>
+                        @foreach($raisas as $raisa)
                           <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>{{ $no++ }}</td>
+                            <td>{{ $raisa->projectName }}</td>
+                            <td>{{ $raisa->segment }}</td>
+                            <td>{{ $raisa->description }}</td>
+                            <td>{{ $raisa->customer }}</td>
+                            <td>{{ $raisa->lastAction }}</td>
+                            <td>{{ $raisa->nextAction }}</td>
+                            <td>{{ $raisa->currentProgress }}</td>
+                            <td>{{ $raisa->status }}</td>
+                            <td>{{ $raisa->information }}</td>
+                            <td>{{ $raisa->keterangan }}</td>
+                            <td>{{ $raisa->startProject }}</td>
+                            <td>{{ $raisa->finishProject}}</td>
+                            <td>{{ $raisa->note }}</td>
                             <td>
                               <div class="btn-group-vertical">
                                 <button type="button" class="btn btn-success btn-flat"><i class='glyphicon glyphicon-zoom-in'></i></button>
@@ -155,7 +157,7 @@
                             </td>
                           </tr>
 
-                          
+                          @endforeach
                         </tbody>
                       </table>
                     </div><!-- /.table-responsive -->
