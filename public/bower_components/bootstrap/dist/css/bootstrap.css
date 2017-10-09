@@ -250,6 +250,7 @@ th {
   }
   .table {
     border-collapse: collapse !important;
+    overflow-y: hidden;
   }
   .table td,
   .table th {
@@ -1148,6 +1149,9 @@ hr {
   margin-bottom: 20px;
   border: 0;
   border-top: 1px solid #eee;
+}
+.scrollable {
+    overflow-y:visible;
 }
 .sr-only {
   position: absolute;

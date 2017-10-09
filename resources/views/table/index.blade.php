@@ -50,26 +50,30 @@
                             <th>Next Action</th>
                             <th>Status</th>
                             <th>Information</th>
+                            <th>Note</th>
                             <th>Start Project</th>
                             <th>Finish Project</th>
-                            <th>Note</th>
                             <th>Action</th> 
                           </tr>
                         </thead>
                         <tbody>
+
+                        <?php $no=1; ?>
+                        @foreach($proactives as $proactive)
                           <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>{{ $no++ }}</td>
+                            <td>{{ $proactive->projectName }}</td>
+                            <td>{{ $proactive->segment }}</td>
+                            <td>{{ $proactive->description }}</td>
+                            <td>{{ $proactive->customer }}</td>
+                            <td>{{ $proactive->lastAction }}</td>
+                            <td>{{ $proactive->nextAction }}</td>
+                            <td>{{ $proactive->status }}</td>
+                            <td>{{ $proactive->information }}</td>
+                            <td>{{ $proactive->note }}</td>
+                            <td>{{ $proactive->startProject }}</td>
+                            <td>{{ $proactive->finishProject }}</td>
+                            
                             <td>
                               <div class="btn-group-vertical">
                                 <button type="button" class="btn btn-success btn-flat"><i class='glyphicon glyphicon-zoom-in'></i></button>
@@ -79,12 +83,13 @@
                             </td>
                           </tr>
 
+                          @endforeach
                         </tbody>
                       </table>
                   </div><!-- /.table-responsive -->
                 </div><!-- /.box-body -->
                 <div class="box-footer clearfix">
-                  <a href="{{ url('form') }}" class="btn btn-sm btn-info btn-flat pull-left">Place New Project</a>
+                  <a href="{{ url('table/createPro') }}" class="btn btn-sm btn-info btn-flat pull-left">Place New Project</a>
                   <a href="javascript::;" class="btn btn-sm btn-default btn-flat pull-right">View All Project</a>
                 </div><!-- /.box-footer -->
               </div><!-- /.box -->
@@ -156,14 +161,14 @@
                               </div>
                             </td>
                           </tr>
-                          
+
                           @endforeach
                         </tbody>
                       </table>
                     </div><!-- /.table-responsive -->
                   </div><!-- /.box-body -->
                     <div class="box-footer clearfix">
-                      <a href="{{ url('form') }}" class="btn btn-sm btn-info btn-flat pull-left">Place New Project</a>
+                      <a href="#" class="btn btn-sm btn-info btn-flat pull-left">Place New Project</a>
                       <a href="javascript::;" class="btn btn-sm btn-default btn-flat pull-right">View All Project</a>
                     </div><!-- /.box-footer -->
                   </div><!-- /.box -->
@@ -196,19 +201,26 @@
                           </tr>
                         </thead>
                         <tbody>
+
+                        <?php $no=1;?>
+                        @foreach($scns as $scn)
+                        
                           <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>{{ $no++ }}</td>
+                            <td>{{ $scn->projectName }}</td>
+                            <td>{{ $scn->segment }}</td>
+                            <td>{{ $scn->description }}</td>
+                            <td>{{ $scn->customer }}</td>
+                            <td>{{ $scn->lastAction }}</td>
+                            <td>{{ $scn->nextAction }}</td>
+                            <td>{{ $scn->currentProgress }}</td>
+                            <td>{{ $scn->status }}</td>
+                            <td>{{ $scn->information }}</td>
+                            <td>{{ $scn->keterangan }}</td>
+                            <td>{{ $scn->startProject }}</td>
+                            <td>{{ $scn->finishProject}}</td>
+                            <td>{{ $scn->note }}</td>
+                            
                             <td>
                               <div class="btn-group-vertical">
                                 <button type="button" class="btn btn-success btn-flat"><i class='glyphicon glyphicon-zoom-in'></i></button>
@@ -218,13 +230,13 @@
                             </td>
                           </tr>
 
-                          
+                        @endforeach
                         </tbody>
                       </table>
                     </div><!-- /.table-responsive -->
                   </div><!-- /.box-body -->
                     <div class="box-footer clearfix">
-                      <a href="{{ url('form') }}" class="btn btn-sm btn-info btn-flat pull-left">Place New Project</a>
+                      <a href="#" class="btn btn-sm btn-info btn-flat pull-left">Place New Project</a>
                       <a href="javascript::;" class="btn btn-sm btn-default btn-flat pull-right">View All Project</a>
                     </div><!-- /.box-footer -->
                   </div><!-- /.box -->
@@ -248,6 +260,7 @@
                             <th>Customer</th>
                             <th>Last Action</th>
                             <th>Next Action</th>
+                            <th>Current Progress</th>
                             <th>Status</th>
                             <th>Information</th>
                             <th>Start Project</th>
@@ -257,19 +270,23 @@
                           </tr>
                         </thead>
                         <tbody>
+                        <?php $no=1;?>
+                        @foreach($others as $other)
                           <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>{{ $no++ }}</td>
+                            <td>{{ $other->projectName }}</td>
+                            <td>{{ $other->segment }}</td>
+                            <td>{{ $other->description }}</td>
+                            <td>{{ $other->customer }}</td>
+                            <td>{{ $other->lastAction }}</td>
+                            <td>{{ $other->nextAction }}</td>
+                            <td>{{ $other->currentProgress }}</td>
+                            <td>{{ $other->status }}</td>
+                            <td>{{ $other->information }}</td>
+                            <td>{{ $other->keterangan }}</td>
+                            <td>{{ $other->startProject }}</td>
+                            <td>{{ $other->finishProject}}</td>
+                            <td>{{ $other->note }}</td>
                             <td>
                               <div class="btn-group-vertical">
                                 <button type="button" class="btn btn-success btn-flat"><i class='glyphicon glyphicon-zoom-in'></i></button>
@@ -278,13 +295,13 @@
                               </div>
                             </td>
                           </tr>
-
+                        @endforeach
                         </tbody>
                       </table>
                     </div><!-- /.table-responsive -->
                   </div><!-- /.box-body -->
                     <div class="box-footer clearfix">
-                      <a href="{{ url('form') }}" class="btn btn-sm btn-info btn-flat pull-left">Place New Project</a>
+                      <a href="#" class="btn btn-sm btn-info btn-flat pull-left">Place New Project</a>
                       <a href="javascript::;" class="btn btn-sm btn-default btn-flat pull-right">View All Project</a>
                     </div><!-- /.box-footer -->
                   </div><!-- /.box -->
