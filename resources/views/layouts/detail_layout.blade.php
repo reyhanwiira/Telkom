@@ -129,6 +129,12 @@
         </li>
 
         <li>
+          <a href="{{ url('detailTest') }}">
+            <i class="fa fa-pencil-square-o"></i> <span>DetailTest Project</span> <small class="fa fa pull-right"></small>
+          </a>
+        </li>
+        
+        <li>
           <a href="{{ url('chart') }}">
             <i class="fa fa-pie-chart"></i> <span>Chart</span> <small class="fa fa pull-right"></small>
           </a>

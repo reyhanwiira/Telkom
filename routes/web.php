@@ -26,6 +26,10 @@ Route::get('/detail', function() {
 	return view('detail');
 });
 
+Route::get('/detailTest', function() {
+	return view('detailTest');
+});
+
 Route::get('/chart', function() {
 	return view('chart');
 });
@@ -37,17 +41,3 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::group(['middleware'=>'auth'], function(){
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-Route::get('/table','TableController@read');
-=======
-Route::get('/table','TableController@index');
->>>>>>> fd17df7685b9e5896899db470cd1c855350c4904
-=======
-Route::get('/table','TableController@index');
->>>>>>> fd17df7685b9e5896899db470cd1c855350c4904
-
-
-});

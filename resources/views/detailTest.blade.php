@@ -1,4 +1,4 @@
-@extends('layouts.detail_layout')
+@extends('layouts.detailTest_layout')
 
 @section('content')
 <body>
@@ -6,7 +6,7 @@
   <div class="col-xs-12">
     <div class="box">   
       <div class="box-header with border">
-        <h3 class="box-title">Pro-Active</h3>
+        <h3 class="box-title">Data Table With Full Features</h3>
         <div class="box-tools pull-right">
           <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
         </div>
@@ -19,7 +19,7 @@
               <th>No</th>
               <th>Project</th>
               <th>Segment</th>
-              <th>Description</th>
+              <th>Deskripsi</th>
               <th>Customer</th>
               <th>Last Action</th>
               <th>Next Action</th>
