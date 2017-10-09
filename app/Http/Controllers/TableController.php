@@ -2,21 +2,6 @@
 
 namespace App\Http\Controllers;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-use App\Http\Controllers\Table;
-
-class TableController extends Controller
-{
-    public function read()
-    {
-    	$proactive = proactive::all();
-
-    	return view('table.index', compact('proactive'));
-
-=======
-=======
->>>>>>> fd17df7685b9e5896899db470cd1c855350c4904
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -28,17 +13,15 @@ use App\proactive;
 use Validator;
 use App\raisa;
 
+
 class TableController extends Controller
 {
-    public function index()
-    {
-    	$proactives = Proactive::all();
-    	$raisas = Raisa::all();
+	public function index()
+	{
+		$raisas = Raisa::all();
 
-    	return view('table.index', compact('proactives','raisas'));
-<<<<<<< HEAD
->>>>>>> fd17df7685b9e5896899db470cd1c855350c4904
-=======
->>>>>>> fd17df7685b9e5896899db470cd1c855350c4904
-    }
+
+    	return view('table.index', compact('raisas'));	
+	}
+    
 }
