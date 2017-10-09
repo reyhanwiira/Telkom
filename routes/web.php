@@ -41,7 +41,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-<<<<<<< HEAD
+
+
 
 Route::group(['middleware'=>'auth'], function(){
 
@@ -53,5 +54,4 @@ Route::post('/table','TableController@storePro');
 
 });
 
-=======
->>>>>>> 3666ed36a4320c73a6450b2a636432ccdeee89d1
+

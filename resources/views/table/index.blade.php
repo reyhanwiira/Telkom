@@ -128,7 +128,6 @@
                             <th>Current Progress</th>
                             <th>Status</th>
                             <th>Information</th>
-                            <th>Keterangan</th>
                             <th>Start Project</th>
                             <th>Finish Project</th>
                             <th>Note</th>
@@ -149,7 +148,6 @@
                             <td>{{ $raisa->currentProgress }}</td>
                             <td>{{ $raisa->status }}</td>
                             <td>{{ $raisa->information }}</td>
-                            <td>{{ $raisa->keterangan }}</td>
                             <td>{{ $raisa->startProject }}</td>
                             <td>{{ $raisa->finishProject}}</td>
                             <td>{{ $raisa->note }}</td>
@@ -216,7 +214,6 @@
                             <td>{{ $scn->currentProgress }}</td>
                             <td>{{ $scn->status }}</td>
                             <td>{{ $scn->information }}</td>
-                            <td>{{ $scn->keterangan }}</td>
                             <td>{{ $scn->startProject }}</td>
                             <td>{{ $scn->finishProject}}</td>
                             <td>{{ $scn->note }}</td>
@@ -283,7 +280,6 @@
                             <td>{{ $other->currentProgress }}</td>
                             <td>{{ $other->status }}</td>
                             <td>{{ $other->information }}</td>
-                            <td>{{ $other->keterangan }}</td>
                             <td>{{ $other->startProject }}</td>
                             <td>{{ $other->finishProject}}</td>
                             <td>{{ $other->note }}</td>
