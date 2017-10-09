@@ -36,12 +36,13 @@
                   <h3 class="box-title">Add Project</h3>
                 </div><!-- /.box-header -->
                 <!-- form start -->
-                <form role="form">
+                <form role="form" method="post" action="{{ url('/table') }}">
+                {!! csrf_field() !!}
                   <div class="box-body">
-                    
+                        
                     <div class="form-group">
                       <label>Project</label>
-                      <input type="text" class="form-control" placeholder="Enter ..."/>
+                      <input type="text" class="form-control" placeholder="Enter ..." name="projectName" />
                     </div>
                     
                     <div class="form-group">

@@ -40,3 +40,35 @@ Route::get('/form', function() {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 7f3b4a321fc176861b5a771ef75e3088b5ea43a9
+
+Route::group(['middleware'=>'auth'], function(){
+
+Route::get('/table','TableController@index');
+
+//CREATE DATA PROPASSIVE
+Route::get('/table/createPro','TableController@createPro');
+Route::post('/table','TableController@storePro');
+
+});
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> 3666ed36a4320c73a6450b2a636432ccdeee89d1
+>>>>>>> 02e76a1991c689d0f037fdf24097905a66b73703
+>>>>>>> 8b2260818b88de249e4ce525b20c53dce9b8e9b4
+>>>>>>> 7f3b4a321fc176861b5a771ef75e3088b5ea43a9
+>>>>>>> a49d2add00a3d5e4061c6df8d8db573ca5d0aba7
