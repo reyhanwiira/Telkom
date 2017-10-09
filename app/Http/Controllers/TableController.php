@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use App\Http\Controllers\Table;
 
 class TableController extends Controller
@@ -14,6 +15,8 @@ class TableController extends Controller
     	return view('table.index', compact('proactive'));
 
 =======
+=======
+>>>>>>> fd17df7685b9e5896899db470cd1c855350c4904
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -33,6 +36,9 @@ class TableController extends Controller
     	$raisas = Raisa::all();
 
     	return view('table.index', compact('proactives','raisas'));
+<<<<<<< HEAD
+>>>>>>> fd17df7685b9e5896899db470cd1c855350c4904
+=======
 >>>>>>> fd17df7685b9e5896899db470cd1c855350c4904
     }
 }
