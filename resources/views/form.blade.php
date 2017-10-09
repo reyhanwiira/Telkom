@@ -1,144 +1,117 @@
-@extends('layouts.layouts')
+@extends('layouts.addProject_layout')
 
 @section('content')
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Solution Management | Dashboard</title>
-    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
-    <!-- Bootstrap 3.3.2 -->
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <!-- Font Awesome Icons -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <!-- Ionicons -->
-    <link href="http://code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css" rel="stylesheet" type="text/css" />
-    <!-- Morris chart -->
-    <link href="plugins/morris/morris.css" rel="stylesheet" type="text/css" />
-    <!-- jvectormap -->
-    <link href="plugins/jvectormap/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css" />
-    <!-- Daterange picker -->
-    <link href="plugins/daterangepicker/daterangepicker-bs3.css" rel="stylesheet" type="text/css" />
-    <!-- Theme style -->
-    <link href="dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
-    <!-- AdminLTE Skins. Choose a skin from the css/skins
-         folder instead of downloading all of them to reduce the load. -->
-    <link href="dist/css/skins/_all-skins.min.css" rel="stylesheet" type="text/css" />
-  </head>
-  <body>
-    <section class="content">
-          <div class="row">
-            <!-- left column -->
-            <div class="col-md-12">
-              <!-- general form elements -->
-              <div class="box box-primary">
-                <div class="box-header">
-                  <h3 class="box-title">Add Project</h3>
-                </div><!-- /.box-header -->
-                <!-- form start -->
-                <form role="form">
-                  <div class="box-body">
-                    
-                    <div class="form-group">
-                      <label>Project</label>
-                      <input type="text" class="form-control" placeholder="Enter ..."/>
-                    </div>
-                    
-                    <div class="form-group">
-                      <label>Segment</label>
-                      <select class="form-control">
-                        <option>...</option>
-                        <option>All</option>
-                        <option>CGS</option>
-                        <option>GAS</option>
-                        <option>LGS</option>
-                        <option>MPS</option>
-                      </select>
-                    </div>
 
-                    <div class="form-group">
-                      <label>Description</label>
-                      <textarea class="form-control" rows="3" placeholder="Enter ..."></textarea>
-                    </div>
-                    
-                    <div class="form-group">
-                      <label>Customer</label>
-                      <input type="text" class="form-control" placeholder="Enter ..."/>
-                    </div>
+<body>
+  <section class="content">
+    <div class="row">
+      <!-- left column -->
+      <div class="col-md-12">
+        <!-- general form elements -->
+        <div class="box box-primary">
+          <div class="box-header">
+          </div><!-- /.box-header -->
+          <!-- form start -->
+          <div class="box-body">
+            <div class="form-group">
+              <label>Project</label>
+              <input type="text" class="form-control" placeholder="Enter ..."/>
+            </div>
 
-                    <div class="form-group">
-                      <label>Last Action</label>
-                      <textarea class="form-control" rows="3" placeholder="Enter ..."></textarea>
-                    </div>
+            <div class="form-group">
+              <label>Segment</label>
+              <select class="form-control select2" multiple="multiple" data-placeholder="Select Segment"
+              style="width: 100%;">
+              <option>CGS</option>
+              <option>GAS</option>
+              <option>LGS</option>
+              <option>MPS</option>
+            </select>
+          </div>
 
-                    <div class="form-group">
-                      <label>Next Action</label>
-                      <textarea class="form-control" rows="3" placeholder="Enter ..."></textarea>
-                    </div>
+          <div class="form-group">
+            <label>Description</label>
+            <form>
+              <textarea id="editor1" name="editor1" rows="10" cols="80">
+              </textarea>
+            </form>
+          </div>
 
-                    <div class="form-group">
-                      <label>Current Progress</label>
-                      <select class="form-control">
-                        <option>Initial Requirement</option>
-                        <option>Initial Solusi</option>
-                        <option>Waiting Feedback & Requirement Gathering</option>
-                        <option>Solution Design</option>
-                        <option>Solution Development</option>
-                        <option>POC</option>
-                        <option>Proposal Ready</option>
-                      </select>
-                    </div>
+          <div class="form-group">
+            <label>Customer</label>
+            <input type="text" class="form-control" placeholder="Enter ..."/>
+          </div>
 
-                    <div class="form-group">
-                      <label>Information</label>
-                      <textarea class="form-control" rows="3" placeholder="Enter ..."></textarea>
-                    </div>
+          <div class="form-group">
+            <label>Last Action</label>
+            <form>
+              <textarea id="editor2" name="editor1" rows="10" cols="80">
+              </textarea>
+            </form>
+          </div>
 
-                    <div class="form-group">
-	                  <label>Start Project</label>
-	                    <div class="input-group">
-		                   <div class="input-group-addon">
-		                     <i class="fa fa-calendar"></i>
-		                   </div>
-	                      <input type="text" class="form-control pull-right" id="reservation"/>
-	                    </div><!-- /.input group -->
-                    </div><!-- /.form group -->
-                 
-                    <div class="form-group">
-	                  <label>Finish Project</label>
-	                    <div class="input-group">
-		                   <div class="input-group-addon">
-		                     <i class="fa fa-calendar"></i>
-		                   </div>
-	                      <input type="text" class="form-control pull-right" id="reservation"/>
-	                    </div><!-- /.input group -->
-                    </div><!-- /.form group -->
+          <div class="form-group">
+            <label>Next Action</label>
+            <form>
+              <textarea id="editor3" name="editor1" rows="10" cols="80">
+              </textarea>
+            </form>
+          </div>
 
-                  </div><!-- /.box-body -->
+          <div class="form-group">
+            <label>Status</label>
+            <select class="form-control select2" style="width: 100%;">
+              <option class="selected">Initial Requirement</option>
+              <option>Initial Solusi</option>
+              <option>Waiting Feedback & Requirement Gathering</option>
+              <option>Solution Design</option>
+              <option>Solution Development</option>
+              <option>POC</option>
+              <option>Proposal Ready</option>
+            </select>
+            </div>
 
-                  <div class="box-footer">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                  </div>
-                </form>
-              </div><!-- /.box -->
+          <div class="form-group">
+            <label>Information</label>
+            <form>
+              <textarea id="editor4" name="editor1" rows="10" cols="80">
+              </textarea>
+            </form>
+          </div>
 
-            </div><!--/.col (left) -->
-          </div>   <!-- /.row -->
-        </section><!-- /.content -->
-      </div><!-- /.content-wrapper -->
+          <div class="form-group">
+            <label>Start Project</label>
 
-    <!-- jQuery 2.1.3 -->
-    <script src="../../plugins/jQuery/jQuery-2.1.3.min.js"></script>
-    <!-- Bootstrap 3.3.2 JS -->
-    <script src="../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-    <!-- FastClick -->
-    <script src='../../plugins/fastclick/fastclick.min.js'></script>
-    <!-- AdminLTE App -->
-    <script src="../../dist/js/app.min.js" type="text/javascript"></script>
-    <!-- AdminLTE for demo purposes -->
-    <script src="../../dist/js/demo.js" type="text/javascript"></script>
+            <div class="input-group date">
+              <div class="input-group-addon">
+                <i class="fa fa-calendar"></i>
+              </div>
+              <input type="text" class="form-control pull-right" id="datepicker">
+            </div>
+          </div>
 
-  </body>
+          <div class="form-group">
+            <label>Finish Project</label>
+
+            <div class="input-group date">
+              <div class="input-group-addon">
+                <i class="fa fa-calendar"></i>
+              </div>
+              <input type="text" class="form-control pull-right" id="datepicker2">
+            </div>
+          </div>
+        </div><!-- /.box-body -->
+
+        <div class="box-footer">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div><!-- /.box -->
+
+    </div><!--/.col (left) -->
+  </div>   <!-- /.row -->
+</section><!-- /.content -->
+</div><!-- /.content-wrapper -->
+</body>
 </html>
 
 @endsection
