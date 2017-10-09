@@ -42,6 +42,9 @@ Route::group(['middleware'=>'auth'], function(){
 
 Route::get('/table','TableController@index');
 
+//CREATE DATA PROPASSIVE
+Route::get('/table/createPro','TableController@createPro');
+Route::post('/table','TableController@storePro');
 
 });
 
