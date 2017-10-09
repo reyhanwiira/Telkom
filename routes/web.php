@@ -41,19 +41,3 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-<<<<<<< HEAD
-Route::group(['middleware'=>'auth'], function(){
-
-=======
-<<<<<<< HEAD
-=======
-
-Route::group(['middleware'=>'auth'], function(){
-
-Route::get('/table','TableController@index');
-
-
->>>>>>> 52b202c186503196360f6c98c2b197cdfd4b3bad
-});
-
->>>>>>> a71bd56e11b009abd956ddeeb063246902ea78f8
