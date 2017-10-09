@@ -5,9 +5,6 @@
   <div class="row">
     <div class="col-xs-12">
       <div class="box">
-        <div class="box-header with border">
-          <div>
-            <h3 class="box-title">Detail</h3>
               <div class="box-body">
                 <div class="col-xs-9">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -25,6 +22,11 @@
                   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                   consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
                   cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
                   proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </div>
                 <div class="col-xs 3">
@@ -37,19 +39,10 @@
                   Proposal Ready (100)<br>
                   Active<br>
                   Idle (tdk berprogress >2 Minggu)<br>
-
-                </div>
-              </div>
             </div>
           </div>
 
-          <div class="box">   
-      <div class="box-header with border">
-        <h3 class="box-title">Data Table With Full Features</h3>
-        <div class="box-tools pull-right">
-          <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-        </div>
-      </div>
+             
       <!-- /.box-header -->
       <div class="box-body">
         <table id="example1" class="table table-bordered table-striped">
@@ -65,16 +58,9 @@
             </tr>
           </thead>
           <tbody>
-              <!--table ny disini -->
+              <!--isi table ny disini -->
           </tfoot>
         </table>
       </div>
       <!-- /.box-body -->
-    </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-
 @endsection

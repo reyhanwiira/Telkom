@@ -35,18 +35,8 @@ class TableController extends Controller
  
     public function storePro(Request $request)
     {
-          $validator = Validator::make(request()->all(), [
-            'projectName'  => 'required',
-        
-        ]);
-        
-        if ($validator->fails()) {
-            redirect()
-                ->back()
-                ->withErrors($validator->errors());
-        }else{
-        
-      Volunteer::create([
+          
+        Proactive::create([
         
         'projectName'=>$request->input('projectName'),
         'segment'=>$request->input('segment'),
@@ -57,14 +47,13 @@ class TableController extends Controller
         'status'=>$request->input('status'),
         'information'=>$request->input('status'),
         'currentProgress'=>$request->input('currentProgress'),
-        'note'=>$request->input('note'),
         'startProject'=>$request->input('startProject'),
         'finishProject'=>$request->input('finishProject')
         
       ]);
       return Redirect('table');
 
-      }
+      
         
     }
 }
