@@ -55,7 +55,7 @@
       </div>
     </form>
     <div class="form-group">
-        <a class="btn btn-link" href="{{ route('password.request') }}">Forgot Password ?</a>
+        <a href="{{ route('password.request') }}">Forgot Password ?</a>
         <br>
         <a href="{{ route('register') }}" class="text-center">Register</a>
     </div>
