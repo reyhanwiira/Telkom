@@ -28,6 +28,8 @@ class TableController extends Controller
     }
 
 
+    //PROACTIVE
+
     public function createPro()
     {
       return view('table.createPro');
@@ -46,7 +48,7 @@ class TableController extends Controller
         'lastAction'=>$request->input('lastAction'),
         'nextAction'=>$request->input('nextAction'),
         'status'=>$request->input('status'),
-        'information'=>$request->input('status'),
+        'information'=>$request->input('information'),
         'currentProgress'=>$request->input('currentProgress'),
         'startProject'=>$request->input('startProject'),
         'finishProject'=>$request->input('finishProject')
@@ -54,10 +56,37 @@ class TableController extends Controller
       ]);
       return Redirect('table');
 
-      
-        
     }
 
+    public function editPro($id)
+    {
+        $proactive= Proactive::find($id); 
+
+      return view('table.editPro',compact('proactive'));
+    }
+
+    public function updatePro(Request $request, $id)
+    {
+        $proactive = Proactive::find($id);
+        $proactive->projectName=$request->input('projectName');
+        $proactive->segment=$request->input('segment');
+        $proactive->description=$request->input('description');
+        $proactive->customer=$request->input('customer');
+        $proactive->lastAction=$request->input('lastAction');
+        $proactive->nextAction=$request->input('nextAction');
+        $proactive->status=$request->input('status');
+        $proactive->information=$request->input('information');
+        $proactive->currentProgress=$request->input('currentProgress');
+        $proactive->startProject=$request->input('startProject');
+        $proactive->finishProject=$request->input('finishProject');
+        
+        $proactive->update();
+
+      return redirect('/table');
+    }
+
+
+    //RAISA 
     public function createRaisa()
     {
       return view('table.createRaisa');
@@ -83,10 +112,38 @@ class TableController extends Controller
         
       ]);
       return Redirect('table');
-
       
-        
     }
+
+    public function editRaisa($id)
+    {
+        $raisa= Raisa::find($id); 
+
+      return view('table.editRaisa',compact('raisa'));
+    }
+
+    public function updateRaisa(Request $request, $id)
+    {
+        $raisa = raisa::find($id);
+        $raisa->projectName=$request->input('projectName');
+        $raisa->segment=$request->input('segment');
+        $raisa->description=$request->input('description');
+        $raisa->customer=$request->input('customer');
+        $raisa->lastAction=$request->input('lastAction');
+        $raisa->nextAction=$request->input('nextAction');
+        $raisa->status=$request->input('status');
+        $raisa->information=$request->input('information');
+        $raisa->currentProgress=$request->input('currentProgress');
+        $raisa->startProject=$request->input('startProject');
+        $raisa->finishProject=$request->input('finishProject');
+        
+        $raisa->update();
+
+      return redirect('/table');
+    }
+
+
+    //SCN
 
      public function createScn()
     {
@@ -112,12 +169,39 @@ class TableController extends Controller
         'finishProject'=>$request->input('finishProject')
         
       ]);
-      return Redirect('table');
-
-      
+      return Redirect('table');   
         
     }
 
+     public function editScn($id)
+    {
+        $scn= Scn::find($id); 
+
+      return view('table.editScn',compact('scn'));
+    }
+
+    public function updateScn(Request $request, $id)
+    {
+        $scn = scn::find($id);
+        $scn->projectName=$request->input('projectName');
+        $scn->segment=$request->input('segment');
+        $scn->description=$request->input('description');
+        $scn->customer=$request->input('customer');
+        $scn->lastAction=$request->input('lastAction');
+        $scn->nextAction=$request->input('nextAction');
+        $scn->status=$request->input('status');
+        $scn->information=$request->input('information');
+        $scn->currentProgress=$request->input('currentProgress');
+        $scn->startProject=$request->input('startProject');
+        $scn->finishProject=$request->input('finishProject');
+        
+        $scn->update();
+
+      return redirect('/table');
+    }
+
+
+    //OTHER
 
      public function createOther()
     {
@@ -145,7 +229,33 @@ class TableController extends Controller
       ]);
       return Redirect('table');
 
-      
-        
     }
+
+    public function editOther($id)
+    {
+        $other = other::find($id); 
+
+      return view('table.editOther',compact('other'));
+    }
+
+    public function updateOther(Request $request, $id)
+    {
+        $other = other::find($id);
+        $other->projectName=$request->input('projectName');
+        $other->segment=$request->input('segment');
+        $other->description=$request->input('description');
+        $other->customer=$request->input('customer');
+        $other->lastAction=$request->input('lastAction');
+        $other->nextAction=$request->input('nextAction');
+        $other->status=$request->input('status');
+        $other->information=$request->input('information');
+        $other->currentProgress=$request->input('currentProgress');
+        $other->startProject=$request->input('startProject');
+        $other->finishProject=$request->input('finishProject');
+        
+        $other->update();
+
+      return redirect('/table');
+    }
+
 }

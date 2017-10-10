@@ -50,22 +50,40 @@ Route::group(['middleware'=>'auth'], function(){
 
 Route::get('/table','TableController@index');
 
-//CREATE DATA PROPASSIVE
+//CREATE DATA PROACTIVE
 Route::get('/table/createPro','TableController@createPro');
 Route::post('/table','TableController@storePro');
+
+//EDIT DAN UPDATE DATA PROACTIVE
+Route::get('/table/{id}/editPro','TableController@editPro');
+Route::put('/table/{id}','TableController@updatePro');
+
+
 
 //CREATE DATA RAISA
 Route::get('/table/createRaisa','TableController@createRaisa');
 Route::post('/table','TableController@storeRaisa');
+
+//EDIT DAN UPDATE DATA RAISA
+Route::get('/table/{id}/editRaisa','TableController@editRaisa');
+Route::put('/table/{id}','TableController@updateRaisa');
 
 
 //CREATE DATA SCN
 Route::get('/table/createScn','TableController@createScn');
 Route::post('/table','TableController@storeScn');
 
+//EDIT DAN UPDATE DATA SCN
+Route::get('/table/{id}/editScn','TableController@editScn');
+Route::put('/table/{id}','TableController@updateScn');
+
 
 //CREATE DATA Other
 Route::get('/table/createOther','TableController@createOther');
 Route::post('/table','TableController@storeOther');
+
+//EDIT DAN UPDATE DATA OTHER
+Route::get('/table/{id}/editOther','TableController@editOther');
+Route::put('/table/{id}','TableController@updateOther');
 
 });

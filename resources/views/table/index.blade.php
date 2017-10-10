@@ -75,7 +75,9 @@
                             <td>
                               <div class="btn-group-vertical">
                                 <button type="button" class="btn btn-success btn-flat"><i class='glyphicon glyphicon-zoom-in'></i></button>
-                                <button type="button" class="btn btn-info btn-flat"><i class='glyphicon glyphicon-edit'></i></button>
+                                
+                                <a href="{{ url('/table/'.$proactive->id.'/editPro') }}"><button type="button" class="btn btn-info btn-flat"><i class='glyphicon glyphicon-edit'></i></button></a>
+
                                 <button type="button" class="btn btn-danger btn-flat"><i class='glyphicon glyphicon-trash'></i></button>
                               </div>
                             </td>
@@ -151,7 +153,9 @@
                             <td>
                               <div class="btn-group-vertical">
                                 <button type="button" class="btn btn-success btn-flat"><i class='glyphicon glyphicon-zoom-in'></i></button>
-                                <button type="button" class="btn btn-info btn-flat"><i class='glyphicon glyphicon-edit'></i></button>
+                               
+                               <a href="{{ url('/table/'.$raisa->id.'/editRaisa') }}"><button type="button" class="btn btn-info btn-flat"><i class='glyphicon glyphicon-edit'></i></button></a>
+                               
                                 <button type="button" class="btn btn-danger btn-flat"><i class='glyphicon glyphicon-trash'></i></button>
                               </div>
                             </td>
@@ -214,7 +218,9 @@
                             <td>
                               <div class="btn-group-vertical">
                                 <button type="button" class="btn btn-success btn-flat"><i class='glyphicon glyphicon-zoom-in'></i></button>
-                                <button type="button" class="btn btn-info btn-flat"><i class='glyphicon glyphicon-edit'></i></button>
+                                
+                                <a href="{{ url('/table/'.$scn->id.'/editScn') }}"><button type="button" class="btn btn-info btn-flat"><i class='glyphicon glyphicon-edit'></i></button></a>
+
                                 <button type="button" class="btn btn-danger btn-flat"><i class='glyphicon glyphicon-trash'></i></button>
                               </div>
                             </td>
@@ -277,7 +283,9 @@
                             <td>
                               <div class="btn-group-vertical">
                                 <button type="button" class="btn btn-success btn-flat"><i class='glyphicon glyphicon-zoom-in'></i></button>
-                                <button type="button" class="btn btn-info btn-flat"><i class='glyphicon glyphicon-edit'></i></button>
+
+                                <a href="{{ url('/table/'.$other->id.'/editOther') }}"><button type="button" class="btn btn-info btn-flat"><i class='glyphicon glyphicon-edit'></i></button></a>
+
                                 <button type="button" class="btn btn-danger btn-flat"><i class='glyphicon glyphicon-trash'></i></button>
                               </div>
                             </td>
