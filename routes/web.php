@@ -40,8 +40,7 @@ Route::get('/form', function() {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-<<<<<<< HEAD
-=======
+
 
 
 
@@ -55,11 +54,3 @@ Route::get('/table/createPro','TableController@createPro');
 Route::post('/table','TableController@storePro');
 
 });
-
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 3666ed36a4320c73a6450b2a636432ccdeee89d1
->>>>>>> 02e76a1991c689d0f037fdf24097905a66b73703
->>>>>>> 8b2260818b88de249e4ce525b20c53dce9b8e9b4
