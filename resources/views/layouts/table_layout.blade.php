@@ -127,22 +127,10 @@
             <i class="fa fa-pencil-square-o"></i> <span>Detail Project</span> <small class="fa fa pull-right"></small>
           </a>
         </li>
-
-        <li>
-          <a href="{{ url('detailTest') }}">
-            <i class="fa fa-pencil-square-o"></i> <span>DetailTest Project</span> <small class="fa fa pull-right"></small>
-          </a>
-        </li>
         
         <li>
           <a href="{{ url('chart') }}">
             <i class="fa fa-pie-chart"></i> <span>Chart</span> <small class="fa fa pull-right"></small>
-          </a>
-        </li>
-
-        <li>
-          <a href="{{ url('form') }}">
-            <i class="fa fa-tasks"></i> <span>Form</span> <small class="fa fa pull-right"></small>
           </a>
         </li>
       </section>
@@ -156,12 +144,12 @@
       <!-- Content Header (Page header) -->
       <section class="content-header">
         <h1>
-          Detail Project
+          Project
           <small></small>
         </h1>
         <ol class="breadcrumb">
           <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-          <li class="active">Detail Project</li>
+          <li class="active">Project</li>
         </ol>
       </section>
 

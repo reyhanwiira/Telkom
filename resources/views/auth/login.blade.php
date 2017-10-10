@@ -12,15 +12,16 @@
   <!-- iCheck -->
   <link rel="stylesheet" href="../../plugins/iCheck/square/blue.css">
 </head>
-
+<div class="container">
+<div class="col-md-8 col-md-offset-2">
+  <div class="panel panel-default">
+                <div class="panel-heading">Login</div>
 <div class="login-box-body" style="border-radius:5px;">
-    <p class="login-box-msg">Sign in to start your session</p>
     <form action="{{ route('login') }}" method="post">
       {{ csrf_field() }}
 
       <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
         <input id="email" type="email" class="form-control" name="email" placeholder="Email" value="{{ old('email') }}" required autofocus>
-        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
         @if ($errors->has('email'))
         <span class="help-block">
             <strong>{{ $errors->first('email') }}</strong>
@@ -30,8 +31,7 @@
     
       <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
         <input id="password" type="password" class="form-control" placeholder="Password" name="password" required>
-        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-
+        
         @if ($errors->has('password'))
         <span class="help-block">
             <strong>{{ $errors->first('password') }}</strong>
@@ -59,5 +59,5 @@
         <br>
         <a href="{{ route('register') }}" class="text-center">Register</a>
     </div>
-</div>
+</div></div></div></div></div>
 @endsection

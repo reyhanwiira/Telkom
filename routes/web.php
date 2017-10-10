@@ -26,10 +26,6 @@ Route::get('/detail', function() {
 	return view('detail');
 });
 
-Route::get('/detailTest', function() {
-	return view('detailTest');
-});
-
 Route::get('/chart', function() {
 	return view('chart');
 });
