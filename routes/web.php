@@ -50,4 +50,20 @@ Route::get('/table','TableController@index');
 Route::get('/table/createPro','TableController@createPro');
 Route::post('/table','TableController@storePro');
 
+
+//CREATE DATA RAISA
+Route::get('/table/createRaisa','TableController@createRaisa');
+Route::post('/table','TableController@storeRaisa');
+
+
+//CREATE DATA SCN
+Route::get('/table/createScn','TableController@createScn');
+Route::post('/table','TableController@storeScn');
+
+
+//CREATE DATA Other
+Route::get('/table/createOther','TableController@createOther');
+Route::post('/table','TableController@storeOther');
+
+
 });
