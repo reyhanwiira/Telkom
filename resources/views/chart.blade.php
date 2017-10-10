@@ -63,16 +63,7 @@
         </div><!-- /.box-body-->
       </div><!-- /.box -->
 
-      <!-- Donut chart -->
-      <div class="box box-primary">
-        <div class="box-header">
-          <i class="fa fa-bar-chart-o"></i>
-          <h3 class="box-title">Donut Chart</h3>
-        </div>
-        <div class="box-body">
-          <div id="donut-chart" style="height: 300px;"></div>
-        </div><!-- /.box-body-->
-      </div><!-- /.box -->
+
     </div><!-- /.col -->
   </div><!-- /.row -->
 </section><!-- /.content -->
