@@ -163,7 +163,7 @@
                     </div><!-- /.table-responsive -->
                   </div><!-- /.box-body -->
                     <div class="box-footer clearfix">
-                      <a href="{{ url('table/createRaisa') }}" class="btn btn-sm btn-info btn-flat pull-left">Place New Project</a>
+                      <a href="{{ url('table/CreateRaisa') }}" class="btn btn-sm btn-info btn-flat pull-left">Place New Project</a>
                       <a href="javascript::;" class="btn btn-sm btn-default btn-flat pull-right">View All Project</a>
                     </div><!-- /.box-footer -->
                   </div><!-- /.box -->
@@ -180,6 +180,8 @@
                       <table class="table no-margin">
                         <thead>
                           <tr>
+                          <?php $no=1; ?>
+                          @foreach($scns as $scn)
                             <th>No</th>
                             <th>Project</th>
                             <th>Segment</th>
@@ -195,8 +197,6 @@
                           </tr>
                         </thead>
                         <tbody>
-                        <?php $no=1; ?>
-                        @foreach($scns as $scn)
                           <tr>
                             <td>{{ $no++ }}</td>
                             <td>{{ $scn->projectName }}</td>
@@ -258,9 +258,8 @@
                           </tr>
                         </thead>
                         <tbody>
-                        <?php $no=1; ?>
-                         @foreach($others as $other)
-                       
+                         <?php $no=1; ?>
+                        @foreach($others as $other)
                           <tr>
                             <td>{{ $no++ }}</td>
                             <td>{{ $other->projectName }}</td>
@@ -269,10 +268,12 @@
                             <td>{{ $other->customer }}</td>
                             <td>{{ $other->lastAction }}</td>
                             <td>{{ $other->nextAction }}</td>
+                            <td>{{ $other->currentProgress }}</td>
                             <td>{{ $other->status }}</td>
                             <td>{{ $other->information }}</td>
+                            <td>{{ $other->keterangan }}</td>
                             <td>{{ $other->startProject }}</td>
-                            <td>{{ $other->finishProject }}</td>
+                            <td>{{ $other->finishProject}}</td>
                             <td>
                               <div class="btn-group-vertical">
                                 <button type="button" class="btn btn-success btn-flat"><i class='glyphicon glyphicon-zoom-in'></i></button>
@@ -281,7 +282,7 @@
                               </div>
                             </td>
                           </tr>
-                         @endforeach
+                        @endforeach
                         </tbody>
                       </table>
                     </div><!-- /.table-responsive -->

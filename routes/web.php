@@ -38,6 +38,10 @@ Route::get('/form', function() {
 	return view('form');
 });
 
+Route::get('/editProject', function() {
+	return view('editProject');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -49,7 +53,6 @@ Route::get('/table','TableController@index');
 //CREATE DATA PROPASSIVE
 Route::get('/table/createPro','TableController@createPro');
 Route::post('/table','TableController@storePro');
-
 
 //CREATE DATA RAISA
 Route::get('/table/createRaisa','TableController@createRaisa');
@@ -64,6 +67,5 @@ Route::post('/table','TableController@storeScn');
 //CREATE DATA Other
 Route::get('/table/createOther','TableController@createOther');
 Route::post('/table','TableController@storeOther');
-
 
 });
