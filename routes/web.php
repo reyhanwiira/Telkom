@@ -54,6 +54,9 @@ Route::post('/table','TableController@storePro');
 Route::get('/table/{id}/editPro','TableController@editPro');
 Route::put('/table/{id}','TableController@updatePro');
 
+//DELETE DATA PROACTIVE
+Route::get('deletePro/{id}','TableController@deletePro');
+
 
 
 //CREATE DATA RAISA
@@ -64,6 +67,10 @@ Route::post('/table','TableController@storeRaisa');
 Route::get('/table/{id}/editRaisa','TableController@editRaisa');
 Route::put('/table/{id}','TableController@updateRaisa');
 
+//DELETE DATA RAISA
+Route::get('deleteRaisa/{id}','TableController@deleteRaisa');
+
+
 
 //CREATE DATA SCN
 Route::get('/table/createScn','TableController@createScn');
@@ -72,6 +79,10 @@ Route::post('/table','TableController@storeScn');
 //EDIT DAN UPDATE DATA SCN
 Route::get('/table/{id}/editScn','TableController@editScn');
 Route::put('/table/{id}','TableController@updateScn');
+
+//DELETE DATA RAISA
+Route::get('deleteScn/{id}','TableController@deleteScn');
+
 
 
 //CREATE DATA Other
@@ -82,4 +93,6 @@ Route::post('/table','TableController@storeOther');
 Route::get('/table/{id}/editOther','TableController@editOther');
 Route::put('/table/{id}','TableController@updateOther');
 
+//DELETE DATA OTHER
+Route::get('deleteOther/{id}','TableController@deleteOther');
 });

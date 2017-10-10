@@ -85,6 +85,13 @@ class TableController extends Controller
       return redirect('/table');
     }
 
+    public function deletePro($id)
+   {
+      $proactive = Proactive::where('id','=',$id)->delete();
+
+      return Redirect::to('/table');
+    }
+
 
     //RAISA 
     public function createRaisa()
@@ -140,6 +147,13 @@ class TableController extends Controller
         $raisa->update();
 
       return redirect('/table');
+    }
+
+     public function deleteRaisa($id)
+   {
+      $raisa = Raisa::where('id','=',$id)->delete();
+
+      return Redirect::to('/table');
     }
 
 
@@ -200,6 +214,13 @@ class TableController extends Controller
       return redirect('/table');
     }
 
+     public function deleteScn($id)
+   {
+      $scn = Scn::where('id','=',$id)->delete();
+
+      return Redirect::to('/table');
+    }
+
 
     //OTHER
 
@@ -256,6 +277,13 @@ class TableController extends Controller
         $other->update();
 
       return redirect('/table');
+    }
+
+      public function deleteOther($id)
+   {
+      $other = Other::where('id','=',$id)->delete();
+
+      return Redirect::to('/table');
     }
 
 }

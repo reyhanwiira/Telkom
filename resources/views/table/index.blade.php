@@ -79,7 +79,8 @@
 
                                 <a href="{{ url('/table/'.$proactive->id.'/editPro') }}"><button type="button" class="btn btn-info btn-flat"><i class='glyphicon glyphicon-edit'></i></button></a>
                                 
-                                <button type="button" class="btn btn-danger btn-flat"><i class='glyphicon glyphicon-trash'></i></button>
+                                <a href="deletePro/{{ $proactive->id }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger btn-flat"><i class='glyphicon glyphicon-trash'></i></button></a>
+                              
                               </div>
                             </td>
                           </tr>
@@ -155,7 +156,7 @@
                                
                                  <a href="{{ url('/table/'.$raisa->id.'/editRaisa') }}"><button type="button" class="btn btn-info btn-flat"><i class='glyphicon glyphicon-edit'></i></button></a>
 
-                                <button type="button" class="btn btn-danger btn-flat"><i class='glyphicon glyphicon-trash'></i></button>
+                                <a href="deleteRaisa/{{ $raisa->id }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger btn-flat"><i class='glyphicon glyphicon-trash'></i></button></a>
                               </div>
                             </td>
                           </tr>
@@ -183,18 +184,19 @@
                       <table class="table no-margin">
                         <thead>
                           <tr>
-                            <th>No</th>
+                           <th>No</th>
                             <th>Project</th>
                             <th>Segment</th>
                             <th>Description</th>
                             <th>Customer</th>
                             <th>Last Action</th>
                             <th>Next Action</th>
+                            <th>Current Progress</th>
                             <th>Status</th>
                             <th>Information</th>
                             <th>Start Project</th>
                             <th>Finish Project</th>
-                            <th>Action</th> 
+                            <th>Action</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -220,7 +222,7 @@
                                <a href="{{ url('/table/'.$scn->id.'/editScn') }}"><button type="button" class="btn btn-info btn-flat"><i class='glyphicon glyphicon-edit'></i></button></a>
 
                                 
-                                <button type="button" class="btn btn-danger btn-flat"><i class='glyphicon glyphicon-trash'></i></button>
+                                <a href="deleteScn/{{ $scn->id }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger btn-flat"><i class='glyphicon glyphicon-trash'></i></button></a>
                               </div>
                             </td>
                           </tr>
@@ -247,8 +249,6 @@
                     <div class="table-responsive">
                       <table class="table no-margin">
                         <thead>
-                        <?php $no=1;?>
-                        @foreach($others as $other)
                           <tr>
                             <th>No</th>
                             <th>Project</th>
@@ -257,14 +257,17 @@
                             <th>Customer</th>
                             <th>Last Action</th>
                             <th>Next Action</th>
+                            <th>Current Progress</th>
                             <th>Status</th>
                             <th>Information</th>
                             <th>Start Project</th>
                             <th>Finish Project</th>
-                            <th>Action</th> 
+                            <th>Action</th>
                           </tr>
                         </thead>
                         <tbody>
+                         <?php $no=1;?>
+                        @foreach($others as $other)
                           <tr>
                            <td>{{ $no++ }}</td>
                             <td>{{ $other->projectName }}</td>
@@ -285,7 +288,7 @@
                                  <a href="{{ url('/table/'.$other->id.'/editOther') }}"><button type="button" class="btn btn-info btn-flat"><i class='glyphicon glyphicon-edit'></i></button></a>
 
                                 
-                                <button type="button" class="btn btn-danger btn-flat"><i class='glyphicon glyphicon-trash'></i></button>
+                                  <a href="deleteOther/{{ $other->id }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger btn-flat"><i class='glyphicon glyphicon-trash'></i></button></a>
                               </div>
                             </td>
                           </tr>
