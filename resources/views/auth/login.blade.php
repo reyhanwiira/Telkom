@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="../../plugins/iCheck/square/blue.css">
 </head>
 
-<div class="login-box-body">
+<div class="login-box-body" style="border-radius:5px;">
     <p class="login-box-msg">Sign in to start your session</p>
     <form action="{{ route('login') }}" method="post">
       {{ csrf_field() }}
@@ -55,7 +55,7 @@
       </div>
     </form>
     <div class="form-group">
-        <a class="btn btn-link" href="{{ route('password.request') }}">Forgot Password ?</a>
+        <a href="{{ route('password.request') }}">Forgot Password ?</a>
         <br>
         <a href="{{ route('register') }}" class="text-center">Register</a>
     </div>
