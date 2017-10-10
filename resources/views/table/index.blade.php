@@ -73,8 +73,8 @@
                 <td>{{ $proactive-> finishProject }}</td>
                 <td>
                   <div class="btn-group-vertical">
-                    <a href="{{ url('detailTest') }}" type="button" class="btn btn-success btn-flat"><i class='glyphicon glyphicon-zoom-in'></i></a>
-                    <a href="#" type="button" class="btn btn-info btn-flat"><i class='glyphicon glyphicon-edit'></i></a>
+                    <a href="{{ url('detail') }}" type="button" class="btn btn-success btn-flat"><i class='glyphicon glyphicon-zoom-in'></i></a>
+                    <a href="{{ url('editProject') }}" type="button" class="btn btn-info btn-flat"><i class='glyphicon glyphicon-edit'></i></a>
                     <a href="#" type="button" class="btn btn-danger btn-flat"><i class='glyphicon glyphicon-trash'></i></a>
                   </div>
                 </td>
@@ -144,8 +144,8 @@
                     <td>{{ $raisa->finishProject}}</td>
                     <td>
                       <div class="btn-group-vertical">
-                        <a href="detailTest" type="button" class="btn btn-success btn-flat"><i class='glyphicon glyphicon-zoom-in'></i></a>
-                        <a href="#" type="button" class="btn btn-info btn-flat"><i class='glyphicon glyphicon-edit'></i></a>
+                        <a href="{{ url('detail') }}" type="button" class="btn btn-success btn-flat"><i class='glyphicon glyphicon-zoom-in'></i></a>
+                        <a href="{{ url('editProject') }}" type="button" class="btn btn-info btn-flat"><i class='glyphicon glyphicon-edit'></i></a>
                         <a href="#" type="button" class="btn btn-danger btn-flat"><i class='glyphicon glyphicon-trash'></i></a>
                       </div>
                     </td>
@@ -206,8 +206,8 @@
 
                   <td>
                     <div class="btn-group-vertical">
-                      <a href="detailTest" type="button" class="btn btn-success btn-flat"><i class='glyphicon glyphicon-zoom-in'></i></a>
-                      <a href="#" type="button" class="btn btn-info btn-flat"><i class='glyphicon glyphicon-edit'></i></a>
+                      <a href="{{ url('detail') }}" type="button" class="btn btn-success btn-flat"><i class='glyphicon glyphicon-zoom-in'></i></a>
+                      <a href="{{ url('editProject') }}" type="button" class="btn btn-info btn-flat"><i class='glyphicon glyphicon-edit'></i></a>
                       <a href="#" type="button" class="btn btn-danger btn-flat"><i class='glyphicon glyphicon-trash'></i></a>
                     </div>
                   </td>
@@ -265,8 +265,8 @@
                 <td>{{ $other->finishProject}}</td>
                 <td>
                   <div class="btn-group-vertical">
-                    <a href="detailTest" type="button" class="btn btn-success btn-flat"><i class='glyphicon glyphicon-zoom-in'></i></a>
-                    <a href="#" type="button" class="btn btn-info btn-flat"><i class='glyphicon glyphicon-edit'></i></a>
+                    <a href="{{ url('detail') }}" type="button" class="btn btn-success btn-flat"><i class='glyphicon glyphicon-zoom-in'></i></a>
+                    <a href="{{ url('editProject') }}" type="button" class="btn btn-info btn-flat"><i class='glyphicon glyphicon-edit'></i></a>
                     <a href="#" type="button" class="btn btn-danger btn-flat"><i class='glyphicon glyphicon-trash'></i></a>
                   </div>
                 </td>
