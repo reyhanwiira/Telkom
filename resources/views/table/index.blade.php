@@ -24,7 +24,7 @@
     <!-- AdminLTE Skins. Choose a skin from the css/skins 
          folder instead of downloading all of them to reduce the load. -->
     <link href="dist/css/skins/_all-skins.min.css" rel="stylesheet" type="text/css" />
-
+<<<<<<< HEAD
   </head>
   <body>
     <div class="row">
@@ -151,7 +151,7 @@
                       </div>
                     </td>
                   </tr>
-
+=======
 </head>
 <body>
   <div class="row">
@@ -198,6 +198,8 @@
                             <td>{{ $proactive-> information }}</td>
                             <td>{{ $proactive-> startProject }}</td>
                             <td>{{ $proactive-> finishProject }}</td>
+>>>>>>> 197dceda4669cf172c1a36e00df33151f5493fc2
+
                             
                             <td>
                               <div class="btn-group-vertical">
@@ -299,7 +301,7 @@
                     </div><!-- /.box-footer -->
                   </div><!-- /.box -->
 
-
+<<<<<<< HEAD
                   <td>
                     <div class="btn-group-vertical">
                       <a href="{{ url('detail') }}" type="button" class="btn btn-success btn-flat"><i class='glyphicon glyphicon-zoom-in'></i></a>
@@ -368,6 +370,7 @@
                 </td>
               </tr>
               @endforeach
+=======
                   <div class="box box-info">
                    <div class="box-header with-border">
                      <h3 class="box-title">SCN</h3>
@@ -432,6 +435,7 @@
                       <a href="javascript::;" class="btn btn-sm btn-default btn-flat pull-right">View All Project</a>
                     </div><!-- /.box-footer -->
                   </div><!-- /.box -->
+>>>>>>> 197dceda4669cf172c1a36e00df33151f5493fc2
 
                   <div class="box box-info">
                    <div class="box-header with-border">
