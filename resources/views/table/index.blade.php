@@ -1,8 +1,8 @@
-<<<<<<< HEAD
+
 @extends('layouts.table_layout')
-=======
+
 @extends('layouts.layouts')
->>>>>>> 83d6f9e479f42fcfd1bc82845a7015cd0ba0ae53
+
 
 @section('content')
 <!DOCTYPE html>
@@ -31,7 +31,7 @@
 </head>
 <body>
   <div class="row">
-<<<<<<< HEAD
+
    <div class="col-md-12">
     <!-- TABLE: LATEST ORDERS -->
     <div class="box box-info">
@@ -295,7 +295,7 @@
 </div>
 </section>
 <!-- /.content -->
-=======
+
             <div class="col-md-12">
               <!-- TABLE: LATEST ORDERS -->
               <div class="box box-info">
@@ -570,8 +570,4 @@
 
 </body>
 </html>
-
-
-
->>>>>>> 83d6f9e479f42fcfd1bc82845a7015cd0ba0ae53
 @endsection

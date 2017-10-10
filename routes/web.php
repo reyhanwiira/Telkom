@@ -54,9 +54,6 @@ Route::get('/table','TableController@index');
 Route::get('/table/createPro','TableController@createPro');
 Route::post('/table','TableController@storePro');
 
-<<<<<<< HEAD
-=======
-
 //CREATE DATA RAISA
 Route::get('/table/createRaisa','TableController@createRaisa');
 Route::post('/table','TableController@storeRaisa');
@@ -71,6 +68,4 @@ Route::post('/table','TableController@storeScn');
 Route::get('/table/createOther','TableController@createOther');
 Route::post('/table','TableController@storeOther');
 
-
->>>>>>> 83d6f9e479f42fcfd1bc82845a7015cd0ba0ae53
 });
