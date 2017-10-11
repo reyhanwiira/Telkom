@@ -83,7 +83,7 @@
       </div>
     </div><!-- /.box-header -->
     <div class="box-body">
-<<<<<<< HEAD
+
       <div class="box-group" id="accordion">
         <!-- we are adding the .panel class so bootstrap.js collapse plugin detects it -->
         <div class="panel box box-primary">
@@ -273,7 +273,7 @@
                    <td>{{ $other->startProject }}</td>
                    <td>{{ $other->finishProject}}</td>
                    <td>
-=======
+
       <div class="table-responsive">
         <div class="box box-info">
          <div class="box-header with-border">
@@ -319,7 +319,7 @@
                   <td>{{ $raisa->startProject }}</td>
                   <td>{{ $raisa->finishProject}}</td>
                   <td>
->>>>>>> parent of 5b99961... edit table dan detail
+
                     <div class="btn-group-vertical">
                       <a href=""><button type="button" class="btn btn-success btn-flat"><i class='glyphicon glyphicon-zoom-in'></i></button></a>
 
