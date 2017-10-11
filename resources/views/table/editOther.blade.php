@@ -75,7 +75,7 @@
 <<<<<<< HEAD
             <div class="form-group">
               <label>Description</label>
-              <textarea id="editor13" class="form-control" rows="3" cols="80" placeholder="Enter ..." name="description" value="{{ $other->description }}"></textarea>
+              <textarea id="editor1" class="form-control" rows="3" cols="80" placeholder="Enter ..." name="description" value="{{ $other->description }}"></textarea>
             </div>
 =======
                     <div class="form-group">
@@ -100,12 +100,12 @@
 <<<<<<< HEAD
             <div class="form-group">
               <label>Last Action</label>
-              <textarea id="editor14" class="form-control" rows="3" cols="80" placeholder="Enter ..." name="lastAction" value="{{ $other->lastAction }}"></textarea>
+              <textarea id="editor2" class="form-control" rows="3" cols="80" placeholder="Enter ..." name="lastAction" value="{{ $other->lastAction }}"></textarea>
             </div>
 
             <div class="form-group">
               <label>Next Action</label>
-              <textarea id="editor15" class="form-control" rows="3" cols="80" placeholder="Enter ..." name="nextAction" value="{{ $other->nextAction }}"></textarea>
+              <textarea id="editor3" class="form-control" rows="3" cols="80" placeholder="Enter ..." name="nextAction" value="{{ $other->nextAction }}"></textarea>
             </div>
 =======
                     <div class="form-group">
@@ -139,7 +139,7 @@
 <<<<<<< HEAD
             <div class="form-group">
               <label>Information</label>
-              <textarea id="editor16" class="form-control" rows="3" cols="80" placeholder="Enter ..." name="information" value="{{ $other->information }}"></textarea>
+              <textarea id="editor4" class="form-control" rows="3" cols="80" placeholder="Enter ..." name="information" value="{{ $other->information }}"></textarea>
             </div>
 =======
                   <div class="box-footer">
