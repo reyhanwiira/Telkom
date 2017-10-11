@@ -116,7 +116,7 @@
   <div class="col-md-6">
     <div class="box box-solid">
       <div class="box-header with-border">
-        <h3 class="box-title">Collapsible Accordion</h3>
+        <h3 class="box-title">Activity Record</h3>
       </div>
       <!-- /.box-header -->
       <div class="box-body">
@@ -126,7 +126,7 @@
             <div class="box-header with-border">
               <h4 class="box-title">
                 <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                  Collapsible Group Item #1
+                  Last Action
                 </a>
               </h4>
             </div>
@@ -156,7 +156,6 @@
                       <i class="fa fa-comments bg-yellow"></i>
 
                       <div class="timeline-item">
-                        <span class="time"><i class="fa fa-clock-o"></i> 27 mins ago</span>
 
                         <h3 class="timeline-header"><a href="#">Jay White</a> commented on your post</h3>
 
