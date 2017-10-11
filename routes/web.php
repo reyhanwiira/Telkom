@@ -46,6 +46,7 @@ Route::group(['middleware'=>'auth'], function(){
 
 Route::get('/table','TableController@index');
 
+
 //CREATE DATA PROACTIVE
 Route::get('/table/createPro','TableController@createPro');
 Route::post('/table','TableController@storePro');
@@ -95,4 +96,8 @@ Route::put('/table/{id}','TableController@updateOther');
 
 //DELETE DATA OTHER
 Route::get('deleteOther/{id}','TableController@deleteOther');
+
+
+Route::get('/detail','DetailController@index');
+
 });
