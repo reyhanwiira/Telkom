@@ -72,213 +72,231 @@
 </div><!-- /.col -->
 
 <div class="col-md-12">
-  <!-- TABLE: LATEST ORDERS -->
   <div class="box box-info">
     <div class="box-header with-border">
       <h3 class="box-title">Pro-Passive</h3>
       <div class="box-tools pull-right">
         <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
       </div>
-    </div><!-- /.box-header -->
+    </div>
+    <!-- /.box-header -->
     <div class="box-body">
-      <div class="table-responsive">
-        <div class="box box-info">
-         <div class="box-header with-border">
-           <h3 class="box-title">RAISA</h3>
-           <div class="box-tools pull-right">
-             <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-           </div>
-         </div><!-- /.box-header -->
-         <div class="box-body">
-          <div class="table-responsive">
-            <table id="example2" class="table table-bordered table-striped">
-              <thead>
-                <tr>
-                  <th>No</th>
-                  <th>Project</th>
-                  <th>Segment</th>
-                  <th>Description</th>
-                  <th>Customer</th>
-                  <th>Last Action</th>
-                  <th>Next Action</th>
-                  <th>Current Progress</th>
-                  <th>Status</th>
-                  <th>Information</th>
-                  <th>Start Project</th>
-                  <th>Finish Project</th>
-                  <th>Action</th> 
-                </tr>
-              </thead>
-              <tbody>
-                <?php $no=1; ?>
-                @foreach($raisas as $raisa)
-                <tr>
-                  <td>{{ $no++ }}</td>
-                  <td>{{ $raisa->projectName }}</td>
-                  <td>{{ $raisa->segment }}</td>
-                  <td>{{ $raisa->description }}</td>
-                  <td>{{ $raisa->customer }}</td>
-                  <td>{{ $raisa->lastAction }}</td>
-                  <td>{{ $raisa->nextAction }}</td>
-                  <td>{{ $raisa->currentProgress }}</td>
-                  <td>{{ $raisa->status }}</td>
-                  <td>{{ $raisa->information }}</td>
-                  <td>{{ $raisa->startProject }}</td>
-                  <td>{{ $raisa->finishProject}}</td>
-                  <td>
+      <div class="box-group" id="accordion">
+        <!-- we are adding the .panel class so bootstrap.js collapse plugin detects it -->
+        <div class="panel box box-primary">
+          <div class="box-header with-border">
+            <h4 class="box-title">RAISA
+              <div class="box-tools pull-right">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                  <button class="btn btn-box-tool"><i class="fa fa-minus"></i></button>
+                </a>
+              </div>
+            </h4>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse in">
+            <div class="box-body">
+              <div class="table-responsive">
+                <table id="example2" class="table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th>No</th>
+                      <th>Project</th>
+                      <th>Segment</th>
+                      <th>Description</th>
+                      <th>Customer</th>
+                      <th>Last Action</th>
+                      <th>Next Action</th>
+                      <th>Current Progress</th>
+                      <th>Status</th>
+                      <th>Information</th>
+                      <th>Start Project</th>
+                      <th>Finish Project</th>
+                      <th>Action</th> 
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php $no=1; ?>
+                    @foreach($raisas as $raisa)
+                    <tr>
+                      <td>{{ $no++ }}</td>
+                      <td>{{ $raisa->projectName }}</td>
+                      <td>{{ $raisa->segment }}</td>
+                      <td>{{ $raisa->description }}</td>
+                      <td>{{ $raisa->customer }}</td>
+                      <td>{{ $raisa->lastAction }}</td>
+                      <td>{{ $raisa->nextAction }}</td>
+                      <td>{{ $raisa->currentProgress }}</td>
+                      <td>{{ $raisa->status }}</td>
+                      <td>{{ $raisa->information }}</td>
+                      <td>{{ $raisa->startProject }}</td>
+                      <td>{{ $raisa->finishProject}}</td>
+                      <td>
+                        <div class="btn-group-vertical">
+                          <a href=""><button type="button" class="btn btn-success btn-flat"><i class='glyphicon glyphicon-zoom-in'></i></button></a>
+
+                          <a href="{{ url('/table/'.$raisa->id.'/editRaisa') }}"><button type="button" class="btn btn-info btn-flat"><i class='glyphicon glyphicon-edit'></i></button></a>
+
+                          <a href="deleteRaisa/{{ $raisa->id }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger btn-flat"><i class='glyphicon glyphicon-trash'></i></button></a>
+                        </div>
+                      </td>
+                    </tr>
+
+                    @endforeach
+                  </tbody>
+                </table>
+              </div><!-- /.table-responsive -->
+            </div>
+            <div class="box-footer clearfix">
+              <a href="{{ url('table/createRaisa') }}" class="btn btn-sm btn-info btn-flat pull-left">Place New Project</a>
+            </div><!-- /.box-footer -->
+          </div>
+        </div>
+
+        <div class="panel box box-primary">
+          <div class="box-header with-border">
+            <h4 class="box-title">SCN
+              <div class="box-tools pull-right">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                <button class="btn btn-box-tool"><i class="fa fa-minus"></i></button>
+                </a>
+              </div>
+            </h4>
+          </div>
+          <div id="collapseTwo" class="panel-collapse collapse in">
+            <div class="box-body">
+              <div class="table-responsive">
+                <table id="example2" class="table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th>No</th>
+                      <th>Project</th>
+                      <th>Segment</th>
+                      <th>Description</th>
+                      <th>Customer</th>
+                      <th>Last Action</th>
+                      <th>Next Action</th>
+                      <th>Current Progress</th>
+                      <th>Status</th>
+                      <th>Information</th>
+                      <th>Start Project</th>
+                      <th>Finish Project</th>
+                      <th>Action</th> 
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php $no=1;?>
+                    @foreach($scns as $scn)
+                    <tr>
+                     <td>{{ $no++ }}</td>
+                     <td>{{ $scn->projectName }}</td>
+                     <td>{{ $scn->segment }}</td>
+                     <td>{{ $scn->description }}</td>
+                     <td>{{ $scn->customer }}</td>
+                     <td>{{ $scn->lastAction }}</td>
+                     <td>{{ $scn->nextAction }}</td>
+                     <td>{{ $scn->currentProgress }}</td>
+                     <td>{{ $scn->status }}</td>
+                     <td>{{ $scn->information }}</td>
+                     <td>{{ $scn->startProject }}</td>
+                     <td>{{ $scn->finishProject}}</td>
+                     <td>
+                      <div class="btn-group-vertical">
+                        <a href=""><button type="button" class="btn btn-success btn-flat"><i class='glyphicon glyphicon-zoom-in'></i></button></a>
+
+                        <a href="{{ url('/table/'.$scn->id.'/editScn') }}"><button type="button" class="btn btn-info btn-flat"><i class='glyphicon glyphicon-edit'></i></button></a>
+
+                        <a href="deleteScn/{{ $scn->id }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger btn-flat"><i class='glyphicon glyphicon-trash'></i></button></a>
+                      </div>
+                    </td>
+                  </tr>
+
+                  @endforeach
+                </tbody>
+              </table>
+            </div><!-- /.table-responsive -->
+          </div>
+          <div class="box-footer clearfix">
+            <a href="{{ url('table/createRaisa') }}" class="btn btn-sm btn-info btn-flat pull-left">Place New Project</a>
+          </div><!-- /.box-footer -->
+        </div>
+      </div>
+
+      <div class="panel box box-primary">
+        <div class="box-header with-border">
+          <h4 class="box-title">OTHERS
+            <div class="box-tools pull-right">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                <button class="btn btn-box-tool"><i class="fa fa-minus"></i></button>
+              </a>
+            </div>
+          </h4>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse in">
+          <div class="box-body">
+            <div class="table-responsive">
+              <table id="example2" class="table table-bordered table-striped">
+                <thead>
+                  <tr>
+                    <th>No</th>
+                    <th>Project</th>
+                    <th>Segment</th>
+                    <th>Description</th>
+                    <th>Customer</th>
+                    <th>Last Action</th>
+                    <th>Next Action</th>
+                    <th>Current Progress</th>
+                    <th>Status</th>
+                    <th>Information</th>
+                    <th>Start Project</th>
+                    <th>Finish Project</th>
+                    <th>Action</th> 
+                  </tr>
+                </thead>
+                <tbody>
+                 <?php $no=1;?>
+                 @foreach($others as $other)
+                 <tr>
+                   <td>{{ $no++ }}</td>
+                   <td>{{ $other->projectName }}</td>
+                   <td>{{ $other->segment }}</td>
+                   <td>{{ $other->description }}</td>
+                   <td>{{ $other->customer }}</td>
+                   <td>{{ $other->lastAction }}</td>
+                   <td>{{ $other->nextAction }}</td>
+                   <td>{{ $other->currentProgress }}</td>
+                   <td>{{ $other->status }}</td>
+                   <td>{{ $other->information }}</td>
+                   <td>{{ $other->startProject }}</td>
+                   <td>{{ $other->finishProject}}</td>
+                   <td>
                     <div class="btn-group-vertical">
                       <a href=""><button type="button" class="btn btn-success btn-flat"><i class='glyphicon glyphicon-zoom-in'></i></button></a>
 
-                      <a href="{{ url('/table/'.$raisa->id.'/editRaisa') }}"><button type="button" class="btn btn-info btn-flat"><i class='glyphicon glyphicon-edit'></i></button></a>
+                      <a href="{{ url('/table/'.$other->id.'/editOther') }}"><button type="button" class="btn btn-info btn-flat"><i class='glyphicon glyphicon-edit'></i></button></a>
 
-                      <a href="deleteRaisa/{{ $raisa->id }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger btn-flat"><i class='glyphicon glyphicon-trash'></i></button></a>
+
+                      <a href="deleteOther/{{ $other->id }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger btn-flat"><i class='glyphicon glyphicon-trash'></i></button></a>
                     </div>
                   </td>
                 </tr>
-
                 @endforeach
               </tbody>
             </table>
           </div><!-- /.table-responsive -->
-        </div><!-- /.box-body -->
+        </div>
         <div class="box-footer clearfix">
           <a href="{{ url('table/createRaisa') }}" class="btn btn-sm btn-info btn-flat pull-left">Place New Project</a>
         </div><!-- /.box-footer -->
-      </div><!-- /.box -->
+      </div>
+    </div>
 
-      <div class="box box-info">
-       <div class="box-header with-border">
-         <h3 class="box-title">SCN</h3>
-         <div class="box-tools pull-right">
-           <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-         </div>
-       </div><!-- /.box-header -->
-       <div class="box-body">
-        <div class="table-responsive">
-          <table id="example3" class="table table-bordered table-striped">
-            <thead>
-              <tr>
-               <th>No</th>
-               <th>Project</th>
-               <th>Segment</th>
-               <th>Description</th>
-               <th>Customer</th>
-               <th>Last Action</th>
-               <th>Next Action</th>
-               <th>Current Progress</th>
-               <th>Status</th>
-               <th>Information</th>
-               <th>Start Project</th>
-               <th>Finish Project</th>
-               <th>Action</th>
-             </tr>
-           </thead>
-           <tbody>
-            <?php $no=1;?>
-            @foreach($scns as $scn)
-            <tr>
-             <td>{{ $no++ }}</td>
-             <td>{{ $scn->projectName }}</td>
-             <td>{{ $scn->segment }}</td>
-             <td>{{ $scn->description }}</td>
-             <td>{{ $scn->customer }}</td>
-             <td>{{ $scn->lastAction }}</td>
-             <td>{{ $scn->nextAction }}</td>
-             <td>{{ $scn->currentProgress }}</td>
-             <td>{{ $scn->status }}</td>
-             <td>{{ $scn->information }}</td>
-             <td>{{ $scn->startProject }}</td>
-             <td>{{ $scn->finishProject}}</td>
-             <td>
-              <div class="btn-group-vertical">
-                <a href=""><button type="button" class="btn btn-success btn-flat"><i class='glyphicon glyphicon-zoom-in'></i></button></a>
-
-                <a href="{{ url('/table/'.$scn->id.'/editScn') }}"><button type="button" class="btn btn-info btn-flat"><i class='glyphicon glyphicon-edit'></i></button></a>
-
-
-                <a href="deleteScn/{{ $scn->id }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger btn-flat"><i class='glyphicon glyphicon-trash'></i></button></a>
-              </div>
-            </td>
-          </tr>
-
-          @endforeach
-        </tbody>
-      </table>
-    </div><!-- /.table-responsive -->
-  </div><!-- /.box-body -->
-  <div class="box-footer clearfix">
-    <a href="{{ url('table/createScn') }}" class="btn btn-sm btn-info btn-flat pull-left">Place New Project</a>
-  </div><!-- /.box-footer -->
-</div><!-- /.box -->
-
-<div class="box box-info">
- <div class="box-header with-border">
-   <h3 class="box-title">OTHERS</h3>
-   <div class="box-tools pull-right">
-     <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-   </div>
- </div><!-- /.box-header -->
- <div class="box-body">
-  <div class="table-responsive">
-  <table id="example4" class="table table-bordered table-striped">
-      <thead>
-        <tr>
-          <th>No</th>
-          <th>Project</th>
-          <th>Segment</th>
-          <th>Description</th>
-          <th>Customer</th>
-          <th>Last Action</th>
-          <th>Next Action</th>
-          <th>Current Progress</th>
-          <th>Status</th>
-          <th>Information</th>
-          <th>Start Project</th>
-          <th>Finish Project</th>
-          <th>Action</th>
-        </tr>
-      </thead>
-      <tbody>
-       <?php $no=1;?>
-       @foreach($others as $other)
-       <tr>
-         <td>{{ $no++ }}</td>
-         <td>{{ $other->projectName }}</td>
-         <td>{{ $other->segment }}</td>
-         <td>{{ $other->description }}</td>
-         <td>{{ $other->customer }}</td>
-         <td>{{ $other->lastAction }}</td>
-         <td>{{ $other->nextAction }}</td>
-         <td>{{ $other->currentProgress }}</td>
-         <td>{{ $other->status }}</td>
-         <td>{{ $other->information }}</td>
-         <td>{{ $other->startProject }}</td>
-         <td>{{ $other->finishProject}}</td>
-         <td>
-          <div class="btn-group-vertical">
-            <a href=""><button type="button" class="btn btn-success btn-flat"><i class='glyphicon glyphicon-zoom-in'></i></button></a>
-
-            <a href="{{ url('/table/'.$other->id.'/editOther') }}"><button type="button" class="btn btn-info btn-flat"><i class='glyphicon glyphicon-edit'></i></button></a>
-
-
-            <a href="deleteOther/{{ $other->id }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger btn-flat"><i class='glyphicon glyphicon-trash'></i></button></a>
-          </div>
-        </td>
-      </tr>
-      @endforeach
-    </tbody>
-  </table>
-</div><!-- /.table-responsive -->
-</div><!-- /.box-body -->
-<div class="box-footer clearfix">
-  <a href="{{ url('table/createOther') }}" class="btn btn-sm btn-info btn-flat pull-left">Place New Project</a>
-</div><!-- /.box-footer -->
-</div><!-- /.box -->
-
-</div><!-- /.table-responsive -->
-</div><!-- /.box-body -->
-</div><!-- /.box -->
-</div><!-- /.col -->
+  </div>
+</div>
+<!-- /.box-body -->
+</div>
+<!-- /.box -->
+</div>
+<!-- /.col -->
 
 </div><!-- /.row --> 
 
