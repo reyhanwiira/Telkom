@@ -83,39 +83,31 @@
                 <th>No</th>
                 <th>Project</th>
                 <th>Segment</th>
-                <th>Description</th>
-                <th>Customer</th>
-                <th>Last Action</th>
-                <th>Next Action</th>
-                <th>Status</th>
-                <th>Information</th>
-                <th>Start Project</th>
-                <th>Finish Project</th>
-                <th>Action</th> 
+                <th>Current Progress</th>
+                <th>Last</th>
+                <th>Current</th>
+                <th>Progress Summary</th>
+                <th>Status</th> 
               </tr>
             </thead>
             <tbody>
+            <?php $no=1; ?>
+            @foreach ($proactives as $proactive)
               <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>{{ $no++ }}</td>
+                <td>{{ $proactive-> projectName }}</td>
+                <td>{{ $proactive-> segment }}</td>
+                <td>{{ $proactive-> currentProgress }}</td>
+                <td>Nilai dari Last</td>
+                <td>Nilai dari Current</td>
+                <td>Progress Summary</td>
+                <td>Status</td>
               </tr>
+              @endforeach
             </tbody>
           </table>
         </div><!-- /.table-responsive -->
       </div><!-- /.box-body -->
-      <div class="box-footer clearfix">
-        <a href="{{ url('form') }}" class="btn btn-sm btn-info btn-flat pull-left">Place New Project</a>
-      </div><!-- /.box-footer -->
     </div><!-- /.box -->
   </div><!-- /.col -->
 </div>
