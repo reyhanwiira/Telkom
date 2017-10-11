@@ -1,4 +1,4 @@
-@extends('layouts.layouts')
+@extends('layouts.editProject_layout')
 
 @section('content')
 
@@ -19,12 +19,12 @@
             
             <div class="form-group">
               <label>Project</label>
-              <input type="text" class="form-control" placeholder="Enter ..." name="projectName" value="{{ $other->projectName }}" />
+              <input type="text" class="form-control" placeholder="Enter ..." name="projectName" value="{{ $proactive->projectName }}" />
             </div>
 
             <div class="form-group">
               <label>Segment</label>
-              <select class="form-control select2" multiple="multiple" name="segment" value="{{ $other->segment }}">
+              <select class="form-control select2" multiple="multiple" name="segment" value="{{ $proactive->segment }}">
                 <option value="All">All</option>
                 <option value="CGS">CGS</option>
                 <option value="GAS">GAS</option>
@@ -35,27 +35,27 @@
 
             <div class="form-group">
               <label>Description</label>
-              <textarea id="editor1" class="form-control" rows="3" cols="80" placeholder="Enter ..." name="description" value="{{ $other->description }}"></textarea>
+              <textarea id="editor1" class="form-control" rows="3" cols="80" placeholder="Enter ..." name="description" value="{{ $proactive->description }}"></textarea>
             </div>
 
             <div class="form-group">
               <label>Customer</label>
-              <input type="text" class="form-control" placeholder="Enter ..." name="customer" value="{{ $other->customer }}" />
+              <input type="text" class="form-control" placeholder="Enter ..." name="customer" value="{{ $proactive->customer }}" />
             </div>
 
             <div class="form-group">
               <label>Last Action</label>
-              <textarea id="editor2" class="form-control" rows="3" cols="80" placeholder="Enter ..." name="lastAction" value="{{ $other->lastAction }}"></textarea>
+              <textarea id="editor2" class="form-control" rows="3" cols="80" placeholder="Enter ..." name="lastAction" value="{{ $proactive->lastAction }}"></textarea>
             </div>
 
             <div class="form-group">
               <label>Next Action</label>
-              <textarea id="editor3" class="form-control" rows="3" cols="80" placeholder="Enter ..." name="nextAction" value="{{ $other->nextAction }}"></textarea>
+              <textarea id="editor3" class="form-control" rows="3" cols="80" placeholder="Enter ..." name="nextAction" value="{{ $proactive->nextAction }}"></textarea>
             </div>
 
             <div class="form-group">
               <label>Current Progress</label>
-              <select class="form-control select2" name="currentProgress" value="{{ $other->currentProgress }}" style="width: 100%">
+              <select class="form-control select2" name="currentProgress" value="{{ $proactive->currentProgress }}" style="width: 100%">
                 <option value="Initial Requirement">Initial Requirement</option>
                 <option value="Initial Solusi">Initial Solusi</option>
                 <option value="Waiting Feedback & Requirement Gathering">Waiting Feedback & Requirement Gathering</option>
@@ -68,7 +68,7 @@
 
             <div class="form-group">
               <label>Information</label>
-              <textarea id="editor4" class="form-control" rows="3" cols="80" placeholder="Enter ..." name="information" value="{{ $other->information }}"></textarea>
+              <textarea id="editor4" class="form-control" rows="3" cols="80" placeholder="Enter ..." name="information" value="{{ $proactive->information }}"></textarea>
             </div>
 
             <div class="form-group">
@@ -77,7 +77,7 @@
                <div class="input-group-addon">
                  <i class="fa fa-calendar"></i>
                </div>
-               <input type="date" class="form-control pull-right" id="reservation" name="startProject" value="{{ $other->startProject }}" />
+               <input type="date" class="form-control pull-right" id="reservation" name="startProject" value="{{ $proactive->startProject }}" />
              </div><!-- /.input group -->
            </div><!-- /.form group -->
 
@@ -87,7 +87,7 @@
              <div class="input-group-addon">
                <i class="fa fa-calendar"></i>
              </div>
-             <input type="date" class="form-control pull-right" id="reservation" name="finishProject" value="{{ $other->finishProject }}" />
+             <input type="date" class="form-control pull-right" id="reservation" name="finishProject" value="{{ $proactive->finishProject }}" />
            </div><!-- /.input group -->
          </div><!-- /.form group -->
 
