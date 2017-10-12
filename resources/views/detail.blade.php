@@ -19,7 +19,7 @@
           </div>
           <div class="col-md-4">
             <div class="progress">
-              <div class="progress-bar progress-bar-#ffffcc" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+              <div class="progress-bar progress-bar-khaki" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
                 <span class="sr-only">40% Complete (success)</span>
                 <p>Initial Requirement (0-10)</p>
               </div>
@@ -60,6 +60,27 @@
                 <p>Proposal Ready(100)</p>
               </div>
             </div>
+            <div class="row">
+              <center>
+                <div class="col-md-3">
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-green" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="10" style="width: 35%">
+                    </div>
+                    <p> Active</p>
+                  </div>
+                </div>
+              </center>
+              <center>
+                <div class="col-md-9">
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="10" style="width: 10%">
+                    </div>
+                    <p>Idle (tdk berprogress >2 Minggu)</p>
+                  </div>
+                </div>
+              </center>
+            </div>
+
           </div>  
         </div>
       </div>
@@ -77,39 +98,41 @@
         </div><!-- /.box-header -->
         <div class="box-body">
           <div class="table-responsive">
-           <table id="example1" class="table no-margin">
-            <thead>
-              <tr>
-                <th>No</th>
-                <th>Project</th>
-                <th>Segment</th>
-                <th>Current Progress</th>
-                <th>Last</th>
-                <th>Current</th>
-                <th>Progress Summary</th>
-                <th>Status</th>
-                <th>Information</th>
-                <th>Start Project</th>
-                <th>Finish Project</th>
-                <th>Action</th>  
-              </tr>
-            </thead>
-            <tbody>
-              <?php $no=1; ?>
-              @foreach ($proactives as $proactive)
-              <tr>
-                <td>{{ $no++ }}</td>
-                <td>{{ $proactive-> projectName }}</td>
-                <td>{{ $proactive-> segment }}</td>
-                <td>{{ $proactive-> currentProgress }}</td>
-                <td>Nilai dari Last</td>
-                <td>Nilai dari Current</td>
-                <td>Progress Summary</td>
-                <td>Status</td>
-              </tr>
-              @endforeach
-            </tbody>
-          </table>
+            <div class="col-md-10">
+             <table id="example1" class="table no-margin">
+              <thead>
+                <tr>
+                  <th>No</th>
+                  <th>Project</th>
+                  <th>Segment</th>
+                  <th>Current Progress</th>
+                  <th>Last</th>
+                  <th>Current</th>
+                  <th>Progress Summary</th>
+                  <th>Status</th>
+                  <th>Information</th>
+                  <th>Start Project</th>
+                  <th>Finish Project</th>
+                  <th>Action</th>  
+                </tr>
+              </thead>
+              <tbody>
+                <?php $no=1; ?>
+                @foreach ($proactives as $proactive)
+                <tr>
+                  <td>{{ $no++ }}</td>
+                  <td>{{ $proactive-> projectName }}</td>
+                  <td>{{ $proactive-> segment }}</td>
+                  <td>{{ $proactive-> currentProgress }}</td>
+                  <td>Nilai dari Last</td>
+                  <td>Nilai dari Current</td>
+                  <td>Progress Summary</td>
+                  <td>Status</td>
+                </tr>
+                @endforeach
+              </tbody>
+            </table>
+          </div>
         </div><!-- /.table-responsive -->
       </div><!-- /.box-body -->
     </div><!-- /.box -->
@@ -151,25 +174,23 @@
                       <i class="fa fa-user bg-aqua"></i>
                       
                       <div class="timeline-item">
-                        <h3 class="timeline-header no-border"><a href="#">Sarah Young</a> accepted your friend request</h3>
+                        <h3 class="timeline-header no-border"><a href="#">Jay White</a> Rapat dengan client</h3>
                       </div>
                     </li>
                     <!-- END timeline item -->
                     <!-- timeline item -->
                     <li>
-                      <i class="fa fa-comments bg-yellow"></i>
+                      <i class="fa fa-file-archive-o bg-aqua"></i>
 
                       <div class="timeline-item">
 
-                        <h3 class="timeline-header"><a href="#">Jay White</a> commented on your post</h3>
+                        <h3 class="timeline-header"><a href="#">Jay White</a> uploaded files</h3>
 
                         <div class="timeline-body">
-                          Take me to your leader!
-                          Switzerland is small and neutral!
-                          We are more like Germany, ambitious and misunderstood!
-                        </div>
-                        <div class="timeline-footer">
-                          <a class="btn btn-warning btn-flat btn-xs">View comment</a>
+                          <h4>Hasil Rapat</h4>
+                          <a class="btn btn-app">
+                            <i class="fa fa-save"></i> Save
+                          </a>
                         </div>
                       </div>
                     </li>
@@ -200,39 +221,12 @@
                     </li>
                     <!-- END timeline item -->
                     <!-- timeline item -->
-                    <li>
-                      <i class="fa fa-video-camera bg-maroon"></i>
-
-                      <div class="timeline-item">
-                        <span class="time"><i class="fa fa-clock-o"></i> 5 days ago</span>
-
-                        <h3 class="timeline-header"><a href="#">Mr. Doe</a> shared a video</h3>
-
-                        <div class="timeline-body">
-                          <div class="embed-responsive embed-responsive-16by9">
-                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/tMWkeBIohBs"
-                            frameborder="0" allowfullscreen></iframe>
-                          </div>
-                        </div>
-                        <div class="timeline-footer">
-                          <a href="#" class="btn btn-xs bg-maroon">See comments</a>
-                        </div>
-                      </div>
-                    </li>
-                    <!-- END timeline item -->
+                    
                     <li>
                       <i class="fa fa-clock-o bg-gray"></i>
                     </li>
                   </ul>
                 </div>
-                <!-- /.col -->
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
-                wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
-                eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
-                assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
-                nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-                farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
-                labore sustainable VHS.
               </div>
             </div>
           </div>
@@ -240,39 +234,37 @@
             <div class="box-header with-border">
               <h4 class="box-title">
                 <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                  Collapsible Group Danger
+                  Next Action
                 </a>
               </h4>
             </div>
             <div id="collapseTwo" class="panel-collapse collapse">
               <div class="box-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
-                wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
-                eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
-                assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
-                nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-                farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
-                labore sustainable VHS.
-              </div>
-            </div>
-          </div>
-          <div class="panel box box-success">
-            <div class="box-header with-border">
-              <h4 class="box-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-                  Collapsible Group Success
-                </a>
-              </h4>
-            </div>
-            <div id="collapseThree" class="panel-collapse collapse">
-              <div class="box-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
-                wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
-                eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
-                assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
-                nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-                farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
-                labore sustainable VHS.
+                <ul class="timeline">
+                  <!-- timeline time label -->
+                  <li class="time-label">
+                    <span class="bg-red">
+                      20 Feb. 2014
+                    </span>
+                  </li>
+                  <!-- /.timeline-label -->
+                  <!-- timeline item -->
+                  <li>
+                    <i class="fa fa-user bg-aqua"></i>
+
+                    <div class="timeline-item">
+                      <h3 class="timeline-header no-border"><a href="#">Jay White</a> Rapat dengan client</h3>
+                    </div>
+                  </li>
+                  <!-- END timeline item -->
+                  <!-- timeline item -->
+                  <li>
+                    <i class="fa fa-clock-o bg-gray"></i>
+                  </li>
+                  <div class="box-tools pull-right">
+                    <a href="{{ url('table/createPro') }}" class="btn btn-sm btn-info btn-flat pull-left">Place New Activty</a>
+                  </div><!-- /.box-footer -->
+                </ul>
               </div>
             </div>
           </div>
