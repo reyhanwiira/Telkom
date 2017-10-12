@@ -9,9 +9,7 @@
       <div class="box-header with-border">
         <h3 class="box-title">Pro-Active</h3>
         <div class="box-tools pull-right">
-          <button class="btn btn-box-tool" data-widget="collapse">
-            <i class="fa fa-minus"></i>
-          </button>
+          <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
         </div>
       </div><!-- /.box-header -->
       <div class="box-body">
@@ -83,19 +81,18 @@
       </div>
     </div><!-- /.box-header -->
     <div class="box-body">
-<<<<<<< HEAD
+
       <div class="box-group" id="accordion">
         <!-- we are adding the .panel class so bootstrap.js collapse plugin detects it -->
         <div class="panel box box-primary">
           <div class="box-header with-border">
-            <h4 class="box-title">RAISA</h4>
-            <div class="box-tools pull-right">
-              <a data-widget="collapse" data-parent="#accordion" href="#collapseOne">
-                <button class="btn btn-box-tool">
-                  <i class="fa fa-minus"></i>
-                </button>
-              </a>
-            </div>
+            <h4 class="box-title">RAISA
+              <div class="box-tools pull-right">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                  <button class="btn btn-box-tool"><i class="fa fa-minus"></i></button>
+                </a>
+              </div>
+            </h4>
           </div>
           <div id="collapseOne" class="panel-collapse collapse in">
             <div class="box-body">
@@ -161,7 +158,7 @@
             <h4 class="box-title">SCN
               <div class="box-tools pull-right">
                 <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                  <button class="btn btn-box-tool"><i class="fa fa-minus"></i></button>
+                <button class="btn btn-box-tool"><i class="fa fa-minus"></i></button>
                 </a>
               </div>
             </h4>
@@ -273,7 +270,7 @@
                    <td>{{ $other->startProject }}</td>
                    <td>{{ $other->finishProject}}</td>
                    <td>
-=======
+
       <div class="table-responsive">
         <div class="box box-info">
          <div class="box-header with-border">
@@ -319,7 +316,7 @@
                   <td>{{ $raisa->startProject }}</td>
                   <td>{{ $raisa->finishProject}}</td>
                   <td>
->>>>>>> parent of 5b99961... edit table dan detail
+
                     <div class="btn-group-vertical">
                       <a href=""><button type="button" class="btn btn-success btn-flat"><i class='glyphicon glyphicon-zoom-in'></i></button></a>
 

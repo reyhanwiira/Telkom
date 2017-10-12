@@ -1,4 +1,4 @@
-@extends('layouts.editProject_layout')
+@extends('layouts.layouts')
 
 @section('content')
 <<<<<<< HEAD
@@ -19,12 +19,12 @@
             
             <div class="form-group">
               <label>Project</label>
-              <input type="text" class="form-control" placeholder="Enter ..." name="projectName" value="{{ $raisa->projectName }}" />
+              <input type="text" class="form-control" placeholder="Enter ..." name="projectName" value="{{ $other->projectName }}" />
             </div>
 
             <div class="form-group">
               <label>Segment</label>
-              <select class="form-control select2" multiple="multiple" name="segment" value="{{ $raisa->segment }}">
+              <select class="form-control select2" multiple="multiple" name="segment" value="{{ $other->segment }}">
                 <option value="All">All</option>
                 <option value="CGS">CGS</option>
                 <option value="GAS">GAS</option>
@@ -35,27 +35,27 @@
 
             <div class="form-group">
               <label>Description</label>
-              <textarea id="editor5" class="form-control" rows="3" cols="80" placeholder="Enter ..." name="description" value="{{ $raisa->description }}"></textarea>
+              <textarea id="editor1" class="form-control" rows="3" cols="80" placeholder="Enter ..." name="description" value="{{ $other->description }}"></textarea>
             </div>
 
             <div class="form-group">
               <label>Customer</label>
-              <input type="text" class="form-control" placeholder="Enter ..." name="customer" value="{{ $raisa->customer }}" />
+              <input type="text" class="form-control" placeholder="Enter ..." name="customer" value="{{ $other->customer }}" />
             </div>
 
             <div class="form-group">
               <label>Last Action</label>
-              <textarea id="editor6" class="form-control" rows="3" cols="80" placeholder="Enter ..." name="lastAction" value="{{ $raisa->lastAction }}"></textarea>
+              <textarea id="editor2" class="form-control" rows="3" cols="80" placeholder="Enter ..." name="lastAction" value="{{ $other->lastAction }}"></textarea>
             </div>
 
             <div class="form-group">
               <label>Next Action</label>
-              <textarea id="editor7" class="form-control" rows="3" cols="80" placeholder="Enter ..." name="nextAction" value="{{ $raisa->nextAction }}"></textarea>
+              <textarea id="editor3" class="form-control" rows="3" cols="80" placeholder="Enter ..." name="nextAction" value="{{ $other->nextAction }}"></textarea>
             </div>
 
             <div class="form-group">
               <label>Current Progress</label>
-              <select class="form-control select2" name="currentProgress" value="{{ $raisa->currentProgress }}" style="width: 100%">
+              <select class="form-control select2" name="currentProgress" value="{{ $other->currentProgress }}" style="width: 100%">
                 <option value="Initial Requirement">Initial Requirement</option>
                 <option value="Initial Solusi">Initial Solusi</option>
                 <option value="Waiting Feedback & Requirement Gathering">Waiting Feedback & Requirement Gathering</option>
@@ -68,7 +68,7 @@
 
             <div class="form-group">
               <label>Information</label>
-              <textarea id="editor8" class="form-control" rows="3" cols="80" placeholder="Enter ..." name="information" value="{{ $raisa->information }}"></textarea>
+              <textarea id="editor4" class="form-control" rows="3" cols="80" placeholder="Enter ..." name="information" value="{{ $other->information }}"></textarea>
             </div>
 
             <div class="form-group">
@@ -77,8 +77,7 @@
                <div class="input-group-addon">
                  <i class="fa fa-calendar"></i>
                </div>
-               <input type="date" class="form-control pull-right" id="reservation" name="startProject" value="{{ $raisa
-               ->startProject }}" />
+               <input type="date" class="form-control pull-right" id="reservation" name="startProject" value="{{ $other->startProject }}" />
              </div><!-- /.input group -->
            </div><!-- /.form group -->
 =======

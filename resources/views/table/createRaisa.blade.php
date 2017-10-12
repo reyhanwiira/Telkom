@@ -1,4 +1,4 @@
-@extends('layouts.addProject_layout')
+@extends('layouts.layouts')
 
 @section('content')
 <!DOCTYPE html>
@@ -70,7 +70,7 @@
 <<<<<<< HEAD
             <div class="form-group">
               <label>Description</label>
-              <textarea id="editor5" class="form-control" rows="3" cols="80" placeholder="Enter ..." name="description"></textarea>
+              <textarea id="editor1" class="form-control" rows="3" cols="80" placeholder="Enter ..." name="description"></textarea>
             </div>
 =======
                     <div class="form-group">
@@ -87,12 +87,12 @@
 <<<<<<< HEAD
             <div class="form-group">
               <label>Last Action</label>
-              <textarea id="editor6" class="form-control" rows="3" cols="80" placeholder="Enter ..." name="lastAction"></textarea>
+              <textarea id="editor2" class="form-control" rows="3" cols="80" placeholder="Enter ..." name="lastAction"></textarea>
             </div>
 
             <div class="form-group">
               <label>Next Action</label>
-              <textarea id="editor7" class="form-control" rows="3" cols="80" placeholder="Enter ..." name="nextAction"></textarea>
+              <textarea id="editor3" class="form-control" rows="3" cols="80" placeholder="Enter ..." name="nextAction"></textarea>
             </div>
 =======
                     <div class="form-group">
@@ -137,7 +137,7 @@
 <<<<<<< HEAD
             <div class="form-group">
               <label>Information</label>
-              <textarea id="editor8" class="form-control" rows="3" cols="80" placeholder="Enter ..." name="information"></textarea>
+              <textarea id="editor4" class="form-control" rows="3" cols="80" placeholder="Enter ..." name="information"></textarea>
             </div>
 =======
                   </div><!-- /.box-body -->
