@@ -160,8 +160,12 @@
             <div id="collapseOne" class="panel-collapse collapse in">
               <div class="box-body">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cb95c7739bc4d59be4e64e46fc3cf3cdf923a0dc
+=======
 <<<<<<< HEAD
 >>>>>>> cb95c7739bc4d59be4e64e46fc3cf3cdf923a0dc
                 <div class="col-md-12">
@@ -205,8 +209,11 @@
 
                       <div class="timeline-item">
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <h3 class="timeline-header no-border"><a href="#">Jay White</a> Rapat dengan client</h3>
 =======
+=======
+>>>>>>> cb95c7739bc4d59be4e64e46fc3cf3cdf923a0dc
                         <span class="time"><i class="fa fa-clock-o"></i> 5 mins ago</span>
 
                         <h3 class="timeline-header no-border"><a href="#">Sarah Young</a> accepted your friend request</h3>
