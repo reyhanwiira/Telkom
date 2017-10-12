@@ -19,37 +19,32 @@
           </div>
           <div class="col-md-4">
             <div class="progress">
-              <div class="progress-bar progress-bar-khaki" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-                <span class="sr-only">40% Complete (success)</span>
+            <div class="progress-bar progress-bar-cream" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
                 <p>Initial Requirement (0-10)</p>
               </div>
             </div>
             <div class="progress">
-              <div class="progress-bar progress-bar-aqua" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-                <span class="sr-only">20% Complete</span>
+              <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
                 <p>Initial Solution (11-20)</p>
               </div>
             </div>
             <div class="progress">
               <div class="progress-bar progress-bar-yellow" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-                <span class="sr-only">60% Complete (warning)</span>
                 <p>Menunggu Feedback & Gathering Req (21-30)</p>
               </div>
             </div>
             <div class="progress">
-              <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-                <span class="sr-only">80% Complete</span>
+              <div class="progress-bar progress-bar-purple" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
                 <p>Solution Design (31-60)</p>
               </div>
             </div>
             <div class="progress">
-              <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-                <span class="sr-only">80% Complete</span>
+              <div class="progress-bar progress-bar-aqua" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
                 <p>Solution Development (61-90)</p>
               </div>
             </div>
             <div class="progress">
-              <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+              <div class="progress-bar progress-bar-green" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
                 <span class="sr-only">80% Complete</span>
                 <p>POC (91-99)</p>
               </div>

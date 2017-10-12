@@ -1394,6 +1394,15 @@ a:focus {
 .table tr > td .progress {
   margin: 0;
 }
+
+.progress-bar-khaki {
+  background-color: #ffcc66;
+}
+
+.progress-bar-cream {
+  background-color: #ffcc99;
+}
+
 .progress-bar-light-blue,
 .progress-bar-primary {
   background-color: #3c8dbc;
@@ -1408,6 +1417,7 @@ a:focus {
 .progress-bar-success {
   background-color: #00a65a;
 }
+
 .progress-striped .progress-bar-green,
 .progress-striped .progress-bar-success {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
@@ -1426,7 +1436,7 @@ a:focus {
 }
 .progress-bar-yellow,
 .progress-bar-warning {
-  background-color: #f39c12;
+  background-color: #ffcc66;
 }
 .progress-striped .progress-bar-yellow,
 .progress-striped .progress-bar-warning {
