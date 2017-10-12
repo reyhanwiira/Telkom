@@ -93,7 +93,7 @@
         </div><!-- /.box-header -->
         <div class="box-body">
           <div class="table-responsive">
-            <div class="col-md-10">
+            <div class="col-md-12">
              <table id="example1" class="table no-margin">
               <thead>
                 <tr>
@@ -233,7 +233,7 @@
                   </a>
                 </h4>
               </div>
-              <div id="collapseTwo" class="panel-collapse collapse">
+              <div id="collapseTwo" class="panel-collapse collapse in">
                 <div class="box-body">
                   <ul class="timeline">
                     <!-- timeline time label -->
