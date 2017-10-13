@@ -84,35 +84,24 @@
 				<div class="box-body">
 					<div class="table-responsive">
 						<div class="col-md-12">
-							<table id="example1" class="table no-margin">
-								<thead>
-									<tr>
-										<th>No</th>
-										<th>Project</th>
-										<th>Segment</th>
-										<th>Current Progress</th>
-										<th>Last</th>
-										<th>Current</th>
-										<th>Progress Summary</th>
-										<th>Status</th>
-										<th>Information</th>
-										<th>Start Project</th>
-										<th>Finish Project</th>
-										<th>Action</th>  
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-									</tr>
-								</tbody>
+							<table id="example1" class="table table-bordered table-striped" style="width:20%; background-color: #fff;">
+								  <tr>
+								    <th rowspan="3">Progress</th>
+								    <td>P0(Usulan/Potensi)</td>
+								  </tr>
+								  <tr>
+								    <td>P1(Req, Des)</td>
+								  </tr>
+								  <tr>
+								    <td>P2(Submit)</td>
+								  </tr>
+								  <tr>
+								  	<th>Done</th>
+								  	<td>P3(Proposal Ready)</td>
+								  </tr>
+								  <tr>
+								  	<th colspan="2">Total</th>
+								  </tr>
 							</table>
 						</div>
 					</div><!-- /.table-responsive -->
