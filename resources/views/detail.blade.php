@@ -19,38 +19,42 @@
           </div>
           <div class="col-md-4">
             <div class="progress">
+<<<<<<< HEAD
               <div class="progress-bar progress-bar-cream" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+=======
+            <div class="progress" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 100%; text-align:center; background-color:#fff5cc;">
+>>>>>>> 3b0f04f415851aae94fc06034c257798c94c6173
                 <p>Initial Requirement (0-10)</p>
               </div>
             </div>
             <div class="progress">
-              <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+              <div class="progress" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 100%; text-align:center; background-color:#ffd1b3;">
                 <p>Initial Solution (11-20)</p>
               </div>
             </div>
             <div class="progress">
-              <div class="progress-bar progress-bar-yellow" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+              <div class="progress" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%; text-align:center; background-color:#ff9999;">
                 <p>Menunggu Feedback & Gathering Req (21-30)</p>
               </div>
             </div>
             <div class="progress">
-              <div class="progress-bar progress-bar-purple" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+              <div class="progress-bar progress-bar-purple" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 100%; text-align:center; background-color:#730099;">
                 <p>Solution Design (31-60)</p>
               </div>
             </div>
             <div class="progress">
-              <div class="progress-bar progress-bar-aqua" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+              <div class="progress-bar progress-bar-aqua" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 100%; text-align:center; background-color:#2ea4bc;">
                 <p>Solution Development (61-90)</p>
               </div>
             </div>
             <div class="progress">
-              <div class="progress-bar progress-bar-green" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+              <div class="progress-bar progress-bar-green" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 100%; text-align:center; background-color:#40bf80;">
                 <span class="sr-only">80% Complete</span>
                 <p>POC (91-99)</p>
               </div>
             </div>
             <div class="progress">
-              <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+              <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 100%; text-align:center; background-color:#66ff66;">
                 <span class="sr-only">80% Complete</span>
                 <p>Proposal Ready(100)</p>
               </div>
@@ -59,7 +63,7 @@
               <center>
                 <div class="col-md-3">
                   <div class="progress">
-                    <div class="progress-bar progress-bar-green" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="10" style="width: 35%">
+                    <div class="progress-bar progress-bar-green" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="10" style="width: 35%; text-align:center; background-color:#1aff1a;">
                     </div>
                     <p> Active</p>
                   </div>
@@ -68,7 +72,7 @@
               <center>
                 <div class="col-md-9">
                   <div class="progress">
-                    <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="10" style="width: 10%">
+                    <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="10" style="width: 10%; text-align:center; background-color:#ff0000;">
                     </div>
                     <p>Idle (tdk berprogress >2 Minggu)</p>
                   </div>
