@@ -67,34 +67,16 @@
                       <input type="text" class="form-control" placeholder="Enter ..." name="customer" />
                     </div>
 
-<<<<<<< HEAD
-            <div class="form-group">
-              <label>Description</label>
-              <textarea id="editor1" class="form-control" rows="3" cols="80" placeholder="Enter ..." name="description"></textarea>
-            </div>
-=======
                     <div class="form-group">
                       <label>Last Action</label>
                       <textarea class="form-control" rows="3" placeholder="Enter ..." name="lastAction"></textarea>
                     </div>
->>>>>>> parent of 5b99961... edit table dan detail
 
                     <div class="form-group">
                       <label>Next Action</label>
                       <textarea class="form-control" rows="3" placeholder="Enter ..." name="nextAction"></textarea>
                     </div>
 
-<<<<<<< HEAD
-            <div class="form-group">
-              <label>Last Action</label>
-              <textarea id="editor2" class="form-control" rows="3" cols="80" placeholder="Enter ..." name="lastAction"></textarea>
-            </div>
-
-            <div class="form-group">
-              <label>Next Action</label>
-              <textarea id="editor3" class="form-control" rows="3" cols="80" placeholder="Enter ..." name="nextAction"></textarea>
-            </div>
-=======
                     <div class="form-group">
                       <label>Current Progress</label>
                       <select class="form-control" name="currentProgress">
@@ -112,7 +94,6 @@
                       <label>Information</label>
                       <textarea class="form-control" rows="3" placeholder="Enter ..." name="information"></textarea>
                     </div>
->>>>>>> parent of 5b99961... edit table dan detail
 
                     <div class="form-group">
 	                  <label>Start Project</label>
@@ -134,14 +115,7 @@
 	                    </div><!-- /.input group -->
                     </div><!-- /.form group -->
 
-<<<<<<< HEAD
-            <div class="form-group">
-              <label>Information</label>
-              <textarea id="editor4" class="form-control" rows="3" cols="80" placeholder="Enter ..." name="information"></textarea>
-            </div>
-=======
                   </div><!-- /.box-body -->
->>>>>>> parent of 5b99961... edit table dan detail
 
                   <div class="box-footer">
                     <button type="submit" class="btn btn-primary">Submit</button>

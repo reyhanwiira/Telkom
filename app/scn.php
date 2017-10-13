@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class scn extends Model
 {
   protected $table='scn';
-  protected $fillable=['projectName','segment','description','customer','lastAction','nextAction','currentProgress','keterangan','startProject','finishProject','note'];
+  protected $fillable=['projectName','segment','description','customer','lastAction','nextAction','status','information','currentProgress','note','startProject','finishProject'];
+    
 }
