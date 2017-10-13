@@ -13,10 +13,26 @@
             <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
           </div>
         </div>
+
         <div class="box-body">
-          <div class="col-md-8">
-            <div id="donut-chart" style="height:300px;"></div>
+          <div class="col-md-4">
+            <div class="box-header">
+              <h3 class="box-title"></h3>
+              <div class="box-body">
+                <canvas id="pieChart" style="height:300px"></canvas>
+              </div>
+            </div>
           </div>
+
+          <div class="col-md-4">
+            <div class="box-header">
+              <h3 class="box-title"></h3>
+              <div class="box-body">
+                <canvas id="pieChart2" style="height:300px"></canvas>
+              </div>
+            </div>
+          </div>
+
           <div class="col-md-4">
             <div class="progress">
               <div class="progress" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 100%; text-align:center; background-color:#fff5cc;">
@@ -157,34 +173,6 @@
                 <div class="col-md-12">
                   <!-- The time line -->
                   <ul class="timeline">
-                    <!-- timeline time label -->
-                    <li class="time-label">
-                      <span class="bg-green">
-                        3 Jan. 2014
-                      </span>
-                    </li>
-                    <!-- /.timeline-label -->
-                    <!-- timeline item -->
-                    <li>
-                      <i class="fa fa-camera bg-purple"></i>
-
-                      <div class="timeline-item">
-
-                        <h3 class="timeline-header"><a href="#">Mina Lee</a> uploaded new photos</h3>
-
-                        <div class="timeline-body">
-                          <img src="http://placehold.it/150x100" alt="..." class="margin">
-                          <img src="http://placehold.it/150x100" alt="..." class="margin">
-                          <img src="http://placehold.it/150x100" alt="..." class="margin">
-                          <img src="http://placehold.it/150x100" alt="..." class="margin">
-                        </div>
-                        <span class="time"><i class="fa fa-clock-o"></i> 2 days ago</span>
-                      </div>
-                    </li>
-                    <!-- END timeline item -->
-                    <!-- timeline item -->
-
-
                     <!-- timeline time label -->
                     <li class="time-label">
                       <span class="bg-red">
