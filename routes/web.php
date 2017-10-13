@@ -18,8 +18,8 @@ Route::get('/home', function () {
     return view('home');
 });
 
-Route::get('/table', function() {
-	return view('table.index');
+Route::get('/TableProActive', function() {
+	return view('table.TableProActive');
 });
 
 Route::get('/detail', function() {
