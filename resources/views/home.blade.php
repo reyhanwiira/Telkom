@@ -7,16 +7,23 @@
 			<div class="col-md-3">
 				<div class="box box-primary">
 					<div class="box-header with-border">
-						<i class="fa fa-bar-chart-o"></i>
 						<h3 class="box-title">Pro-Active</h3>
 					</div>
 					<div class="box-body">
-						<canvas id="pieChart3" style="height:300px"></canvas>
+							<div class="box box-primary">
+								<div class="box-header with-border">
+									<i class="fa fa-bar-chart-o"></i>
+									<h3 class="box-title">PRO-ACTIVE</h3>
+								</div>
+								<div class="box-body">
+									<canvas id="pieChart3" style="height:300px"></canvas>
+								</div>
+								<!-- /.box-body-->
+							</div>
+							<!-- /.box -->
+						</div>
 					</div>
-					<!-- /.box-body-->
 				</div>
-				<!-- /.box -->
-			</div>
 
 			<div class="col-md-9">
 				<div class="box box-primary">
