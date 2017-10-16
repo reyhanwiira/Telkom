@@ -18,8 +18,8 @@ Route::get('/home', function () {
     return view('home');
 });
 
-Route::get('/table', function() {
-	return view('table.index');
+Route::get('/TableProActive', function() {
+	return view('table.TableProActive');
 });
 
 Route::get('/detail', function() {
@@ -97,6 +97,10 @@ Route::put('/table/{id}','TableController@updateOther');
 //DELETE DATA OTHER
 Route::get('deleteOther/{id}','TableController@deleteOther');
 
+<<<<<<< HEAD
+=======
+Route::get('/detail','DetailController@index');
+>>>>>>> 8e4dddb3e7b46191e111a4f4b9163d73b9fa6431
 
 
 });
