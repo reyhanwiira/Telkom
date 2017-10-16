@@ -117,8 +117,8 @@
           </a>
         </li>
 
-        <li>
-          <a href="{{ url('table') }}">
+        <li>s
+          <a href="{{ url('proactive') }}">
             <i class="fa fa-table"></i> <span>Table</span> <small class="fa fa pull-right"></small>
           </a>
         </li>

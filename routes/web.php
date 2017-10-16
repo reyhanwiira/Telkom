@@ -97,4 +97,6 @@ Route::put('/table/{id}','TableController@updateOther');
 //DELETE DATA OTHER
 Route::get('deleteOther/{id}','TableController@deleteOther');
 
+
+
 });

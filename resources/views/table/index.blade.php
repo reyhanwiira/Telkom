@@ -84,11 +84,11 @@
           <div class="box-header with-border">
             <h4 class="box-title">RAISA</h4>
             <div class="box-tools pull-right">
-          
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
                 <button class="btn btn-box-tool">
                   <i class="fa fa-minus"></i>
                 </button>
-             
+              </a>
             </div>
           </div>
           <div id="collapseOne" class="panel-collapse collapse in">

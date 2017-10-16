@@ -82,7 +82,7 @@ class TableController extends Controller
         
         $proactive->update();
 
-      return redirect::to('/table');
+      return redirect('/table');
     }
 
     public function deletePro($id)
@@ -118,7 +118,7 @@ class TableController extends Controller
         'finishProject'=>$request->input('finishProject')
         
       ]);
-      return Redirect::to('/table');
+      return Redirect('table');
       
     }
 
@@ -146,7 +146,7 @@ class TableController extends Controller
         
         $raisa->update();
 
-      return redirect::to('/table');
+      return redirect('/table');
     }
 
      public function deleteRaisa($id)
@@ -183,7 +183,7 @@ class TableController extends Controller
         'finishProject'=>$request->input('finishProject')
         
       ]);
-      return Redirect::to('/table');   
+      return Redirect('table');   
         
     }
 
@@ -211,7 +211,7 @@ class TableController extends Controller
         
         $scn->update();
 
-      return Redirect::to('/table');
+      return redirect('/table');
     }
 
      public function deleteScn($id)
@@ -248,7 +248,7 @@ class TableController extends Controller
         'finishProject'=>$request->input('finishProject')
         
       ]);
-      return Redirect::to('/table');
+      return Redirect('table');
 
     }
 
@@ -276,7 +276,7 @@ class TableController extends Controller
         
         $other->update();
 
-      return Redirect::to('/table');
+      return redirect('/table');
     }
 
       public function deleteOther($id)
