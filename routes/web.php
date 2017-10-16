@@ -56,43 +56,51 @@ Route::put('/tableProactive/{id}','ProactiveController@updatePro');
 Route::get('deletePro/{id}','ProactiveController@deletePro');
 
 
+//READ RAISA
+Route::get('/tableRaisa','RaisaController@read');
 
 //CREATE DATA RAISA
-Route::get('/table/createRaisa','TableController@createRaisa');
-Route::post('/table','TableController@storeRaisa');
+Route::get('/tableRaisa/create','RaisaController@create');
+Route::post('/tableRaisa','RaisaController@store');
 
 //EDIT DAN UPDATE DATA RAISA
-Route::get('/table/{id}/editRaisa','TableController@editRaisa');
-Route::put('/table/{id}','TableController@updateRaisa');
+Route::get('/tableRaisa/{id}/edit','RaisaController@edit');
+Route::put('/tableRaisa/{id}','RaisaController@update');
 
 //DELETE DATA RAISA
-Route::get('deleteRaisa/{id}','TableController@deleteRaisa');
+Route::get('deleteRaisa/{id}','RaisaController@delete');
 
 
+//READ SCN
+Route::get('/tableScn','ScnController@read');
 
 //CREATE DATA SCN
-Route::get('/table/createScn','TableController@createScn');
-Route::post('/table','TableController@storeScn');
+Route::get('/tableScn/create','ScnController@create');
+Route::post('/tableScn','ScnController@store');
 
 //EDIT DAN UPDATE DATA SCN
-Route::get('/table/{id}/editScn','TableController@editScn');
-Route::put('/table/{id}','TableController@updateScn');
+Route::get('/tableScn/{id}/edit','ScnController@edit');
+Route::put('/tableScn/{id}','ScnController@update');
 
 //DELETE DATA RAISA
-Route::get('deleteScn/{id}','TableController@deleteScn');
+Route::get('deleteScn/{id}','ScnController@delete');
 
 
+
+
+//READ SCN
+Route::get('/tableOthers','OthersController@read');
 
 //CREATE DATA Other
-Route::get('/table/createOther','TableController@createOther');
-Route::post('/table','TableController@storeOther');
+Route::get('/tableOthers/create','OthersController@create');
+Route::post('/tableOthers','OthersController@store');
 
 //EDIT DAN UPDATE DATA OTHER
-Route::get('/table/{id}/editOther','TableController@editOther');
-Route::put('/table/{id}','TableController@updateOther');
+Route::get('/tableOthers/{id}/edit','OthersController@edit');
+Route::put('/tableOthers/{id}','OthersController@update');
 
 //DELETE DATA OTHER
-Route::get('deleteOther/{id}','TableController@deleteOther');
+Route::get('deleteOthers/{id}','OthersController@delete');
 
 
 Route::get('/detail','DetailController@index');

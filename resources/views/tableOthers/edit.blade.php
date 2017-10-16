@@ -33,22 +33,22 @@
               <!-- general form elements -->
               <div class="box box-primary">
                 <div class="box-header">
-                  <h3 class="box-title">Add Project</h3>
+                  <h3 class="box-title">Edit Project</h3>
                 </div><!-- /.box-header -->
                 <!-- form start -->
-                <form role="form" method="post" action="{{ url('/tableProactive') }}">
+                <form role="form" method="post" action="{{ url('/tableOthers/'.$other->id) }}">
+                {{ method_field('PUT') }}
                 {!! csrf_field() !!}
                   <div class="box-body">
                         
                     <div class="form-group">
                       <label>Project</label>
-                      <input type="text" class="form-control" placeholder="Enter ..." name="projectName" />
+                      <input type="text" class="form-control" placeholder="Enter ..." name="projectName" value="{{ $other->projectName }}" />
                     </div>
                     
                     <div class="form-group">
                       <label>Segment</label>
-                      <select class="form-control" name="segment">
-                        <option>...</option>
+                      <select class="form-control" name="segment" value="{{ $other->segment }}">
                         <option value="All">All</option>
                         <option value="CGS">CGS</option>
                         <option value="GAS">GAS</option>
@@ -59,27 +59,31 @@
 
                     <div class="form-group">
                       <label>Description</label>
-                      <textarea class="form-control" rows="3" placeholder="Enter ..." name="description"></textarea>
+                      <textarea class="form-control" rows="3" placeholder="Enter ..." name="description" value="{{ $other->description }}"></textarea>
                     </div>
                     
                     <div class="form-group">
                       <label>Customer</label>
-                      <input type="text" class="form-control" placeholder="Enter ..." name="customer" />
+                      <input type="text" class="form-control" placeholder="Enter ..." name="customer" value="{{ $other->customer }}" />
                     </div>
 
                     <div class="form-group">
                       <label>Last Action</label>
-                      <textarea class="form-control" rows="3" placeholder="Enter ..." name="lastAction"></textarea>
+                      <textarea class="form-control" rows="3" placeholder="Enter ..." name="lastAction" value="{{ $other->lastAction }}"></textarea>
                     </div>
 
+            <div class="form-group">
+              <label>Description</label>
+              <textarea id="editor1" class="form-control" rows="3" cols="80" placeholder="Enter ..." name="description" value="{{ $other->description }}"></textarea>
+            </div>
                     <div class="form-group">
                       <label>Next Action</label>
-                      <textarea class="form-control" rows="3" placeholder="Enter ..." name="nextAction"></textarea>
+                      <textarea class="form-control" rows="3" placeholder="Enter ..." name="nextAction" value="{{ $other->nextAction }}"></textarea>
                     </div>
 
                     <div class="form-group">
                       <label>Current Progress</label>
-                      <select class="form-control" name="currentProgress">
+                      <select class="form-control" name="currentProgress" value="{{ $other->currentProgress }}">
                         <option value="Initial Requirement">Initial Requirement</option>
                         <option value="Initial Solusi">Initial Solusi</option>
                         <option value="Waiting Feedback & Requirement Gathering">Waiting Feedback & Requirement Gathering</option>
@@ -90,32 +94,48 @@
                       </select>
                     </div>
 
+
+            <div class="form-group">
+              <label>Last Action</label>
+              <textarea id="editor2" class="form-control" rows="3" cols="80" placeholder="Enter ..." name="lastAction" value="{{ $other->lastAction }}"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label>Next Action</label>
+              <textarea id="editor3" class="form-control" rows="3" cols="80" placeholder="Enter ..." name="nextAction" value="{{ $other->nextAction }}"></textarea>
+            </div>
                     <div class="form-group">
                       <label>Information</label>
-                      <textarea class="form-control" rows="3" placeholder="Enter ..." name="information"></textarea>
+                      <textarea class="form-control" rows="3" placeholder="Enter ..." name="information" value="{{ $other->information }}"></textarea>
                     </div>
 
                     <div class="form-group">
-	                  <label>Start Project</label>
-	                    <div class="input-group">
-		                   <div class="input-group-addon">
-		                     <i class="fa fa-calendar"></i>
-		                   </div>
-	                      <input type="text" class="form-control pull-right" id="reservation" name="startProject" />
-	                    </div><!-- /.input group -->
+                    <label>Start Project</label>
+                      <div class="input-group">
+                       <div class="input-group-addon">
+                         <i class="fa fa-calendar"></i>
+                       </div>
+                        <input type="text" class="form-control pull-right" id="reservation" name="startProject" value="{{ $other->startProject }}" />
+                      </div><!-- /.input group -->
                     </div><!-- /.form group -->
                  
                     <div class="form-group">
-	                  <label>Finish Project</label>
-	                    <div class="input-group">
-		                   <div class="input-group-addon">
-		                     <i class="fa fa-calendar"></i>
-		                   </div>
-	                      <input type="text" class="form-control pull-right" id="reservation" name="finishProject" />
-	                    </div><!-- /.input group -->
+                    <label>Finish Project</label>
+                      <div class="input-group">
+                       <div class="input-group-addon">
+                         <i class="fa fa-calendar"></i>
+                       </div>
+                        <input type="text" class="form-control pull-right" id="reservation" name="finishProject" value="{{ $other->finishProject }}" />
+                      </div><!-- /.input group -->
                     </div><!-- /.form group -->
 
                   </div><!-- /.box-body -->
+
+
+            <div class="form-group">
+              <label>Information</label>
+              <textarea id="editor4" class="form-control" rows="3" cols="80" placeholder="Enter ..." name="information" value="{{ $other->information }}"></textarea>
+            </div>
 
                   <div class="box-footer">
                     <button type="submit" class="btn btn-primary">Submit</button>

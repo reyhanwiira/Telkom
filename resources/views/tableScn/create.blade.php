@@ -36,7 +36,7 @@
                   <h3 class="box-title">Add Project</h3>
                 </div><!-- /.box-header -->
                 <!-- form start -->
-                <form role="form" method="post" action="{{ url('/tableProactive') }}">
+                <form role="form" method="post" action="{{ url('/tableScn') }}">
                 {!! csrf_field() !!}
                   <div class="box-body">
                         

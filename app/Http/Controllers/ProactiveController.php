@@ -14,15 +14,16 @@ use Validator;
 
 class ProactiveController extends Controller
 {
+
+    //PROACTIVE
+    
     public function readPro()
     {
     	$proactives = Proactive::all();
 
-    	return view('tableProactive.indexProactive', compact('proactives'));
+    	return view('tableProactive.index', compact('proactives'));
     }
 
-
-    //PROACTIVE
 
     public function createPro()
     {

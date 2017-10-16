@@ -33,29 +33,26 @@
           </thead>
           <tbody>
             <?php $no=1; ?>
-            @foreach ($proactives as $proactive)
+            @foreach ($raisas as $raisa)
             <tr>
               <td>{{ $no++ }}</td>
-              <td>{{ $proactive-> projectName }}</td>
-              <td>{{ $proactive-> segment }}</td>
-              <td>{{ $proactive-> description }}</td>
-              <td>{{ $proactive-> customer }}</td>
-              <td>{{ $proactive-> lastAction }}</td>
-              <td>{{ $proactive-> nextAction }}</td>
-              <td>{{ $proactive-> status }}</td>
-              <td>{{ $proactive-> information }}</td>
-              <td>{{ $proactive-> startProject }}</td>
-              <td>{{ $proactive-> finishProject }}</td>
-
-
-
+              <td>{{ $raisa-> projectName }}</td>
+              <td>{{ $raisa-> segment }}</td>
+              <td>{{ $raisa-> description }}</td>
+              <td>{{ $raisa-> customer }}</td>
+              <td>{{ $raisa-> lastAction }}</td>
+              <td>{{ $raisa-> nextAction }}</td>
+              <td>{{ $raisa-> status }}</td>
+              <td>{{ $raisa-> information }}</td>
+              <td>{{ $raisa-> startProject }}</td>
+              <td>{{ $raisa-> finishProject }}</td>
               <td>
                 <div class="btn-group-vertical">
                   <a href=""><button type="button" class="btn btn-success btn-flat"><i class='glyphicon glyphicon-zoom-in'></i></button></a>
                   
-                  <a href="{{ url('/tableProactive/'.$proactive->id.'/editPro') }}"><button type="button" class="btn btn-info btn-flat"><i class='glyphicon glyphicon-edit'></i></button></a>
+                  <a href="{{ url('/tableRaisa/'.$raisa->id.'/edit') }}"><button type="button" class="btn btn-info btn-flat"><i class='glyphicon glyphicon-edit'></i></button></a>
 
-                  <a href="deletePro/{{ $proactive->id }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger btn-flat"><i class='glyphicon glyphicon-trash'></i></button></a>
+                  <a href="deleteRaisa/{{ $raisa->id }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger btn-flat"><i class='glyphicon glyphicon-trash'></i></button></a>
 
                 </div>
               </td>
@@ -66,21 +63,9 @@
       </div><!-- /.table-responsive -->
     </div><!-- /.box-body -->
     <div class="box-footer clearfix">
-      <a href="{{ url('tableProactive/createPro') }}" class="btn btn-sm btn-info btn-flat pull-left">Place New Project</a>
+      <a href="{{ url('tableRaisa/createRaisa') }}" class="btn btn-sm btn-info btn-flat pull-left">Place New Project</a>
     </div><!-- /.box-footer -->
   </div><!-- /.box -->
-</div><!-- /.col -->
-
-            </table>
-          </div><!-- /.table-responsive -->
-        </div><!-- /.box-body -->
-        <div class="box-footer clearfix">
-          <a href="{{ url('tableProactive/createOther') }}" class="btn btn-sm btn-info btn-flat pull-left">Place New Project</a>
-        </div><!-- /.box-footer -->
-      </div><!-- /.box -->
-    </div><!-- /.table-responsive -->
-  </div><!-- /.box-body -->
-</div><!-- /.box -->
 </div><!-- /.col -->
 
 </div><!-- /.row --> 

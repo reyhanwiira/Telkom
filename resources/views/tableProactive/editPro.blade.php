@@ -36,7 +36,7 @@
                   <h3 class="box-title">Edit Project</h3>
                 </div><!-- /.box-header -->
                 <!-- form start -->
-                <form role="form" method="post" action="{{ url('/table/'.$proactive->id) }}">
+                <form role="form" method="post" action="{{ url('/tableProactive/'.$proactive->id) }}">
                 {{ method_field('PUT') }}
                 {!! csrf_field() !!}
                   <div class="box-body">
