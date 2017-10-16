@@ -117,11 +117,10 @@
           </a>
         </li>
 
-<<<<<<< HEAD
-        <li>s
-          <a href="{{ url('proactive') }}">
+        <li>
+          <a href="{{ url('tableProactive') }}">
             <i class="fa fa-table"></i> <span>Table</span> <small class="fa fa pull-right"></small>
-=======
+
         <li class="treeview">
           <a href="#">
             <i class="fa fa-pie-chart"></i>
@@ -129,10 +128,10 @@
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
->>>>>>> 8e4dddb3e7b46191e111a4f4b9163d73b9fa6431
+
           </a>
           <ul class="treeview-menu">
-            <li><a href="{{ url('TableProActive') }}"><i class="fa fa-circle-o"></i> Pro-Active</a></li>
+            <li><a href="{{ url('tableProactive') }}"><i class="fa fa-circle-o"></i> Pro-Active</a></li>
             <li><a href="{{ url('TableRaisa') }}"><i class="fa fa-circle-o"></i> RAISA</a></li>
             <li><a href="{{ url('TableScn') }}"><i class="fa fa-circle-o"></i> SCN</a></li>
             <li><a href="{{ url('TableOthers') }}"><i class="fa fa-circle-o"></i> OTHERS</a></li>

@@ -12,19 +12,21 @@ use View;
 use App\proactive;
 use Validator;
 
-
 class ProactiveController extends Controller
 {
     public function readPro()
     {
     	$proactives = Proactive::all();
 
-    	return view('proactive.index', compact('proactives'));
+    	return view('tableProactive.indexProactive', compact('proactives'));
     }
+
+
+    //PROACTIVE
 
     public function createPro()
     {
-      return view('proactive.createPro');
+      return view('tableProactive.createPro');
     }
  
  
@@ -46,15 +48,15 @@ class ProactiveController extends Controller
         'finishProject'=>$request->input('finishProject')
         
       ]);
-      return Redirect::to('/proactive');
+      return Redirect::to('/tableProactive');
 
     }
 
     public function editPro($id)
     {
-        $proactive = Proactive::find($id); 
+        $proactive= Proactive::find($id); 
 
-      return view('proactive.editPro',compact('proactive'));
+      return view('tableProactive.editPro',compact('proactive'));
     }
 
     public function updatePro(Request $request, $id)
@@ -74,14 +76,14 @@ class ProactiveController extends Controller
         
         $proactive->update();
 
-      return redirect::to('/proactive');
+      return redirect::to('/tableProactive');
     }
 
     public function deletePro($id)
    {
       $proactive = Proactive::where('id','=',$id)->delete();
 
-      return Redirect::to('/proactive');
+      return Redirect::to('/tableProactive');
     }
 
 }

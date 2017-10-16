@@ -18,10 +18,6 @@ Route::get('/home', function () {
     return view('home');
 });
 
-Route::get('/TableProActive', function() {
-	return view('table.TableProActive');
-});
-
 Route::get('/detail', function() {
 	return view('detail');
 });
@@ -44,19 +40,20 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['middleware'=>'auth'], function(){
 
-Route::get('/table','TableController@index');
+//READ DATA PROACTIVE
 
+Route::get('/tableProactive','ProactiveController@readPro');
 
 //CREATE DATA PROACTIVE
-Route::get('/table/createPro','TableController@createPro');
-Route::post('/table','TableController@storePro');
+Route::get('/tableProactive/createPro','ProactiveController@createPro');
+Route::post('/tableProactive','ProactiveController@storePro');
 
 //EDIT DAN UPDATE DATA PROACTIVE
-Route::get('/table/{id}/editPro','TableController@editPro');
-Route::put('/table/{id}','TableController@updatePro');
+Route::get('/tableProactive/{id}/editPro','ProactiveController@editPro');
+Route::put('/tableProactive/{id}','ProactiveController@updatePro');
 
 //DELETE DATA PROACTIVE
-Route::get('deletePro/{id}','TableController@deletePro');
+Route::get('deletePro/{id}','ProactiveController@deletePro');
 
 
 
@@ -97,10 +94,9 @@ Route::put('/table/{id}','TableController@updateOther');
 //DELETE DATA OTHER
 Route::get('deleteOther/{id}','TableController@deleteOther');
 
-<<<<<<< HEAD
-=======
+
 Route::get('/detail','DetailController@index');
->>>>>>> 8e4dddb3e7b46191e111a4f4b9163d73b9fa6431
+
 
 
 });
