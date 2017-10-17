@@ -222,40 +222,22 @@
     var pieChart       = new Chart(pieChartCanvas)
     var PieData        = [
       {
-        value    : 700,
-        color    : '#f56954',
-        highlight: '#f56954',
-        label    : 'Chrome'
+        value    : 5,
+        color    : '#800000',
+        highlight: '#b30000',
+        label    : 'P3'
       },
       {
-        value    : 500,
-        color    : '#00a65a',
-        highlight: '#00a65a',
-        label    : 'IE'
+        value    : 2,
+        color    : '#ff8080',
+        highlight: '#ffb3b3',
+        label    : 'P0'
       },
       {
-        value    : 400,
-        color    : '#f39c12',
-        highlight: '#f39c12',
-        label    : 'FireFox'
-      },
-      {
-        value    : 600,
-        color    : '#00c0ef',
-        highlight: '#00c0ef',
-        label    : 'Safari'
-      },
-      {
-        value    : 300,
-        color    : '#3c8dbc',
-        highlight: '#3c8dbc',
-        label    : 'Opera'
-      },
-      {
-        value    : 100,
-        color    : '#d2d6de',
-        highlight: '#d2d6de',
-        label    : 'Navigator'
+        value    : 5,
+        color    : '#ff3333',
+        highlight: '#ff6666',
+        label    : 'P1'
       }
     ]
     var pieOptions     = {
@@ -264,9 +246,9 @@
       //String - The colour of each segment stroke
       segmentStrokeColor   : '#fff',
       //Number - The width of each segment stroke
-      segmentStrokeWidth   : 2,
+      segmentStrokeWidth   : 3,
       //Number - The percentage of the chart that we cut out of the middle
-      percentageInnerCutout: 50, // This is 0 for Pie charts
+      percentageInnerCutout: 25, // This is 0 for Pie charts
       //Number - Amount of animation steps
       animationSteps       : 150,
       //String - Animation easing effect
@@ -388,7 +370,7 @@
     var pieChart       = new Chart(pieChartCanvas)
     var PieData        = [
       {
-        value    : 700,
+        value    : 250,
         color    : '#f56954',
         highlight: '#f56954',
         label    : 'Chrome'
