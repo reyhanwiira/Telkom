@@ -20,6 +20,15 @@
               <h3 class="box-title"></h3>
               <div class="box-body">
                 <canvas id="pieChart" style="height:300px"></canvas>
+
+                <ul class="chart-legend clearfix">
+                  <li><i class="fa fa-circle-o text-red"></i> Chrome</li>
+                  <li><i class="fa fa-circle-o text-green"></i> IE</li>
+                  <li><i class="fa fa-circle-o text-yellow"></i> FireFox</li>
+                  <li><i class="fa fa-circle-o text-aqua"></i> Safari</li>
+                  <li><i class="fa fa-circle-o text-light-blue"></i> Opera</li>
+                  <li><i class="fa fa-circle-o text-gray"></i> Navigator</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -29,6 +38,15 @@
               <h3 class="box-title"></h3>
               <div class="box-body">
                 <canvas id="pieChart2" style="height:300px"></canvas>
+
+                <ul class="chart-legend clearfix">
+                  <li><i class="fa fa-circle-o text-red"></i> Chrome</li>
+                  <li><i class="fa fa-circle-o text-green"></i> IE</li>
+                  <li><i class="fa fa-circle-o text-yellow"></i> FireFox</li>
+                  <li><i class="fa fa-circle-o text-aqua"></i> Safari</li>
+                  <li><i class="fa fa-circle-o text-light-blue"></i> Opera</li>
+                  <li><i class="fa fa-circle-o text-gray"></i> Navigator</li>
+                </ul>
               </div>
             </div>
           </div>

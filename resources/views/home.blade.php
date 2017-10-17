@@ -10,20 +10,26 @@
 						<h3 class="box-title">Pro-Active</h3>
 					</div>
 					<div class="box-body">
-							<div class="box box-primary">
-								<div class="box-header with-border">
-									<i class="fa fa-bar-chart-o"></i>
-									<h3 class="box-title">PRO-ACTIVE</h3>
-								</div>
-								<div class="box-body">
-									<canvas id="pieChart3" style="height:300px"></canvas>
-								</div>
-								<!-- /.box-body-->
+						<div class="box box-primary">
+							<div class="box-header with-border">
+								<i class="fa fa-bar-chart-o"></i>
+								<h3 class="box-title">PRO-ACTIVE</h3>
 							</div>
-							<!-- /.box -->
+							<div class="box-body">
+								<canvas id="pieChart3" style="height:300px"></canvas>
+
+								<ul class="chart-legend clearfix">
+									<li><i class="fa fa-circle-o text-red"></i> Chrome</li>
+									<li><i class="fa fa-circle-o text-green"></i> IE</li>
+									<li><i class="fa fa-circle-o text-yellow"></i> FireFox</li>
+								</ul>
+							</div>
+							<!-- /.box-body-->
 						</div>
+						<!-- /.box -->
 					</div>
 				</div>
+			</div>			
 
 			<div class="col-md-9">
 				<div class="box box-primary">
@@ -39,6 +45,15 @@
 								</div>
 								<div class="box-body">
 									<canvas id="pieChart4" style="height:300px"></canvas>
+
+									<ul class="chart-legend clearfix">
+										<li><i class="fa fa-circle-o text-red"></i> Chrome</li>
+										<li><i class="fa fa-circle-o text-green"></i> IE</li>
+										<li><i class="fa fa-circle-o text-yellow"></i> FireFox</li>
+										<li><i class="fa fa-circle-o text-aqua"></i> Safari</li>
+										<li><i class="fa fa-circle-o text-light-blue"></i> Opera</li>
+										<li><i class="fa fa-circle-o text-gray"></i> Navigator</li>
+									</ul>
 								</div>
 								<!-- /.box-body-->
 							</div>
@@ -53,6 +68,15 @@
 								</div>
 								<div class="box-body">
 									<canvas id="pieChart5" style="height:300px"></canvas>
+
+									<ul class="chart-legend clearfix">
+										<li><i class="fa fa-circle-o text-red"></i> Chrome</li>
+										<li><i class="fa fa-circle-o text-green"></i> IE</li>
+										<li><i class="fa fa-circle-o text-yellow"></i> FireFox</li>
+										<li><i class="fa fa-circle-o text-aqua"></i> Safari</li>
+										<li><i class="fa fa-circle-o text-light-blue"></i> Opera</li>
+										<li><i class="fa fa-circle-o text-gray"></i> Navigator</li>
+									</ul>
 								</div>
 								<!-- /.box-body-->
 							</div>
@@ -67,6 +91,15 @@
 								</div>
 								<div class="box-body">
 									<canvas id="pieChart6" style="height:300px"></canvas>
+
+									<ul class="chart-legend clearfix">
+										<li><i class="fa fa-circle-o text-red"></i> Chrome</li>
+										<li><i class="fa fa-circle-o text-green"></i> IE</li>
+										<li><i class="fa fa-circle-o text-yellow"></i> FireFox</li>
+										<li><i class="fa fa-circle-o text-aqua"></i> Safari</li>
+										<li><i class="fa fa-circle-o text-light-blue"></i> Opera</li>
+										<li><i class="fa fa-circle-o text-gray"></i> Navigator</li>
+									</ul>
 								</div>
 								<!-- /.box-body-->
 							</div>
