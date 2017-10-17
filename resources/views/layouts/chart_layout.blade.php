@@ -123,10 +123,10 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="{{ url('TableProActive') }}"><i class="fa fa-circle-o"></i> Pro-Active</a></li>
-            <li><a href="{{ url('TableRaisa') }}"><i class="fa fa-circle-o"></i> RAISA</a></li>
-            <li><a href="{{ url('TableScn') }}"><i class="fa fa-circle-o"></i> SCN</a></li>
-            <li><a href="{{ url('TableOthers') }}"><i class="fa fa-circle-o"></i> OTHERS</a></li>
+            <li><a href="{{ url('tableProActive') }}"><i class="fa fa-circle-o"></i> Pro-Active</a></li>
+            <li><a href="{{ url('tableRaisa') }}"><i class="fa fa-circle-o"></i> RAISA</a></li>
+            <li><a href="{{ url('tableScn') }}"><i class="fa fa-circle-o"></i> SCN</a></li>
+            <li><a href="{{ url('tableOthers') }}"><i class="fa fa-circle-o"></i> OTHERS</a></li>
           </ul>
         </li>
 
