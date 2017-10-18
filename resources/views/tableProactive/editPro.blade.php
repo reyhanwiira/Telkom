@@ -9,7 +9,7 @@
         <!-- general form elements -->
         <div class="box box-primary">
           <div class="box-header with-border">
-            <h3 class="box-title">Edit Project - Pro Active</h3>
+            <h3 class="box-title">View Detail Project</h3>
             <div class="box-tools pull-right">
               <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
             </div>
@@ -58,7 +58,7 @@
 
                 <div class="form-group">
                   <label>Current Progress</label>
-                  <select class="form-control select2" name="currentProgress" style="width: 100%;">
+                  <select class="form-control select2" name="currentProgress">
                     <option value="Initial Requirement" selected="selected">Initial Requirement</option>
                     <option value="Initial Solusi">Initial Solusi</option>
                     <option value="Waiting Feedback & Requirement Gathering">Waiting Feedback & Requirement Gathering</option>
