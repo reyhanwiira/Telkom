@@ -66,6 +66,7 @@
     </div><!-- /.box-body -->
     <div class="box-footer clearfix">
       <a href="{{ url('tableProactive/createPro') }}" class="btn btn-sm btn-info btn-flat pull-left">Place New Project</a>
+      <a href="invoice-print.html" target="_blank" class="btn btn-sm btn-info btn-flat pull-right"><i class="fa fa-print"></i> Print</a>
     </div><!-- /.box-footer -->
   </div><!-- /.box -->
 </div><!-- /.col -->
