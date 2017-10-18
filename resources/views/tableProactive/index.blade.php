@@ -47,10 +47,12 @@
               <td>{{ $proactive-> startProject }}</td>
               <td>{{ $proactive-> finishProject }}</td>
               <td>
-                <div class="btn-group-vertical">
-                  <a href=""><button type="button" class="btn btn-success btn-flat"><i class='glyphicon glyphicon-zoom-in'></i></button></a>
-                  
-                  <a href="{{ url('/tableProactive/'.$proactive->id.'/editPro') }}"><button type="button" class="btn btn-info btn-flat"><i class='glyphicon glyphicon-edit'></i></button></a>
+                <div class="btn-group">
+                  <a href="{{ url('/tableProactive/'.$proactive->id.'/editPro') }}">
+                    <button type="button" class="btn btn-success btn-flat">
+                      <i class='glyphicon glyphicon-zoom-in'></i>
+                    </button>
+                  </a>
 
                   <a href="deletePro/{{ $proactive->id }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger btn-flat"><i class='glyphicon glyphicon-trash'></i></button></a>
 

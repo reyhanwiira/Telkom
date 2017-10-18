@@ -48,9 +48,7 @@
               <td>{{ $others-> finishProject }}</td>
               <td>
                 <div class="btn-group-vertical">
-                  <a href=""><button type="button" class="btn btn-success btn-flat"><i class='glyphicon glyphicon-zoom-in'></i></button></a>
-                  
-                  <a href="{{ url('/tableOthers/'.$others->id.'/edit') }}"><button type="button" class="btn btn-info btn-flat"><i class='glyphicon glyphicon-edit'></i></button></a>
+                  <a href="{{ url('/tableOthers/'.$others->id.'/edit') }}"><button type="button" class="btn btn-success btn-flat"><i class='glyphicon glyphicon-zoom-in'></i></button></a>
 
                   <a href="deleteOthers/{{ $others->id }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger btn-flat"><i class='glyphicon glyphicon-trash'></i></button></a>
 
