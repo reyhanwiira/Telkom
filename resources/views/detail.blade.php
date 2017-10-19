@@ -4,7 +4,6 @@
 <section class="content">
   <div class="row">
     <div class="col-md-12">
-
       <div class="box box-primary">
         <div class="box-header">
           <i class="fa fa-bar-chart-o"></i>
@@ -15,7 +14,7 @@
         </div>
 
         <div class="box-body">
-          <div class="col-md-4">
+          <div class="col-md-3">
             <div class="box-header">
               <h3 class="box-title"></h3>
               <div class="box-body">
@@ -33,7 +32,15 @@
             </div>
           </div>
 
-          <div class="col-md-4">
+          <div class="col-md-1">
+            <div class="box-header">
+              <div class="box-body">
+                <i class="fa fa-chevron-right"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
             <div class="box-header">
               <h3 class="box-title"></h3>
               <div class="box-body">
@@ -51,7 +58,7 @@
             </div>
           </div>
 
-          <div class="col-md-4">
+          <div class="col-md-5">
             <div class="progress">
               <div class="progress" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 100%; text-align:center; background-color:#fff5cc;">
                 <p>Initial Requirement (0-10)</p>
