@@ -10,13 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () {
-    return view('home');
-});
 
-Route::get('/home', function () {
-    return view('home');
-});
 
 Route::get('/detail', function() {
 	return view('detail');
@@ -39,6 +33,10 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['middleware'=>'auth'], function(){
+	
+Route::get('/', function () {
+    return view('home');
+});
 
 //READ DATA PROACTIVE
 

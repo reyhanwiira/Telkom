@@ -21,7 +21,7 @@
 
             <div class="form-group">
               <label>Segment</label>
-              <select class="form-control select2" multiple="multiple" name="segment">
+              <select name="segment[]" class="form-control select2" multiple>
                 <option value="CGS">CGS</option>
                 <option value="GAS">GAS</option>
                 <option value="LGS">LGS</option>
@@ -51,7 +51,7 @@
 
             <div class="form-group">
               <label>Current Progress</label>
-              <select class="form-control select2" name="currentProgress" style="width: 100%;">
+              <select class="form-control select2" name="currentProgress">
                 <option value="Initial Requirement" selected="selected">Initial Requirement</option>
                 <option value="Initial Solusi">Initial Solusi</option>
                 <option value="Waiting Feedback & Requirement Gathering">Waiting Feedback & Requirement Gathering</option>
@@ -86,6 +86,36 @@
                <input type="date" class="form-control pull-right" id="reservation" name="finishProject" />
              </div><!-- /.input group -->
            </div><!-- /.form group -->
+
+            <div class="form-group">
+              <label>AM Segment</label>
+              <input type="text" class="form-control" placeholder="Enter ..." name="AMSegment" />
+            </div>
+
+             <div class="form-group">
+              <label>Keahlian yang dibutuhkan</label>
+              <input type="text" class="form-control" placeholder="Enter ..." name="keahlian" />
+            </div>
+
+             <div class="form-group">
+              <label>Est. Revenue</label>
+              <input type="text" class="form-control" placeholder="Enter ..." name="EstRevenue" />
+            </div>
+
+             <div class="form-group">
+              <label>Deliverable</label>
+              <input type="text" class="form-control" placeholder="Enter ..." name="deliverable" />
+            </div>
+
+             <div class="form-group">
+              <label>Benefit</label>
+              <input type="text" class="form-control" placeholder="Enter ..." name="benefit" />
+            </div>
+
+             <div class="form-group">
+              <label>Support AP</label>
+              <input type="text" class="form-control" placeholder="Enter ..." name="supportAP" />
+            </div>
 
          </div><!-- /.box-body -->
 
