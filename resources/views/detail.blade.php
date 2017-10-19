@@ -127,7 +127,7 @@
       <!-- TABLE: LATEST ORDERS -->
       <div class="box box-primary">
         <div class="box-header with-border">
-          <h3 class="box-title">Pro-Active</h3>
+          <h3 class="box-title">Table</h3>
           <div class="box-tools pull-right">
             <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
           </div>
@@ -153,19 +153,17 @@
                 </tr>
               </thead>
               <tbody>
-                <?php $no=1; ?>
-                @foreach ($proactives as $proactive)
+                
                 <tr>
-                  <td>{{ $no++ }}</td>
-                  <td>{{ $proactive-> projectName }}</td>
-                  <td>{{ $proactive-> segment }}</td>
-                  <td>{{ $proactive-> currentProgress }}</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
                   <td>Nilai dari Last</td>
                   <td>Nilai dari Current</td>
                   <td>Progress Summary</td>
                   <td>Status</td>
                 </tr>
-                @endforeach
               </tbody>
             </table>
           </div>

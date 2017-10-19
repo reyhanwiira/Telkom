@@ -20,7 +20,7 @@
             {!! csrf_field() !!}
             <div class="box-body">
 
-            <div class="col-md-12">
+              <div class="col-md-12">
                 <div class="form-group">
                   <label>Project</label>
                   <input type="text" class="form-control" placeholder="Enter ..." name="projectName" />
@@ -151,7 +151,9 @@
         </div><!-- /.table-responsive -->
       </div><!-- /.box-body -->
       <div class="box-footer clearfix">
-        <a href="" class="btn btn-sm btn-info btn-flat pull-left">Place New Activity</a>
+        <button type="button" class="btn btn-sm btn-info btn-flat pull-left" data-toggle="modal" data-target="#myModal">
+          Place New Activity
+        </button>
       </div><!-- /.box-footer -->
     </div><!-- /.box -->
 
@@ -197,9 +199,129 @@
       </div><!-- /.table-responsive -->
     </div><!-- /.box-body -->
     <div class="box-footer clearfix">
-      <a href="" class="btn btn-sm btn-info btn-flat pull-left">Place New Document</a>
+      <button type="button" class="btn btn-sm btn-info btn-flat pull-left" data-toggle="modal" data-target="#myModal1">
+        Place New Documents
+      </button>
     </div><!-- /.box-footer -->
   </div><!-- /.box -->
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <!-- left column -->
+            <div class="col-md-12">
+              <!-- general form elements -->
+              <div class="box box-primary">
+                <div class="box-header">
+                </div><!-- /.box-header -->
+                <!-- form start -->
+                <form role="form" method="post" action="">
+                  <div class="box-body">
+
+                    <div class="form-group">
+                     <label>Date</label>
+                     <div class="input-group">
+                       <div class="input-group-addon">
+                         <i class="fa fa-calendar"></i>
+                       </div>
+                       <input type="date" class="form-control pull-right" id="reservation" name="startProject" />
+                     </div><!-- /.input group -->
+                   </div><!-- /.form group -->
+
+                   <div class="form-group">
+                    <label>Agenda</label>
+                    <input type="text" class="form-control" name="customer" />
+                  </div>
+
+                  <div class="form-group">
+                    <label>Action Plan</label>
+                    <input type="text" class="form-control" name="customer" />
+                  </div>
+
+                  <div class="form-group">
+                    <label>Evidance</label>
+                    <input type="text" class="form-control" name="customer" />
+                  </div>
+
+                  <div class="form-group">
+                    <label>Lampiran</label>
+                    <input type="text" class="form-control" name="customer" />
+                  </div>
+                </div><!-- /.box-body -->
+
+                <div class="box-footer">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </form>
+            </div><!-- /.box -->
+
+          </div><!--/.col (left) -->
+        </div>   <!-- /.row -->
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <!-- left column -->
+          <div class="col-md-12">
+            <!-- general form elements -->
+            <div class="box box-primary">
+              <div class="box-header">
+              </div><!-- /.box-header -->
+              <!-- form start -->
+              <form role="form" method="post" action="">
+                <div class="box-body">
+
+                  <div class="form-group">
+                    <label>Agenda</label>
+                    <input type="text" class="form-control" name="businessUnitName">
+                  </div>
+
+                  <div class="form-group">
+                    <label>Nama Dokumen</label>
+                    <input type="text" class="form-control" name="customer" />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="exampleInputFile">File input</label>
+                    <input type="file" id="exampleInputFile">
+                    <p class="help-block">Example block-level help text here.</p>
+                  </div>
+
+              </div><!-- /.box-body -->
+
+              <div class="box-footer">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </form>
+          </div><!-- /.box -->
+
+        </div><!--/.col (left) -->
+      </div>   <!-- /.row -->
+    </div>
+    <div class="modal-footer">
+    </div>
+  </div>
+</div>
+</div>
+
 </div><!--/.col (left) -->
 </div>   <!-- /.row -->
 </section><!-- /.content -->

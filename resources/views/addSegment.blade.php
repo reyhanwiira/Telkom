@@ -32,7 +32,6 @@
                 </textarea>
               </form>
             </div>
-
          </div><!-- /.box-body -->
 
          <div class="box-footer">
