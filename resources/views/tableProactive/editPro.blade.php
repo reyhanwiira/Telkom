@@ -140,6 +140,7 @@
           <div class="table-responsive">
            <table id="example1" class="table table-bordered table-striped">
             <thead>
+            <?php $no=1; ?>
               <tr>
                 <th>No</th>
                 <th>Tanggal</th>
@@ -152,12 +153,12 @@
             </thead>
             <tbody>
               <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>{{ $no++ }}</td>
+                <td>{{ $proactive->tanggalActivity }}</td>
+                <td>{{ $proactive->agenda }}</td>
+                <td>{{ $proactive->actionPlan }}</td>
+                <td>{{ $proactive->evidance }}</td>
+                <td>{{ $proactive->lampiran }}</td>
                 <td>
                   <div class="btn-group">
                     <a href="#">
@@ -194,6 +195,7 @@
         <div class="table-responsive">
          <table id="example1" class="table table-bordered table-striped">
           <thead>
+           <?php $no=1; ?>
             <tr>
               <th>No</th>
               <th>Agenda</th>
@@ -203,9 +205,9 @@
           </thead>
           <tbody>
             <tr>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td>{{ $no++ }}</td>
+              <td>{{ $proactive->agenda }}</td>
+              <td>{{ $proactive->lampiran }}</td>
               <td>
                 <div class="btn-group">
                   <a href="#">
@@ -224,9 +226,11 @@
       </div><!-- /.table-responsive -->
     </div><!-- /.box-body -->
     <div class="box-footer clearfix">
-      <button type="button" class="btn btn-sm btn-info btn-flat pull-left" data-toggle="modal" data-target="#myModal1">
+
+      <a href="#"><button type="button" class="btn btn-sm btn-info btn-flat pull-left" data-toggle="modal" data-target="#myModal1">
         Place New Documents
-      </button>
+      </button></a>
+
     </div><!-- /.box-footer -->
   </div><!-- /.box -->
 
@@ -246,7 +250,8 @@
                 <div class="box-header">
                 </div><!-- /.box-header -->
                 <!-- form start -->
-                <form role="form" method="post" action="">
+                <form role="form" method="post" action="#">
+                {!! csrf_field() !!}
                   <div class="box-body">
 
                     <div class="form-group">
@@ -261,22 +266,22 @@
 
                    <div class="form-group">
                     <label>Agenda</label>
-                    <input type="text" class="form-control" name="customer" />
+                    <input type="text" class="form-control" name="agenda" />
                   </div>
 
                   <div class="form-group">
                     <label>Action Plan</label>
-                    <input type="text" class="form-control" name="customer" />
+                    <input type="text" class="form-control" name="actionPlan" />
                   </div>
 
                   <div class="form-group">
                     <label>Evidance</label>
-                    <input type="text" class="form-control" name="customer" />
+                    <input type="text" class="form-control" name="evidance" />
                   </div>
 
                   <div class="form-group">
                     <label>Lampiran</label>
-                    <input type="text" class="form-control" name="customer" />
+                    <input type="text" class="form-control" name="lampiran" />
                   </div>
                 </div><!-- /.box-body -->
 

@@ -21,7 +21,7 @@
 
             <div class="form-group">
               <label>Segment</label>
-              <select name="segment[]" class="form-control select2" multiple>
+              <select name="segment" class="form-control select2" multiple>
                 <option value="CGS">CGS</option>
                 <option value="GAS">GAS</option>
                 <option value="LGS">LGS</option>

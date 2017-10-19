@@ -38,6 +38,9 @@ Route::get('/', function () {
     return view('home');
 });
 
+//ACTIVITY
+
+
 //READ DATA PROACTIVE
 
 Route::get('/tableProactive','ProactiveController@readPro');
