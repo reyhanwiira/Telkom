@@ -94,35 +94,35 @@
                  </div><!-- /.input group -->
                </div><!-- /.form group -->
 
-                <div class="form-group">
-                  <label>AM Segement</label>
-                  <input type="text" class="form-control" placeholder="Enter ..." name="AMSegment" value="{{ $proactive->AMSegement }}" />
-                </div>
+               <div class="form-group">
+                <label>AM Segement</label>
+                <input type="text" class="form-control" placeholder="Enter ..." name="AMSegment" value="{{ $proactive->AMSegement }}" />
+              </div>
 
-                 <div class="form-group">
-                  <label>Keahlian yang dibutuhkan</label>
-                  <input type="text" class="form-control" placeholder="Enter ..." name="keahlian" value="{{ $proactive->keahlian }}" />
-                </div>
+              <div class="form-group">
+                <label>Keahlian yang dibutuhkan</label>
+                <input type="text" class="form-control" placeholder="Enter ..." name="keahlian" value="{{ $proactive->keahlian }}" />
+              </div>
 
-                 <div class="form-group">
-                  <label>Est. Revenue</label>
-                  <input type="text" class="form-control" placeholder="Enter ..." name="EstRevenue" value="{{ $proactive->EstRevenue }}" />
-                </div>
+              <div class="form-group">
+                <label>Est. Revenue</label>
+                <input type="text" class="form-control" placeholder="Enter ..." name="EstRevenue" value="{{ $proactive->EstRevenue }}" />
+              </div>
 
-                 <div class="form-group">
-                  <label>Deliverable</label>
-                  <input type="text" class="form-control" placeholder="Enter ..." name="deliverable" value="{{ $proactive->deliverable }}" />
-                </div>
+              <div class="form-group">
+                <label>Deliverable</label>
+                <input type="text" class="form-control" placeholder="Enter ..." name="deliverable" value="{{ $proactive->deliverable }}" />
+              </div>
 
-                 <div class="form-group">
-                  <label>Benefit</label>
-                  <input type="text" class="form-control" placeholder="Enter ..." name="benefit" value="{{ $proactive->benefit }}" />
-                </div>
-             </div>
+              <div class="form-group">
+                <label>Benefit</label>
+                <input type="text" class="form-control" placeholder="Enter ..." name="benefit" value="{{ $proactive->benefit }}" />
+              </div>
+            </div>
 
-           </div><!-- /.box-body -->
+          </div><!-- /.box-body -->
 
-           <div class="box-footer">
+          <div class="box-footer">
             <button type="submit" class="btn btn-primary">Update</button>
           </div>
         </form>
@@ -140,7 +140,7 @@
           <div class="table-responsive">
            <table id="example1" class="table table-bordered table-striped">
             <thead>
-            <?php $no=1; ?>
+              <?php $no=1; ?>
               <tr>
                 <th>No</th>
                 <th>Tanggal</th>
@@ -177,9 +177,7 @@
         </div><!-- /.table-responsive -->
       </div><!-- /.box-body -->
       <div class="box-footer clearfix">
-        <button type="button" class="btn btn-sm btn-info btn-flat pull-left" data-toggle="modal" data-target="#myModal">
-          Place New Activity
-        </button>
+        <a href="#" class="btn btn-sm btn-info btn-flat pull-left">Place New Project</a>
       </div><!-- /.box-footer -->
     </div><!-- /.box -->
 
@@ -196,108 +194,108 @@
          <table id="example1" class="table table-bordered table-striped">
           <thead>
            <?php $no=1; ?>
-            <tr>
-              <th>No</th>
-              <th>Agenda</th>
-              <th>Nama Dokumen</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>{{ $no++ }}</td>
-              <td>{{ $proactive->agenda }}</td>
-              <td>{{ $proactive->lampiran }}</td>
-              <td>
-                <div class="btn-group">
-                  <a href="#">
-                    <button type="button" class="btn btn-success btn-flat">
-                      <i class='glyphicon glyphicon-download-alt'></i>
-                    </button>
-                  </a>
+           <tr>
+            <th>No</th>
+            <th>Agenda</th>
+            <th>Nama Dokumen</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{ $no++ }}</td>
+            <td>{{ $proactive->agenda }}</td>
+            <td>{{ $proactive->lampiran }}</td>
+            <td>
+              <div class="btn-group">
+                <a href="#">
+                  <button type="button" class="btn btn-success btn-flat">
+                    <i class='glyphicon glyphicon-download-alt'></i>
+                  </button>
+                </a>
 
-                  <a href="#" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger btn-flat"><i class='glyphicon glyphicon-trash'></i></button></a>
+                <a href="#" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger btn-flat"><i class='glyphicon glyphicon-trash'></i></button></a>
 
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div><!-- /.table-responsive -->
-    </div><!-- /.box-body -->
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div><!-- /.table-responsive -->
+  </div><!-- /.box-body -->
+  <div class="box-footer clearfix">
+
     <div class="box-footer clearfix">
-
-      <a href="#"><button type="button" class="btn btn-sm btn-info btn-flat pull-left" data-toggle="modal" data-target="#myModal1">
-        Place New Documents
-      </button></a>
-
+      <a href="#" class="btn btn-sm btn-info btn-flat pull-left">Place New Project</a>
     </div><!-- /.box-footer -->
-  </div><!-- /.box -->
 
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-        </div>
-        <div class="modal-body">
-          <div class="row">
-            <!-- left column -->
-            <div class="col-md-12">
-              <!-- general form elements -->
-              <div class="box box-primary">
-                <div class="box-header">
-                </div><!-- /.box-header -->
-                <!-- form start -->
-                <form role="form" method="post" action="#">
+  </div><!-- /.box-footer -->
+</div><!-- /.box -->
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <!-- left column -->
+          <div class="col-md-12">
+            <!-- general form elements -->
+            <div class="box box-primary">
+              <div class="box-header">
+              </div><!-- /.box-header -->
+              <!-- form start -->
+              <form role="form" method="post" action="#">
                 {!! csrf_field() !!}
-                  <div class="box-body">
-
-                    <div class="form-group">
-                     <label>Date</label>
-                     <div class="input-group">
-                       <div class="input-group-addon">
-                         <i class="fa fa-calendar"></i>
-                       </div>
-                       <input type="date" class="form-control pull-right" id="reservation" name="startProject" />
-                     </div><!-- /.input group -->
-                   </div><!-- /.form group -->
-
-                   <div class="form-group">
-                    <label>Agenda</label>
-                    <input type="text" class="form-control" name="agenda" />
-                  </div>
+                <div class="box-body">
 
                   <div class="form-group">
-                    <label>Action Plan</label>
-                    <input type="text" class="form-control" name="actionPlan" />
-                  </div>
+                   <label>Date</label>
+                   <div class="input-group">
+                     <div class="input-group-addon">
+                       <i class="fa fa-calendar"></i>
+                     </div>
+                     <input type="date" class="form-control pull-right" id="reservation" name="startProject" />
+                   </div><!-- /.input group -->
+                 </div><!-- /.form group -->
 
-                  <div class="form-group">
-                    <label>Evidance</label>
-                    <input type="text" class="form-control" name="evidance" />
-                  </div>
-
-                  <div class="form-group">
-                    <label>Lampiran</label>
-                    <input type="text" class="form-control" name="lampiran" />
-                  </div>
-                </div><!-- /.box-body -->
-
-                <div class="box-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                 <div class="form-group">
+                  <label>Agenda</label>
+                  <input type="text" class="form-control" name="agenda" />
                 </div>
-              </form>
-            </div><!-- /.box -->
 
-          </div><!--/.col (left) -->
-        </div>   <!-- /.row -->
-      </div>
-      <div class="modal-footer">
-      </div>
+                <div class="form-group">
+                  <label>Action Plan</label>
+                  <input type="text" class="form-control" name="actionPlan" />
+                </div>
+
+                <div class="form-group">
+                  <label>Evidance</label>
+                  <input type="text" class="form-control" name="evidance" />
+                </div>
+
+                <div class="form-group">
+                  <label>Lampiran</label>
+                  <input type="text" class="form-control" name="lampiran" />
+                </div>
+              </div><!-- /.box-body -->
+
+              <div class="box-footer">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </form>
+          </div><!-- /.box -->
+
+        </div><!--/.col (left) -->
+      </div>   <!-- /.row -->
+    </div>
+    <div class="modal-footer">
     </div>
   </div>
+</div>
 </div>
 
 <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -335,21 +333,21 @@
                     <p class="help-block">Example block-level help text here.</p>
                   </div>
 
-              </div><!-- /.box-body -->
+                </div><!-- /.box-body -->
 
-              <div class="box-footer">
-                <button type="submit" class="btn btn-primary">Submit</button>
-              </div>
-            </form>
-          </div><!-- /.box -->
+                <div class="box-footer">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </form>
+            </div><!-- /.box -->
 
-        </div><!--/.col (left) -->
-      </div>   <!-- /.row -->
-    </div>
-    <div class="modal-footer">
+          </div><!--/.col (left) -->
+        </div>   <!-- /.row -->
+      </div>
+      <div class="modal-footer">
+      </div>
     </div>
   </div>
-</div>
 </div>
 
 </div><!--/.col (left) -->
