@@ -24,8 +24,8 @@ Route::get('/form', function() {
 	return view('form');
 });
 
-Route::get('/editProject', function() {
-	return view('editProject');
+Route::get('/addSegment', function() {
+	return view('addSegment');
 });
 
 Auth::routes();

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Soution Management | Data Tables</title>
+  <title>Solution Management | Project Overview</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -159,7 +159,7 @@
         </h1>
         <ol class="breadcrumb">
           <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-          <li class="active">Detail Project</li>
+          <li class="active">Project Overview</li>
         </ol>
       </section>
 
@@ -172,7 +172,7 @@
 
     <footer class="main-footer">
       <div class="pull-right hidden-xs">
-        <b>Version</b> 2.4.0
+        <b>Version</b> 1.1
       </div>
       <strong>Copyright &copy; 2017 <a href="#">BINUS TEAM</a>.</strong> All rights reserved.
     </footer>
