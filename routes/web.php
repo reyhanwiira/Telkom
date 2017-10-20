@@ -39,6 +39,10 @@ Route::get('/', function () {
 });
 
 //ACTIVITY
+Route::get('/tableProactive/addActivity','ProactiveController@createActivity');
+Route::post('/tableProactive/{id}','ProactiveController@storeActPro');
+
+Route::get('deleteActPro/{id}','ProactiveController@deleteActPro');
 
 
 //READ DATA PROACTIVE

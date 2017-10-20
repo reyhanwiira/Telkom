@@ -11,6 +11,7 @@ use Redirect;
 use View;
 use App\proactive;
 use Validator;
+use App\activity;
 
 class ProactiveController extends Controller
 {
@@ -56,8 +57,9 @@ class ProactiveController extends Controller
     public function editPro($id)
     {
         $proactive= Proactive::find($id); 
+        $activitys= Activity::all();
 
-      return view('tableProactive.editPro',compact('proactive'));
+      return view('tableProactive.editPro',compact('proactive','activitys'));
     }
 
     public function updatePro(Request $request, $id)
@@ -86,5 +88,37 @@ class ProactiveController extends Controller
 
       return Redirect::to('/tableProactive');
     }
+
+
+
+    public function createActivity()
+    {
+      return view('tableProactive.addActivity');
+    }
+ 
+     public function storeActPro(Request $request)
+    {
+          
+        Activity::create([
+        
+        'tanggal'=>$request->input('tanggal'),
+        'agenda'=>$request->input('agenda'),
+        'actionPlan'=>$request->input('actionPlan'),
+        'evidence'=>$request->input('evidence'),
+        'lampiran'=>$request->input('lampiran')
+        
+      ]);
+
+      return redirect('tableProactive');
+  }
+
+
+   public function deleteActPro($id)
+   {
+      $activity = Activity::where('id','=',$id)->delete();
+
+      return back();
+    }
+
 
 }

@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Solution Management | Add Document</title>
+  <title>Solution Management | Dashboard</title>
   <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
   <!-- Bootstrap 3.3.2 -->
   <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
@@ -175,7 +175,7 @@
           <li><a href="{{ url('home') }}"><i class="fa fa-dashboard"></i> Home</a></li>
           <li><a href="#"> Table</a></li>
           <li><a href=""> Project Overview</a></li>
-          <li class="active">Add Documents</li>
+          <li class="active">Edit Activity</li>
         </ol>
       </section>
 

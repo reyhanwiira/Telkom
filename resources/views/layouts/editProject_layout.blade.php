@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Solution Management | Dashboard</title>
+  <title>Solution Management | Edit Project</title>
   <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
   <!-- Bootstrap 3.3.2 -->
   <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
@@ -91,15 +91,15 @@
         <div class="user-panel">
           <div class="pull-left image">
             <img src="dist/img/avatar04.png" class="img-circle" alt="User Image" />
+          </div>
+          <div class="pull-left info">
+            @if(Auth::guest())
+            <p>Hi, Guest!</p>
+            @else
+            <p>Hi, {{ Auth::user()->name }}</p>
+            @endif
+          </div>
         </div>
-        <div class="pull-left info">
-          @if(Auth::guest())
-          <p>Hi, Guest!</p>
-          @else
-          <p>Hi, {{ Auth::user()->name }}</p>
-          @endif
-        </div>
-      </div>
 
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu" data-widget="tree">
@@ -112,86 +112,99 @@
           </li>
 
           <li class="treeview">
-          <a href="#">
-            <i class="fa fa-pie-chart"></i>
-            <span>Table</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
+            <a href="#">
+              <i class="fa fa-pie-chart"></i>
+              <span>Table</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="{{ url('tableProActive') }}"><i class="fa fa-circle-o"></i> Pro-Active</a></li>
+              <li><a href="{{ url('tableRaisa') }}"><i class="fa fa-circle-o"></i> RAISA</a></li>
+              <li><a href="{{ url('tableScn') }}"><i class="fa fa-circle-o"></i> SCN</a></li>
+              <li><a href="{{ url('tableOthers') }}"><i class="fa fa-circle-o"></i> OTHERS</a></li>
+            </ul>
+          </li>
+        </li>
+
+        <li>
+          <a href="{{ url('detail') }}">
+            <i class="fa fa-pencil-square-o"></i> <span>Detail Project</span> <small class="fa fa pull-right"></small>
           </a>
+<<<<<<< HEAD
+<<<<<<< HEAD
           <ul class="treeview-menu">
-            <li><a href="{{ url('tableProActive') }}"><i class="fa fa-circle-o"></i> Pro-Active</a></li>
+            <li><a href="{{ url('tableProactive') }}"><i class="fa fa-circle-o"></i> Pro-Active</a></li>
             <li><a href="{{ url('tableRaisa') }}"><i class="fa fa-circle-o"></i> RAISA</a></li>
             <li><a href="{{ url('tableScn') }}"><i class="fa fa-circle-o"></i> SCN</a></li>
             <li><a href="{{ url('tableOthers') }}"><i class="fa fa-circle-o"></i> OTHERS</a></li>
           </ul>
+=======
+>>>>>>> 4e4da5802fb85dc98a6add2bb5aa8b22383f48f9
+=======
+>>>>>>> 4e4da5802fb85dc98a6add2bb5aa8b22383f48f9
         </li>
-          </li>
 
-          <li>
-            <a href="{{ url('detail') }}">
-              <i class="fa fa-pencil-square-o"></i> <span>Detail Project</span> <small class="fa fa pull-right"></small>
-            </a>
-          </li>
+        <li>
+          <a href="{{ url('chart') }}">
+            <i class="fa fa-pie-chart"></i> <span>Chart</span> <small class="fa fa pull-right"></small>
+          </a>
+        </li>
 
-          <li>
-            <a href="{{ url('chart') }}">
-              <i class="fa fa-pie-chart"></i> <span>Chart</span> <small class="fa fa pull-right"></small>
-            </a>
-          </li>
+      </section>
+      <!-- /.sidebar -->
+    </aside>
 
-        </section>
-        <!-- /.sidebar -->
-      </aside>
+    <!-- =============================================== -->
 
-      <!-- =============================================== -->
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <h1>
+          Edit Project
+          <small></small>
+        </h1>
+        <ol class="breadcrumb">
+          <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+          <li><a href="#"> Data Table</a></li>
+          <li class="active">Edit Project Table</li>
+        </ol>
+      </section>
 
-      <!-- Content Wrapper. Contains page content -->
-      <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-        <section class="content-header">
-          <h1>
-            Edit Project
-            <small></small>
-          </h1>
-          <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li class="active">Edit Project</li>
-          </ol>
-        </section>
+      <!-- Main content -->
+      <section class="content">
+        @yield('content')
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+          <!-- CHART IS HERE-->
+        </div><!-- /.row -->
+        <!-- Main row -->
+        <div class="row">
+          <!-- MAIN CONTENT IS HERE-->
+        </div><!-- /.row (main row) -->
+      </section><!-- /.content -->
+      <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
 
-        <!-- Main content -->
-        <section class="content">
-          @yield('content')
-          <!-- Small boxes (Stat box) -->
-          <div class="row">
-            <!-- CHART IS HERE-->
-          </div><!-- /.row -->
-          <!-- Main row -->
-          <div class="row">
-            <!-- MAIN CONTENT IS HERE-->
-          </div><!-- /.row (main row) -->
-        </section><!-- /.content -->
-        <!-- /.content -->
+    <footer class="main-footer">
+      <div class="pull-right hidden-xs">
+        <b>Version</b> 2.4.0
       </div>
-      <!-- /.content-wrapper -->
+      <strong>Copyright &copy; 2017 <a href="#">BINUS TEAM</a>.</strong> All rights reserved.
+    </footer>
 
-      <footer class="main-footer">
-        <div class="pull-right hidden-xs">
-          <b>Version</b> 2.4.0
-        </div>
-        <strong>Copyright &copy; 2017 <a href="#">BINUS TEAM</a>.</strong> All rights reserved.
-      </footer>
-
-      <!-- Control Sidebar -->
-      <aside class="control-sidebar control-sidebar-dark">
-        <!-- Create the tabs -->
-        <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-          <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
-          <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
-        </ul>
-      </aside>
-      <!-- /.control-sidebar -->
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+      <!-- Create the tabs -->
+      <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+        <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+        <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+      </ul>
+    </aside>
+    <!-- /.control-sidebar -->
   <!-- Add the sidebar's background. This div must be placed
   immediately after the control sidebar -->
   <div class="control-sidebar-bg"></div>

@@ -129,7 +129,7 @@
       </div><!-- /.box -->
 
       <!-- TABLE: LATEST ORDERS -->
-      <div class="box box-info">
+      <div class="box box-primary">
         <div class="box-header with-border">
           <h3 class="box-title">Activity Record</h3>
           <div class="box-tools pull-right">
@@ -140,7 +140,6 @@
           <div class="table-responsive">
            <table id="example1" class="table table-bordered table-striped">
             <thead>
-              <?php $no=1; ?>
               <tr>
                 <th>No</th>
                 <th>Tanggal</th>
@@ -153,36 +152,43 @@
             </thead>
             <tbody>
               <tr>
+                <?php $no=1; ?>
+                @foreach ($activitys as $activity)
                 <td>{{ $no++ }}</td>
-                <td>{{ $proactive->tanggalActivity }}</td>
-                <td>{{ $proactive->agenda }}</td>
-                <td>{{ $proactive->actionPlan }}</td>
-                <td>{{ $proactive->evidance }}</td>
-                <td>{{ $proactive->lampiran }}</td>
+                <td>{{ $activity->tanggal }}</td>
+                <td>{{ $activity->agenda }}</td>
+                <td>{{ $activity->actionPlan }}</td>
+                <td>{{ $activity->evidence }}</td>
+                <td>{{ $activity->lampiran }}</td>
+              
                 <td>
                   <div class="btn-group">
                     <a href="#">
-                      <button type="button" class="btn btn-success btn-flat">
+                      <button type="button" class="btn btn-success btn-flat" data-toggle="tooltip" data-placement="left" title="Edit File">
                         <i class='glyphicon glyphicon-pencil'></i>
                       </button>
                     </a>
 
-                    <a href="#" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger btn-flat"><i class='glyphicon glyphicon-trash'></i></button></a>
+                   <a href="{{ url('/deleteActPro/'.$activity->id) }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger btn-flat"><i class='glyphicon glyphicon-trash'></i></button></a>
 
                   </div>
                 </td>
               </tr>
+              @endforeach
             </tbody>
+
           </table>
         </div><!-- /.table-responsive -->
       </div><!-- /.box-body -->
       <div class="box-footer clearfix">
-        <a href="#" class="btn btn-sm btn-info btn-flat pull-left">Place New Project</a>
+
+        <a href="{{ url('tableProactive/addActivity') }}" class="btn btn-sm btn-info btn-flat pull-left">Place New Project</a>
+
       </div><!-- /.box-footer -->
     </div><!-- /.box -->
 
     <!-- TABLE: LATEST ORDERS -->
-    <div class="box box-info">
+    <div class="box box-primary">
       <div class="box-header with-border">
         <h3 class="box-title">Lampiran Dokumen</h3>
         <div class="box-tools pull-right">
@@ -209,12 +215,12 @@
             <td>
               <div class="btn-group">
                 <a href="#">
-                  <button type="button" class="btn btn-success btn-flat">
+                  <button type="button" class="btn btn-success btn-flat" data-toggle="tooltip" data-placement="left" title="Download File">
                     <i class='glyphicon glyphicon-download-alt'></i>
                   </button>
                 </a>
 
-                <a href="#" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger btn-flat"><i class='glyphicon glyphicon-trash'></i></button></a>
+                <a href="#" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger btn-flat" data-toggle="tooltip" data-placement="right" title="Delete"><i class='glyphicon glyphicon-trash'></i></button></a>
 
               </div>
             </td>
@@ -224,11 +230,7 @@
     </div><!-- /.table-responsive -->
   </div><!-- /.box-body -->
   <div class="box-footer clearfix">
-
-    <div class="box-footer clearfix">
-      <a href="#" class="btn btn-sm btn-info btn-flat pull-left">Place New Project</a>
-    </div><!-- /.box-footer -->
-
+    <a href="#" class="btn btn-primary pull-left">Place New Documents</a>
   </div><!-- /.box-footer -->
 </div><!-- /.box -->
 
