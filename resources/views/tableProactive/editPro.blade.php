@@ -129,7 +129,7 @@
       </div><!-- /.box -->
 
       <!-- TABLE: LATEST ORDERS -->
-      <div class="box box-info">
+      <div class="box box-primary">
         <div class="box-header with-border">
           <h3 class="box-title">Activity Record</h3>
           <div class="box-tools pull-right">
@@ -162,12 +162,12 @@
                 <td>
                   <div class="btn-group">
                     <a href="#">
-                      <button type="button" class="btn btn-success btn-flat">
+                      <button type="button" class="btn btn-success btn-flat" data-toggle="tooltip" data-placement="left" title="Edit File">
                         <i class='glyphicon glyphicon-pencil'></i>
                       </button>
                     </a>
 
-                    <a href="#" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger btn-flat"><i class='glyphicon glyphicon-trash'></i></button></a>
+                    <a href="#" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger btn-flat" data-toggle="tooltip" data-placement="right" title="Delete"><i class='glyphicon glyphicon-trash'></i></button></a>
 
                   </div>
                 </td>
@@ -177,12 +177,12 @@
         </div><!-- /.table-responsive -->
       </div><!-- /.box-body -->
       <div class="box-footer clearfix">
-        <a href="#" class="btn btn-sm btn-info btn-flat pull-left">Place New Project</a>
+      <a href="#" class="btn btn-primary pull-left">Place New Activity</a>
       </div><!-- /.box-footer -->
     </div><!-- /.box -->
 
     <!-- TABLE: LATEST ORDERS -->
-    <div class="box box-info">
+    <div class="box box-primary">
       <div class="box-header with-border">
         <h3 class="box-title">Lampiran Dokumen</h3>
         <div class="box-tools pull-right">
@@ -209,12 +209,12 @@
             <td>
               <div class="btn-group">
                 <a href="#">
-                  <button type="button" class="btn btn-success btn-flat">
+                  <button type="button" class="btn btn-success btn-flat" data-toggle="tooltip" data-placement="left" title="Download File">
                     <i class='glyphicon glyphicon-download-alt'></i>
                   </button>
                 </a>
 
-                <a href="#" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger btn-flat"><i class='glyphicon glyphicon-trash'></i></button></a>
+                <a href="#" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger btn-flat" data-toggle="tooltip" data-placement="right" title="Delete"><i class='glyphicon glyphicon-trash'></i></button></a>
 
               </div>
             </td>
@@ -224,11 +224,7 @@
     </div><!-- /.table-responsive -->
   </div><!-- /.box-body -->
   <div class="box-footer clearfix">
-
-    <div class="box-footer clearfix">
-      <a href="#" class="btn btn-sm btn-info btn-flat pull-left">Place New Project</a>
-    </div><!-- /.box-footer -->
-
+    <a href="#" class="btn btn-primary pull-left">Place New Documents</a>
   </div><!-- /.box-footer -->
 </div><!-- /.box -->
 
