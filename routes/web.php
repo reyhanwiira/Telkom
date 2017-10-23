@@ -44,6 +44,9 @@ Route::post('/tableProactive/{id}','ProactiveController@storeActPro');
 
 Route::get('deleteActPro/{id}','ProactiveController@deleteActPro');
 
+Route::get('/tableProactive/editActPro/{id}','ProactiveController@editActPro');
+Route::put('/editActPro/{id}','ProactiveController@updateActPro');
+
 
 //READ DATA PROACTIVE
 

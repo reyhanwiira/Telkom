@@ -163,17 +163,13 @@
               
                 <td>
                   <div class="btn-group">
-                    <a href="#">
+                    <a href="{{ url('/tableProactive'.'/editActPro/'.$activity->id) }}">
                       <button type="button" class="btn btn-success btn-flat" data-toggle="tooltip" data-placement="left" title="Edit File">
                         <i class='glyphicon glyphicon-pencil'></i>
                       </button>
                     </a>
 
-<<<<<<< HEAD
                    <a href="{{ url('/deleteActPro/'.$activity->id) }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger btn-flat"><i class='glyphicon glyphicon-trash'></i></button></a>
-=======
-                    <a href="#" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger btn-flat" data-toggle="tooltip" data-placement="right" title="Delete"><i class='glyphicon glyphicon-trash'></i></button></a>
->>>>>>> 4e4da5802fb85dc98a6add2bb5aa8b22383f48f9
 
                   </div>
                 </td>
@@ -185,13 +181,10 @@
         </div><!-- /.table-responsive -->
       </div><!-- /.box-body -->
       <div class="box-footer clearfix">
-<<<<<<< HEAD
 
-        <a href="{{ url('tableProactive/addActivity') }}" class="btn btn-sm btn-info btn-flat pull-left">Place New Project</a>
 
-=======
-      <a href="#" class="btn btn-primary pull-left">Place New Activity</a>
->>>>>>> 4e4da5802fb85dc98a6add2bb5aa8b22383f48f9
+        <a href="{{ url('tableProactive/addActivity') }}" class="btn btn-sm btn-info btn-flat pull-left">Place New Activity</a>
+
       </div><!-- /.box-footer -->
     </div><!-- /.box -->
 
