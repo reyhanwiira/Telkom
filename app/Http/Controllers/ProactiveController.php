@@ -120,5 +120,26 @@ class ProactiveController extends Controller
       return back();
     }
 
+    public function editActPro($id)
+    {
+        $activity = Activity::find($id);
+
+        return view('tableProactive.editActPro',compact('activity'));
+    }
+
+    public function updateActPro(Request $request, $id)
+    {
+        $activity = Activity::find($id);
+        $activity->tanggal=$request->input('tanggal');
+        $activity->agenda=$request->input('agenda');
+        $activity->actionPlan=$request->input('actionPlan');
+        $activity->evidence=$request->input('evidence');
+        $activity->lampiran=$request->input('lampiran');
+
+        $activity->update();
+
+        return redirect::to('/tableProactive');
+    }
+
 
 }
