@@ -88,11 +88,11 @@ Route::get('deletePro/{id}','ProactiveController@deletePro');
 Route::get('/tableRaisa','RaisaController@read');
 
 //CREATE DATA RAISA
-Route::get('/tableRaisa/create','RaisaController@create');
+Route::get('/tableRaisa/createRaisa','RaisaController@create');
 Route::post('/tableRaisa','RaisaController@store');
 
 //EDIT DAN UPDATE DATA RAISA
-Route::get('/tableRaisa/{id}/edit','RaisaController@edit');
+Route::get('/tableRaisa/{id}/editRaisa','RaisaController@edit');
 Route::put('/tableRaisa/{id}','RaisaController@update');
 
 //DELETE DATA RAISA

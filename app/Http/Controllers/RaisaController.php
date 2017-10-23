@@ -24,7 +24,7 @@ class RaisaController extends Controller
 
     public function create()
     {
-      return view('tableRaisa.create');
+      return view('tableRaisa.createRaisa');
     }
  
  
@@ -54,7 +54,7 @@ class RaisaController extends Controller
     {
         $raisa= Raisa::find($id); 
 
-      return view('tableRaisa.edit',compact('raisa'));
+      return view('tableRaisa.editRaisa',compact('raisa'));
     }
 
     public function update(Request $request, $id)

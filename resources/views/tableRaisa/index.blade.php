@@ -7,7 +7,7 @@
     <!-- TABLE: LATEST ORDERS -->
     <div class="box box-info">
       <div class="box-header with-border">
-        <h3 class="box-title">Pro-Active</h3>
+        <h3 class="box-title">RAISA</h3>
         <div class="box-tools pull-right">
           <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
         </div>
@@ -47,10 +47,12 @@
               <td>{{ $raisa-> startProject }}</td>
               <td>{{ $raisa-> finishProject }}</td>
               <td>
-                <div class="btn-group-vertical">
-                  <a href=""><button type="button" class="btn btn-success btn-flat"><i class='glyphicon glyphicon-zoom-in'></i></button></a>
-                  
-                  <a href="{{ url('/tableRaisa/'.$raisa->id.'/edit') }}"><button type="button" class="btn btn-info btn-flat"><i class='glyphicon glyphicon-edit'></i></button></a>
+                <div class="btn-group">
+                  <a href="{{ url('/tableRaisa/'.$raisa->id.'/editRaisa') }}">
+                    <button type="button" class="btn btn-success btn-flat">
+                      <i class='glyphicon glyphicon-zoom-in'></i>
+                    </button>
+                  </a>
 
                   <a href="deleteRaisa/{{ $raisa->id }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger btn-flat"><i class='glyphicon glyphicon-trash'></i></button></a>
 
@@ -64,6 +66,7 @@
     </div><!-- /.box-body -->
     <div class="box-footer clearfix">
       <a href="{{ url('tableRaisa/createRaisa') }}" class="btn btn-sm btn-info btn-flat pull-left">Place New Project</a>
+      <a href="invoice-print.html" target="_blank" class="btn btn-sm btn-info btn-flat pull-right"><i class="fa fa-print"></i> Print</a>
     </div><!-- /.box-footer -->
   </div><!-- /.box -->
 </div><!-- /.col -->
