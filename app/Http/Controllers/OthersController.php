@@ -11,25 +11,26 @@ use Redirect;
 use View;
 use Validator;
 use App\other;
+use App\activity;
 
 
 class OthersController extends Controller
 {
 
-	public function read()
+	public function readOthers()
     {
     	$otherss = Other::all();
 
     	return view('tableOthers.index', compact('otherss'));
     }
 
-    public function create()
+    public function createOthers()
     {
-      return view('tableOthers.create');
+      return view('tableOthers.createOthers');
     }
  
  
-    public function store(Request $request)
+    public function storeOthers(Request $request)
     {
           
         Other::create([
@@ -51,14 +52,15 @@ class OthersController extends Controller
 
     }
 
-    public function edit($id)
+    public function editOthers($id)
     {
-        $other = other::find($id); 
+        $other = other::find($id);
+        $activitys= Activity::all(); 
 
-      return view('tableOthers.edit',compact('other'));
+      return view('tableOthers.editOthers',compact('other','activitys'));
     }
 
-    public function update(Request $request, $id)
+    public function updateOthers(Request $request, $id)
     {
         $other = other::find($id);
         $other->projectName=$request->input('projectName');
@@ -78,11 +80,40 @@ class OthersController extends Controller
       return redirect::to('/tableOthers');
     }
 
-      public function delete($id)
+      public function deleteOthers($id)
    {
       $other = Other::where('id','=',$id)->delete();
 
       return Redirect::to('/tableOthers');
+    }
+
+
+     public function deleteActOthers($id)
+   {
+      $activity = Activity::where('id','=',$id)->delete();
+
+      return back();
+    }
+
+    public function editActOthers($id)
+    {
+        $activity = Activity::find($id);
+
+        return view('tableOthers.editActOthers',compact('activity'));
+    }
+
+    public function updateActOthers(Request $request, $id)
+    {
+        $activity = Activity::find($id);
+        $activity->tanggal=$request->input('tanggal');
+        $activity->agenda=$request->input('agenda');
+        $activity->actionPlan=$request->input('actionPlan');
+        $activity->evidence=$request->input('evidence');
+        $activity->lampiran=$request->input('lampiran');
+
+        $activity->update();
+
+        return redirect::to('/tableOthers');
     }
 
 }

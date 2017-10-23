@@ -11,6 +11,7 @@ use Redirect;
 use View;
 use Validator;
 use App\scn;
+use App\activity;
 
 
 class ScnController extends Controller
@@ -54,8 +55,9 @@ class ScnController extends Controller
      public function edit($id)
     {
         $scn= Scn::find($id); 
+        $activitys= Activity::all();
 
-      return view('tableScn.edit',compact('scn'));
+      return view('tableScn.edit',compact('scn','activitys'));
     }
 
     public function update(Request $request, $id)
@@ -82,7 +84,37 @@ class ScnController extends Controller
    {
       $scn = Scn::where('id','=',$id)->delete();
 
-      return Redirect::to('/tableScn');
+      return Redirect::to('tableScn');
     }
+
+
+    public function deleteActScn($id)
+   {
+      $activity = Activity::where('id','=',$id)->delete();
+
+      return back();
+    }
+
+    public function editActScn($id)
+    {
+        $activity = Activity::find($id);
+
+        return view('tableScn.editActScn',compact('activity'));
+    }
+
+    public function updateActScn(Request $request, $id)
+    {
+        $activity = Activity::find($id);
+        $activity->tanggal=$request->input('tanggal');
+        $activity->agenda=$request->input('agenda');
+        $activity->actionPlan=$request->input('actionPlan');
+        $activity->evidence=$request->input('evidence');
+        $activity->lampiran=$request->input('lampiran');
+
+        $activity->update();
+
+        return redirect::to('/tableScn');
+    }
+
 
 }

@@ -7,7 +7,7 @@
     <!-- TABLE: LATEST ORDERS -->
     <div class="box box-info">
       <div class="box-header with-border">
-        <h3 class="box-title">Pro-Active</h3>
+        <h3 class="box-title">OTHERS</h3>
         <div class="box-tools pull-right">
           <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
         </div>
@@ -33,24 +33,28 @@
           </thead>
           <tbody>
             <?php $no=1; ?>
-            @foreach ($otherss as $others)
+            @foreach ($otherss as $other)
             <tr>
               <td>{{ $no++ }}</td>
-              <td>{{ $others-> projectName }}</td>
-              <td>{{ $others-> segment }}</td>
-              <td>{{ $others-> description }}</td>
-              <td>{{ $others-> customer }}</td>
-              <td>{{ $others-> lastAction }}</td>
-              <td>{{ $others-> nextAction }}</td>
-              <td>{{ $others-> status }}</td>
-              <td>{{ $others-> information }}</td>
-              <td>{{ $others-> startProject }}</td>
-              <td>{{ $others-> finishProject }}</td>
+              <td>{{ $other-> projectName }}</td>
+              <td>{{ $other-> segment }}</td>
+              <td>{{ $other-> description }}</td>
+              <td>{{ $other-> customer }}</td>
+              <td>{{ $other-> lastAction }}</td>
+              <td>{{ $other-> nextAction }}</td>
+              <td>{{ $other-> status }}</td>
+              <td>{{ $other-> information }}</td>
+              <td>{{ $other-> startProject }}</td>
+              <td>{{ $other-> finishProject }}</td>
               <td>
-                <div class="btn-group-vertical">
-                  <a href="{{ url('/tableOthers/'.$others->id.'/edit') }}"><button type="button" class="btn btn-success btn-flat"><i class='glyphicon glyphicon-zoom-in'></i></button></a>
+                <div class="btn-group">
+                  <a href="{{ url('/tableOthers/'.$other->id.'/editOthers') }}">
+                    <button type="button" class="btn btn-success btn-flat">
+                      <i class='glyphicon glyphicon-zoom-in'></i>
+                    </button>
+                  </a>
 
-                  <a href="deleteOthers/{{ $others->id }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger btn-flat"><i class='glyphicon glyphicon-trash'></i></button></a>
+                  <a href="deleteOthers/{{ $other->id }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger btn-flat"><i class='glyphicon glyphicon-trash'></i></button></a>
 
                 </div>
               </td>
@@ -61,7 +65,8 @@
       </div><!-- /.table-responsive -->
     </div><!-- /.box-body -->
     <div class="box-footer clearfix">
-      <a href="{{ url('tableOthers/create') }}" class="btn btn-sm btn-info btn-flat pull-left">Place New Project</a>
+      <a href="{{ url('tableOthers/createOthers') }}" class="btn btn-sm btn-info btn-flat pull-left">Place New Project</a>
+      <a href="invoice-print.html" target="_blank" class="btn btn-sm btn-info btn-flat pull-right"><i class="fa fa-print"></i> Print</a>
     </div><!-- /.box-footer -->
   </div><!-- /.box -->
 </div><!-- /.col -->
