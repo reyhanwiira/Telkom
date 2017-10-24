@@ -5,7 +5,7 @@
 <div class="row">
   <div class="col-md-12">
     <!-- TABLE: LATEST ORDERS -->
-    <div class="box box-info">
+    <div class="box box-primary">
       <div class="box-header with-border">
         <h3 class="box-title">Pro-Active</h3>
         <div class="box-tools pull-right">
@@ -49,12 +49,12 @@
               <td>
                 <div class="btn-group">
                   <a href="{{ url('/tableProactive/'.$proactive->id.'/editPro') }}">
-                    <button type="button" class="btn btn-success btn-flat">
+                    <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Detail Project">
                       <i class='glyphicon glyphicon-zoom-in'></i>
                     </button>
                   </a>
 
-                  <a href="deletePro/{{ $proactive->id }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger btn-flat"><i class='glyphicon glyphicon-trash'></i></button></a>
+                  <a href="deletePro/{{ $proactive->id }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="bottom" title="Delete Project"><i class='glyphicon glyphicon-trash'></i></button></a>
 
                 </div>
               </td>
@@ -65,8 +65,8 @@
       </div><!-- /.table-responsive -->
     </div><!-- /.box-body -->
     <div class="box-footer clearfix">
-      <a href="{{ url('tableProactive/createPro') }}" class="btn btn-sm btn-info btn-flat pull-left">Place New Project</a>
-      <a href="invoice-print.html" target="_blank" class="btn btn-sm btn-info btn-flat pull-right"><i class="fa fa-print"></i> Print</a>
+      <a href="{{ url('tableProactive/createPro') }}" class="btn btn-primary pull-left">Place New Project</a>
+      <a href="invoice-print.html" target="_blank" class="btn btn-primary pull-right"><i class="fa fa-print"></i> Print</a>
     </div><!-- /.box-footer -->
   </div><!-- /.box -->
 </div><!-- /.col -->

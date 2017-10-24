@@ -140,6 +140,7 @@ class OthersController extends Controller
     }
 
 
+<<<<<<< HEAD
     public function print()
     {
         $otherss = Other::all();
@@ -171,4 +172,6 @@ class OthersController extends Controller
          
  
     }
+=======
+>>>>>>> d41624be577177999691f69f2d990995444944b6
 }

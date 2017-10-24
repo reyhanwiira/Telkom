@@ -7,8 +7,12 @@
     <div class="col-md-12">
       <!-- general form elements -->
       <div class="box box-primary">
-        <div class="box-header">
-        </div><!-- /.box-header -->
+        <div class="box-header with-border">
+            <h3 class="box-title">View Detail Project</h3>
+            <div class="box-tools pull-right">
+              <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+            </div>
+          </div>
         <!-- form start -->
         <form role="form" method="post" action="{{ url('/tableRaisa/'.$raisa->id) }}">
           {{ method_field('PUT') }}
@@ -133,12 +137,12 @@
                 <td>
                   <div class="btn-group">
                     <a href="{{ url('/tableRaisa'.'/editActRaisa/'.$activity->id) }}">
-                      <button type="button" class="btn btn-success btn-flat" data-toggle="tooltip" data-placement="left" title="Edit File">
+                      <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="left" title="Edit File">
                         <i class='glyphicon glyphicon-pencil'></i>
                       </button>
                     </a>
 
-                   <a href="{{ url('/deleteActRaisa/'.$activity->id) }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger btn-flat"><i class='glyphicon glyphicon-trash'></i></button></a>
+                   <a href="{{ url('/deleteActRaisa/'.$activity->id) }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="right" title="Delete File"><i class='glyphicon glyphicon-trash'></i></button></a>
 
                   </div>
                 </td>
@@ -152,7 +156,7 @@
       <div class="box-footer clearfix">
 
 
-        <a href="{{ url('tableRaisa/addActRaisa') }}" class="btn btn-sm btn-info btn-flat pull-left">Place New Activity</a>
+        <a href="{{ url('tableRaisa/addActRaisa') }}" class="btn btn-primary pull-left">Place New Activity</a>
 
       </div><!-- /.box-footer -->
     </div><!-- /.box -->
@@ -185,12 +189,12 @@
             <td>
               <div class="btn-group">
                 <a href="#">
-                  <button type="button" class="btn btn-success btn-flat" data-toggle="tooltip" data-placement="left" title="Download File">
+                  <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="left" title="Download File">
                     <i class='glyphicon glyphicon-download-alt'></i>
                   </button>
                 </a>
 
-                <a href="#" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger btn-flat" data-toggle="tooltip" data-placement="right" title="Delete"><i class='glyphicon glyphicon-trash'></i></button></a>
+                <a href="#" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="right" title="Delete"><i class='glyphicon glyphicon-trash'></i></button></a>
 
               </div>
             </td>
