@@ -20,6 +20,10 @@ Route::get('/chart', function() {
 	return view('chart');
 });
 
+Route::get('/tableOthers/printOther', function() {
+	return view('printOther');
+});
+
 Route::get('/form', function() {
 	return view('form');
 });

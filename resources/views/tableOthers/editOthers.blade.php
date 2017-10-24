@@ -183,7 +183,7 @@
       <div class="box-footer clearfix">
 
 
-        <a href="{{ url('tableother/addActother') }}" class="btn btn-sm btn-info btn-flat pull-left">Place New Activity</a>
+        <a href="{{ url('tableother/addActother') }}" class="btn btn-primary pull-left">Place New Activity</a>
 
       </div><!-- /.box-footer -->
     </div><!-- /.box -->

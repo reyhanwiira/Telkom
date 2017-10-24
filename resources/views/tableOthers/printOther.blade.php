@@ -1,7 +1,6 @@
-@extends('layouts.table_layout')
+@extends('layouts.print_layout')
 
 @section('content')
-
 <div class="row">
   <div class="col-md-12">
     <!-- TABLE: LATEST ORDERS -->
@@ -66,11 +65,10 @@
     </div><!-- /.box-body -->
     <div class="box-footer clearfix">
       <a href="{{ url('tableOthers/createOthers') }}" class="btn btn-primary pull-left">Place New Project</a>
-      <a href="{{ url('tableOthers/printOther') }}" target="_blank" class="btn btn-primary pull-right"><i class="fa fa-print"></i> Print</a>
+      <a href="invoice-print.html" target="_blank" class="btn btn-primary pull-right"><i class="fa fa-print"></i> Print</a>
     </div><!-- /.box-footer -->
   </div><!-- /.box -->
 </div><!-- /.col -->
 
 </div><!-- /.row --> 
-
-@endsection
+  @endsection
