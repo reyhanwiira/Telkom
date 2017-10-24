@@ -132,21 +132,12 @@
           <a href="{{ url('detail') }}">
             <i class="fa fa-pencil-square-o"></i> <span>Detail Project</span> <small class="fa fa pull-right"></small>
           </a>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
           <ul class="treeview-menu">
             <li><a href="{{ url('tableProactive') }}"><i class="fa fa-circle-o"></i> Pro-Active</a></li>
             <li><a href="{{ url('tableRaisa') }}"><i class="fa fa-circle-o"></i> RAISA</a></li>
             <li><a href="{{ url('tableScn') }}"><i class="fa fa-circle-o"></i> SCN</a></li>
             <li><a href="{{ url('tableOthers') }}"><i class="fa fa-circle-o"></i> OTHERS</a></li>
           </ul>
-=======
->>>>>>> 4e4da5802fb85dc98a6add2bb5aa8b22383f48f9
-=======
->>>>>>> 4e4da5802fb85dc98a6add2bb5aa8b22383f48f9
-=======
->>>>>>> 4e4da5802fb85dc98a6add2bb5aa8b22383f48f9
         </li>
 
         <li>
