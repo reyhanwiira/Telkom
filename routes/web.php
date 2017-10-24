@@ -49,6 +49,16 @@ Route::get('/tableProactive/editActPro/{id}','ProactiveController@editActPro');
 Route::put('/editActPro/{id}','ProactiveController@updateActPro');
 
 
+//ACTIVITY RAISA
+Route::get('/tableRaisa/addActRaisa','RaisaController@createActRaisa');
+Route::post('/tableRaisa/{id}','RaisaController@storeActRaisa');
+
+Route::get('deleteActRaisa/{id}','RaisaController@deleteActRaisa');
+
+Route::get('/tableRaisa/editActRaisa/{id}','RaisaController@editActRaisa');
+Route::put('/editActRaisa/{id}','RaisaController@updateActRaisa');
+
+
 //ACTIVITY SCN
 Route::get('/tableScn/addActScn','ScnController@createActScn');
 Route::post('/tableScn/{id}','ScnController@storeActScn');
@@ -108,7 +118,7 @@ Route::get('/tableScn/create','ScnController@create');
 Route::post('/tableScn','ScnController@store');
 
 //EDIT DAN UPDATE DATA SCN
-Route::get('/tableScn/{id}/edit','ScnController@edit');
+Route::get('/tableScn/{id}/editScn','ScnController@edit');
 Route::put('/tableScn/{id}','ScnController@update');
 
 //DELETE DATA RAISA
@@ -133,7 +143,6 @@ Route::get('deleteOthers/{id}','OthersController@deleteOthers');
 
 Route::get('/tableOthers/printOthers','OthersController@print');
 
-Route::get('/tableOthers/addDocumentOthers','OthersController@addDocumentOthers');
 
 
 Route::get('/detail','DetailController@index');

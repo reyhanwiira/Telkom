@@ -15,12 +15,12 @@
 
                   <div class="form-group">
                     <label>Nama Dokumen</label>
-                    <input type="text" class="form-control" name="namaDokumen" />
+                    <input type="text" class="form-control" name="filename" />
                   </div>
 
                   <div class="form-group">
                     <label for="exampleInputFile">File input</label>
-                    <input type="file" id="exampleInputFile" name="lampiran">
+                    <input type="file" id="exampleInputFile" name="upload">
                     <p class="help-block">Example block-level help text here.</p>
                   </div>
 

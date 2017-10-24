@@ -48,7 +48,7 @@
               <td>{{ $scn-> finishProject }}</td>
               <td>
                 <div class="btn-group">
-                  <a href="{{ url('/tableScn/'.$scn->id.'/edit') }}">
+                  <a href="{{ url('/tableScn/'.$scn->id.'/editScn') }}">
                     <button type="button" class="btn btn-success btn-flat">
                       <i class='glyphicon glyphicon-zoom-in'></i>
                     </button>

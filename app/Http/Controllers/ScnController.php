@@ -57,7 +57,7 @@ class ScnController extends Controller
         $scn= Scn::find($id); 
         $activitys= Activity::all();
 
-      return view('tableScn.edit',compact('scn','activitys'));
+      return view('tableScn.editScn',compact('scn','activitys'));
     }
 
     public function update(Request $request, $id)

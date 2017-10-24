@@ -11,6 +11,7 @@ use Redirect;
 use View;
 use Validator;
 use App\raisa;
+use App\activity;
 
 class RaisaController extends Controller
 {
@@ -52,9 +53,10 @@ class RaisaController extends Controller
 
     public function edit($id)
     {
-        $raisa= Raisa::find($id); 
+        $raisa= Raisa::find($id);
+        $activitys= Activity::all(); 
 
-      return view('tableRaisa.editRaisa',compact('raisa'));
+      return view('tableRaisa.editRaisa',compact('raisa','activitys'));
     }
 
     public function update(Request $request, $id)
@@ -83,4 +85,55 @@ class RaisaController extends Controller
 
       return Redirect::to('/tableRaisa');
     } 
+
+
+    public function createActRaisa()
+    {
+      return view('tableRaisa.addActRaisa');
+    }
+ 
+     public function storeActRaisa(Request $request)
+    {
+          
+        Activity::create([
+        
+        'tanggal'=>$request->input('tanggal'),
+        'agenda'=>$request->input('agenda'),
+        'actionPlan'=>$request->input('actionPlan'),
+        'evidence'=>$request->input('evidence'),
+        'lampiran'=>$request->input('lampiran')
+        
+      ]);
+
+      return redirect('tableRaisa');
+  }
+
+
+   public function deleteActRaisa($id)
+   {
+      $activity = Activity::where('id','=',$id)->delete();
+
+      return back();
+    }
+
+    public function editActRaisa($id)
+    {
+        $activity = Activity::find($id);
+
+        return view('tableRaisa.editActRaisa',compact('activity'));
+    }
+
+    public function updateActRaisa(Request $request, $id)
+    {
+        $activity = Activity::find($id);
+        $activity->tanggal=$request->input('tanggal');
+        $activity->agenda=$request->input('agenda');
+        $activity->actionPlan=$request->input('actionPlan');
+        $activity->evidence=$request->input('evidence');
+        $activity->lampiran=$request->input('lampiran');
+
+        $activity->update();
+
+        return redirect::to('/tableRaisa');
+    }
 }

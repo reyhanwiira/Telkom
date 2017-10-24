@@ -98,6 +98,112 @@
       </form>
     </div><!-- /.box -->
 
+    <div class="box box-primary">
+        <div class="box-header with-border">
+          <h3 class="box-title">Activity Record</h3>
+          <div class="box-tools pull-right">
+            <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+          </div>
+        </div><!-- /.box-header -->
+        <div class="box-body">
+          <div class="table-responsive">
+           <table id="example1" class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Tanggal</th>
+                <th>Agenda</th>
+                <th>Action Plan</th>
+                <th>Evidence</th>
+                <th>Lampiran</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <?php $no=1; ?>
+                @foreach ($activitys as $activity)
+                <td>{{ $no++ }}</td>
+                <td>{{ $activity->tanggal }}</td>
+                <td>{{ $activity->agenda }}</td>
+                <td>{{ $activity->actionPlan }}</td>
+                <td>{{ $activity->evidence }}</td>
+                <td>{{ $activity->lampiran }}</td>
+              
+                <td>
+                  <div class="btn-group">
+                    <a href="{{ url('/tableRaisa'.'/editActRaisa/'.$activity->id) }}">
+                      <button type="button" class="btn btn-success btn-flat" data-toggle="tooltip" data-placement="left" title="Edit File">
+                        <i class='glyphicon glyphicon-pencil'></i>
+                      </button>
+                    </a>
+
+                   <a href="{{ url('/deleteActRaisa/'.$activity->id) }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger btn-flat"><i class='glyphicon glyphicon-trash'></i></button></a>
+
+                  </div>
+                </td>
+              </tr>
+              @endforeach
+            </tbody>
+
+          </table>
+        </div><!-- /.table-responsive -->
+      </div><!-- /.box-body -->
+      <div class="box-footer clearfix">
+
+
+        <a href="{{ url('tableRaisa/addActRaisa') }}" class="btn btn-sm btn-info btn-flat pull-left">Place New Activity</a>
+
+      </div><!-- /.box-footer -->
+    </div><!-- /.box -->
+
+    <!-- TABLE: LATEST ORDERS -->
+    <div class="box box-primary">
+      <div class="box-header with-border">
+        <h3 class="box-title">Lampiran Dokumen</h3>
+        <div class="box-tools pull-right">
+          <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+        </div>
+      </div><!-- /.box-header -->
+      <div class="box-body">
+        <div class="table-responsive">
+         <table id="example1" class="table table-bordered table-striped">
+          <thead>
+           <?php $no=1; ?>
+           <tr>
+            <th>No</th>
+            <th>Agenda</th>
+            <th>Nama Dokumen</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{ $no++ }}</td>
+            <td>{{ $activity->agenda }}</td>
+            <td>{{ $activity->lampiran }}</td>
+            <td>
+              <div class="btn-group">
+                <a href="#">
+                  <button type="button" class="btn btn-success btn-flat" data-toggle="tooltip" data-placement="left" title="Download File">
+                    <i class='glyphicon glyphicon-download-alt'></i>
+                  </button>
+                </a>
+
+                <a href="#" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger btn-flat" data-toggle="tooltip" data-placement="right" title="Delete"><i class='glyphicon glyphicon-trash'></i></button></a>
+
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div><!-- /.table-responsive -->
+  </div><!-- /.box-body -->
+  <div class="box-footer clearfix">
+    <a href="#" class="btn btn-primary pull-left">Place New Documents</a>
+  </div><!-- /.box-footer -->
+</div><!-- /.box -->
+
   </div><!--/.col (left) -->
 </div>   <!-- /.row -->
 </section><!-- /.content -->

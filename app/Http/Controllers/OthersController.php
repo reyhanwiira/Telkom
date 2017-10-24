@@ -95,6 +95,29 @@ class OthersController extends Controller
       return back();
     }
 
+    public function createActOthers()
+    {
+      return view('tableOthers.addActOthers');
+    }
+ 
+
+    public function storeActOthers(Request $request)
+    {
+          
+        Activity::create([
+        
+        'tanggal'=>$request->input('tanggal'),
+        'agenda'=>$request->input('agenda'),
+        'actionPlan'=>$request->input('actionPlan'),
+        'evidence'=>$request->input('evidence'),
+        'filename'=>$request->input('filename'),
+        'upload'=>$request->input('upload')
+        
+      ]);
+
+      return redirect('tableOthers');
+  }
+
     public function editActOthers($id)
     {
         $activity = Activity::find($id);
@@ -122,13 +145,6 @@ class OthersController extends Controller
         $otherss = Other::all();
 
         return view('tableOthers.printOthers',compact('otherss'));
-    }
-
-
-    public function addDocumentOthers()
-    {
-
-        return view('tableOthers.addDocumentOthers');
     }
 
 }
