@@ -66,7 +66,7 @@
     </div><!-- /.box-body -->
     <div class="box-footer clearfix">
       <a href="{{ url('tableOthers/createOthers') }}" class="btn btn-primary pull-left">Place New Project</a>
-      <a href="{{ url('tableOthers/printOther') }}" target="_blank" class="btn btn-primary pull-right"><i class="fa fa-print"></i> Print</a>
+      <a href="{{ url('tableOthers/printOthers') }}" target="_blank" class="btn btn-primary pull-right"><i class="fa fa-print"></i> Print</a>
     </div><!-- /.box-footer -->
   </div><!-- /.box -->
 </div><!-- /.col -->

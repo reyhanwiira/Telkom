@@ -27,8 +27,8 @@
               <th>Information</th>
               <th>Start Project</th>
               <th>Finish Project</th>
-              <th>Action</th> 
-            </tr>
+          
+          </tr>
           </thead>
           <tbody>
             <?php $no=1; ?>
@@ -45,28 +45,13 @@
               <td>{{ $other-> information }}</td>
               <td>{{ $other-> startProject }}</td>
               <td>{{ $other-> finishProject }}</td>
-              <td>
-                <div class="btn-group">
-                  <a href="{{ url('/tableOthers/'.$other->id.'/editOthers') }}">
-                    <button type="button" class="btn btn-success">
-                      <i class='glyphicon glyphicon-zoom-in'></i>
-                    </button>
-                  </a>
-                  
-                  <a href="deleteOthers/{{ $other->id }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger"><i class='glyphicon glyphicon-trash'></i></button></a>
-
-                </div>
-              </td>
+          
             </tr>
             @endforeach
           </tbody>
         </table>
       </div><!-- /.table-responsive -->
     </div><!-- /.box-body -->
-    <div class="box-footer clearfix">
-      <a href="{{ url('tableOthers/createOthers') }}" class="btn btn-primary pull-left">Place New Project</a>
-      <a href="invoice-print.html" target="_blank" class="btn btn-primary pull-right"><i class="fa fa-print"></i> Print</a>
-    </div><!-- /.box-footer -->
   </div><!-- /.box -->
 </div><!-- /.col -->
 

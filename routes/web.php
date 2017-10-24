@@ -20,9 +20,6 @@ Route::get('/chart', function() {
 	return view('chart');
 });
 
-Route::get('/tableOthers/printOther', function() {
-	return view('printOther');
-});
 
 Route::get('/form', function() {
 	return view('form');
@@ -133,6 +130,10 @@ Route::put('/tableOthers/{id}','OthersController@updateOthers');
 
 //DELETE DATA OTHER
 Route::get('deleteOthers/{id}','OthersController@deleteOthers');
+
+Route::get('/tableOthers/printOthers','OthersController@print');
+
+Route::get('/tableOthers/addDocumentOthers','OthersController@addDocumentOthers');
 
 
 Route::get('/detail','DetailController@index');

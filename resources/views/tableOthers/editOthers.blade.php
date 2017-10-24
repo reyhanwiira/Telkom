@@ -231,7 +231,7 @@
     </div><!-- /.table-responsive -->
   </div><!-- /.box-body -->
   <div class="box-footer clearfix">
-    <a href="#" class="btn btn-primary pull-left">Place New Documents</a>
+    <a href="{{ url('/tableOthers/addDocumentOthers') }}" class="btn btn-primary pull-left">Place New Documents</a>
   </div><!-- /.box-footer -->
 </div><!-- /.box -->
 
@@ -261,7 +261,7 @@
                      <div class="input-group-addon">
                        <i class="fa fa-calendar"></i>
                      </div>
-                     <input type="date" class="form-control pull-right" id="reservation" name="startProject" />
+                     <input type="date" class="form-control pull-right" id="reservation" name="date" />
                    </div><!-- /.input group -->
                  </div><!-- /.form group -->
 
@@ -276,13 +276,8 @@
                 </div>
 
                 <div class="form-group">
-                  <label>Evidance</label>
-                  <input type="text" class="form-control" name="evidance" />
-                </div>
-
-                <div class="form-group">
-                  <label>Lampiran</label>
-                  <input type="text" class="form-control" name="lampiran" />
+                  <label>Evidence</label>
+                  <input type="text" class="form-control" name="evidence" />
                 </div>
               </div><!-- /.box-body -->
 

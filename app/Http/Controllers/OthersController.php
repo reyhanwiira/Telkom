@@ -116,4 +116,19 @@ class OthersController extends Controller
         return redirect::to('/tableOthers');
     }
 
+
+    public function print()
+    {
+        $otherss = Other::all();
+
+        return view('tableOthers.printOthers',compact('otherss'));
+    }
+
+
+    public function addDocumentOthers()
+    {
+
+        return view('tableOthers.addDocumentOthers');
+    }
+
 }
