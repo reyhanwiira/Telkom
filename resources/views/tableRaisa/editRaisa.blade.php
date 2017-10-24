@@ -7,8 +7,12 @@
     <div class="col-md-12">
       <!-- general form elements -->
       <div class="box box-primary">
-        <div class="box-header">
-        </div><!-- /.box-header -->
+        <div class="box-header with-border">
+            <h3 class="box-title">View Detail Project</h3>
+            <div class="box-tools pull-right">
+              <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+            </div>
+          </div>
         <!-- form start -->
         <form role="form" method="post" action="{{ url('/tableRaisa/'.$raisa->id) }}">
           {{ method_field('PUT') }}
