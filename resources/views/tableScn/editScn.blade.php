@@ -145,7 +145,7 @@
                       
                     </a>
 
-                   <a href="{{ url('/deleteActScn/'.$activity->id) }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger"><i class='glyphicon glyphicon-trash'></i></button></a>
+                   <a href="{{ url('/deleteActScn/'.$activity->id) }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger" data-placement="left" title="Delete File"><i class='glyphicon glyphicon-trash'></i></button></a>
 
                   </div>
                 </td>

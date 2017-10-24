@@ -49,12 +49,12 @@
               <td>
                 <div class="btn-group">
                   <a href="{{ url('/tableOthers/'.$other->id.'/editOthers') }}">
-                    <button type="button" class="btn btn-success">
+                    <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Detail Project">
                       <i class='glyphicon glyphicon-zoom-in'></i>
                     </button>
                   </a>
                   
-                  <a href="deleteOthers/{{ $other->id }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger"><i class='glyphicon glyphicon-trash'></i></button></a>
+                  <a href="deleteOthers/{{ $other->id }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="bottom" title="Delete Project"><i class='glyphicon glyphicon-trash'></i></button></a>
 
                 </div>
               </td>
