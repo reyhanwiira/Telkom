@@ -39,9 +39,10 @@
               <input type="text" class="form-control" name="evidence" />
             </div>
 
-            <div class="form-group">
-              <label>Lampiran</label>
-              <input type="text" class="form-control" name="lampiran" />
+             <div class="form-group">
+                    <label for="exampleInputFile">File input</label>
+                    <input type="file" id="upload" name="upload">
+                    <p class="help-block">Example block-level help text here.</p>
             </div>
          </div><!-- /.box-body -->
 

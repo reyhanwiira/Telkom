@@ -78,6 +78,7 @@ Route::get('deleteActOthers/{id}','OthersController@deleteActOthers');
 Route::get('/tableOthers/editActOthers/{id}','OthersController@editActOthers');
 Route::put('/editActOthers/{id}','OthersController@updateActOthers');
 
+Route::post('/tableOthers','OthersController@uploadOthers');
 
 //READ DATA PROACTIVE
 
@@ -142,6 +143,7 @@ Route::put('/tableOthers/{id}','OthersController@updateOthers');
 Route::get('deleteOthers/{id}','OthersController@deleteOthers');
 
 Route::get('/tableOthers/printOthers','OthersController@print');
+
 
 
 
