@@ -113,14 +113,14 @@
 
           <li class="treeview">
             <a href="#">
-              <i class="fa fa-pie-chart"></i>
+              <i class="fa fa-table"></i>
               <span>Table</span>
               <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="{{ url('tableProActive') }}"><i class="fa fa-circle-o"></i> Pro-Active</a></li>
+              <li><a href="{{ url('tableProactive') }}"><i class="fa fa-circle-o"></i> Pro-Active</a></li>
               <li><a href="{{ url('tableRaisa') }}"><i class="fa fa-circle-o"></i> RAISA</a></li>
               <li><a href="{{ url('tableScn') }}"><i class="fa fa-circle-o"></i> SCN</a></li>
               <li><a href="{{ url('tableOthers') }}"><i class="fa fa-circle-o"></i> OTHERS</a></li>

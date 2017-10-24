@@ -5,7 +5,7 @@
 <div class="row">
   <div class="col-md-12">
     <!-- TABLE: LATEST ORDERS -->
-    <div class="box box-info">
+    <div class="box box-primary">
       <div class="box-header with-border">
         <h3 class="box-title">RAISA</h3>
         <div class="box-tools pull-right">
@@ -49,12 +49,12 @@
               <td>
                 <div class="btn-group">
                   <a href="{{ url('/tableRaisa/'.$raisa->id.'/editRaisa') }}">
-                    <button type="button" class="btn btn-success btn-flat">
+                    <button type="button" class="btn btn-success">
                       <i class='glyphicon glyphicon-zoom-in'></i>
                     </button>
                   </a>
 
-                  <a href="deleteRaisa/{{ $raisa->id }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger btn-flat"><i class='glyphicon glyphicon-trash'></i></button></a>
+                  <a href="deleteRaisa/{{ $raisa->id }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger"><i class='glyphicon glyphicon-trash'></i></button></a>
 
                 </div>
               </td>
@@ -65,8 +65,8 @@
       </div><!-- /.table-responsive -->
     </div><!-- /.box-body -->
     <div class="box-footer clearfix">
-      <a href="{{ url('tableRaisa/createRaisa') }}" class="btn btn-sm btn-info btn-flat pull-left">Place New Project</a>
-      <a href="invoice-print.html" target="_blank" class="btn btn-sm btn-info btn-flat pull-right"><i class="fa fa-print"></i> Print</a>
+      <a href="{{ url('tableRaisa/createRaisa') }}" class="btn btn-primary pull-left">Place New Project</a>
+      <a href="invoice-print.html" target="_blank" class="btn btn-primary pull-right"><i class="fa fa-print"></i> Print</a>
     </div><!-- /.box-footer -->
   </div><!-- /.box -->
 </div><!-- /.col -->

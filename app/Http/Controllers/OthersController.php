@@ -140,11 +140,4 @@ class OthersController extends Controller
     }
 
 
-    public function print()
-    {
-        $otherss = Other::all();
-
-        return view('tableOthers.printOthers',compact('otherss'));
-    }
-
 }

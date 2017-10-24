@@ -139,12 +139,12 @@
                 <td>
                   <div class="btn-group">
                     <a href="{{ url('/tableOthers'.'/editActOthers/'.$activity->id) }}">
-                      <button type="button" class="btn btn-success btn-flat" data-toggle="tooltip" data-placement="left" title="Edit File">
+                      <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="left" title="Edit File">
                         <i class='glyphicon glyphicon-pencil'></i>
                       </button>
                     </a>
 
-                   <a href="{{ url('/deleteActOthers/'.$activity->id) }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger btn-flat"><i class='glyphicon glyphicon-trash'></i></button></a>
+                   <a href="{{ url('/deleteActOthers/'.$activity->id) }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger"><i class='glyphicon glyphicon-trash'></i></button></a>
 
                   </div>
                 </td>
@@ -191,12 +191,12 @@
             <td>
               <div class="btn-group">
                 <a href="#">
-                  <button type="button" class="btn btn-success btn-flat" data-toggle="tooltip" data-placement="left" title="Download File">
+                  <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="left" title="Download File">
                     <i class='glyphicon glyphicon-download-alt'></i>
                   </button>
                 </a>
 
-                <a href="#" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger btn-flat" data-toggle="tooltip" data-placement="right" title="Delete"><i class='glyphicon glyphicon-trash'></i></button></a>
+                <a href="#" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="right" title="Delete"><i class='glyphicon glyphicon-trash'></i></button></a>
 
               </div>
             </td>
