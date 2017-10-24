@@ -154,7 +154,7 @@
       <!-- Content Header (Page header) -->
       <section class="content-header">
         <h1>
-          Detail Project
+          Project Overview
           <small></small>
         </h1>
         <ol class="breadcrumb">
