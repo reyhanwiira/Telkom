@@ -138,30 +138,22 @@
                 <td>
                 
                 <a href="#">
-                  <button type="button" class="btn btn-success btn-flat" data-toggle="tooltip" data-placement="left" title="Download File">
+                  <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="left" title="Download File">
                     <i class='glyphicon glyphicon-download-alt'></i>
                   </button>
                 </a>
 
 
                   <div class="btn-group">
-<<<<<<< HEAD
-                    <a href="{{ url('/tableProactives'.'/editActProactives/'.$activity->id) }}">
-                      <button type="button" class="btn btn-success btn-flat" data-toggle="tooltip" data-placement="left" title="Edit File">
-=======
                     <a href="{{ url('/tableProactive'.'/editActPro/'.$activity->id) }}">
                       <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="left" title="Edit File">
->>>>>>> d41624be577177999691f69f2d990995444944b6
                         <i class='glyphicon glyphicon-pencil'></i>
                       </button>
                     </a>
 
-<<<<<<< HEAD
-                   <a href="{{ url('/deleteActProactives/'.$activity->id) }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger btn-flat"><i class='glyphicon glyphicon-trash'></i></button></a>
+                   <a href="{{ url('/deleteActProactives/'.$activity->id) }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="left" title="Delete Activity"><i class='glyphicon glyphicon-trash'></i></button></a>
 
-=======
                    <a href="{{ url('/deleteActPro/'.$activity->id) }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger" data-placement="left" title="Delete Fle"><i class='glyphicon glyphicon-trash'></i></button></a>
->>>>>>> d41624be577177999691f69f2d990995444944b6
 
                   </div>
                 </td>
@@ -180,9 +172,6 @@
       </div><!-- /.box-footer -->
     </div><!-- /.box -->
 
-<<<<<<< HEAD
-    
-=======
     <!-- TABLE: LATEST ORDERS -->
     <div class="box box-primary">
       <div class="box-header with-border">
@@ -348,7 +337,6 @@
   </div>
 </div>
 
->>>>>>> d41624be577177999691f69f2d990995444944b6
 </div><!--/.col (left) -->
 </div>   <!-- /.row -->
 </section><!-- /.content -->
