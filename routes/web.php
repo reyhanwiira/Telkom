@@ -148,5 +148,9 @@ Route::get('/tableOthers/printOthers','OthersController@print');
 Route::get('/detail','DetailController@index');
 
 
+//Dashboard chart
+
+Route::get('/home','ChartController@readChart');
+
 
 });

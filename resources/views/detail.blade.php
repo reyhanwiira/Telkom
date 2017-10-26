@@ -174,104 +174,110 @@
 </div>
 
 <div class="row">
-  <div class="col-md-6">
-    <div class="box box-solid">
-      <div class="box-header with-border">
-        <h3 class="box-title">Activity Record</h3>
-      </div>
-      <!-- /.box-header -->
-      <div class="box-body">
-        <div class="box-group" id="accordion">
-          <!-- we are adding the .panel class so bootstrap.js collapse plugin detects it -->
-          <div class="panel box box-primary">
-            <div class="box-header with-border">
-              <h4 class="box-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                  Last Action
-                </a>
-              </h4>
-            </div>
-            <div id="collapseOne" class="panel-collapse collapse in">
-              <div class="box-body">
-                <div class="col-md-12">
-                  <!-- The time line -->
-                  <ul class="timeline">
-                    <!-- timeline time label -->
-                    <li class="time-label">
-                      <span class="bg-red">
-                        10 Feb. 2014
-                      </span>
-                    </li>
-                    <!-- /.timeline-label -->
-                    <!-- timeline item -->
-                    <li>
-                      <i class="fa fa-user bg-aqua"></i>
+  <div>
+    <div class="col-md-12">
+      <div class="box box-solid">
+        <div class="box-header with-border">
+          <h3 class="box-title">Activity Record</h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+          
+          <div class="box-group" id="accordion">
+            <!-- we are adding the .panel class so bootstrap.js collapse plugin detects it -->
+            <div class="col-md-6">  
+              <div class="panel box box-primary">
+                <div class="box-header with-border">
+                  <h4 class="box-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                      Last Action
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in">
+                  <div class="box-body">
+                    <div class="col-md-12">
+                      <!-- The time line -->
+                      <ul class="timeline">
+                        <!-- timeline time label -->
+                        <li class="time-label">
+                          <span class="bg-red">
+                            10 Feb. 2014
+                          </span>
+                        </li>
+                        <!-- /.timeline-label -->
+                        <!-- timeline item -->
+                        <li>
+                          <i class="fa fa-user bg-aqua"></i>
 
-                      <div class="timeline-item">
-                        <h3 class="timeline-header no-border"><a href="#">Jay White</a> Rapat dengan client</h3>
-                      </div>
-                    </li>
-                    <!-- END timeline item -->
-                    <!-- timeline item -->
-                    <li>
-                      <i class="fa fa-file-archive-o bg-aqua"></i>
-                      <div class="timeline-item">
-                        <h3 class="timeline-header"><a href="#">Jay White</a> uploaded files</h3>
-                        <div class="timeline-body">
-                          <h4>Hasil Rapat</h4>
-                          <a class="btn btn-app">
-                            <i class="fa fa-save"></i> Save
-                          </a>
-                        </div>
-                        <span class="time"><i class="fa fa-clock-o"></i> 5 mins ago</span>
-                      </div>
-                    </li>
-                    <!-- END timeline item -->
-                    <li>
-                      <i class="fa fa-clock-o bg-gray"></i>
-                    </li>
-                  </ul>
+                          <div class="timeline-item">
+                            <h3 class="timeline-header no-border"><a href="#">Jay White</a> Rapat dengan client</h3>
+                          </div>
+                        </li>
+                        <!-- END timeline item -->
+                        <!-- timeline item -->
+                        <li>
+                          <i class="fa fa-file-archive-o bg-aqua"></i>
+                          <div class="timeline-item">
+                            <h3 class="timeline-header"><a href="#">Jay White</a> uploaded files</h3>
+                            <div class="timeline-body">
+                              <h4>Hasil Rapat</h4>
+                              <a class="btn btn-app">
+                                <i class="fa fa-save"></i> Save
+                              </a>
+                            </div>
+                            <span class="time"><i class="fa fa-clock-o"></i> 5 mins ago</span>
+                          </div>
+                        </li>
+                        <!-- END timeline item -->
+                        <li>
+                          <i class="fa fa-clock-o bg-gray"></i>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          <div class="col-md-6">
+            <div class="panel box box-danger">
+              <div class="box-header with-border">
+                <h4 class="box-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                    Next Action
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseTwo" class="panel-collapse collapse in">
+                <div class="box-body">
+                  <div class="col-md-12">
+                    <ul class="timeline">
+                      <!-- timeline time label -->
+                      <li class="time-label">
+                        <span class="bg-red">
+                          20 Feb. 2014
+                        </span>
+                      </li>
+                      <!-- /.timeline-label -->
+                      <!-- timeline item -->
+                      <li>
+                        <i class="fa fa-user bg-aqua"></i>
 
-          <div class="panel box box-danger">
-            <div class="box-header with-border">
-              <h4 class="box-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                  Next Action
-                </a>
-              </h4>
-            </div>
-            <div id="collapseTwo" class="panel-collapse collapse in">
-              <div class="box-body">
-                <div class="col-md-12">
-                  <ul class="timeline">
-                    <!-- timeline time label -->
-                    <li class="time-label">
-                      <span class="bg-red">
-                        20 Feb. 2014
-                      </span>
-                    </li>
-                    <!-- /.timeline-label -->
-                    <!-- timeline item -->
-                    <li>
-                      <i class="fa fa-user bg-aqua"></i>
-
-                      <div class="timeline-item">
-                        <h3 class="timeline-header no-border"><a href="#">Jay White</a> Rapat dengan client</h3>
-                      </div>
-                    </li>
-                    <!-- END timeline item -->
-                    <!-- timeline item -->
-                    <li>
-                      <i class="fa fa-clock-o bg-gray"></i>
-                    </li>
-                    <div class="box-tools pull-right">
-                      <a href="" class="btn btn-sm btn-info btn-flat pull-left">Place New Activty</a>
-                    </div><!-- /.box-footer -->
-                  </ul>
+                        <div class="timeline-item">
+                          <h3 class="timeline-header no-border"><a href="#">Jay White</a> Rapat dengan client</h3>
+                        </div>
+                      </li>
+                      <!-- END timeline item -->
+                      <!-- timeline item -->
+                      <li>
+                        <i class="fa fa-clock-o bg-gray"></i>
+                      </li>
+                      <div class="box-tools pull-right">
+                        <a href="" class="btn btn-sm btn-info btn-flat pull-left">Place New Activty</a>
+                      </div><!-- /.box-footer -->
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
