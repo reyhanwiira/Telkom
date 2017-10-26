@@ -75,10 +75,11 @@
           </button>
         </a>
 
-        <button type="button" class="btn btn-primary pull-center" data-toggle="tooltip" data-placement="right" title="Export Data">
-            <i class='glyphicon glyphicon-floppy-open'></i>
-        </button>
-
+        <a href="#">
+          <button type="button" class="btn btn-primary pull-center" data-toggle="tooltip" data-placement="right" title="Export Data">
+              <i class='glyphicon glyphicon-floppy-open'></i>
+          </button>
+        </a>
       </div><!-- /.box-footer -->
     </div><!-- /.box -->
   </div><!-- /.col -->
