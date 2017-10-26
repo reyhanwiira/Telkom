@@ -174,7 +174,7 @@
 
     <footer class="main-footer">
       <div class="pull-right hidden-xs">
-        <b>Version</b> 2.4.0
+        <b>Version</b> 1.1
       </div>
       <strong>Copyright &copy; 2017 <a href="#">BINUS TEAM</a>.</strong> All rights reserved.
     </footer>
@@ -212,14 +212,7 @@
 <!-- page script -->
 <script>
   $(function () {
-    $('#example1').DataTable({
-      'paging'      : true,
-      'lengthChange': true,
-      'searching'   : true,
-      'ordering'    : true,
-      'info'        : true,
-      'autoWidth'   : true
-    })
+    $('#example1').DataTable()
     $('#example2').DataTable({
       'paging'      : true,
       'lengthChange': true,
@@ -234,7 +227,7 @@
       'searching'   : true,
       'ordering'    : true,
       'info'        : true,
-      'autoWidth'   : true
+      'autoWidth'   : false
     })
     $('#example4').DataTable({
       'paging'      : true,
@@ -242,10 +235,19 @@
       'searching'   : true,
       'ordering'    : true,
       'info'        : true,
-      'autoWidth'   : true
+      'autoWidth'   : false
+    })
+    $('#example5').DataTable({
+      'paging'      : true,
+      'lengthChange': true,
+      'searching'   : true,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : false
     })
   })
 </script>
+
 
 </body>
 </html>

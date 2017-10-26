@@ -139,5 +139,35 @@ class OthersController extends Controller
         return redirect::to('/tableOthers');
     }
 
+    public function print()
+    {
+        $otherss = Other::all();
 
+        return view('tableOthers.printOthers',compact('otherss'));
+    }
+
+
+    public function uploadOthersIndex(){
+
+
+        return view('tableOthers.addDocumentOthers');
+    }
+ 
+    public function uploadOthers(Request $request){
+        $file = $request->file('filename');
+        echo 'File name :'.$file->getClientOriginalName().'<br>';
+        echo 'File extension :'.$file->getClientOriginalExtension().'<br>';
+        echo 'File path :'.$file->getRealPath().'<br>';
+        echo 'File size :'.$file->getSize().'<br>';
+        echo 'File MIME Type :'.$file->getMimeType().'<br>';
+ 
+        //upload file
+        $destinationPath='uploads';
+        $filename = $file->getClientOriginalName();
+        if($file->move($destinationPath,$file->getClientOriginalName())){
+            echo "<img src='uploads/".$filename."'>";
+        }
+         
+ 
+    }
 }

@@ -142,7 +142,7 @@
                       </button>
                     </a>
 
-                   <a href="{{ url('/deleteActRaisa/'.$activity->id) }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger"><i class='glyphicon glyphicon-trash'></i></button></a>
+                   <a href="{{ url('/deleteActRaisa/'.$activity->id) }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="right" title="Delete File"><i class='glyphicon glyphicon-trash'></i></button></a>
 
                   </div>
                 </td>

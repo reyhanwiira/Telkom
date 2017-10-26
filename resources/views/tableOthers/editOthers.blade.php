@@ -134,9 +134,16 @@
                 <td>{{ $activity->agenda }}</td>
                 <td>{{ $activity->actionPlan }}</td>
                 <td>{{ $activity->evidence }}</td>
-                <td>{{ $activity->lampiran }}</td>
-              
+                <td>{{ $activity->upload }}</td>
                 <td>
+                
+                <a href="#">
+                  <button type="button" class="btn btn-success btn-flat" data-toggle="tooltip" data-placement="left" title="Download File">
+                    <i class='glyphicon glyphicon-download-alt'></i>
+                  </button>
+                </a>
+
+
                   <div class="btn-group">
                     <a href="{{ url('/tableOthers'.'/editActOthers/'.$activity->id) }}">
                       <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="left" title="Edit File">
@@ -145,6 +152,7 @@
                     </a>
 
                    <a href="{{ url('/deleteActOthers/'.$activity->id) }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger"><i class='glyphicon glyphicon-trash'></i></button></a>
+
 
                   </div>
                 </td>
@@ -163,6 +171,9 @@
       </div><!-- /.box-footer -->
     </div><!-- /.box -->
 
+<<<<<<< HEAD
+    
+=======
     <!-- TABLE: LATEST ORDERS -->
     <div class="box box-primary">
       <div class="box-header with-border">
@@ -323,6 +334,7 @@
   </div>
 </div>
 
+>>>>>>> d41624be577177999691f69f2d990995444944b6
 </div><!--/.col (left) -->
 </div>   <!-- /.row -->
 </section><!-- /.content -->
