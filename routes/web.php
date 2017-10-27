@@ -78,7 +78,10 @@ Route::get('deleteActOthers/{id}','OthersController@deleteActOthers');
 Route::get('/tableOthers/editActOthers/{id}','OthersController@editActOthers');
 Route::put('/editActOthers/{id}','OthersController@updateActOthers');
 
-Route::post('/tableOthers','OthersController@uploadOthers');
+Route::get('/tableOthers/uploadOthers','OthersUploadController@indexUploadOthers') ;
+Route::post('/tableOthers/editOthers','OthersUploadController@showUploadFile') ;
+
+Route::get('/tableOthers/editOthers','OthersController@downloadFileOthers');
 
 //READ DATA PROACTIVE
 

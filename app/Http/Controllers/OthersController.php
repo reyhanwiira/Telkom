@@ -109,9 +109,7 @@ class OthersController extends Controller
         'tanggal'=>$request->input('tanggal'),
         'agenda'=>$request->input('agenda'),
         'actionPlan'=>$request->input('actionPlan'),
-        'evidence'=>$request->input('evidence'),
-        'filename'=>$request->input('filename'),
-        'upload'=>$request->input('upload')
+        'evidence'=>$request->input('evidence')
         
       ]);
 
@@ -140,7 +138,6 @@ class OthersController extends Controller
     }
 
 
-<<<<<<< HEAD
     public function print()
     {
         $otherss = Other::all();
@@ -149,29 +146,18 @@ class OthersController extends Controller
     }
 
 
-    public function uploadOthersIndex(){
+    public function IndexUpload(){
 
 
-        return view('tableOthers.addDocumentOthers');
+        return view('tableOthers.uploadOthers');
     }
- 
-    public function uploadOthers(Request $request){
-        $file = $request->file('filename');
-        echo 'File name :'.$file->getClientOriginalName().'<br>';
-        echo 'File extension :'.$file->getClientOriginalExtension().'<br>';
-        echo 'File path :'.$file->getRealPath().'<br>';
-        echo 'File size :'.$file->getSize().'<br>';
-        echo 'File MIME Type :'.$file->getMimeType().'<br>';
- 
-        //upload file
-        $destinationPath='uploads';
-        $filename = $file->getClientOriginalName();
-        if($file->move($destinationPath,$file->getClientOriginalName())){
-            echo "<img src='uploads/".$filename."'>";
-        }
-         
- 
+
+
+    public function downloadFileOthers()
+    {
+        $activity= Activity::all()->get();
+
+
+        return view('tableOthers.editOthers',compact('activity'));
     }
-=======
->>>>>>> d41624be577177999691f69f2d990995444944b6
 }
