@@ -137,7 +137,10 @@ class OthersController extends Controller
         return redirect::to('/tableOthers');
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1e3480812303e06556d397dcacf261192f020eec
     public function print()
     {
         $otherss = Other::all();
