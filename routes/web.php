@@ -150,33 +150,6 @@ Route::group(['middleware'=>'auth'], function(){
 
 	Route::get('/tableOthers/printOthers','OthersController@print');
 
-//======================================================================
-
-//getCSV
-
-public function store(AddProjectRequest $request)
-{
-    // Get uploaded CSV file
-    $file = $request->file('csv');
-
-    // Create list name
-    $name = time().'-'.$file->getClientOriginalName();
-
-    // Create a list record in the database
-    $list = List::create(['name' => $name]);
-
-    // Create a CSV reader instance
-    $reader = Reader::createFromFileObject($file->openFile());
-
-    // Create a customer from each row in the CSV file
-    foreach ($reader as $index => $row) {
-        $list->customers()->create($row);
-    }
-
-    // Redirect back to where you need with a success message
-}
-
-
 	Route::get('/detail','DetailController@index');
 
 
