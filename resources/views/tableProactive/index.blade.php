@@ -69,17 +69,14 @@
 
         <a href="#" target="_blank" class="btn btn-primary pull-right "><i class="fa fa-print"></i> Print</a>
 
-        <a href="#">
-          <button type="button" class="btn btn-primary pull-center" data-toggle="tooltip" data-placement="top" title="Import Data">
-            <i class='glyphicon glyphicon-floppy-save'></i>
-          </button>
-        </a>
+        <button class="btn btn-sm btn-primary pull-center" data-toggle="tooltip" data-placement="top" title="Import Data">
+          <input type="file" id="import" name="import">
+        </button>
 
-        <a href="#">
-          <button type="button" class="btn btn-primary pull-center" data-toggle="tooltip" data-placement="right" title="Export Data">
-              <i class='glyphicon glyphicon-floppy-open'></i>
-          </button>
-        </a>
+        <button type="button" class="btn btn-primary pull-center" data-toggle="tooltip" data-placement="right" title="Export Data">
+            <i class='glyphicon glyphicon-floppy-open'></i>
+        </button>
+
       </div><!-- /.box-footer -->
     </div><!-- /.box -->
   </div><!-- /.col -->

@@ -83,14 +83,13 @@ Route::group(['middleware'=>'auth'], function(){
 
 	Route::post('/tableOthers','OthersController@uploadOthers');
 
-<<<<<<< HEAD
 Route::get('/tableOthers/uploadOthers','OthersUploadController@indexUploadOthers') ;
 Route::post('/tableOthers/editOthers','OthersUploadController@showUploadFile') ;
 
 Route::get('/tableOthers/editOthers','OthersController@downloadFileOthers');
-=======
+
 //======================================================================
->>>>>>> 1e3480812303e06556d397dcacf261192f020eec
+
 
 //READ DATA PROACTIVE
 
@@ -161,27 +160,27 @@ Route::get('/tableOthers/editOthers','OthersController@downloadFileOthers');
 
 //getCSV
 
-public function store(AddProjectRequest $request)
-{
+//public function store(AddProjectRequest $request)
+//{
     // Get uploaded CSV file
-    $file = $request->file('csv');
+    //$file = $request->file('csv');
 
     // Create list name
-    $name = time().'-'.$file->getClientOriginalName();
+    //$name = time().'-'.$file->getClientOriginalName();
 
     // Create a list record in the database
-    $list = List::create(['name' => $name]);
+    //$list = List::create(['name' => $name]);
 
     // Create a CSV reader instance
-    $reader = Reader::createFromFileObject($file->openFile());
+    //$reader = Reader::createFromFileObject($file->openFile());
 
     // Create a customer from each row in the CSV file
-    foreach ($reader as $index => $row) {
-        $list->customers()->create($row);
-    }
+    //foreach ($reader as $index => $row) {
+    //    $list->customers()->create($row);
+    //}
 
     // Redirect back to where you need with a success message
-}
+//}
 
 
 	Route::get('/detail','DetailController@index');
