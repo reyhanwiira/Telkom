@@ -83,7 +83,13 @@ Route::group(['middleware'=>'auth'], function(){
 
 	Route::post('/tableOthers','OthersController@uploadOthers');
 
+Route::get('/tableOthers/uploadOthers','OthersUploadController@indexUploadOthers') ;
+Route::post('/tableOthers/editOthers','OthersUploadController@showUploadFile') ;
+
+Route::get('/tableOthers/editOthers','OthersController@downloadFileOthers');
+
 //======================================================================
+
 
 //READ DATA PROACTIVE
 
@@ -150,6 +156,36 @@ Route::group(['middleware'=>'auth'], function(){
 
 	Route::get('/tableOthers/printOthers','OthersController@print');
 
+<<<<<<< HEAD
+=======
+//======================================================================
+
+//getCSV
+
+//public function store(AddProjectRequest $request)
+//{
+    // Get uploaded CSV file
+    //$file = $request->file('csv');
+
+    // Create list name
+    //$name = time().'-'.$file->getClientOriginalName();
+
+    // Create a list record in the database
+    //$list = List::create(['name' => $name]);
+
+    // Create a CSV reader instance
+    //$reader = Reader::createFromFileObject($file->openFile());
+
+    // Create a customer from each row in the CSV file
+    //foreach ($reader as $index => $row) {
+    //    $list->customers()->create($row);
+    //}
+
+    // Redirect back to where you need with a success message
+//}
+
+
+>>>>>>> c124d410ffe77d0089233a64e2c66c1791863310
 	Route::get('/detail','DetailController@index');
 
 
