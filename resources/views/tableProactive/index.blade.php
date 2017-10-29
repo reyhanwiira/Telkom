@@ -67,15 +67,17 @@
       <div class="box-footer clearfix">
         <a href="{{ url('tableProactive/createPro') }}" class="btn btn-primary pull-center">Place New Project</a>
 
-        <a href="#" target="_blank" class="btn btn-primary pull-right "><i class="fa fa-print"></i> Print</a>
+        <a href="#" target="_blank" class="btn btn-primary pull-right "><i class="fa fa-print"></i>  Print</a>
 
-        <button class="btn btn-sm btn-primary pull-center" data-toggle="tooltip" data-placement="top" title="Import Data">
-          <input type="file" id="import" name="import">
+        <button type="button" class="btn btn-primary pull-center" data-toggle="tooltip" data-placement="top" title="Import Data">
+            <i class='glyphicon glyphicon-floppy-open'></i>
         </button>
 
         <button type="button" class="btn btn-primary pull-center" data-toggle="tooltip" data-placement="right" title="Export Data">
-            <i class='glyphicon glyphicon-floppy-open'></i>
+            <i class='glyphicon glyphicon-floppy-save'></i>
         </button>
+
+        <input type="file" id="upload" name="upload" class="btn btn-primary pull-center">
 
       </div><!-- /.box-footer -->
     </div><!-- /.box -->

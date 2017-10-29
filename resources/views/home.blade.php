@@ -109,9 +109,9 @@
 
 								<ul class="chart-legend clearfix">
 									<li><i class="fa fa-circle-o"></i> P0</li>
-									<li><i class="fa fa-circle-o"></i> P1 </li>
-									<li><i class="fa fa-circle-o"></i> P2</li>									
-									<li><i class="fa fa-circle-o"></i> P2</li>									
+									<li><i class="fa fa-circle-o"></i> P1</li>
+									<li><i class="fa fa-circle-o"></i> P2</li>
+									<li><i class="fa fa-circle-o"></i> P3</li>									
 								</ul>
 							</div>
 						<!-- /.box -->
@@ -135,9 +135,9 @@
 
 									<ul class="chart-legend clearfix">
 									<li><i class="fa fa-circle-o"></i> P0</li>
-									<li><i class="fa fa-circle-o"></i> P1 </li>
-									<li><i class="fa fa-circle-o"></i> P2</li>									
+									<li><i class="fa fa-circle-o"></i> P1</li>
 									<li><i class="fa fa-circle-o"></i> P2</li>
+									<li><i class="fa fa-circle-o"></i> P3</li>
 									</ul>
 								</div>
 							<!-- /.box -->
@@ -153,9 +153,9 @@
 
 									<ul class="chart-legend clearfix">
 									<li><i class="fa fa-circle-o"></i> P0</li>
-									<li><i class="fa fa-circle-o"></i> P1 </li>
-									<li><i class="fa fa-circle-o"></i> P2</li>									
+									<li><i class="fa fa-circle-o"></i> P1</li>
 									<li><i class="fa fa-circle-o"></i> P2</li>
+									<li><i class="fa fa-circle-o"></i> P3</li>
 									</ul>
 								</div>
 								<!-- /.box-body-->
@@ -172,9 +172,9 @@
 
 									<ul class="chart-legend clearfix">
 									<li><i class="fa fa-circle-o"></i> P0</li>
-									<li><i class="fa fa-circle-o"></i> P1 </li>
-									<li><i class="fa fa-circle-o"></i> P2</li>									
+									<li><i class="fa fa-circle-o"></i> P1</li>
 									<li><i class="fa fa-circle-o"></i> P2</li>
+									<li><i class="fa fa-circle-o"></i> P3</li>
 									</ul>
 								</div>
 						</div>
