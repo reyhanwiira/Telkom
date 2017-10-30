@@ -156,8 +156,6 @@ Route::get('/tableOthers/editOthers','OthersController@downloadFileOthers');
 
 	Route::get('/tableOthers/printOthers','OthersController@print');
 
-<<<<<<< HEAD
-=======
 //======================================================================
 
 //getCSV
@@ -184,8 +182,6 @@ Route::get('/tableOthers/editOthers','OthersController@downloadFileOthers');
     // Redirect back to where you need with a success message
 //}
 
-
->>>>>>> c124d410ffe77d0089233a64e2c66c1791863310
 	Route::get('/detail','DetailController@index');
 
 
