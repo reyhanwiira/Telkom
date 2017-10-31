@@ -33,28 +33,47 @@
 
     {
       value    : {{ $resume[0]->p0Proactive}},
-      color    : '#ff8080',
+      color    : '#fff5cc',
       highlight: '#ffb3b3',
-      label    : 'P0'
+      label    : 'Initial Requirement'
     },
     {
       value    : {{ $resume[0]->p1Proactive}},
-      color    : '#ff3333',
+      color    : '#ffd1b3',
       highlight: '#ff6666',
-      label    : 'P1'
+      label    : 'Initial Solution'
     },
     {
       value    : {{ $resume[0]->p2Proactive }},
-      color    : '#800000',
+      color    : '#ff9999',
       highlight: '#b30000',
-      label    : 'P2'
+      label    : 'Menunggu Feedback & Gathering Req'
     },
     {
       value    : {{ $resume[0]->p3Proactive }},
-      color    : '#600000',
+      color    : '#730099',
       highlight: '#830000',
-      label    : 'P3'
+      label    : 'Solution Design'
+    },
+    {
+      value    : {{ $resume[0]->p0Raisa}},
+      color    : '#2ea4bc',
+      highlight: '#ff6666',
+      label    : 'Solution Development'
+    },
+    {
+      value    : {{ $resume[0]->p1Raisa }},
+      color    : '#40bf80',
+      highlight: '#b30000',
+      label    : 'POC'
+    },
+    {
+      value    : {{ $resume[0]->p2Raisa }},
+      color    : '#66ff66',
+      highlight: '#830000',
+      label    : 'Proposal Ready'
     }
+
     ]
     var pieOptions     = {
       //Boolean - Whether we should show a stroke on each segment
@@ -79,11 +98,11 @@
       maintainAspectRatio  : true,
       //String - A legend template
       legendTemplate       : '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<segments.length; i++){%><li><span style="background-color:<%=segments[i].fillColor%>"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>'
-  }
+    }
     //Create pie or douhnut chart
     // You can switch between pie and douhnut using the method below.
     pieChart.Doughnut(PieData, pieOptions)
-})
+  })
 </script>
 <script>
   $(function () {
@@ -102,28 +121,47 @@
 
     {
       value    : {{ $resume[1]->p0Proactive}},
-      color    : '#ff8080',
+      color    : '#fff5cc',
       highlight: '#ffb3b3',
-      label    : 'P0'
+      label    : 'Initial Requirement'
     },
     {
       value    : {{ $resume[1]->p1Proactive}},
-      color    : '#ff3333',
+      color    : '#ffd1b3',
       highlight: '#ff6666',
-      label    : 'P1'
+      label    : 'Initial Solution'
     },
     {
       value    : {{ $resume[1]->p2Proactive }},
-      color    : '#800000',
+      color    : '#ff9999',
       highlight: '#b30000',
-      label    : 'P3'
+      label    : 'Menunggu Feedback & Gathering Req'
     },
     {
       value    : {{ $resume[1]->p3Proactive }},
-      color    : '#600000',
+      color    : '#730099',
       highlight: '#830000',
-      label    : 'P3'
+      label    : 'Solution Design'
+    },
+    {
+      value    : {{ $resume[1]->p0Raisa}},
+      color    : '#2ea4bc',
+      highlight: '#ff6666',
+      label    : 'Solution Development'
+    },
+    {
+      value    : {{ $resume[1]->p1Raisa }},
+      color    : '#40bf80',
+      highlight: '#b30000',
+      label    : 'POC'
+    },
+    {
+      value    : {{ $resume[1]->p2Raisa }},
+      color    : '#66ff66',
+      highlight: '#830000',
+      label    : 'Proposal Ready'
     }
+
     ]
     var pieOptions     = {
       //Boolean - Whether we should show a stroke on each segment
@@ -148,11 +186,11 @@
       maintainAspectRatio  : true,
       //String - A legend template
       legendTemplate       : '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<segments.length; i++){%><li><span style="background-color:<%=segments[i].fillColor%>"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>'
-  }
+    }
     //Create pie or douhnut chart
     // You can switch between pie and douhnut using the method below.
     pieChart.Doughnut(PieData, pieOptions)
-})
+  })
 </script>
 
 @section('content')
@@ -174,10 +212,31 @@
           <div class="col-md-4">
             <div class="box-header">
               <h3 class="box-title"></h3>
-              <p>Before</p>
+              <p>Last Week</p>
               <div class="box-body">
                 <canvas id="pieChart5" style="height:300px"></canvas>
-                
+                <ul class="chart-legend clearfix">
+                  <div class="row">
+                    <center>
+                      <div class="col-md-2">
+                        <div class="progress">
+                          <div class="progress-bar progress-bar-green" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="10" style="width: 40%; text-align:center; background-color:#1aff1a;">
+                          </div>
+                          <p> 2</p>
+                        </div>
+                      </div>
+                    </center>
+                    <center>
+                      <div class="col-md-2">
+                        <div class="progress">
+                          <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="10" style="width: 40%; text-align:center; background-color:#ff0000;">
+                          </div>
+                          <p> 4</p>
+                        </div>
+                      </div>
+                    </center>
+                  </div>
+                </ul>                
               </div>
             </div>
           </div>
@@ -185,10 +244,31 @@
           <div class="col-md-4">
             <div class="box-header">
               <h3 class="box-title"></h3>
-              <p>After</p>
+              <p>Current Week</p>
               <div class="box-body">
                 <canvas id="pieChart6" style="height:300px"></canvas>
-
+                <ul class="chart-legend clearfix">
+                  <div class="row">
+              <center>
+                <div class="col-md-2">
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-green" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="10" style="width: 40%; text-align:center; background-color:#1aff1a;">
+                    </div>
+                    <p> 4</p>
+                  </div>
+                </div>
+              </center>
+              <center>
+                <div class="col-md-2">
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="10" style="width: 40%; text-align:center; background-color:#ff0000;">
+                    </div>
+                    <p> 4</p>
+                  </div>
+                </div>
+              </center>
+            </div>
+                </ul>
               </div>
             </div>
           </div>
