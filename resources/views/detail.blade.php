@@ -1,5 +1,181 @@
 @extends('layouts.detail_layout')
 
+<script>
+  $(function () {
+    /* ChartJS
+     * -------
+     * Here we will create a few charts using ChartJS
+     */
+
+    //-------------
+    //- PIE CHART -
+    //-------------
+    // Get context with jQuery - using jQuery's .get() method.
+    var pieChartCanvas = $('#pieChart7').get(0).getContext('2d')
+    var pieChart       = new Chart(pieChartCanvas)
+    var PieData        = [
+    {
+      value    : {{ $detailChart[0]->initialRequirement}},
+      color    : '#fff5cc',
+      highlight: '#fffae6',
+      label    : 'Initial Requirement'
+    },
+    {
+      value    : {{ $detailChart[0]->initialSolution}},
+      color    : '#ffd1b3',
+      highlight: '#ffe0cc',
+      label    : 'Initial Solution'
+    },
+    {
+      value    : {{ $detailChart[0]->menungguFeedbackRG}},
+      color    : '#ff9999',
+      highlight: '#ffcccc',
+      label    : 'Menunggu Feedback & Gathering Req'
+    },
+    {
+      value    : {{ $detailChart[0]->solutionDesign}},
+      color    : '#730099',
+      highlight: '#9900cc',
+      label    : 'Solution Design'
+    }
+    {
+      value    : {{ $detailChart[0]->solutionDevelopment}},
+      color    : '#2ea4bc',
+      highlight: '#98d9e6',
+      label    : 'Solution Development'
+    }
+    {
+      value    : {{ $detailChart[0]->POC}},
+      color    : '#40bf80',
+      highlight: '#9fdfbf',
+      label    : 'POC'
+    }
+    {
+      value    : {{ $detailChart[0]->proposalReady}},
+      color    : '#1aff1a',
+      highlight: '#99ff99',
+      label    : 'Proposal Ready'
+    }
+    ]
+    var pieOptions     = {
+      //Boolean - Whether we should show a stroke on each segment
+      segmentShowStroke    : true,
+      //String - The colour of each segment stroke
+      segmentStrokeColor   : '#fff',
+      //Number - The width of each segment stroke
+      segmentStrokeWidth   : 2,
+      //Number - The percentage of the chart that we cut out of the middle
+      percentageInnerCutout: 50, // This is 0 for Pie charts
+      //Number - Amount of animation steps
+      animationSteps       : 100,
+      //String - Animation easing effect
+      animationEasing      : 'easeOutBounce',
+      //Boolean - Whether we animate the rotation of the Doughnut
+      animateRotate        : true,
+      //Boolean - Whether we animate scaling the Doughnut from the centre
+      animateScale         : false,
+      //Boolean - whether to make the chart responsive to window resizing
+      responsive           : true,
+      // Boolean - whether to maintain the starting aspect ratio or not when responsive, if set to false, will take up entire container
+      maintainAspectRatio  : true,
+      //String - A legend template
+      legendTemplate       : '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<segments.length; i++){%><li><span style="background-color:<%=segments[i].fillColor%>"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>'
+    }
+    //Create pie or douhnut chart
+    // You can switch between pie and douhnut using the method below.
+    pieChart.Doughnut(PieData, pieOptions)
+
+  })
+</script>
+
+<script>
+  $(function () {
+    /* ChartJS
+     * -------
+     * Here we will create a few charts using ChartJS
+     */
+
+    //-------------
+    //- PIE CHART -
+    //-------------
+    // Get context with jQuery - using jQuery's .get() method.
+    var pieChartCanvas = $('#pieChart8').get(0).getContext('2d')
+    var pieChart       = new Chart(pieChartCanvas)
+    var PieData        = [
+    {
+      value    : {{ $detailChart[1]->initialRequirement}},
+      color    : '#fff5cc',
+      highlight: '#fffae6',
+      label    : 'Initial Requirement'
+    },
+    {
+      value    : {{ $detailChart[1]->initialSolution}},
+      color    : '#ffd1b3',
+      highlight: '#ffe0cc',
+      label    : 'Initial Solution'
+    },
+    {
+      value    : {{ $detailChart[1]->menungguFeedbackRG}},
+      color    : '#ff9999',
+      highlight: '#ffcccc',
+      label    : 'Menunggu Feedback & Gathering Req'
+    },
+    {
+      value    : {{ $detailChart[1]->solutionDesign}},
+      color    : '#730099',
+      highlight: '#9900cc',
+      label    : 'Solution Design'
+    }
+    {
+      value    : {{ $detailChart[1]->solutionDevelopment}},
+      color    : '#2ea4bc',
+      highlight: '#98d9e6',
+      label    : 'Solution Development'
+    }
+    {
+      value    : {{ $detailChart[1]->POC}},
+      color    : '#40bf80',
+      highlight: '#9fdfbf',
+      label    : 'POC'
+    }
+    {
+      value    : {{ $detailChart[1]->proposalReady}},
+      color    : '#1aff1a',
+      highlight: '#99ff99',
+      label    : 'Proposal Ready'
+    }
+    ]
+    var pieOptions     = {
+      //Boolean - Whether we should show a stroke on each segment
+      segmentShowStroke    : true,
+      //String - The colour of each segment stroke
+      segmentStrokeColor   : '#fff',
+      //Number - The width of each segment stroke
+      segmentStrokeWidth   : 2,
+      //Number - The percentage of the chart that we cut out of the middle
+      percentageInnerCutout: 50, // This is 0 for Pie charts
+      //Number - Amount of animation steps
+      animationSteps       : 100,
+      //String - Animation easing effect
+      animationEasing      : 'easeOutBounce',
+      //Boolean - Whether we animate the rotation of the Doughnut
+      animateRotate        : true,
+      //Boolean - Whether we animate scaling the Doughnut from the centre
+      animateScale         : false,
+      //Boolean - whether to make the chart responsive to window resizing
+      responsive           : true,
+      // Boolean - whether to maintain the starting aspect ratio or not when responsive, if set to false, will take up entire container
+      maintainAspectRatio  : true,
+      //String - A legend template
+      legendTemplate       : '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<segments.length; i++){%><li><span style="background-color:<%=segments[i].fillColor%>"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>'
+    }
+    //Create pie or douhnut chart
+    // You can switch between pie and douhnut using the method below.
+    pieChart.Doughnut(PieData, pieOptions)
+
+  })
+</script>
+
 @section('content')
 <section class="content">
   <div class="row">
@@ -8,6 +184,8 @@
         <div class="box-header">
           <i class="fa fa-bar-chart-o"></i>
           <h3 class="box-title">Donut Chart</h3>
+          <p></p>
+          <p>Breakdown Pengawalan status "P1" untuk Others Initiatives </p>
           <div class="box-tools pull-right">
             <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
           </div>
@@ -18,24 +196,8 @@
             <div class="box-header">
               <h3 class="box-title"></h3>
               <div class="box-body">
-                <canvas id="pieChart" style="height:300px"></canvas>
-
-                <ul class="chart-legend clearfix">
-                  <li><i class="fa fa-circle-o text-red"></i> Chrome</li>
-                  <li><i class="fa fa-circle-o text-green"></i> IE</li>
-                  <li><i class="fa fa-circle-o text-yellow"></i> FireFox</li>
-                  <li><i class="fa fa-circle-o text-aqua"></i> Safari</li>
-                  <li><i class="fa fa-circle-o text-light-blue"></i> Opera</li>
-                  <li><i class="fa fa-circle-o text-gray"></i> Navigator</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-1">
-            <div class="box-header">
-              <div class="box-body">
-                <i class="fa fa-chevron-right"></i>
+                <canvas id="pieChart7" style="height:300px"></canvas>
+                
               </div>
             </div>
           </div>
@@ -44,16 +206,8 @@
             <div class="box-header">
               <h3 class="box-title"></h3>
               <div class="box-body">
-                <canvas id="pieChart2" style="height:300px"></canvas>
+                <canvas id="pieChart8" style="height:300px"></canvas>
 
-                <ul class="chart-legend clearfix">
-                  <li><i class="fa fa-circle-o text-red"></i> Chrome</li>
-                  <li><i class="fa fa-circle-o text-green"></i> IE</li>
-                  <li><i class="fa fa-circle-o text-yellow"></i> FireFox</li>
-                  <li><i class="fa fa-circle-o text-aqua"></i> Safari</li>
-                  <li><i class="fa fa-circle-o text-light-blue"></i> Opera</li>
-                  <li><i class="fa fa-circle-o text-gray"></i> Navigator</li>
-                </ul>
               </div>
             </div>
           </div>
@@ -86,13 +240,11 @@
             </div>
             <div class="progress">
               <div class="progress-bar progress-bar-green" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 100%; text-align:center; background-color:#40bf80;">
-                <span class="sr-only">80% Complete</span>
                 <p>POC (91-99)</p>
               </div>
             </div>
             <div class="progress">
               <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 100%; text-align:center; background-color:#66ff66;">
-                <span class="sr-only">80% Complete</span>
                 <p>Proposal Ready(100)</p>
               </div>
             </div>
@@ -153,7 +305,7 @@
                 </tr>
               </thead>
               <tbody>
-                
+
                 <tr>
                   <td></td>
                   <td></td>
@@ -182,7 +334,7 @@
         </div>
         <!-- /.box-header -->
         <div class="box-body">
-          
+
           <div class="box-group" id="accordion">
             <!-- we are adding the .panel class so bootstrap.js collapse plugin detects it -->
             <div class="col-md-6">  

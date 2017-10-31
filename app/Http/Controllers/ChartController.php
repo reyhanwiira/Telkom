@@ -18,7 +18,7 @@ class ChartController extends Controller
     {
     	$resume = Resume::all();
 
-    	return view('home', compact('resume'));
+    	return view('detail', compact('resume'));
     }
 
 }

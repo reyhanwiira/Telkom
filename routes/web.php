@@ -182,8 +182,11 @@ Route::get('/tableOthers/editOthers','OthersController@downloadFileOthers');
     // Redirect back to where you need with a success message
 //}
 
-	Route::get('/detail','DetailController@index');
+Route::get('/detail','DetailController@index');
 
+//Detail Chart
+
+Route::get('/detail','DetailChartController@readChart');
 
 //Dashboard chart
 

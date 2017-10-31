@@ -16,7 +16,7 @@
 <script src="../../bower_components/Chart.js/Chart.js"></script>
 <!-- page script -->
 <script>
-  $(function () {
+	$(function () {
     /* ChartJS
      * -------
      * Here we will create a few charts using ChartJS
@@ -29,31 +29,31 @@
     var pieChartCanvas = $('#pieChart3').get(0).getContext('2d')
     var pieChart       = new Chart(pieChartCanvas)
     var PieData        = [
-      
-      {
-        value    : {{ $resume[0]->p0Proactive}},
-        color    : '#ff8080',
-        highlight: '#ffb3b3',
-        label    : 'P0'
-      },
-      {
-        value    : {{ $resume[0]->p1Proactive}},
-        color    : '#ff3333',
-        highlight: '#ff6666',
-        label    : 'P1'
-      },
-      {
-        value    : {{ $resume[0]->p2Proactive }},
-        color    : '#800000',
-        highlight: '#b30000',
-        label    : 'P3'
-      },
-      {
-        value    : {{ $resume[0]->p3Proactive }},
-        color    : '#600000',
-        highlight: '#830000',
-        label    : 'P3'
-      }
+
+    {
+    	value    : {{ $resume[0]->p0Proactive}},
+    	color    : '#ff8080',
+    	highlight: '#ffb3b3',
+    	label    : 'P0'
+    },
+    {
+    	value    : {{ $resume[0]->p1Proactive}},
+    	color    : '#ff3333',
+    	highlight: '#ff6666',
+    	label    : 'P1'
+    },
+    {
+    	value    : {{ $resume[0]->p2Proactive }},
+    	color    : '#800000',
+    	highlight: '#b30000',
+    	label    : 'P3'
+    },
+    {
+    	value    : {{ $resume[0]->p3Proactive }},
+    	color    : '#600000',
+    	highlight: '#830000',
+    	label    : 'P3'
+    }
     ]
     var pieOptions     = {
       //Boolean - Whether we should show a stroke on each segment
@@ -78,111 +78,110 @@
       maintainAspectRatio  : true,
       //String - A legend template
       legendTemplate       : '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<segments.length; i++){%><li><span style="background-color:<%=segments[i].fillColor%>"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>'
-    }
+  }
     //Create pie or douhnut chart
     // You can switch between pie and douhnut using the method below.
     pieChart.Doughnut(PieData, pieOptions)
 
     
-  })
+})
 </script>
 
 @section('content')
 <section class="content">
 	<div class="row">
 		<div class="col-md-12">
-
-      <div class="box box-primary">
-        <div class="box-header with-border">
-			<div class="col-md-3">
-				<div class="box box-primary">
-					<div class="box-header with-border">
-						<h3 class="box-title">Pro-Active</h3>
-					</div>
-					<div class="box-body">
+			<div class="box box-primary">
+				<div class="box-header with-border">
+					<div class="col-md-3">
+						<div class="box box-primary">
 							<div class="box-header with-border">
-								<i class="fa fa-bar-chart-o"></i>
-								<h3 class="box-title">PRO-ACTIVE</h3>
+								<h3 class="box-title">Pro-Active</h3>
 							</div>
 							<div class="box-body">
-								<canvas id="pieChart3" style="height:300px"></canvas>
+								<div class="box-header with-border">
+									<i class="fa fa-bar-chart-o"></i>
+									<h3 class="box-title">PRO-ACTIVE</h3>
+								</div>
+								<div class="box-body">
+									<canvas id="pieChart3" style="height:300px"></canvas>
 
-								<ul class="chart-legend clearfix">
-									<li><i class="fa fa-circle-o"></i> P0</li>
-									<li><i class="fa fa-circle-o"></i> P1</li>
-									<li><i class="fa fa-circle-o"></i> P2</li>
-									<li><i class="fa fa-circle-o"></i> P3</li>									
-								</ul>
+									<ul class="chart-legend clearfix">
+										<li><i class="fa fa-circle-o"></i> P0</li>
+										<li><i class="fa fa-circle-o"></i> P1</li>
+										<li><i class="fa fa-circle-o"></i> P2</li>
+										<li><i class="fa fa-circle-o"></i> P3</li>									
+									</ul>
+								</div>
+								<!-- /.box -->
 							</div>
-						<!-- /.box -->
-					</div>
-				</div>
-			</div>			
-
-			<div class="col-md-9">
-				<div class="box box-primary">
-					<div class="box-header with-border">
-						<h3 class="box-title">Pro-Passive</h3>
-					</div>
-					<div class="box-body">
-						<div class="col-md-4">
-								<div class="box-header with-border">
-									<i class="fa fa-bar-chart-o"></i>
-									<h3 class="box-title">RAISA</h3>
-								</div>
-								<div class="box-body">
-									<canvas id="pieChart4" style="height:300px"></canvas>
-
-									<ul class="chart-legend clearfix">
-									<li><i class="fa fa-circle-o"></i> P0</li>
-									<li><i class="fa fa-circle-o"></i> P1</li>
-									<li><i class="fa fa-circle-o"></i> P2</li>
-									<li><i class="fa fa-circle-o"></i> P3</li>
-									</ul>
-								</div>
-							<!-- /.box -->
 						</div>
+					</div>			
 
-						<div class="col-md-4">
-								<div class="box-header with-border">
-									<i class="fa fa-bar-chart-o"></i>
-									<h3 class="box-title">SCN</h3>
-								</div>
-								<div class="box-body">
-									<canvas id="pieChart5" style="height:300px"></canvas>
+					<div class="col-md-9">
+						<div class="box box-primary">
+							<div class="box-header with-border">
+								<h3 class="box-title">Pro-Passive</h3>
+							</div>
+							<div class="box-body">
+								<div class="col-md-4">
+									<div class="box-header with-border">
+										<i class="fa fa-bar-chart-o"></i>
+										<h3 class="box-title">RAISA</h3>
+									</div>
+									<div class="box-body">
+										<canvas id="pieChart4" style="height:300px"></canvas>
 
-									<ul class="chart-legend clearfix">
-									<li><i class="fa fa-circle-o"></i> P0</li>
-									<li><i class="fa fa-circle-o"></i> P1</li>
-									<li><i class="fa fa-circle-o"></i> P2</li>
-									<li><i class="fa fa-circle-o"></i> P3</li>
-									</ul>
+										<ul class="chart-legend clearfix">
+											<li><i class="fa fa-circle-o"></i> P0</li>
+											<li><i class="fa fa-circle-o"></i> P1</li>
+											<li><i class="fa fa-circle-o"></i> P2</li>
+											<li><i class="fa fa-circle-o"></i> P3</li>
+										</ul>
+									</div>
+									<!-- /.box -->
 								</div>
-								<!-- /.box-body-->
-							<!-- /.box -->
-						</div>
 
-						<div class="col-md-4">
-								<div class="box-header with-border">
-									<i class="fa fa-bar-chart-o"></i>
-									<h3 class="box-title">OTHERS</h3>
-								</div>
-								<div class="box-body">
-									<canvas id="pieChart6" style="height:300px"></canvas>
+								<div class="col-md-4">
+									<div class="box-header with-border">
+										<i class="fa fa-bar-chart-o"></i>
+										<h3 class="box-title">SCN</h3>
+									</div>
+									<div class="box-body">
+										<canvas id="pieChart5" style="height:300px"></canvas>
 
-									<ul class="chart-legend clearfix">
-									<li><i class="fa fa-circle-o"></i> P0</li>
-									<li><i class="fa fa-circle-o"></i> P1</li>
-									<li><i class="fa fa-circle-o"></i> P2</li>
-									<li><i class="fa fa-circle-o"></i> P3</li>
-									</ul>
+										<ul class="chart-legend clearfix">
+											<li><i class="fa fa-circle-o"></i> P0</li>
+											<li><i class="fa fa-circle-o"></i> P1</li>
+											<li><i class="fa fa-circle-o"></i> P2</li>
+											<li><i class="fa fa-circle-o"></i> P3</li>
+										</ul>
+									</div>
+									<!-- /.box-body-->
+									<!-- /.box -->
 								</div>
+
+								<div class="col-md-4">
+									<div class="box-header with-border">
+										<i class="fa fa-bar-chart-o"></i>
+										<h3 class="box-title">OTHERS</h3>
+									</div>
+									<div class="box-body">
+										<canvas id="pieChart6" style="height:300px"></canvas>
+
+										<ul class="chart-legend clearfix">
+											<li><i class="fa fa-circle-o"></i> P0</li>
+											<li><i class="fa fa-circle-o"></i> P1</li>
+											<li><i class="fa fa-circle-o"></i> P2</li>
+											<li><i class="fa fa-circle-o"></i> P3</li>
+										</ul>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
 		</div>
 	</div>
 
