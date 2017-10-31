@@ -211,9 +211,6 @@
 <script src="../../bower_components/Chart.js/Chart.js"></script>
 <!-- page script -->
 
-
-
-
 <script>
   $(function () {
     /* ChartJS

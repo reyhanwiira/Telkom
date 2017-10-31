@@ -187,6 +187,7 @@ Route::get('/detail','DetailController@index');
 //Detail Chart
 
 Route::get('/detail','DetailChartController@readChart');
+Route::get('/detail','ChartController@readChartDetail');
 
 //Dashboard chart
 

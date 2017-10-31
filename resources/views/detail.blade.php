@@ -1,4 +1,20 @@
 @extends('layouts.detail_layout')
+<!-- jQuery 3 -->
+<script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../../bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<!-- SlimScroll -->
+<script src="../../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../../bower_components/fastclick/lib/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../../dist/js/demo.js"></script>
+<!-- ChartJS -->
+<script src="../../bower_components/Chart.js/Chart.js"></script>
+<!-- page script -->
 
 <script>
   $(function () {
@@ -11,50 +27,33 @@
     //- PIE CHART -
     //-------------
     // Get context with jQuery - using jQuery's .get() method.
-    var pieChartCanvas = $('#pieChart7').get(0).getContext('2d')
+    var pieChartCanvas = $('#pieChart5').get(0).getContext('2d')
     var pieChart       = new Chart(pieChartCanvas)
     var PieData        = [
+
     {
-      value    : {{ $detailChart[0]->initialRequirement}},
-      color    : '#fff5cc',
-      highlight: '#fffae6',
-      label    : 'Initial Requirement'
+      value    : {{ $resume[0]->p0Proactive}},
+      color    : '#ff8080',
+      highlight: '#ffb3b3',
+      label    : 'P0'
     },
     {
-      value    : {{ $detailChart[0]->initialSolution}},
-      color    : '#ffd1b3',
-      highlight: '#ffe0cc',
-      label    : 'Initial Solution'
+      value    : {{ $resume[0]->p1Proactive}},
+      color    : '#ff3333',
+      highlight: '#ff6666',
+      label    : 'P1'
     },
     {
-      value    : {{ $detailChart[0]->menungguFeedbackRG}},
-      color    : '#ff9999',
-      highlight: '#ffcccc',
-      label    : 'Menunggu Feedback & Gathering Req'
+      value    : {{ $resume[0]->p2Proactive }},
+      color    : '#800000',
+      highlight: '#b30000',
+      label    : 'P2'
     },
     {
-      value    : {{ $detailChart[0]->solutionDesign}},
-      color    : '#730099',
-      highlight: '#9900cc',
-      label    : 'Solution Design'
-    }
-    {
-      value    : {{ $detailChart[0]->solutionDevelopment}},
-      color    : '#2ea4bc',
-      highlight: '#98d9e6',
-      label    : 'Solution Development'
-    }
-    {
-      value    : {{ $detailChart[0]->POC}},
-      color    : '#40bf80',
-      highlight: '#9fdfbf',
-      label    : 'POC'
-    }
-    {
-      value    : {{ $detailChart[0]->proposalReady}},
-      color    : '#1aff1a',
-      highlight: '#99ff99',
-      label    : 'Proposal Ready'
+      value    : {{ $resume[0]->p3Proactive }},
+      color    : '#600000',
+      highlight: '#830000',
+      label    : 'P3'
     }
     ]
     var pieOptions     = {
@@ -65,7 +64,7 @@
       //Number - The width of each segment stroke
       segmentStrokeWidth   : 2,
       //Number - The percentage of the chart that we cut out of the middle
-      percentageInnerCutout: 50, // This is 0 for Pie charts
+      percentageInnerCutout: 48, // This is 0 for Pie charts
       //Number - Amount of animation steps
       animationSteps       : 100,
       //String - Animation easing effect
@@ -80,14 +79,12 @@
       maintainAspectRatio  : true,
       //String - A legend template
       legendTemplate       : '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<segments.length; i++){%><li><span style="background-color:<%=segments[i].fillColor%>"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>'
-    }
+  }
     //Create pie or douhnut chart
     // You can switch between pie and douhnut using the method below.
     pieChart.Doughnut(PieData, pieOptions)
-
-  })
+})
 </script>
-
 <script>
   $(function () {
     /* ChartJS
@@ -99,50 +96,33 @@
     //- PIE CHART -
     //-------------
     // Get context with jQuery - using jQuery's .get() method.
-    var pieChartCanvas = $('#pieChart8').get(0).getContext('2d')
+    var pieChartCanvas = $('#pieChart6').get(0).getContext('2d')
     var pieChart       = new Chart(pieChartCanvas)
     var PieData        = [
+
     {
-      value    : {{ $detailChart[1]->initialRequirement}},
-      color    : '#fff5cc',
-      highlight: '#fffae6',
-      label    : 'Initial Requirement'
+      value    : {{ $resume[1]->p0Proactive}},
+      color    : '#ff8080',
+      highlight: '#ffb3b3',
+      label    : 'P0'
     },
     {
-      value    : {{ $detailChart[1]->initialSolution}},
-      color    : '#ffd1b3',
-      highlight: '#ffe0cc',
-      label    : 'Initial Solution'
+      value    : {{ $resume[1]->p1Proactive}},
+      color    : '#ff3333',
+      highlight: '#ff6666',
+      label    : 'P1'
     },
     {
-      value    : {{ $detailChart[1]->menungguFeedbackRG}},
-      color    : '#ff9999',
-      highlight: '#ffcccc',
-      label    : 'Menunggu Feedback & Gathering Req'
+      value    : {{ $resume[1]->p2Proactive }},
+      color    : '#800000',
+      highlight: '#b30000',
+      label    : 'P3'
     },
     {
-      value    : {{ $detailChart[1]->solutionDesign}},
-      color    : '#730099',
-      highlight: '#9900cc',
-      label    : 'Solution Design'
-    }
-    {
-      value    : {{ $detailChart[1]->solutionDevelopment}},
-      color    : '#2ea4bc',
-      highlight: '#98d9e6',
-      label    : 'Solution Development'
-    }
-    {
-      value    : {{ $detailChart[1]->POC}},
-      color    : '#40bf80',
-      highlight: '#9fdfbf',
-      label    : 'POC'
-    }
-    {
-      value    : {{ $detailChart[1]->proposalReady}},
-      color    : '#1aff1a',
-      highlight: '#99ff99',
-      label    : 'Proposal Ready'
+      value    : {{ $resume[1]->p3Proactive }},
+      color    : '#600000',
+      highlight: '#830000',
+      label    : 'P3'
     }
     ]
     var pieOptions     = {
@@ -153,7 +133,7 @@
       //Number - The width of each segment stroke
       segmentStrokeWidth   : 2,
       //Number - The percentage of the chart that we cut out of the middle
-      percentageInnerCutout: 50, // This is 0 for Pie charts
+      percentageInnerCutout: 48, // This is 0 for Pie charts
       //Number - Amount of animation steps
       animationSteps       : 100,
       //String - Animation easing effect
@@ -168,12 +148,11 @@
       maintainAspectRatio  : true,
       //String - A legend template
       legendTemplate       : '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<segments.length; i++){%><li><span style="background-color:<%=segments[i].fillColor%>"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>'
-    }
+  }
     //Create pie or douhnut chart
     // You can switch between pie and douhnut using the method below.
     pieChart.Doughnut(PieData, pieOptions)
-
-  })
+})
 </script>
 
 @section('content')
@@ -192,27 +171,29 @@
         </div>
 
         <div class="box-body">
-          <div class="col-md-3">
+          <div class="col-md-4">
             <div class="box-header">
               <h3 class="box-title"></h3>
+              <p>Before</p>
               <div class="box-body">
-                <canvas id="pieChart7" style="height:300px"></canvas>
+                <canvas id="pieChart5" style="height:300px"></canvas>
                 
               </div>
             </div>
           </div>
 
-          <div class="col-md-3">
+          <div class="col-md-4">
             <div class="box-header">
               <h3 class="box-title"></h3>
+              <p>After</p>
               <div class="box-body">
-                <canvas id="pieChart8" style="height:300px"></canvas>
+                <canvas id="pieChart6" style="height:300px"></canvas>
 
               </div>
             </div>
           </div>
 
-          <div class="col-md-5">
+          <div class="col-md-3">
             <div class="progress">
               <div class="progress" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 100%; text-align:center; background-color:#fff5cc;">
                 <p>Initial Requirement (0-10)</p>
@@ -250,9 +231,9 @@
             </div>
             <div class="row">
               <center>
-                <div class="col-md-3">
+                <div class="col-md-4">
                   <div class="progress">
-                    <div class="progress-bar progress-bar-green" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="10" style="width: 35%; text-align:center; background-color:#1aff1a;">
+                    <div class="progress-bar progress-bar-green" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="10" style="width: 28%; text-align:center; background-color:#1aff1a;">
                     </div>
                     <p> Active</p>
                   </div>
@@ -268,7 +249,6 @@
                 </div>
               </center>
             </div>
-
           </div>  
         </div>
       </div>
