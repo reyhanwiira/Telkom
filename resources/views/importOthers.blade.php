@@ -166,8 +166,7 @@ href="../../bower_components/googlefont/googlefont.css">
 
       <!-- Main content -->
       <section class="content">
-        <div class="col-md-3"></div>
-        <div class="col-md-6">
+        <div class="col-md-9">
           <div class="box box-primary">
             <div class="box-header with-border">
               <h3 class="box-title">Import File</h3>
@@ -192,7 +191,6 @@ href="../../bower_components/googlefont/googlefont.css">
             <!-- /.box-footer -->
           </div>
         </div>
-        <div class="col-md-3"></div>
       </section>
       <!-- /.content -->
     </div>

@@ -211,79 +211,106 @@
         <div class="box-body">
           <div class="col-md-4">
             <div class="box-body">
-            <div class="box-header with-border">
-              <h3 class="box-title">Last Week</h3>
-            </div>
-            <!-- /.box-header -->
-            <div class="box-body">
-              <div class="row">
-                <div class="col-md-8">
-                  <div class="chart-responsive">
-                    <canvas id="pieChart5" height="250"></canvas>
-                  </div>
-                  <!-- ./chart-responsive -->
-                </div>
-                <!-- /.col -->
+              <div class="box-header with-border">
+                <h3 class="box-title">Last Week</h3>
               </div>
-              <!-- /.row -->
-            </div>
-            <!-- /.box-body -->
-            <div class="box-footer no-padding">
-              <ul class="nav nav-pills nav-stacked">
-                <li><a href="#">United States of America
-                  <span class="pull-right text-red"><i class="fa fa-angle-down"></i> 12%</span></a></li>
-                <li><a href="#">India <span class="pull-right text-green"><i class="fa fa-angle-up"></i> 4%</span></a>
-                </li>
-                <li><a href="#">China
-                  <span class="pull-right text-yellow"><i class="fa fa-angle-left"></i> 0%</span></a></li>
-              </ul>
-            </div>
-            <!-- /.footer -->
-          </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="box-header">
-              <h3 class="box-title"></h3>
-              <p>Current Week</p>
+              <!-- /.box-header -->
               <div class="box-body">
-                <canvas id="pieChart6" style="height:300px"></canvas>
-                <ul class="chart-legend clearfix">
-                  <div class="row">
-                    <center>
-                      <div class="col-md-2">
-                        <div class="progress">
-                          <div class="progress-bar " role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="10" style="width: 40%; text-align:center; background-color:#1aff1a;">
-                          </div>
-                          <p> 2</p>
-                        </div>
-                      </div>
-                    </center>
-                    <center>
-                      <div class="col-md-2">
-                        <div class="progress">
-                          <div class="progress-bar " role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="10" style="width: 40%; text-align:center; background-color:#ff0000;">
-                          </div>
-                          <p> 4</p>
-                        </div>
-                      </div>
-                    </center>
-                    <center>
-                      <div class="col-md-2">
-                        <div class="progress">
-                          <div class="progress-bar " role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="10" style="width: 0%; text-align:center; background-color:#ff0000;">
-                          </div>
-                          <p> 40%</p>
-                        </div>
-                      </div>
-                    </center>
+                <div class="row">
+                  <div class="col-md-8">
+                    <div class="chart-responsive">
+                      <canvas id="pieChart5" height="220"></canvas>
+                    </div>
                   </div>
-                </ul>
+                  <div class="col-md-4">
+                    <ul class="chart-legend clearfix">
+                      <li><i class="fa fa-circle-o" style="color: #fff5cc"></i> : {{ $resume[0]->p0Proactive}}</li>
+                      <li><i class="fa fa-circle-o" style="color: #ffd1b3"></i> : {{ $resume[0]->p1Proactive}}</li>
+                      <li><i class="fa fa-circle-o" style="color: #ff9999"></i> : {{ $resume[0]->p2Proactive}}</li>
+                      <li><i class="fa fa-circle-o" style="color: #730099"></i> : {{ $resume[0]->p3Proactive}}</li>
+                      <li><i class="fa fa-circle-o" style="color: #2ea4bc"></i> : {{ $resume[0]->p0Raisa}}</li>
+                      <li><i class="fa fa-circle-o" style="color: #40bf80"></i> : {{ $resume[0]->p1Raisa}}</li>
+                      <li><i class="fa fa-circle-o" style="color: #66ff66"></i> : {{ $resume[0]->p2Raisa}}</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
+              <div class="box-footer no-padding">
+                <ul class="nav nav-pills nav-stacked">
+                  <li>
+                    <a href="#">Active
+                      <span class="pull-right text-red"><i class="fa fa-angle-down"></i> 4</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">Idle (tdk berprogress >2 Minggu) 
+                      <span class="pull-right text-green"><i class="fa fa-angle-up"></i> 4</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">Persentase
+                      <span class="pull-right text-teal"><i class="fa fa-exchange"></i> 40%</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>  
             </div>
           </div>
 
           <div class="col-md-4">
+            <div class="box-body">
+              <div class="box-header with-border">
+                <h3 class="box-title">Current Week</h3>
+              </div>
+              <!-- /.box-header -->
+              <div class="box-body">
+                <div class="row">
+                  <div class="col-md-8">
+                    <div class="chart-responsive">
+                      <canvas id="pieChart6" height="220"></canvas>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <ul class="chart-legend clearfix">
+                      <li><i class="fa fa-circle-o" style="color: #fff5cc"></i> : {{ $resume[1]->p0Proactive}}</li>
+                      <li><i class="fa fa-circle-o" style="color: #ffd1b3"></i> : {{ $resume[1]->p1Proactive}}</li>
+                      <li><i class="fa fa-circle-o" style="color: #ff9999"></i> : {{ $resume[1]->p2Proactive}}</li>
+                      <li><i class="fa fa-circle-o" style="color: #730099"></i> : {{ $resume[1]->p3Proactive}}</li>
+                      <li><i class="fa fa-circle-o" style="color: #2ea4bc"></i> : {{ $resume[1]->p0Raisa}}</li>
+                      <li><i class="fa fa-circle-o" style="color: #40bf80"></i> : {{ $resume[1]->p1Raisa}}</li>
+                      <li><i class="fa fa-circle-o" style="color: #66ff66"></i> : {{ $resume[1]->p2Raisa}}</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="box-footer no-padding">
+                <ul class="nav nav-pills nav-stacked">
+                  <li>
+                    <a href="#">Active
+                      <span class="pull-right text-green"><i class="fa fa-angle-up"></i> 6</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">Idle (tdk berprogress >2 Minggu) 
+                      <span class="pull-right text-teal"><i class="fa fa-exchange"></i> 4</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">Persentase
+                      <span class="pull-right text-green"><i class="fa fa-angle-up"></i> 42%</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>  
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="box-body">
+              <div class="box-header with-border">
+                <h3 class="box-title">Legend</h3>
+              </div>
+            </div>
             <div class="progress">
               <div class="progress" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 100%; text-align:center; background-color:#fff5cc;">
                 <p>Initial Requirement (0-10)</p>
@@ -318,27 +345,8 @@
               <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 100%; text-align:center; background-color:#66ff66;">
                 <p>Proposal Ready(100)</p>
               </div>
-            </div>
-            <div class="row">
-              <center>
-                <div class="col-md-3">
-                  <div class="progress">
-                    <div class="progress-bar progress-bar-green" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="10" style="width: 25%; text-align:center; background-color:#1aff1a;">
-                    </div>
-                    <p> Active</p>
-                  </div>
-                </div>
-              </center>
-              <center>
-                <div class="col-md-9">
-                  <div class="progress">
-                    <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="10" style="width: 10%; text-align:center; background-color:#ff0000;">
-                    </div>
-                    <p>Idle (tdk berprogress >2 Minggu)</p>
-                  </div>
-                </div>
-              </center>
-            </div>
+            </div> 
+            
           </div>  
         </div>
       </div>
@@ -357,34 +365,32 @@
         <div class="box-body">
           <div class="table-responsive">
             <div class="col-md-12">
-             <table id="example1" class="table no-margin">
+             <table id="example1" class="table table-bordered table-striped">
               <thead>
                 <tr>
-                  <th>No</th>
-                  <th>Project</th>
-                  <th>Segment</th>
-                  <th>Current Progress</th>
-                  <th>Last</th>
-                  <th>Current</th>
-                  <th>Progress Summary</th>
-                  <th>Status</th>
-                  <th>Information</th>
-                  <th>Start Project</th>
-                  <th>Finish Project</th>
-                  <th>Action</th>  
+                  <th rowspan="2" style="text-align: center; vertical-align: middle; background-color: #3c8dbc">No</th>
+                  <th rowspan="2" style="text-align: center; vertical-align: middle; background-color: #3c8dbc">Solusi</th>
+                  <th rowspan="2" style="text-align: center; vertical-align: middle; background-color: #3c8dbc">TR</th>
+                  <th rowspan="2" style="text-align: center; vertical-align: middle; background-color: #3c8dbc">Current Progress</th>
+                  <th rowspan="2" style="text-align: center; vertical-align: middle; background-color: #3c8dbc">Progress Summary</th>
+                  <th rowspan="2" style="text-align: center; vertical-align: middle; background-color: #3c8dbc">Status</th> 
+                  <th colspan="2" style="text-align: center; background-color: #3c8dbc">Progress (%)</th>
+                  <tr>
+                    <th style="text-align: center; background-color: #3c8dbc">Last</th>
+                    <th style="text-align: center; background-color: #3c8dbc">Current</th>
+                  </tr> 
                 </tr>
               </thead>
               <tbody>
-
                 <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td>Nilai dari Last</td>
-                  <td>Nilai dari Current</td>
-                  <td>Progress Summary</td>
-                  <td>Status</td>
+                  <td style="text-align: center;">Nilai dari Last</td>
+                  <td style="text-align: center;">Nilai dari Last</td>
+                  <td style="text-align: center;">Nilai dari Last</td>
+                  <td style="text-align: center;">Nilai dari Last</td>
+                  <td style="text-align: center;">Nilai dari Last</td>
+                  <td style="text-align: center;">Nilai dari Current</td>
+                  <td style="text-align: center;">Summary</td>
+                  <td style="text-align: center;">Status</td>
                 </tr>
               </tbody>
             </table>

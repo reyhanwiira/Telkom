@@ -303,7 +303,7 @@
 			<div class="box box-primary">
 				<div class="box-header with-border">
 					<div class="col-md-3">
-						<div class="box box-primary">
+						<div class="box">
 							<div class="box-header with-border">
 								<h3 class="box-title">Pro-Active</h3>
 							</div>
@@ -328,7 +328,7 @@
 					</div>			
 
 					<div class="col-md-9">
-						<div class="box box-primary">
+						<div class="box">
 							<div class="box-header with-border">
 								<h3 class="box-title">Pro-Passive</h3>
 							</div>
