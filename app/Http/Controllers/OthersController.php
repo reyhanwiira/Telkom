@@ -19,9 +19,9 @@ class OthersController extends Controller
 
 	public function readOthers()
     {
-    	$otherss = Other::all();
+    	$others = Other::all();
 
-    	return view('tableOthers.index', compact('otherss'));
+    	return view('tableOthers.index', compact('others'));
     }
 
     public function createOthers()
@@ -137,10 +137,7 @@ class OthersController extends Controller
         return redirect::to('/tableOthers');
     }
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 1e3480812303e06556d397dcacf261192f020eec
     public function print()
     {
         $otherss = Other::all();
