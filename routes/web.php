@@ -88,6 +88,14 @@ Route::post('/tableOthers/editOthers','OthersUploadController@showUploadFile') ;
 
 Route::get('/tableOthers/editOthers','OthersController@downloadFileOthers');
 
+
+
+//IMPORT DAN EXPORT OTHERS
+
+Route::get('importOthers', 'ExcelOthersController@importOthersRead');
+
+Route::post('importOthers', 'ExcelOthersController@importOthers');
+Route::get('downloadOthers/{type}', 'ExcelOthersController@ExportOthers');
 //======================================================================
 
 
@@ -195,3 +203,8 @@ Route::get('/home','ChartController@readChart');
 
 
 });
+
+
+Route::get('importExport', 'MaatWebsiteController@importExport');
+Route::get('downloadExcel/{type}', 'MaatWebsiteController@downloadExcel');
+Route::post('importExcel', 'MaatWebsiteController@importExcel');
