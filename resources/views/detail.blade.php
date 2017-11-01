@@ -198,16 +198,17 @@
   <div class="row">
     <div class="col-md-12">
       <div class="box box-primary">
-        <div class="box-header">
+        <div class="box-header with-border">
           <i class="fa fa-bar-chart-o"></i>
           <h3 class="box-title">Donut Chart</h3>
           <p></p>
-          <p>Breakdown Pengawalan status "P1" untuk Others Initiatives </p>
+          <h3 class="box-title">Breakdown Pengawalan status "P1" untuk Others Initiatives</h3>
           <div class="box-tools pull-right">
-            <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+            <button class="btn btn-box-tool" data-widget="collapse">
+              <i class="fa fa-minus"></i>
+            </button>
           </div>
         </div>
-
         <div class="box-body">
           <div class="col-md-4">
             <div class="box-body">
