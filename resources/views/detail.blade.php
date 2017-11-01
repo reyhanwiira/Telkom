@@ -210,44 +210,36 @@
 
         <div class="box-body">
           <div class="col-md-4">
-            <div class="box-header">
-              <h3 class="box-title"></h3>
-              <p>Last Week</p>
-              <div class="box-body">
-                <canvas id="pieChart5" style="height:300px"></canvas>
-                <ul class="chart-legend clearfix">
-                  <div class="row">
-                    <center>
-                      <div class="col-md-2">
-                        <div class="progress">
-                          <div class="progress-bar " role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="10" style="width: 40%; text-align:center; background-color:#1aff1a;">
-                          </div>
-                          <p> 2</p>
-                        </div>
-                      </div>
-                    </center>
-                    <center>
-                      <div class="col-md-2">
-                        <div class="progress">
-                          <div class="progress-bar " role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="10" style="width: 40%; text-align:center; background-color:#ff0000;">
-                          </div>
-                          <p> 4</p>
-                        </div>
-                      </div>
-                    </center>
-                    <center>
-                      <div class="col-md-2">
-                        <div class="progress">
-                          <div class="progress-bar " role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="10" style="width: 0%; text-align:center; background-color:#ff0000;">
-                          </div>
-                          <p> 40%</p>
-                        </div>
-                      </div>
-                    </center>
-                  </div>
-                </ul>                
-              </div>
+            <div class="box-body">
+            <div class="box-header with-border">
+              <h3 class="box-title">Last Week</h3>
             </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <div class="row">
+                <div class="col-md-8">
+                  <div class="chart-responsive">
+                    <canvas id="pieChart5" height="250"></canvas>
+                  </div>
+                  <!-- ./chart-responsive -->
+                </div>
+                <!-- /.col -->
+              </div>
+              <!-- /.row -->
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer no-padding">
+              <ul class="nav nav-pills nav-stacked">
+                <li><a href="#">United States of America
+                  <span class="pull-right text-red"><i class="fa fa-angle-down"></i> 12%</span></a></li>
+                <li><a href="#">India <span class="pull-right text-green"><i class="fa fa-angle-up"></i> 4%</span></a>
+                </li>
+                <li><a href="#">China
+                  <span class="pull-right text-yellow"><i class="fa fa-angle-left"></i> 0%</span></a></li>
+              </ul>
+            </div>
+            <!-- /.footer -->
+          </div>
           </div>
 
           <div class="col-md-4">

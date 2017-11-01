@@ -65,19 +65,20 @@
       </div><!-- /.table-responsive -->
     </div><!-- /.box-body -->
     <div class="box-footer clearfix">
-      <a href="{{ url('tableOthers/createOthers') }}" class="btn btn-primary pull-left">Place New Project</a>
-      
-      <a href="{{ url('tableOthers/printOthers') }}" target="_blank" class="btn btn-primary pull-right"><i class="fa fa-print"></i> Print</a>
-
-      <a href="{{ url('importOthers') }}">Import</a>
-
-       <a href="{{ url('downloadOthers','xlsx') }}">
-        <button class="btn btn-success">Download Excel xlsx</button>
-      </a>
-      
-      <button type="button" class="btn btn-primary pull-center" data-toggle="tooltip" data-placement="right" title="Export Data">
-        <i class='glyphicon glyphicon-floppy-open'></i>
-      </button>
+      <div class="row">
+        <div class="col-md-2">
+          <a href="{{ url('tableOthers/createOthers') }}" class="btn btn-block btn-social"><i class="fa fa-plus-square-o"></i> Place New Project</a>
+        </div>
+        <div class="col-md-2">
+          <a href="{{ url('importOthers') }}" target="_blank" class="btn btn-block btn-social"><i class="fa fa-download"></i> Import</a>
+        </div>
+        <div class="col-md-2">
+          <a href="{{ url('downloadOthers','xlsx') }}" target="_blank" class="btn btn-block btn-social"><i class="fa fa-upload"></i> Export</a> 
+        </div>
+        <div class="col-md-2">
+          <a href="{{ url('tableOthers/printOthers') }}" target="_blank" class="btn btn-block btn-social"><i class="fa fa-print"></i> Print</a>
+        </div>
+      </div>
     </div><!-- /.box-footer -->
   </div><!-- /.box -->
 </div><!-- /.col -->
