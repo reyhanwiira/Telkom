@@ -190,8 +190,12 @@ Route::get('downloadOthers/{type}', 'ExcelOthersController@ExportOthers');
     // Redirect back to where you need with a success message
 //}
 
-	Route::get('/detail','DetailController@index');
+Route::get('/detail','DetailController@index');
 
+//Detail Chart
+
+Route::get('/detail','DetailChartController@readChart');
+Route::get('/detail','ChartController@readChartDetail');
 
 //Dashboard chart
 

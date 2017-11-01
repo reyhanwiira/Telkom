@@ -11,9 +11,8 @@ use Redirect;
 use View;
 use App\proactive;
 use Validator;
-use App\raisa;
-use App\scn;
-use App\other;
+use App\activity;
+use App\resume;
 
 class DetailController extends Controller
 {
