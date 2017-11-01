@@ -220,7 +220,7 @@
                     <center>
                       <div class="col-md-2">
                         <div class="progress">
-                          <div class="progress-bar progress-bar-green" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="10" style="width: 40%; text-align:center; background-color:#1aff1a;">
+                          <div class="progress-bar " role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="10" style="width: 40%; text-align:center; background-color:#1aff1a;">
                           </div>
                           <p> 2</p>
                         </div>
@@ -229,9 +229,18 @@
                     <center>
                       <div class="col-md-2">
                         <div class="progress">
-                          <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="10" style="width: 40%; text-align:center; background-color:#ff0000;">
+                          <div class="progress-bar " role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="10" style="width: 40%; text-align:center; background-color:#ff0000;">
                           </div>
                           <p> 4</p>
+                        </div>
+                      </div>
+                    </center>
+                    <center>
+                      <div class="col-md-2">
+                        <div class="progress">
+                          <div class="progress-bar " role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="10" style="width: 0%; text-align:center; background-color:#ff0000;">
+                          </div>
+                          <p> 40%</p>
                         </div>
                       </div>
                     </center>
@@ -249,31 +258,40 @@
                 <canvas id="pieChart6" style="height:300px"></canvas>
                 <ul class="chart-legend clearfix">
                   <div class="row">
-              <center>
-                <div class="col-md-2">
-                  <div class="progress">
-                    <div class="progress-bar progress-bar-green" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="10" style="width: 40%; text-align:center; background-color:#1aff1a;">
-                    </div>
-                    <p> 4</p>
+                    <center>
+                      <div class="col-md-2">
+                        <div class="progress">
+                          <div class="progress-bar " role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="10" style="width: 40%; text-align:center; background-color:#1aff1a;">
+                          </div>
+                          <p> 2</p>
+                        </div>
+                      </div>
+                    </center>
+                    <center>
+                      <div class="col-md-2">
+                        <div class="progress">
+                          <div class="progress-bar " role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="10" style="width: 40%; text-align:center; background-color:#ff0000;">
+                          </div>
+                          <p> 4</p>
+                        </div>
+                      </div>
+                    </center>
+                    <center>
+                      <div class="col-md-2">
+                        <div class="progress">
+                          <div class="progress-bar " role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="10" style="width: 0%; text-align:center; background-color:#ff0000;">
+                          </div>
+                          <p> 40%</p>
+                        </div>
+                      </div>
+                    </center>
                   </div>
-                </div>
-              </center>
-              <center>
-                <div class="col-md-2">
-                  <div class="progress">
-                    <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="10" style="width: 40%; text-align:center; background-color:#ff0000;">
-                    </div>
-                    <p> 4</p>
-                  </div>
-                </div>
-              </center>
-            </div>
                 </ul>
               </div>
             </div>
           </div>
 
-          <div class="col-md-3">
+          <div class="col-md-4">
             <div class="progress">
               <div class="progress" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 100%; text-align:center; background-color:#fff5cc;">
                 <p>Initial Requirement (0-10)</p>
@@ -311,9 +329,9 @@
             </div>
             <div class="row">
               <center>
-                <div class="col-md-4">
+                <div class="col-md-3">
                   <div class="progress">
-                    <div class="progress-bar progress-bar-green" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="10" style="width: 28%; text-align:center; background-color:#1aff1a;">
+                    <div class="progress-bar progress-bar-green" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="10" style="width: 25%; text-align:center; background-color:#1aff1a;">
                     </div>
                     <p> Active</p>
                   </div>
