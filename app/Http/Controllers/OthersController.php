@@ -137,27 +137,4 @@ class OthersController extends Controller
         return redirect::to('/tableOthers');
     }
 
-
-    public function print()
-    {
-        $otherss = Other::all();
-
-        return view('tableOthers.printOthers',compact('otherss'));
-    }
-
-
-    public function IndexUpload(){
-
-
-        return view('tableOthers.uploadOthers');
-    }
-
-
-    public function downloadFileOthers()
-    {
-        $activity= Activity::all()->get();
-
-
-        return view('tableOthers.editOthers',compact('activity'));
-    }
 }

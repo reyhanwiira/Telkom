@@ -298,6 +298,7 @@ $(function () {
 
 @section('content')
 <section class="content">
+<<<<<<< HEAD
   <div class="row">
     <div class="col-md-12">
       <div class="box box-primary">
@@ -326,6 +327,24 @@ $(function () {
               </div>
             </div>
           </div>      
+=======
+	<div class="row">
+		<div class="col-md-12">
+			<div class="box box-primary">
+				<div class="box-header with-border">
+					<div class="col-md-3">
+						<div class="box">
+							<div class="box-header with-border">
+								<h3 class="box-title">Pro-Active</h3>
+							</div>
+							<div class="box-body">
+								<div class="box-header with-border">
+									<i class="fa fa-bar-chart-o"></i>
+									<h3 class="box-title">PRO-ACTIVE</h3>
+								</div>
+								<div class="box-body">
+									<canvas id="pieChart" style="height:300px"></canvas>
+>>>>>>> 4c245889d84a3fe6f65d55d77682b143f838a0df
 
           <div class="col-md-9">
             <div class="box box-primary">
@@ -341,6 +360,7 @@ $(function () {
                   <div class="box-body">
                     <canvas id="pieChart2" style="height:300px"></canvas>
 
+<<<<<<< HEAD
                     <ul class="chart-legend clearfix">
                       <li><i class="fa fa-circle-o"></i> P0</li>
                       <li><i class="fa fa-circle-o"></i> P1</li>
@@ -350,6 +370,21 @@ $(function () {
                   </div>
                   <!-- /.box -->
                 </div>
+=======
+					<div class="col-md-9">
+						<div class="box">
+							<div class="box-header with-border">
+								<h3 class="box-title">Pro-Passive</h3>
+							</div>
+							<div class="box-body">
+								<div class="col-md-4">
+									<div class="box-header with-border">
+										<i class="fa fa-bar-chart-o"></i>
+										<h3 class="box-title">RAISA</h3>
+									</div>
+									<div class="box-body">
+										<canvas id="pieChart2" style="height:300px"></canvas>
+>>>>>>> 4c245889d84a3fe6f65d55d77682b143f838a0df
 
                 <div class="col-md-4">
                   <div class="box-header with-border">
