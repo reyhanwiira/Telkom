@@ -33,7 +33,7 @@
           </thead>
           <tbody>
             <?php $no=1; ?>
-            @foreach ($otherss as $other)
+            @foreach ($others as $other)
             <tr>
               <td>{{ $no++ }}</td>
               <td>{{ $other-> projectName }}</td>
@@ -69,10 +69,12 @@
       
       <a href="{{ url('tableOthers/printOthers') }}" target="_blank" class="btn btn-primary pull-right"><i class="fa fa-print"></i> Print</a>
 
-      <button class="btn btn-sm btn-primary pull-center" data-toggle="tooltip" data-placement="top" title="Import Data">
-        <input type="file" id="import" name="import">
-      </button>
+      <a href="{{ url('importOthers') }}">Import</a>
 
+       <a href="{{ url('downloadOthers','xlsx') }}">
+        <button class="btn btn-success">Download Excel xlsx</button>
+      </a>
+      
       <button type="button" class="btn btn-primary pull-center" data-toggle="tooltip" data-placement="right" title="Export Data">
         <i class='glyphicon glyphicon-floppy-open'></i>
       </button>

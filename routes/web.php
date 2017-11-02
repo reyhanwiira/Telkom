@@ -92,6 +92,14 @@ Route::group(['middleware'=>'auth'], function(){
 
 	Route::get('/tableOthers/editOthers','OthersController@downloadFileOthers');
 
+
+
+//IMPORT DAN EXPORT OTHERS
+
+	Route::get('importOthers', 'ExcelOthersController@importOthersRead');
+
+	Route::post('importOthers', 'ExcelOthersController@importOthers');
+	Route::get('downloadOthers/{type}', 'ExcelOthersController@ExportOthers');
 //======================================================================
 
 
@@ -160,9 +168,7 @@ Route::group(['middleware'=>'auth'], function(){
 
 	Route::get('/tableOthers/printOthers','OthersController@print');
 
-
 	Route::get('/detail','DetailController@index');
-
 
 //Dashboard chart
 
@@ -173,6 +179,13 @@ Route::group(['middleware'=>'auth'], function(){
 	Route::get('/{id}/editResume','ResumeController@editResume');
 	Route::put('/{id}','ResumeController@updateResume');
 
+	Route::get('/detail','DetailController@index');
+
+//Detail Chart
+
+	Route::get('/detail','DetailChartController@readChart');
+	Route::get('/detail','ChartController@readChartDetail');
+
 	Route::get('/tableProactive', 'ProactiveController@showUploadForm');
 
 	Route::get('/tableProactive', 'ProactiveController@storeFile')->name('upload.file');
@@ -180,4 +193,9 @@ Route::group(['middleware'=>'auth'], function(){
 	Route::get('file','FileController@showUploadForm')->name('upload.file');
 
 	Route::get('file','FileController@storeFile');
+
+
+	Route::get('importExport', 'MaatWebsiteController@importExport');
+	Route::get('downloadExcel/{type}', 'MaatWebsiteController@downloadExcel');
+	Route::post('importExcel', 'MaatWebsiteController@importExcel');
 });

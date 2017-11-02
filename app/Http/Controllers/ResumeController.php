@@ -26,6 +26,23 @@ class ResumeController extends Controller
      public function updateResume(Request $request, $id)
     {
         $resume = resume::find($id);
+        $resume->p0ScnLast=$resume->p0Scn;
+        $resume->p1ScnLast=$resume->p1Scn;
+        $resume->p2ScnLast=$resume->p2Scn;
+        $resume->p3ScnLast=$resume->p3Scn;
+        $resume->p0ProactiveLast=$resume->p0Proactive;
+        $resume->p1ProactiveLast=$resume->p1Proactive;
+        $resume->p2ProactiveLast=$resume->p2Proactive;
+        $resume->p3ProactiveLast=$resume->p3Proactive;
+        $resume->p0RaisaLast=$resume->p0Raisa;
+        $resume->p1RaisaLast=$resume->p1Raisa;
+        $resume->p2RaisaLast=$resume->p2Raisa;
+        $resume->p3RaisaLast=$resume->p3Raisa;
+        $resume->p0OtherLast=$resume->p0Other;
+        $resume->p1OtherLast=$resume->p1Other;
+        $resume->p2OtherLast=$resume->p2Other;
+        $resume->p3OtherLast=$resume->p3Other;
+
         $resume->p0Scn=$request->input('p0Scn');
         $resume->p1Scn=$request->input('p1Scn');
         $resume->p2Scn=$request->input('p2Scn');

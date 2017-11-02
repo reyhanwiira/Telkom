@@ -21,4 +21,10 @@ class ChartController extends Controller
     	return view('home', compact('resume'));
     }
 
+    public function readChartDetail()
+    {
+    	$resume = Resume::all();
+
+    	return view('detail', compact('resume'));
+    }
 }
