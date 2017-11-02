@@ -288,17 +288,17 @@
                 <ul class="nav nav-pills nav-stacked">
                   <li>
                     <a href="#">Active
-                      <span class="pull-right text-green"><i class="fa fa-angle-up"></i> 6</span>
+                      <span class="pull-right badge bg-green"><i class="fa fa-angle-up"></i> 4</span>
                     </a>
                   </li>
                   <li>
                     <a href="#">Idle (tdk berprogress >2 Minggu) 
-                      <span class="pull-right text-teal"><i class="fa fa-exchange"></i> 4</span>
+                      <span class="pull-right badge bg-teal"><i class="fa fa-angle-exchange"></i> 4</span>
                     </a>
                   </li>
                   <li>
                     <a href="#">Persentase
-                      <span class="pull-right text-green"><i class="fa fa-angle-up"></i> 42%</span>
+                      <span class="pull-right badge bg-green"><i class="fa fa-angle-up"></i> 42%</span>
                     </a>
                   </li>
                 </ul>
