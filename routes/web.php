@@ -185,6 +185,16 @@ Route::group(['middleware'=>'auth'], function(){
 
 	Route::get('/detail','DetailChartController@readChart');
 	Route::get('/detail','ChartController@readChartDetail');
+	Route::get('/detailProact','DetailChartController@readChart');
+	Route::get('/detailProact','ChartController@readChartDetail');
+	Route::get('/detailRaisa','DetailChartController@readChart');
+	Route::get('/detailRaisa','ChartController@readChartDetail');
+	Route::get('/detailScn','DetailChartController@readChart');
+	Route::get('/detailScn','ChartController@readChartDetail');
+	Route::get('/detailOther','DetailChartController@readChart');
+	Route::get('/detailOther','ChartController@readChartDetail');
+
+//=====================================================
 
 	Route::get('/tableProactive', 'ProactiveController@showUploadForm');
 
