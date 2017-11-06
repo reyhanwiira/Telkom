@@ -15,19 +15,19 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
-  folder instead of downloading all of them to reduce the load. -->
-  <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+    folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
 
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
+<![endif]-->
 
-  <!-- Google Font -->
-    <link rel="stylesheet"
-    href="../../bower_components/googlefont/googlefont.css">
+<!-- Google Font -->
+<link rel="stylesheet"
+href="../../bower_components/googlefont/googlefont.css">
 
 </head>
 <!-- ADD THE CLASS sidebar-collapse TO HIDE THE SIDEBAR PRIOR TO LOADING THE SITE -->
@@ -60,28 +60,67 @@
             <li><a href="{{ route('login') }}">Login</a></li>
             <li><a href="{{ route('register') }}">Register</a></li>
             @else
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+            <li class="dropdown notifications-menu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-bell-o"></i>
+                <span class="label label-warning">10</span>
+              </a>
+              <ul class="dropdown-menu">
+                <li class="header">You have 2 notifications</li>
+                <li>
+                  <!-- inner menu: contains the actual data -->
+                  <ul class="menu">
+                    <li>
+                      <a href="#">
+                        <i class="fa fa-newspaper-o text-red"></i> 2 Project idle sudah melebihi batas
+                      </a>
+                      <a href="#">
+                        <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="footer"><a href="#">View all</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown user user-menu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <img src="../../dist/img/avatar04.png" class="user-image" alt="User Image">
                 {{ Auth::user()->name }} <span class="caret"></span>
               </a>
 
-              <ul class="dropdown-menu" role="menu">
-                <li>
-                  <a href="{{ route('logout') }}"
-                  onclick="event.preventDefault();
-                  document.getElementById('logout-form').submit();">
-                  Logout
+              <ul class="dropdown-menu">
+                <!-- User image -->
+                <li class="user-header">
+                  <img src="../../dist/img/avatar04.png" class="img-circle" alt="User Image">
+
+                  <p>
+                    {{ Auth::user()->name }} - Web Developer
+                  </p>
+                </li>
+                <!-- Menu Footer-->
+                <li class="user-footer">
+                  <div class="pull-left">
+                    <a href="#" class="btn btn-default btn-flat">Profile</a>
+                  </div>
+                  <div class="pull-right">
+                    <a href="{{ route('logout') }}" class="btn btn-default btn-flat" 
+                    onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();">
+                    Logout
                   </a>
 
                   <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     {{ csrf_field() }}
                   </form>
-                </li>
-              </ul>
-            </li>
-           @endif
-          </ul>
-        </div>
+                </div>
+              </li>
+            </ul>
+            @endif
+          </li>
+        </ul>
+      </div>
     </nav>
   </header>
 
@@ -100,10 +139,22 @@
           @if(Auth::guest())
           <p>Hi, Guest!</p>
           @else
-          <p>Hi, {{ Auth::user()->name }}</p>
-          @endif
+          <p>{{ Auth::user()->name }}</p>
+          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
+      <!-- search form -->
+      <form action="#" method="get" class="sidebar-form">
+        <div class="input-group">
+          <input type="text" name="q" class="form-control" placeholder="Search...">
+          <span class="input-group-btn">
+            <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+            </button>
+          </span>
+        </div>
+      </form>
+      <!-- /.search form -->
+      @endif
       
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
@@ -111,7 +162,11 @@
 
         <li>
           <a href="{{ url('home') }}">
-            <i class="fa fa-dashboard"></i> <span>Dashboard</span> <small class="fa fa pull-right"></small>
+            <i class="fa fa-dashboard"></i> 
+            <span>Dashboard</span> 
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
           </a>
         </li>
 
@@ -174,7 +229,7 @@
       </section>
 
       <!-- Main content -->
-        @yield('content')
+      @yield('content')
       <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
@@ -196,10 +251,10 @@
     </aside>
     <!-- /.control-sidebar -->
   <!-- Add the sidebar's background. This div must be placed
-  immediately after the control sidebar -->
-  <div class="control-sidebar-bg"></div>
-</div>
-<!-- ./wrapper -->
+    immediately after the control sidebar -->
+    <div class="control-sidebar-bg"></div>
+  </div>
+  <!-- ./wrapper -->
 
 </body>
 </html>
