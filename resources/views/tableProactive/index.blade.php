@@ -50,7 +50,7 @@
                   <div class="btn-group">
                     <a href="{{ url('/tableProactive/'.$proactive->id.'/editPro') }}">
                       <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Detail Project">
-                        <i class='glyphicon glyphicon-zoom-in'></i>
+                        <i class='glyphicon glyphicon-search'></i>
                       </button>
                     </a>
 
@@ -65,20 +65,26 @@
         </div><!-- /.table-responsive -->
       </div><!-- /.box-body -->
       <div class="box-footer clearfix">
-        <a href="{{ url('tableProactive/createPro') }}" class="btn btn-primary pull-center">Place New Project</a>
+        <div class="row">
+          <div class="col-xs-2 text-center">
+            <a href="{{ url('tableProactive/createPro') }}" class="btn btn-block btn-social"><i class="fa fa-plus-square-o"></i> Place New Project</a>
+          </div>
+          <div class="col-xs-2 text-center">
+            <a href="#" target="_blank" class="btn btn-block btn-social"><i class="fa fa-download"></i> Import</a>
+          </div>
+          <div class="col-xs-2 text-center">
 
-        <a href="#" target="_blank" class="btn btn-primary pull-right "><i class="fa fa-print"></i>  Print</a>
+          </div>
+          <div class="col-xs-2 text-center">
 
-        <button type="button" class="btn btn-primary pull-center" data-toggle="tooltip" data-placement="top" title="Import Data">
-            <i class='glyphicon glyphicon-floppy-open'></i>
-        </button>
-
-        <button type="button" class="btn btn-primary pull-center" data-toggle="tooltip" data-placement="right" title="Export Data">
-            <i class='glyphicon glyphicon-floppy-save'></i>
-        </button>
-
-        <input type="file" id="upload" name="upload" class="btn btn-primary pull-center">
-
+          </div>
+          <div class="col-xs-2 text-center">
+            <a href="#" target="_blank" class="btn btn-block btn-social"><i class="fa fa-upload"></i> Export</a> 
+          </div>
+          <div class="col-xs-2 text-center">
+            <a href="#" target="_blank" class="btn btn-block btn-social"><i class="fa fa-print"></i> Print</a>
+          </div>
+        </div>
       </div><!-- /.box-footer -->
     </div><!-- /.box -->
   </div><!-- /.col -->

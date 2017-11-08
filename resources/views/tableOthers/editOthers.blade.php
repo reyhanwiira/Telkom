@@ -103,7 +103,7 @@
         </form>
       </div><!-- /.box -->
 
-      <!-- TABLE: LATEST ORDERS -->
+      <!-- TABLE: Activity Record -->
       <div class="box box-primary">
         <div class="box-header with-border">
           <h3 class="box-title">Activity Record</h3>
@@ -153,11 +153,11 @@
 
                     <a href="{{ url('/tableOthers'.'/editActOthers/'.$activity->id) }}">
                       <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="left" title="Edit File">
-                        <i class='glyphicon glyphicon-pencil'></i>
+                        <i class='fa fa-pencil'></i>
                       </button>
                     </a>
 
-                    <a href="{{ url('/deleteActOthers/'.$activity->id) }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger"><i class='glyphicon glyphicon-trash'></i></button></a>
+                    <a href="{{ url('/deleteActOthers/'.$activity->id) }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger"><i class='fa fa-trash-o'></i></button></a>
 
 
                   </div>

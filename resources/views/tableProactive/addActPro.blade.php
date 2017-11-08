@@ -10,9 +10,10 @@
         <div class="box-header">
         </div><!-- /.box-header -->
         <!-- form start -->
-        <form action="{{ url('/tableProactive/editProactive') }}" method="post"  enctype="multipart/form-data">
+        <form role="form" method="post" action="{{ url('/tableRaisa/editPro') }}">
         {!! csrf_field() !!}
           <div class="box-body">
+
             <div class="form-group">
                  <label>Date</label>
                  <div class="input-group">
@@ -38,7 +39,7 @@
               <input type="text" class="form-control" name="evidence" />
             </div>
 
-             <div class="form-group">
+            <div class="form-group">
               Input File (can attach more than one):
               <br />
               <input type="file" name="file[]" multiple />

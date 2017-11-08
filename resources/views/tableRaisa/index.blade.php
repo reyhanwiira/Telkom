@@ -50,12 +50,16 @@
                 <div class="btn-group">
                   <a href="{{ url('/tableRaisa/'.$raisa->id.'/editRaisa') }}">
                     <button type="button" class="btn btn-success" data-placement="top" title="Detail Project">
-                      <i class='glyphicon glyphicon-zoom-in'></i>
+                      <i class='glyphicon glyphicon-search'></i>
                     </button>
                   </a>
-
-                  <a href="deleteRaisa/{{ $raisa->id }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger" data-placement="bottom" title="Delete Project"><i class='glyphicon glyphicon-trash'></i></button></a>
-
+                  <a>
+                    <span data-toggle="modal" data-target="#myModal" >
+                      <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="bottom" title="Delete Project">
+                        <i class='glyphicon glyphicon-trash'></i>
+                      </button>
+                    </span>
+                  </a>
                 </div>
               </td>
             </tr>
@@ -63,6 +67,26 @@
           </tbody>
         </table>
       </div><!-- /.table-responsive -->
+
+      <div class="modal modal-danger fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Alert!</h4>
+            </div>
+            <div class="modal-body">
+              Are You Sure want to delete this Project ?, this cannot be undo!
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+              <a href="deleteRaisa/{{ $raisa->id }}"><button type="button" class="btn btn-danger">Delete Project</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div><!-- /.box-body -->
     <div class="box-footer clearfix">
       <div class="row">

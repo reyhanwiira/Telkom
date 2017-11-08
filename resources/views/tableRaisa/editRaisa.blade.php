@@ -8,11 +8,11 @@
       <!-- general form elements -->
       <div class="box box-primary">
         <div class="box-header with-border">
-            <h3 class="box-title">View Detail Project</h3>
-            <div class="box-tools pull-right">
-              <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-            </div>
+          <h3 class="box-title">View Detail Project</h3>
+          <div class="box-tools pull-right">
+            <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
           </div>
+        </div>
         <!-- form start -->
         <form role="form" method="post" action="{{ url('/tableRaisa/'.$raisa->id) }}">
           {{ method_field('PUT') }}
@@ -103,68 +103,8 @@
     </div><!-- /.box -->
 
     <div class="box box-primary">
-        <div class="box-header with-border">
-          <h3 class="box-title">Activity Record</h3>
-          <div class="box-tools pull-right">
-            <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-          </div>
-        </div><!-- /.box-header -->
-        <div class="box-body">
-          <div class="table-responsive">
-           <table id="example1" class="table table-bordered table-striped">
-            <thead>
-              <tr>
-                <th>No</th>
-                <th>Tanggal</th>
-                <th>Agenda</th>
-                <th>Action Plan</th>
-                <th>Evidence</th>
-                <th>Lampiran</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <?php $no=1; ?>
-                @foreach ($activitys as $activity)
-                <td>{{ $no++ }}</td>
-                <td>{{ $activity->tanggal }}</td>
-                <td>{{ $activity->agenda }}</td>
-                <td>{{ $activity->actionPlan }}</td>
-                <td>{{ $activity->evidence }}</td>
-                <td>{{ $activity->lampiran }}</td>
-              
-                <td>
-                  <div class="btn-group">
-                    <a href="{{ url('/tableRaisa'.'/editActRaisa/'.$activity->id) }}">
-                      <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="left" title="Edit File">
-                        <i class='glyphicon glyphicon-pencil'></i>
-                      </button>
-                    </a>
-
-                   <a href="{{ url('/deleteActRaisa/'.$activity->id) }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="right" title="Delete File"><i class='glyphicon glyphicon-trash'></i></button></a>
-
-                  </div>
-                </td>
-              </tr>
-              @endforeach
-            </tbody>
-
-          </table>
-        </div><!-- /.table-responsive -->
-      </div><!-- /.box-body -->
-      <div class="box-footer clearfix">
-
-
-        <a href="{{ url('tableRaisa/addActRaisa') }}" class="btn btn-primary pull-left">Place New Activity</a>
-
-      </div><!-- /.box-footer -->
-    </div><!-- /.box -->
-
-    <!-- TABLE: LATEST ORDERS -->
-    <div class="box box-primary">
       <div class="box-header with-border">
-        <h3 class="box-title">Lampiran Dokumen</h3>
+        <h3 class="box-title">Activity Record</h3>
         <div class="box-tools pull-right">
           <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
         </div>
@@ -173,42 +113,90 @@
         <div class="table-responsive">
          <table id="example1" class="table table-bordered table-striped">
           <thead>
-           <?php $no=1; ?>
-           <tr>
-            <th>No</th>
-            <th>Agenda</th>
-            <th>Nama Dokumen</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>{{ $no++ }}</td>
-            <td>{{ $activity->agenda }}</td>
-            <td>{{ $activity->lampiran }}</td>
-            <td>
-              <div class="btn-group">
-                <a href="#">
-                  <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="left" title="Download File">
-                    <i class='glyphicon glyphicon-download-alt'></i>
-                  </button>
-                </a>
+            <tr>
+              <th>No</th>
+              <th>Tanggal</th>
+              <th>Agenda</th>
+              <th>Action Plan</th>
+              <th>Evidence</th>
+              <th>Lampiran</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <?php $no=1; ?>
+              @foreach ($activitys as $activity)
+              <td>{{ $no++ }}</td>
+              <td>{{ $activity->tanggal }}</td>
+              <td>{{ $activity->agenda }}</td>
+              <td>{{ $activity->actionPlan }}</td>
+              <td>{{ $activity->evidence }}</td>
+              <td>{{ $activity->lampiran }}</td>
+              
+              <td>
+                <div class="btn-group">
+                  <a href="#">
+                    <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Upload File">
+                      <i class='glyphicon glyphicon-floppy-open'></i>
+                    </button>
+                  </a>
 
-                <a href="#" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="right" title="Delete"><i class='glyphicon glyphicon-trash'></i></button></a>
+                  <a href="#" download="#" >
+                    <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Download File">
+                      <i class='glyphicon glyphicon-floppy-save'></i>
+                    </button>
+                  </a>
 
-              </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div><!-- /.table-responsive -->
-  </div><!-- /.box-body -->
-  <div class="box-footer clearfix">
-    <a href="#" class="btn btn-primary pull-left">Place New Documents</a>
-  </div><!-- /.box-footer -->
-</div><!-- /.box -->
+                  <a href="{{ url('/tableRaisa'.'/editActRaisa/'.$activity->id) }}">
+                    <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Edit File">
+                      <i class='glyphicon glyphicon-edit'></i>
+                    </button>
+                  </a>
 
-  </div><!--/.col (left) -->
+                  <span data-toggle="modal" data-target="#myModal" >
+                    <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="bottom" title="Delete Project">
+                      <i class='glyphicon glyphicon-trash'></i>
+                    </button>
+                  </span>
+
+                </div>
+              </td>
+            </tr>
+            @endforeach
+          </tbody>
+
+        </table>
+      </div><!-- /.table-responsive -->
+
+      <div class="modal modal-danger fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Alert!</h4>
+            </div>
+            <div class="modal-body">
+              Are You Sure want to delete this Project ?, this cannot be undo!
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+              <a href="{{ url('/deleteActRaisa/'.$activity->id) }}"><button type="button" class="btn btn-danger">Delete Project</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /.box-body -->
+    <div class="box-footer clearfix">
+
+      <a href="{{ url('tableRaisa/addActRaisa') }}" class="btn btn-primary pull-left">Place New Activity</a>
+
+    </div><!-- /.box-footer -->
+  </div><!-- /.box -->
+
+</div><!--/.col (left) -->
 </div>   <!-- /.row -->
 </section><!-- /.content -->
 

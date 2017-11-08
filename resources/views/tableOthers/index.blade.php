@@ -50,7 +50,7 @@
                 <div class="btn-group" style="text-align: center;">
                   <a href="{{ url('/tableOthers/'.$other->id.'/editOthers') }}">
                     <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Detail Project">
-                      <i class='glyphicon glyphicon-zoom-in'></i>
+                      <i class='glyphicon glyphicon-search'></i>
                     </button>
                   </a>
 

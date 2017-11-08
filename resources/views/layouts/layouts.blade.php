@@ -96,7 +96,7 @@ href="../../bower_components/googlefont/googlefont.css">
                   <img src="../../dist/img/avatar04.png" class="img-circle" alt="User Image">
 
                   <p>
-                    {{ Auth::user()->name }} - Web Developer
+                    {{ Auth::user()->name }}
                   </p>
                 </li>
                 <!-- Menu Footer-->
@@ -146,11 +146,7 @@ href="../../bower_components/googlefont/googlefont.css">
       <!-- search form -->
       <form action="#" method="get" class="sidebar-form">
         <div class="input-group">
-          <input type="text" name="q" class="form-control" placeholder="Search...">
-          <span class="input-group-btn">
-            <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
-            </button>
-          </span>
+          
         </div>
       </form>
       <!-- /.search form -->

@@ -92,7 +92,7 @@
                   <img src="../../dist/img/avatar04.png" class="img-circle" alt="User Image">
 
                   <p>
-                    {{ Auth::user()->name }} - Web Developer
+                    {{ Auth::user()->name }}
                   </p>
                 </li>
                 <!-- Menu Footer-->

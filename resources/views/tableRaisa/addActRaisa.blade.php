@@ -40,8 +40,9 @@
             </div>
 
             <div class="form-group">
-              <label>Lampiran</label>
-              <input type="text" class="form-control" name="lampiran" />
+              Input File (can attach more than one):
+              <br />
+              <input type="file" name="file[]" multiple />
             </div>
          </div><!-- /.box-body -->
 
