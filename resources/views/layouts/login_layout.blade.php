@@ -22,40 +22,40 @@
   <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
+<![endif]-->
 
-  <!-- Google Font -->
-    <link rel="stylesheet"
-    href="../../bower_components/googlefont/googlefont.css">
+<!-- Google Font -->
+<link rel="stylesheet"
+href="../../bower_components/googlefont/googlefont.css">
 
 </head>
-<body class="hold-transition login-page">
-    <div class="login-logo">
-      <a><b>Solution</b>Management</a>
-    </div>
-    <!-- /.login-logo -->
-    
-    @yield('content')
-
-    <!-- /.login-box-body -->
+<body class="hold-transition login-page" style="background-image: url(../../dist/img/Telkom.jpg); background-size: 1350px 640px; background-repeat: no-repeat;">
+  <div class="login-logo">
+    <a><b>Solution</b>Management</a>
   </div>
-  <!-- /.login-box -->
+  <!-- /.login-logo -->
 
-  <!-- jQuery 3 -->
-  <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
-  <!-- Bootstrap 3.3.7 -->
-  <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-  <!-- iCheck -->
-  <script src="../../plugins/iCheck/icheck.min.js"></script>
-  <script>
-    $(function () {
-      $('input').iCheck({
-        checkboxClass: 'icheckbox_square-blue',
-        radioClass: 'iradio_square-blue',
+  @yield('content')
+
+  <!-- /.login-box-body -->
+</div>
+<!-- /.login-box -->
+
+<!-- jQuery 3 -->
+<script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- iCheck -->
+<script src="../../plugins/iCheck/icheck.min.js"></script>
+<script>
+  $(function () {
+    $('input').iCheck({
+      checkboxClass: 'icheckbox_square-blue',
+      radioClass: 'iradio_square-blue',
       increaseArea: '20%' // optional
     });
-    });
-  </script>
+  });
+</script>
 </body>
 
 <style type="text/css">

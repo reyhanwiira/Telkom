@@ -33,6 +33,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/editResume',function(){
+	return view('editResume'); 
+});
+
 Route::group(['middleware'=>'auth'], function(){
 	
 	Route::get('/', function () {
@@ -44,13 +48,17 @@ Route::group(['middleware'=>'auth'], function(){
 	Route::post('/tableProactive/{id}','ProactiveController@storeActPro');
 
 	Route::get('deleteActPro/{id}','ProactiveController@deleteActPro');
-
+/*
 	Route::get('/tableProactive/editActPro/{id}','ProactiveController@editActPro');
 	Route::put('/editActPro/{id}','ProactiveController@updateActPro');
+<<<<<<< HEAD
 
 
 
 
+=======
+*/
+>>>>>>> 6cb396003fc0b003a314be38152b59113f55012c
 //======================================================================
 
 //ACTIVITY RAISA
@@ -86,19 +94,19 @@ Route::group(['middleware'=>'auth'], function(){
 
 	Route::post('/tableOthers','OthersController@uploadOthers');
 
-Route::get('/tableOthers/uploadOthers','OthersUploadController@indexUploadOthers') ;
-Route::post('/tableOthers/editOthers','OthersUploadController@showUploadFile') ;
+	Route::get('/tableOthers/uploadOthers','OthersUploadController@indexUploadOthers') ;
+	Route::post('/tableOthers/editOthers','OthersUploadController@showUploadFile') ;
 
-Route::get('/tableOthers/editOthers','OthersController@downloadFileOthers');
+	Route::get('/tableOthers/editOthers','OthersController@downloadFileOthers');
 
 
 
 //IMPORT DAN EXPORT OTHERS
 
-Route::get('importOthers', 'ExcelOthersController@importOthersRead');
+	Route::get('importOthers', 'ExcelOthersController@importOthersRead');
 
-Route::post('importOthers', 'ExcelOthersController@importOthers');
-Route::get('downloadOthers/{type}', 'ExcelOthersController@ExportOthers');
+	Route::post('importOthers', 'ExcelOthersController@importOthers');
+	Route::get('downloadOthers/{type}', 'ExcelOthersController@ExportOthers');
 //======================================================================
 
 
@@ -167,45 +175,48 @@ Route::get('downloadOthers/{type}', 'ExcelOthersController@ExportOthers');
 
 	Route::get('/tableOthers/printOthers','OthersController@print');
 
-//======================================================================
-
-//getCSV
-
-//public function store(AddProjectRequest $request)
-//{
-    // Get uploaded CSV file
-    //$file = $request->file('csv');
-
-    // Create list name
-    //$name = time().'-'.$file->getClientOriginalName();
-
-    // Create a list record in the database
-    //$list = List::create(['name' => $name]);
-
-    // Create a CSV reader instance
-    //$reader = Reader::createFromFileObject($file->openFile());
-
-    // Create a customer from each row in the CSV file
-    //foreach ($reader as $index => $row) {
-    //    $list->customers()->create($row);
-    //}
-
-    // Redirect back to where you need with a success message
-//}
-
-Route::get('/detail','DetailController@index');
-
-//Detail Chart
-
-Route::get('/detail','DetailChartController@readChart');
-Route::get('/detail','ChartController@readChartDetail');
+	Route::get('/detail','DetailController@index');
 
 //Dashboard chart
 
-Route::get('/home','ChartController@readChart');
+	Route::get('/home','ChartController@readChart');
+//resume
+
+	Route::get('/editResume','ResumeController@readResume');
+	Route::get('/{id}/editResume','ResumeController@editResume');
+	Route::put('/{id}','ResumeController@updateResume');
+
+	Route::get('/detail','DetailController@index');
+
+//Detail Chart
+
+	Route::get('/detail','DetailChartController@readChart');
+	Route::get('/detail','ChartController@readChartDetail');
+	Route::get('/detailProact','DetailChartController@readChart');
+	Route::get('/detailProact','ChartController@readChartDetail');
+	Route::get('/detailRaisa','DetailChartController@readChart');
+	Route::get('/detailRaisa','ChartController@readChartDetail');
+	Route::get('/detailScn','DetailChartController@readChart');
+	Route::get('/detailScn','ChartController@readChartDetail');
+	Route::get('/detailOther','DetailChartController@readChart');
+	Route::get('/detailOther','ChartController@readChartDetail');
+
+//=====================================================
+
+	Route::get('/tableProactive', 'ProactiveController@showUploadForm');
+
+	Route::get('/tableProactive', 'ProactiveController@storeFile')->name('upload.file');
+
+	Route::get('file','FileController@showUploadForm')->name('upload.file');
+
+	Route::get('file','FileController@storeFile');
 
 
+	Route::get('importExport', 'MaatWebsiteController@importExport');
+	Route::get('downloadExcel/{type}', 'MaatWebsiteController@downloadExcel');
+	Route::post('importExcel', 'MaatWebsiteController@importExcel');
 });
+<<<<<<< HEAD
 
 
 Route::get('importExport', 'MaatWebsiteController@importExport');
@@ -222,3 +233,5 @@ Route::group(['middleware' => 'web'], function () {
 
 Route::get('/upload','CobaUpload@index');
 Route::post('/upload','CobaUpload@upload');
+=======
+>>>>>>> 6cb396003fc0b003a314be38152b59113f55012c

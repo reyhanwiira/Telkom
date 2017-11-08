@@ -35,26 +35,30 @@
             <?php $no=1; ?>
             @foreach ($others as $other)
             <tr>
-              <td>{{ $no++ }}</td>
-              <td>{{ $other-> projectName }}</td>
-              <td>{{ $other-> segment }}</td>
-              <td>{{ $other-> description }}</td>
-              <td>{{ $other-> customer }}</td>
-              <td>{{ $other-> lastAction }}</td>
-              <td>{{ $other-> nextAction }}</td>
-              <td>{{ $other-> status }}</td>
-              <td>{{ $other-> information }}</td>
-              <td>{{ $other-> startProject }}</td>
-              <td>{{ $other-> finishProject }}</td>
+              <td style="text-align: center;">{{ $no++ }}</td>
+              <td style="text-align: center;">{{ $other-> projectName }}</td>
+              <td style="text-align: center;">{{ $other-> segment }}</td>
+              <td style="text-align: center;">{{ $other-> description }}</td>
+              <td style="text-align: center;">{{ $other-> customer }}</td>
+              <td style="text-align: center;">{{ $other-> lastAction }}</td>
+              <td style="text-align: center;">{{ $other-> nextAction }}</td>
+              <td style="text-align: center;">{{ $other-> status }}</td>
+              <td style="text-align: center;">{{ $other-> information }}</td>
+              <td style="text-align: center;">{{ $other-> startProject }}</td>
+              <td style="text-align: center;">{{ $other-> finishProject }}</td>
               <td>
-                <div class="btn-group">
+                <div class="btn-group" style="text-align: center;">
                   <a href="{{ url('/tableOthers/'.$other->id.'/editOthers') }}">
                     <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Detail Project">
                       <i class='glyphicon glyphicon-zoom-in'></i>
                     </button>
                   </a>
-                  
-                  <a href="deleteOthers/{{ $other->id }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="bottom" title="Delete Project"><i class='glyphicon glyphicon-trash'></i></button></a>
+
+                  <span data-toggle="modal" data-target="#myModal" >
+                    <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="bottom" title="Delete Project">
+                      <i class='glyphicon glyphicon-trash'></i>
+                    </button>
+                  </span>
 
                 </div>
               </td>
@@ -63,23 +67,51 @@
           </tbody>
         </table>
       </div><!-- /.table-responsive -->
+
+      <div class="modal modal-danger fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Alert!</h4>
+            </div>
+            <div class="modal-body">
+              Are You Sure want to delete this Project ?, this cannot be undo!
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+              <a href="deleteOthers/{{ $other->id }}"><button type="button" class="btn btn-danger">Delete Project</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div><!-- /.box-body -->
     <div class="box-footer clearfix">
-      <a href="{{ url('tableOthers/createOthers') }}" class="btn btn-primary pull-left">Place New Project</a>
-      
-      <a href="{{ url('tableOthers/printOthers') }}" target="_blank" class="btn btn-primary pull-right"><i class="fa fa-print"></i> Print</a>
-
-      <a href="{{ url('importOthers') }}">Import</a>
-
-       <a href="{{ url('downloadOthers','xlsx') }}">
-        <button class="btn btn-success">Download Excel xlsx</button>
-      </a>
-      
-      <button type="button" class="btn btn-primary pull-center" data-toggle="tooltip" data-placement="right" title="Export Data">
-        <i class='glyphicon glyphicon-floppy-open'></i>
-      </button>
+      <div class="row">
+        <div class="col-xs-2 text-center">
+          <a href="{{ url('tableOthers/createOthers') }}" class="btn btn-block btn-social"><i class="fa fa-plus-square-o"></i> Place New Project</a>
+        </div>
+        <div class="col-xs-2 text-center">
+          <a href="{{ url('importOthers') }}" target="_blank" class="btn btn-block btn-social"><i class="fa fa-download"></i> Import</a>
+        </div>
+        <div class="col-xs-2 text-center">
+          
+        </div>
+        <div class="col-xs-2 text-center">
+           
+        </div>
+        <div class="col-xs-2 text-center">
+          <a href="{{ url('downloadOthers','xlsx') }}" target="_blank" class="btn btn-block btn-social"><i class="fa fa-upload"></i> Export</a> 
+        </div>
+        <div class="col-xs-2 text-center">
+          <a href="{{ url('tableOthers/printOthers') }}" target="_blank" class="btn btn-block btn-social"><i class="fa fa-print"></i> Print</a>
+        </div>
+      </div>
     </div><!-- /.box-footer -->
   </div><!-- /.box -->
+
 </div><!-- /.col -->
 
 </div><!-- /.row --> 
