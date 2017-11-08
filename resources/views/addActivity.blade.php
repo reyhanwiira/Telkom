@@ -1,4 +1,4 @@
-@extends('layouts.addProject_layout')
+@extends('layouts.addActivity_layout')
 
 @section('content')
 <section class="content">
@@ -10,113 +10,40 @@
         <div class="box-header">
         </div><!-- /.box-header -->
         <!-- form start -->
-        <form role="form" method="post" action="{{ url('/tableProactive') }}">
-          {!! csrf_field() !!}
+        <form action="{{ url('/tableProactive/editProactive') }}" method="post"  enctype="multipart/form-data">
+        {!! csrf_field() !!}
           <div class="box-body">
+            <div class="form-group">
+                 <label>Date</label>
+                 <div class="input-group">
+                   <div class="input-group-addon">
+                     <i class="fa fa-calendar"></i>
+                   </div>
+                   <input type="date" class="form-control pull-right" id="reservation" name="tanggal" />
+                 </div><!-- /.input group -->
+               </div><!-- /.form group -->
 
             <div class="form-group">
-              <label>Project</label>
-              <input type="text" class="form-control" placeholder="Enter ..." name="projectName" />
+              <label>Agenda</label>
+              <input type="text" class="form-control" name="agenda" />
             </div>
 
             <div class="form-group">
-              <label>Segment</label>
-              <select name="segment" class="form-control select2" multiple>
-                <option value="CGS">CGS</option>
-                <option value="GAS">GAS</option>
-                <option value="LGS">LGS</option>
-                <option value="MPS">MPS</option>
-              </select>
+              <label>Action Plan</label>
+              <input type="text" class="form-control" name="actionPlan" />
             </div>
 
             <div class="form-group">
-              <label>Description</label>
-              <textarea class="form-control" rows="3" placeholder="Enter ..." name="description"></textarea>
-            </div>
-
-            <div class="form-group">
-              <label>Customer</label>
-              <input type="text" class="form-control" placeholder="Enter ..." name="customer" />
-            </div>
-
-            <div class="form-group">
-              <label>Last Action</label>
-              <textarea class="form-control" rows="3" placeholder="Enter ..." name="lastAction"></textarea>
-            </div>
-
-            <div class="form-group">
-              <label>Next Action</label>
-              <textarea class="form-control" rows="3" placeholder="Enter ..." name="nextAction"></textarea>
-            </div>
-
-            <div class="form-group">
-              <label>Current Progress</label>
-              <select class="form-control select2" name="currentProgress">
-                <option value="Initial Requirement" selected="selected">Initial Requirement</option>
-                <option value="Initial Solusi">Initial Solusi</option>
-                <option value="Waiting Feedback & Requirement Gathering">Waiting Feedback & Requirement Gathering</option>
-                <option value="Solution Design">Solution Design</option>
-                <option value="Solution Development">Solution Development</option>
-                <option value="POC">POC</option>
-                <option value="Proposal Ready">Proposal Ready</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label>Information</label>
-              <textarea class="form-control" rows="3" placeholder="Enter ..." name="information"></textarea>
-            </div>
-
-            <div class="form-group">
-             <label>Start Project</label>
-             <div class="input-group">
-               <div class="input-group-addon">
-                 <i class="fa fa-calendar"></i>
-               </div>
-               <input type="date" class="form-control pull-right" id="reservation" name="startProject" />
-             </div><!-- /.input group -->
-           </div><!-- /.form group -->
-
-           <div class="form-group">
-             <label>Finish Project</label>
-             <div class="input-group">
-               <div class="input-group-addon">
-                 <i class="fa fa-calendar"></i>
-               </div>
-               <input type="date" class="form-control pull-right" id="reservation" name="finishProject" />
-             </div><!-- /.input group -->
-           </div><!-- /.form group -->
-
-            <div class="form-group">
-              <label>AM Segment</label>
-              <input type="text" class="form-control" placeholder="Enter ..." name="AMSegment" />
+              <label>Evidence</label>
+              <input type="text" class="form-control" name="evidence" />
             </div>
 
              <div class="form-group">
-              <label>Keahlian yang dibutuhkan</label>
-              <input type="text" class="form-control" placeholder="Enter ..." name="keahlian" />
+              Input File (can attach more than one):
+              <br />
+              <input type="file" name="file[]" multiple />
+              <br /><br />
             </div>
-
-             <div class="form-group">
-              <label>Est. Revenue</label>
-              <input type="text" class="form-control" placeholder="Enter ..." name="EstRevenue" />
-            </div>
-
-             <div class="form-group">
-              <label>Deliverable</label>
-              <input type="text" class="form-control" placeholder="Enter ..." name="deliverable" />
-            </div>
-
-             <div class="form-group">
-              <label>Benefit</label>
-              <input type="text" class="form-control" placeholder="Enter ..." name="benefit" />
-            </div>
-
-             <div class="form-group">
-              <label>Support AP</label>
-              <input type="text" class="form-control" placeholder="Enter ..." name="supportAP" />
-            </div>
-
          </div><!-- /.box-body -->
 
          <div class="box-footer">

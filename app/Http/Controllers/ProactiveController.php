@@ -93,7 +93,7 @@ class ProactiveController extends Controller
 
     public function createActivity()
     {
-      return view('tableProactive.addActivity');
+      return view('addActivity');
     }
  
      public function storeActPro(Request $request)
@@ -142,29 +142,21 @@ class ProactiveController extends Controller
     }
 
 
-
-     public function addDocumentPro()
+    public function uploadPro(Request $request)
     {
+        $tambah = new Activity();
+        $tambah->judul = $request['upload'];
 
-        return view('tableProactive.addDocumentPro');
-    }
-    
 
-    public function uploadPro()
-    {
-        $file = $request->file('filename');
-        echo 'File name :'.$file->getClientOriginalName().'<br>';
-        echo 'File extension :'.$file->getClientOriginalExtension().'<br>';
-        echo 'File path :'.$file->getRealPath().'<br>';
-        echo 'File size :'.$file->getSize().'<br>';
-        echo 'File MIME Type :'.$file->getMimeType().'<br>';
+        // Disini proses mendapatkan judul dan memindahkan letak gambar ke folder image
+        $file       = $request->file('import_file');
+        $fileName   = $file->getClientOriginalName();
+        $request->file('import_file')->move("upload/", $fileName);
 
-        //upload file
-        $destinationPath='uploads';
-        $filename = $file->getClientOriginalName();
-        if($file->move($destinationPath,$file->getClientOriginalName())){
-            echo "<img src='uploads/".$filename."'>";
-        }
+        $tambah->import_file = $fileName;
+        $tambah->save();
+
+        return redirect()->to('/');
 
     }
 

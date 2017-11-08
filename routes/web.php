@@ -40,13 +40,16 @@ Route::group(['middleware'=>'auth'], function(){
 	});
 
 //ACTIVITY PROACTIVE
-	Route::get('/tableProactive/addActivity','ProactiveController@createActivity');
+	Route::get('addActivity','ProactiveController@createActivity');
 	Route::post('/tableProactive/{id}','ProactiveController@storeActPro');
 
 	Route::get('deleteActPro/{id}','ProactiveController@deleteActPro');
 
 	Route::get('/tableProactive/editActPro/{id}','ProactiveController@editActPro');
 	Route::put('/editActPro/{id}','ProactiveController@updateActPro');
+
+
+
 
 //======================================================================
 
@@ -208,3 +211,14 @@ Route::get('/home','ChartController@readChart');
 Route::get('importExport', 'MaatWebsiteController@importExport');
 Route::get('downloadExcel/{type}', 'MaatWebsiteController@downloadExcel');
 Route::post('importExcel', 'MaatWebsiteController@importExcel');
+
+
+Route::group(['middleware' => 'web'], function () {
+	Route::get('fileUpload', function () {
+        return view('fileUpload');
+    });
+    Route::post('fileUpload', 'FileUploadOthers@upload');
+});
+
+Route::get('/upload','CobaUpload@index');
+Route::post('/upload','CobaUpload@upload');

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Storage;
 
 class FileUploadOthers extends Controller
 {
@@ -15,20 +16,37 @@ class FileUploadOthers extends Controller
 
     public function upload()
     {
-    	$file = $request->file('filename');
-        echo 'File name :'.$file->getClientOriginalName().'<br>';
-        echo 'File extension :'.$file->getClientOriginalExtension().'<br>';
-        echo 'File path :'.$file->getRealPath().'<br>';
-        echo 'File size :'.$file->getSize().'<br>';
-        echo 'File MIME Type :'.$file->getMimeType().'<br>';
+    	public function upload(Request $request){
+        $files = $request->file('file');
 
-        //upload file
-        $destinationPath='uploads';
-        $filename = $file->getClientOriginalName();
-        if($file->move($destinationPath,$file->getClientOriginalName())){
-            echo "<img src='uploads/".$filename."'>";
-        }
+        if(!empty($files)):
 
+            foreach($files as $file):
+                Storage::put($file->getClientOriginalName(), file_get_contents($file));
+            endforeach;
+
+        endif;
+
+        return \Response::json(array('success' => true));
+    }
+
+    }
+
+
+    public function fileUpload(Request $request)
+    {
+        $this->validate($request, [
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+
+        $image = $request->file('image');
+        $input['imagename'] = time().'.'.$image->getClientOriginalExtension();
+        $destinationPath = public_path('/images');
+        $image->move($destinationPath, $input['imagename']);
+
+        $this->postImage->add($input);
+
+        return back()->with('success','Image Upload successful');
     }
 
 }

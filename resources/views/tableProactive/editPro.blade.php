@@ -165,7 +165,7 @@
       <div class="box-footer clearfix">
 
 
-        <a href="{{ url('tableProactive/addActivity') }}" class="btn btn-primary pull-left">Place New Activity</a>
+        <a href="{{ url('addActivity') }}" class="btn btn-primary pull-left">Place New Activity</a>
 
       </div><!-- /.box-footer -->
     </div><!-- /.box -->
