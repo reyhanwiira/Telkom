@@ -128,7 +128,7 @@ class ProactiveController extends Controller
         return view('tableProactive.editActPro',compact('activity'));
     }
 
-    /*
+   
     public function updateActPro(Request $request, $id)
     {
         $activity = Activity::find($id);
@@ -142,8 +142,6 @@ class ProactiveController extends Controller
 
         return redirect::to('/tableProactive');
     }
-
-<<<<<<< HEAD
 
     public function uploadPro(Request $request)
     {
@@ -162,9 +160,7 @@ class ProactiveController extends Controller
         return redirect()->to('/');
 
     }
-=======
-*/
->>>>>>> 6cb396003fc0b003a314be38152b59113f55012c
+
 
 
 }

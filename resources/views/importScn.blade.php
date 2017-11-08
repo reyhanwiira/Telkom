@@ -179,7 +179,7 @@ href="../../bower_components/googlefont/googlefont.css">
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-              <form action="{{ URL::to('importOthers') }}" class="form-horizontal" method="post" enctype="multipart/form-data">
+              <form action="{{ URL::to('importScn') }}" class="form-horizontal" method="post" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 <input type="file" name="import_file" />
               

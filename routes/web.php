@@ -80,6 +80,16 @@ Route::get('deleteActScn/{id}','ScnController@deleteActScn');
 Route::get('/tableScn/editActScn/{id}','ScnController@editActScn');
 Route::put('/editActScn/{id}','ScnController@updateActScn');
 
+
+//IMPORT DAN EXPORT OTHERS
+
+Route::get('importScn', 'ExcelScnController@importScnRead');
+
+Route::post('importScn', 'ExcelScnController@importScn')->name('importScn');
+Route::get('downloadScn/{type}', 'ExcelScnController@ExportScn');
+//======================================================================
+
+
 //======================================================================
 
 //ACTIVITY OTHERS
@@ -104,7 +114,7 @@ Route::get('/tableOthers/editOthers','OthersController@downloadFileOthers');
 
 Route::get('importOthers', 'ExcelOthersController@importOthersRead');
 
-Route::post('importOthers', 'ExcelOthersController@importOthers');
+Route::post('importOthers', 'ExcelOthersController@importOthers')->name('importOthers');
 Route::get('downloadOthers/{type}', 'ExcelOthersController@ExportOthers');
 //======================================================================
 
@@ -202,13 +212,6 @@ Route::get('/detailOther','ChartController@readChartDetail');
 
 //=====================================================
 
-Route::get('/tableProactive', 'ProactiveController@showUploadForm');
-
-Route::get('/tableProactive', 'ProactiveController@storeFile')->name('upload.file');
-
-Route::get('file','FileController@showUploadForm')->name('upload.file');
-
-Route::get('file','FileController@storeFile');
 
 
 Route::get('importExport', 'MaatWebsiteController@importExport');
