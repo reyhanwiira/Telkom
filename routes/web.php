@@ -62,161 +62,160 @@ Route::group(['middleware'=>'auth'], function(){
 //======================================================================
 
 //ACTIVITY RAISA
-	Route::get('/tableRaisa/addActRaisa','RaisaController@createActRaisa');
-	Route::post('/tableRaisa/{id}','RaisaController@storeActRaisa');
+Route::get('/tableRaisa/addActRaisa','RaisaController@createActRaisa');
+Route::post('/tableRaisa/{id}','RaisaController@storeActRaisa');
 
-	Route::get('deleteActRaisa/{id}','RaisaController@deleteActRaisa');
+Route::get('deleteActRaisa/{id}','RaisaController@deleteActRaisa');
 
-	Route::get('/tableRaisa/editActRaisa/{id}','RaisaController@editActRaisa');
-	Route::put('/editActRaisa/{id}','RaisaController@updateActRaisa');
+Route::get('/tableRaisa/editActRaisa/{id}','RaisaController@editActRaisa');
+Route::put('/editActRaisa/{id}','RaisaController@updateActRaisa');
 
 //======================================================================
 
 //ACTIVITY SCN
-	Route::get('/tableScn/addActScn','ScnController@createActScn');
-	Route::post('/tableScn/{id}','ScnController@storeActScn');
+Route::get('/tableScn/addActScn','ScnController@createActScn');
+Route::post('/tableScn/{id}','ScnController@storeActScn');
 
-	Route::get('deleteActScn/{id}','ScnController@deleteActScn');
+Route::get('deleteActScn/{id}','ScnController@deleteActScn');
 
-	Route::get('/tableScn/editActScn/{id}','ScnController@editActScn');
-	Route::put('/editActScn/{id}','ScnController@updateActScn');
+Route::get('/tableScn/editActScn/{id}','ScnController@editActScn');
+Route::put('/editActScn/{id}','ScnController@updateActScn');
 
 //======================================================================
 
 //ACTIVITY OTHERS
-	Route::get('/tableOthers/addActOthers','OthersController@createActOthers');
-	Route::post('/tableOthers/{id}','OthersController@storeActOthers');
+Route::get('/tableOthers/addActOthers','OthersController@createActOthers');
+Route::post('/tableOthers/{id}','OthersController@storeActOthers');
 
-	Route::get('deleteActOthers/{id}','OthersController@deleteActOthers');
+Route::get('deleteActOthers/{id}','OthersController@deleteActOthers');
 
-	Route::get('/tableOthers/editActOthers/{id}','OthersController@editActOthers');
-	Route::put('/editActOthers/{id}','OthersController@updateActOthers');
+Route::get('/tableOthers/editActOthers/{id}','OthersController@editActOthers');
+Route::put('/editActOthers/{id}','OthersController@updateActOthers');
 
-	Route::post('/tableOthers','OthersController@uploadOthers');
+Route::post('/tableOthers','OthersController@uploadOthers');
 
-	Route::get('/tableOthers/uploadOthers','OthersUploadController@indexUploadOthers') ;
-	Route::post('/tableOthers/editOthers','OthersUploadController@showUploadFile') ;
+Route::get('/tableOthers/uploadOthers','OthersUploadController@indexUploadOthers') ;
+Route::post('/tableOthers/editOthers','OthersUploadController@showUploadFile') ;
 
-	Route::get('/tableOthers/editOthers','OthersController@downloadFileOthers');
+Route::get('/tableOthers/editOthers','OthersController@downloadFileOthers');
 
 
 
 //IMPORT DAN EXPORT OTHERS
 
-	Route::get('importOthers', 'ExcelOthersController@importOthersRead');
+Route::get('importOthers', 'ExcelOthersController@importOthersRead');
 
-	Route::post('importOthers', 'ExcelOthersController@importOthers');
-	Route::get('downloadOthers/{type}', 'ExcelOthersController@ExportOthers');
+Route::post('importOthers', 'ExcelOthersController@importOthers');
+Route::get('downloadOthers/{type}', 'ExcelOthersController@ExportOthers');
 //======================================================================
 
 
 //READ DATA PROACTIVE
 
-	Route::get('/tableProactive','ProactiveController@readPro');
+Route::get('/tableProactive','ProactiveController@readPro');
 
 //CREATE DATA PROACTIVE
-	Route::get('/tableProactive/createPro','ProactiveController@createPro');
-	Route::post('/tableProactive','ProactiveController@storePro');
+Route::get('/tableProactive/createPro','ProactiveController@createPro');
+Route::post('/tableProactive','ProactiveController@storePro');
 
 //EDIT DAN UPDATE DATA PROACTIVE
-	Route::get('/tableProactive/{id}/editPro','ProactiveController@editPro');
-	Route::put('/tableProactive/{id}','ProactiveController@updatePro');
+Route::get('/tableProactive/{id}/editPro','ProactiveController@editPro');
+Route::put('/tableProactive/{id}','ProactiveController@updatePro');
 
 //DELETE DATA PROACTIVE
-	Route::get('deletePro/{id}','ProactiveController@deletePro');
+Route::get('deletePro/{id}','ProactiveController@deletePro');
 
 //======================================================================
 
 //READ RAISA
-	Route::get('/tableRaisa','RaisaController@read');
+Route::get('/tableRaisa','RaisaController@read');
 
 //CREATE DATA RAISA
-	Route::get('/tableRaisa/createRaisa','RaisaController@create');
-	Route::post('/tableRaisa','RaisaController@store');
+Route::get('/tableRaisa/createRaisa','RaisaController@create');
+Route::post('/tableRaisa','RaisaController@store');
 
 //EDIT DAN UPDATE DATA RAISA
-	Route::get('/tableRaisa/{id}/editRaisa','RaisaController@edit');
-	Route::put('/tableRaisa/{id}','RaisaController@update');
+Route::get('/tableRaisa/{id}/editRaisa','RaisaController@edit');
+Route::put('/tableRaisa/{id}','RaisaController@update');
 
 //DELETE DATA RAISA
-	Route::get('deleteRaisa/{id}','RaisaController@delete');
+Route::get('deleteRaisa/{id}','RaisaController@delete');
 
 //======================================================================
 
 //READ SCN
-	Route::get('/tableScn','ScnController@read');
+Route::get('/tableScn','ScnController@read');
 
 //CREATE DATA SCN
-	Route::get('/tableScn/create','ScnController@create');
-	Route::post('/tableScn','ScnController@store');
+Route::get('/tableScn/create','ScnController@create');
+Route::post('/tableScn','ScnController@store');
 
 //EDIT DAN UPDATE DATA SCN
-	Route::get('/tableScn/{id}/editScn','ScnController@edit');
-	Route::put('/tableScn/{id}','ScnController@update');
+Route::get('/tableScn/{id}/editScn','ScnController@edit');
+Route::put('/tableScn/{id}','ScnController@update');
 
 //DELETE DATA RAISA
-	Route::get('deleteScn/{id}','ScnController@delete');
+Route::get('deleteScn/{id}','ScnController@delete');
 
 //======================================================================
 
 //READ OTHERS
-	Route::get('/tableOthers','OthersController@readOthers');
+Route::get('/tableOthers','OthersController@readOthers');
 
 //CREATE DATA Other
-	Route::get('/tableOthers/createOthers','OthersController@createOthers');
-	Route::post('/tableOthers','OthersController@storeOthers');
+Route::get('/tableOthers/createOthers','OthersController@createOthers');
+Route::post('/tableOthers','OthersController@storeOthers');
 
 //EDIT DAN UPDATE DATA OTHER
-	Route::get('/tableOthers/{id}/editOthers','OthersController@editOthers');
-	Route::put('/tableOthers/{id}','OthersController@updateOthers');
+Route::get('/tableOthers/{id}/editOthers','OthersController@editOthers');
+Route::put('/tableOthers/{id}','OthersController@updateOthers');
 
 //DELETE DATA OTHER
-	Route::get('deleteOthers/{id}','OthersController@deleteOthers');
+Route::get('deleteOthers/{id}','OthersController@deleteOthers');
 
-	Route::get('/tableOthers/printOthers','OthersController@print');
+Route::get('/tableOthers/printOthers','OthersController@print');
 
-	Route::get('/detail','DetailController@index');
+Route::get('/detail','DetailController@index');
 
 //Dashboard chart
 
-	Route::get('/home','ChartController@readChart');
+Route::get('/home','ChartController@readChart');
 //resume
 
-	Route::get('/editResume','ResumeController@readResume');
-	Route::get('/{id}/editResume','ResumeController@editResume');
-	Route::put('/{id}','ResumeController@updateResume');
+Route::get('/editResume','ResumeController@readResume');
+Route::get('/{id}/editResume','ResumeController@editResume');
+Route::put('/{id}','ResumeController@updateResume');
 
-	Route::get('/detail','DetailController@index');
+Route::get('/detail','DetailController@index');
 
 //Detail Chart
 
-	Route::get('/detail','DetailChartController@readChart');
-	Route::get('/detail','ChartController@readChartDetail');
-	Route::get('/detailProact','DetailChartController@readChart');
-	Route::get('/detailProact','ChartController@readChartDetail');
-	Route::get('/detailRaisa','DetailChartController@readChart');
-	Route::get('/detailRaisa','ChartController@readChartDetail');
-	Route::get('/detailScn','DetailChartController@readChart');
-	Route::get('/detailScn','ChartController@readChartDetail');
-	Route::get('/detailOther','DetailChartController@readChart');
-	Route::get('/detailOther','ChartController@readChartDetail');
+Route::get('/detail','DetailChartController@readChart');
+Route::get('/detail','ChartController@readChartDetail');
+Route::get('/detailProact','DetailChartController@readChart');
+Route::get('/detailProact','ChartController@readChartDetail');
+Route::get('/detailRaisa','DetailChartController@readChart');
+Route::get('/detailRaisa','ChartController@readChartDetail');
+Route::get('/detailScn','DetailChartController@readChart');
+Route::get('/detailScn','ChartController@readChartDetail');
+Route::get('/detailOther','DetailChartController@readChart');
+Route::get('/detailOther','ChartController@readChartDetail');
 
 //=====================================================
 
-	Route::get('/tableProactive', 'ProactiveController@showUploadForm');
+Route::get('/tableProactive', 'ProactiveController@showUploadForm');
 
-	Route::get('/tableProactive', 'ProactiveController@storeFile')->name('upload.file');
+Route::get('/tableProactive', 'ProactiveController@storeFile')->name('upload.file');
 
-	Route::get('file','FileController@showUploadForm')->name('upload.file');
+Route::get('file','FileController@showUploadForm')->name('upload.file');
 
-	Route::get('file','FileController@storeFile');
+Route::get('file','FileController@storeFile');
 
 
-	Route::get('importExport', 'MaatWebsiteController@importExport');
-	Route::get('downloadExcel/{type}', 'MaatWebsiteController@downloadExcel');
-	Route::post('importExcel', 'MaatWebsiteController@importExcel');
+Route::get('importExport', 'MaatWebsiteController@importExport');
+Route::get('downloadExcel/{type}', 'MaatWebsiteController@downloadExcel');
+Route::post('importExcel', 'MaatWebsiteController@importExcel');
 });
-<<<<<<< HEAD
 
 
 Route::get('importExport', 'MaatWebsiteController@importExport');
@@ -226,12 +225,10 @@ Route::post('importExcel', 'MaatWebsiteController@importExcel');
 
 Route::group(['middleware' => 'web'], function () {
 	Route::get('fileUpload', function () {
-        return view('fileUpload');
-    });
-    Route::post('fileUpload', 'FileUploadOthers@upload');
+		return view('fileUpload');
+	});
+	Route::post('fileUpload', 'FileUploadOthers@upload');
 });
 
 Route::get('/upload','CobaUpload@index');
 Route::post('/upload','CobaUpload@upload');
-=======
->>>>>>> 6cb396003fc0b003a314be38152b59113f55012c
