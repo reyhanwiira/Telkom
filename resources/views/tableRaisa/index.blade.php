@@ -7,14 +7,14 @@
     <!-- TABLE: LATEST ORDERS -->
     <div class="box box-primary">
       <div class="box-header with-border">
-        <h3 class="box-title">RAISA</h3>
+        <h3 class="box-title">raisa</h3>
         <div class="box-tools pull-right">
           <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
         </div>
       </div><!-- /.box-header -->
       <div class="box-body">
         <div class="table-responsive">
-         <table id="example3" class="table table-bordered table-striped">
+         <table id="example4" class="table table-bordered table-striped">
           <thead>
             <tr>
               <th>No</th>
@@ -35,31 +35,31 @@
             <?php $no=1; ?>
             @foreach ($raisas as $raisa)
             <tr>
-              <td>{{ $no++ }}</td>
-              <td>{{ $raisa-> projectName }}</td>
-              <td>{{ $raisa-> segment }}</td>
-              <td>{{ $raisa-> description }}</td>
-              <td>{{ $raisa-> customer }}</td>
-              <td>{{ $raisa-> lastAction }}</td>
-              <td>{{ $raisa-> nextAction }}</td>
-              <td>{{ $raisa-> status }}</td>
-              <td>{{ $raisa-> information }}</td>
-              <td>{{ $raisa-> startProject }}</td>
-              <td>{{ $raisa-> finishProject }}</td>
+              <td style="text-align: center;">{{ $no++ }}</td>
+              <td style="text-align: center;">{{ $raisa-> projectName }}</td>
+              <td style="text-align: center;">{{ $raisa-> segment }}</td>
+              <td style="text-align: center;">{{ $raisa-> description }}</td>
+              <td style="text-align: center;">{{ $raisa-> customer }}</td>
+              <td style="text-align: center;">{{ $raisa-> lastAction }}</td>
+              <td style="text-align: center;">{{ $raisa-> nextAction }}</td>
+              <td style="text-align: center;">{{ $raisa-> status }}</td>
+              <td style="text-align: center;">{{ $raisa-> information }}</td>
+              <td style="text-align: center;">{{ $raisa-> startProject }}</td>
+              <td style="text-align: center;">{{ $raisa-> finishProject }}</td>
               <td>
-                <div class="btn-group">
-                  <a href="{{ url('/tableRaisa/'.$raisa->id.'/editRaisa') }}">
-                    <button type="button" class="btn btn-success" data-placement="top" title="Detail Project">
+                <div class="btn-group" style="text-align: center;">
+                  <a href="{{ url('/tableRaisa/'.$raisa->id.'/editraisa') }}">
+                    <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Detail Project">
                       <i class='glyphicon glyphicon-search'></i>
                     </button>
                   </a>
-                  <a>
-                    <span data-toggle="modal" data-target="#myModal" >
-                      <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="bottom" title="Delete Project">
-                        <i class='glyphicon glyphicon-trash'></i>
-                      </button>
-                    </span>
-                  </a>
+
+                  <span data-toggle="modal" data-target="#myModal" >
+                    <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="bottom" title="Delete Project">
+                      <i class='glyphicon glyphicon-trash'></i>
+                    </button>
+                  </span>
+
                 </div>
               </td>
             </tr>
@@ -91,26 +91,27 @@
     <div class="box-footer clearfix">
       <div class="row">
         <div class="col-xs-2 text-center">
-          <a href="{{ url('tableRaisa/createRaisa') }}" class="btn btn-block btn-social"><i class="fa fa-plus-square-o"></i>Place New Project</a>
+          <a href="{{ url('tableRaisa/createRaisa') }}" class="btn btn-block btn-social"><i class="fa fa-plus-square-o"></i> Place New Project</a>
         </div>
         <div class="col-xs-2 text-center">
-          <a href="#" target="_blank" class="btn btn-block btn-social"><i class="fa fa-download"></i> Import</a>
+          <a href="{{ url('importRaisa') }}" target="_blank" class="btn btn-block btn-social"><i class="fa fa-download"></i> Import</a>
         </div>
         <div class="col-xs-2 text-center">
-
+          
         </div>
         <div class="col-xs-2 text-center">
-
+           
         </div>
         <div class="col-xs-2 text-center">
-          <a href="#" target="_blank" class="btn btn-block btn-social"><i class="fa fa-upload"></i> Export</a> 
+          <a href="{{ url('downloadRaisa','xlsx') }}" target="_blank" class="btn btn-block btn-social"><i class="fa fa-upload"></i> Export</a> 
         </div>
         <div class="col-xs-2 text-center">
-          <a href="#" target="_blank" class="btn btn-block btn-social"><i class="fa fa-print"></i> Print</a>
+          <a href="{{ url('tableRaisa/printRaisa') }}" target="_blank" class="btn btn-block btn-social"><i class="fa fa-print"></i> Print</a>
         </div>
-      </div><!-- /.box-footer -->
+      </div>
     </div><!-- /.box-footer -->
   </div><!-- /.box -->
+
 </div><!-- /.col -->
 
 </div><!-- /.row --> 

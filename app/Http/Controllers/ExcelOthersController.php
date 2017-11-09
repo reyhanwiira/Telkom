@@ -42,8 +42,8 @@ class ExcelOthersController extends Controller
                 \App\Other::insert($render->toArray());
                 });
     
-       if ($test) {
+       
          return Redirect::to('/tableOthers');
-    }
+    
 }
 }

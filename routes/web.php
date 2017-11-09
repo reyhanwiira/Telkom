@@ -69,6 +69,11 @@ Route::get('deleteActRaisa/{id}','RaisaController@deleteActRaisa');
 Route::get('/tableRaisa/editActRaisa/{id}','RaisaController@editActRaisa');
 Route::put('/editActRaisa/{id}','RaisaController@updateActRaisa');
 
+Route::get('importRaisa', 'ExcelRaisaController@importRaisaRead');
+
+Route::post('importRaisa', 'ExcelRaisaController@importRaisa')->name('importRaisa');
+Route::get('downloadRaisa/{type}', 'ExcelRaisaController@ExportRaisa');
+
 //======================================================================
 
 //ACTIVITY SCN
@@ -81,7 +86,7 @@ Route::get('/tableScn/editActScn/{id}','ScnController@editActScn');
 Route::put('/editActScn/{id}','ScnController@updateActScn');
 
 
-//IMPORT DAN EXPORT OTHERS
+//IMPORT DAN EXPORT SCN
 
 Route::get('importScn', 'ExcelScnController@importScnRead');
 

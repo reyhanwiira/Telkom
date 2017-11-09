@@ -42,8 +42,8 @@ class ExcelScnController extends Controller
                 \App\Scn::insert($render->toArray());
                 });
     
-       if ($test) {
+      
          return Redirect::to('/tableScn');
-    }
+    
 }
 }
