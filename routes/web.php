@@ -48,16 +48,20 @@ Route::group(['middleware'=>'auth'], function(){
 	Route::post('/tableProactive/{id}','ProactiveController@storeActPro');
 
 	Route::get('deleteActPro/{id}','ProactiveController@deleteActPro');
-/*
+
 	Route::get('/tableProactive/editActPro/{id}','ProactiveController@editActPro');
 	Route::put('/editActPro/{id}','ProactiveController@updateActPro');
-<<<<<<< HEAD
+
+
+//EXPORT AND IMPORT PROACTIVE
+
+	Route::get('importProactive', 'ExcelProactiveController@importProactiveRead');
+
+	Route::post('importProactive', 'ExcelProactiveController@importProactive')->name('importProactive');
+	Route::get('downloadProactive/{type}', 'ExcelProactiveController@ExportProactive');
 
 
 
-
-=======
-*/
 //======================================================================
 
 //ACTIVITY RAISA
