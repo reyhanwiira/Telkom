@@ -101,25 +101,25 @@
     var pieChart       = new Chart(pieChartCanvas)
     var PieData        = [
     {
-      value    : {{ $resume[1]->p0Proactive}},
+      value    : {{ $resume[0]->p0Raisa}},
       color    : '#730099',
       highlight: '#8600b3',
       label    : 'P0'
     },
     {
-      value    : {{ $resume[1]->p1Proactive}},
+      value    : {{ $resume[0]->p1Raisa}},
       color    : '#2ea4bc',
       highlight: '#32b3cd',
       label    : 'P1'
     },
     {
-      value    : {{ $resume[1]->p2Proactive }},
+      value    : {{ $resume[0]->p2Raisa }},
       color    : '#40bf80',
       highlight: '#53c68c',
       label    : 'P2'
     },
     {
-      value    : {{ $resume[1]->p3Proactive }},
+      value    : {{ $resume[0]->p3Raisa }},
       color    : '#66ff66',
       highlight: '#80ff80',
       label    : 'P3'
@@ -171,25 +171,25 @@
     var pieChart       = new Chart(pieChartCanvas)
     var PieData        = [
     {
-      value    : {{ $resume[2]->p0Proactive}},
+      value    : {{ $resume[0]->p0Scn}},
       color    : '#730099',
       highlight: '#8600b3',
       label    : 'P0'
     },
     {
-      value    : {{ $resume[2]->p1Proactive}},
+      value    : {{ $resume[0]->p1Scn}},
       color    : '#2ea4bc',
       highlight: '#32b3cd',
       label    : 'P1'
     },
     {
-      value    : {{ $resume[2]->p2Proactive }},
+      value    : {{ $resume[0]->p2Scn}},
       color    : '#40bf80',
       highlight: '#53c68c',
       label    : 'P2'
     },
     {
-      value    : {{ $resume[2]->p3Proactive }},
+      value    : {{ $resume[0]->p3Scn}},
       color    : '#66ff66',
       highlight: '#80ff80',
       label    : 'P3'
@@ -241,25 +241,25 @@
     var pieChart       = new Chart(pieChartCanvas)
     var PieData        = [
     {
-      value    : {{ $resume[3]->p0Proactive}},
+      value    : {{ $resume[0]->p0Other}},
       color    : '#730099',
       highlight: '#8600b3',
       label    : 'P0'
     },
     {
-      value    : {{ $resume[3]->p1Proactive}},
+      value    : {{ $resume[0]->p1Other}},
       color    : '#2ea4bc',
       highlight: '#32b3cd',
       label    : 'P1'
     },
     {
-      value    : {{ $resume[3]->p2Proactive }},
+      value    : {{ $resume[0]->p2Other }},
       color    : '#40bf80',
       highlight: '#53c68c',
       label    : 'P2'
     },
     {
-      value    : {{ $resume[3]->p3Proactive }},
+      value    : {{ $resume[0]->p3Other }},
       color    : '#66ff66',
       highlight: '#80ff80',
       label    : 'P3'
@@ -378,22 +378,22 @@
               <ul class="nav nav-pills nav-stacked">
                 <li>
                   <a href="#">P0
-                    <span class="pull-right text-red"><i class="fa fa-angle-down"></i> {{ $resume[1]->p0Proactive}}</span>
+                    <span class="pull-right text-red"><i class="fa fa-angle-down"></i> {{ $resume[0]->p0Raisa}}</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P1 
-                    <span class="pull-right text-green"><i class="fa fa-angle-up"></i> {{ $resume[1]->p1Proactive}}</span>
+                    <span class="pull-right text-green"><i class="fa fa-angle-up"></i> {{ $resume[0]->p1Raisa}}</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P2
-                    <span class="pull-right text-teal"><i class="fa fa-exchange"></i> {{ $resume[1]->p2Proactive}}</span>
+                    <span class="pull-right text-teal"><i class="fa fa-exchange"></i> {{ $resume[0]->p2Raisa}}</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P3
-                    <span class="pull-right text-teal"><i class="fa fa-exchange"></i> {{ $resume[1]->p3Proactive}}</span>
+                    <span class="pull-right text-teal"><i class="fa fa-exchange"></i> {{ $resume[0]->p3Raisa}}</span>
                   </a>
                 </li>
               </ul>
@@ -425,22 +425,22 @@
               <ul class="nav nav-pills nav-stacked">
                 <li>
                   <a href="#">P0
-                    <span class="pull-right text-red"><i class="fa fa-angle-down"></i> {{ $resume[2]->p0Proactive}}</span>
+                    <span class="pull-right text-red"><i class="fa fa-angle-down"></i> {{ $resume[0]->p0Scn}}</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P1 
-                    <span class="pull-right text-green"><i class="fa fa-angle-up"></i> {{ $resume[2]->p1Proactive}}</span>
+                    <span class="pull-right text-green"><i class="fa fa-angle-up"></i> {{ $resume[0]->p1Scn}}</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P2
-                    <span class="pull-right text-teal"><i class="fa fa-exchange"></i> {{ $resume[2]->p2Proactive}}</span>
+                    <span class="pull-right text-teal"><i class="fa fa-exchange"></i> {{ $resume[0]->p2Scn}}</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P3
-                    <span class="pull-right text-teal"><i class="fa fa-exchange"></i> {{ $resume[2]->p3Proactive}}</span>
+                    <span class="pull-right text-teal"><i class="fa fa-exchange"></i> {{ $resume[0]->p3Scn}}</span>
                   </a>
                 </li>
               </ul>
@@ -472,22 +472,22 @@
               <ul class="nav nav-pills nav-stacked">
                 <li>
                   <a href="#">P0
-                    <span class="pull-right text-red"><i class="fa fa-angle-down"></i> {{ $resume[3]->p0Proactive}}</span>
+                    <span class="pull-right text-red"><i class="fa fa-angle-down"></i> {{ $resume[0]->p0Other}}</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P1 
-                    <span class="pull-right text-green"><i class="fa fa-angle-up"></i> {{ $resume[3]->p1Proactive}}</span>
+                    <span class="pull-right text-green"><i class="fa fa-angle-up"></i> {{ $resume[0]->p1Other}}</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P2
-                    <span class="pull-right text-teal"><i class="fa fa-exchange"></i> {{ $resume[3]->p2Proactive}}</span>
+                    <span class="pull-right text-teal"><i class="fa fa-exchange"></i> {{ $resume[0]->p2Other}}</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P3
-                    <span class="pull-right text-teal"><i class="fa fa-exchange"></i> {{ $resume[3]->p3Proactive}}</span>
+                    <span class="pull-right text-teal"><i class="fa fa-exchange"></i> {{ $resume[0]->p3Other}}</span>
                   </a>
                 </li>
               </ul>
