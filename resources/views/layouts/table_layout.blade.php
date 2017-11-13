@@ -174,24 +174,34 @@ href="../../bower_components/googlefont/googlefont.css">
 
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-table"></i>
+            <i class="fa fa-pie-chart"></i>
             <span>Table</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="{{ url('tableProactive') }}"><i class="fa fa-circle-o"></i> Pro-Active</a></li>
-            <li><a href="{{ url('tableRaisa') }}"><i class="fa fa-circle-o"></i> RAISA</a></li>
-            <li><a href="{{ url('tableScn') }}"><i class="fa fa-circle-o"></i> SCN</a></li>
-            <li><a href="{{ url('tableOthers') }}"><i class="fa fa-circle-o"></i> OTHERS</a></li>
+            <li><a href="{{ url('tableProActive') }}"><i class="fa fa-circle-o text-red"></i> Pro-Active</a></li>
+            <li><a href="{{ url('tableRaisa') }}"><i class="fa fa-circle-o text-aqua"></i> RAISA</a></li>
+            <li><a href="{{ url('tableScn') }}"><i class="fa fa-circle-o text-yellow"></i> SCN</a></li>
+            <li><a href="{{ url('tableOthers') }}"><i class="fa fa-circle-o text-success"></i> OTHERS</a></li>
           </ul>
         </li>
 
         <li>
-          <a href="{{ url('detail') }}">
-            <i class="fa fa-pencil-square-o"></i> <span>Detail Project</span> <small class="fa fa pull-right"></small>
+          <a href="#">
+            <i class="fa fa-pencil-square-o"></i>
+            <span>Detail Project</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
           </a>
+          <ul class="treeview-menu">
+            <li><a href="{{ url('detailProact') }}"><i class="fa fa-circle-o text-red"></i> PROACTIVE</a></li>
+            <li><a href="{{ url('detailRaisa') }}"><i class="fa fa-circle-o text-aqua"></i> RAISA</a></li>
+            <li><a href="{{ url('detailScn') }}"><i class="fa fa-circle-o text-yellow"></i> SCN</a></li>
+            <li><a href="{{ url('detailOther') }}"><i class="fa fa-circle-o text-success"></i> OTHERS</a></li>
+          </ul>
         </li>
         
         <li>

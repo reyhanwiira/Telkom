@@ -303,7 +303,7 @@
       <div class="box box-primary">
         <div class="box-body">
           <div class="box-header with-border">
-            <h3 class="box-title">Pro-Active</h3>
+            <h3 class="box-title">PROACTIVE</h3>
           </div>
           <div class="box-body">
             <div class="row">
@@ -558,14 +558,10 @@
                   <td><b><span id="otherAmount"></span></b> | 8</td>
                 </tr>
               </table>
-              <center>
-                <a href="{{ url('/'.$resume[0]->id.'/editResume') }}">
-                 <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top">
-                  <i>Edit Data</i>
-                </button>
+              <div class="box-footer clearfix">
+                <a href="{{ url('/'.$resume[0]->id.'/editResume') }}" type="button" class="btn btn-primary"><i class="fa fa-wrench"></i> Edit Data</a>
               </a>
-
-            </center>
+            </div>
           </div>
         </div><!-- /.table-responsive -->
       </div><!-- /.box-body -->
