@@ -120,43 +120,43 @@
     var PieData        = [
 
     {
-      value    : {{ $resume[1]->p0Proactive}},
+      value    : {{ $resume[0]->p0Proactive}},
       color    : '#fff5cc',
       highlight: '#fff2cc',
       label    : 'Initial Requirement'
     },
     {
-      value    : {{ $resume[1]->p1Proactive}},
+      value    : {{ $resume[0]->p1Proactive}},
       color    : '#ffd1b3',
       highlight: '#ffe0cc',
       label    : 'Initial Solution'
     },
     {
-      value    : {{ $resume[1]->p2Proactive }},
+      value    : {{ $resume[0]->p2Proactive }},
       color    : '#ff9999',
       highlight: '#ffb3b3',
       label    : 'Menunggu Feedback & Gathering Req'
     },
     {
-      value    : {{ $resume[1]->p3Proactive }},
+      value    : {{ $resume[0]->p3Proactive }},
       color    : '#730099',
       highlight: '#ac00e6',
       label    : 'Solution Design'
     },
     {
-      value    : {{ $resume[1]->p0Raisa}},
+      value    : {{ $resume[0]->p0Raisa}},
       color    : '#2ea4bc',
       highlight: '#5bc2d7',
       label    : 'Solution Development'
     },
     {
-      value    : {{ $resume[1]->p1Raisa }},
+      value    : {{ $resume[0]->p1Raisa }},
       color    : '#40bf80',
       highlight: '#79d2a6',
       label    : 'POC'
     },
     {
-      value    : {{ $resume[1]->p2Raisa }},
+      value    : {{ $resume[0]->p2Raisa }},
       color    : '#66ff66',
       highlight: '#99ff99',
       label    : 'Proposal Ready'
@@ -261,7 +261,7 @@
           <div class="col-md-4">
             <div class="box-body">
               <div class="box-header with-border">
-                <h3 class="box-title">Current Week</h3>
+                <h3 class="box-title">Current Weekasdasd</h3>
               </div>
               <!-- /.box-header -->
               <div class="box-body" >
@@ -273,13 +273,13 @@
                   </div>
                   <div class="col-md-4">
                     <ul class="chart-legend clearfix">
-                      <li><i class="fa fa-circle-o" style="color: #fff5cc"></i> : {{ $resume[1]->p0Proactive}}</li>
-                      <li><i class="fa fa-circle-o" style="color: #ffd1b3"></i> : {{ $resume[1]->p1Proactive}}</li>
-                      <li><i class="fa fa-circle-o" style="color: #ff9999"></i> : {{ $resume[1]->p2Proactive}}</li>
-                      <li><i class="fa fa-circle-o" style="color: #730099"></i> : {{ $resume[1]->p3Proactive}}</li>
-                      <li><i class="fa fa-circle-o" style="color: #2ea4bc"></i> : {{ $resume[1]->p0Raisa}}</li>
-                      <li><i class="fa fa-circle-o" style="color: #40bf80"></i> : {{ $resume[1]->p1Raisa}}</li>
-                      <li><i class="fa fa-circle-o" style="color: #66ff66"></i> : {{ $resume[1]->p2Raisa}}</li>
+                      <li><i class="fa fa-circle-o" style="color: #fff5cc"></i> : {{ $resume[0]->p0Proactive}}</li>
+                      <li><i class="fa fa-circle-o" style="color: #ffd1b3"></i> : {{ $resume[0]->p1Proactive}}</li>
+                      <li><i class="fa fa-circle-o" style="color: #ff9999"></i> : {{ $resume[0]->p2Proactive}}</li>
+                      <li><i class="fa fa-circle-o" style="color: #730099"></i> : {{ $resume[0]->p3Proactive}}</li>
+                      <li><i class="fa fa-circle-o" style="color: #2ea4bc"></i> : {{ $resume[0]->p0Raisa}}</li>
+                      <li><i class="fa fa-circle-o" style="color: #40bf80"></i> : {{ $resume[0]->p1Raisa}}</li>
+                      <li><i class="fa fa-circle-o" style="color: #66ff66"></i> : {{ $resume[0]->p2Raisa}}</li>
                     </ul>
                   </div>
                 </div>

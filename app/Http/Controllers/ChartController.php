@@ -32,17 +32,10 @@ class ChartController extends Controller
     {
         $resume = Resume::all();
 
-        return view('detailProact', compact('resume'));
-    }
-
-    public function readChartDetailScn()
-    {
-        $resume = Resume::all();
-
         return view('detailRaisa', compact('resume'));
     }
 
-    public function readChartDetailOther()
+    public function readChartDetailScn()
     {
         $resume = Resume::all();
 
