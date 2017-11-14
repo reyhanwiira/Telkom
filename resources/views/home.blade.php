@@ -513,14 +513,14 @@
             <div class="col-md-12">
               <table id="example1" class="table table-bordered table-striped" style="width:100%; background-color: #cfe0e8;">
                 <tr>
-                  <th colspan="2">Activity</th>
-                  <th>Proactive</th>
+                  <th colspan="2" style="width: 30%;">Activity</th>
+                  <th style="width: 20%;">Proactive</th>
                   <th>Raisa</th>
                   <th>SCN</th>
                   <th>Other</th>
                 </tr>
                 <tr>
-                  <th rowspan="3">Progress</th>
+                  <th rowspan="3" style=" vertical-align: middle;">Progress</th>
                   <td>P0(Usulan/Potensi)</td>
                   <td><b>{{ $resume[0]->p0Proactive }}</b> | {{ $resume[0]->p0ProactiveLast }}</td>
                   <td><b>{{ $resume[0]->p0Raisa }}</b> | {{ $resume[0]->p0RaisaLast }}</td>
