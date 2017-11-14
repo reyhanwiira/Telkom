@@ -137,17 +137,17 @@
                 <td>{{ $activity->upload }}</td>
                 <td>
 
-                  <a href="#">
-                    <a href="#">
+                  <div class="btn-group">
+                    <span data-toggle="modal" data-target="#myModal" >
                       <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Upload File">
                         <i class='glyphicon glyphicon-floppy-open'></i>
                       </button>
-                    </a>
+                    </span>
+                  </div>
 
-                    <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Download File">
-                      <i class='glyphicon glyphicon-floppy-save'></i>
-                    </button>
-                  </a>
+                  <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Download File">
+                    <i class='glyphicon glyphicon-floppy-save'></i>
+                  </button>
 
 
                   <div class="btn-group">
@@ -157,7 +157,7 @@
                       </button>
                     </a>
 
-                    <span data-toggle="modal" data-target="#myModal" >
+                    <span data-toggle="modal" data-target="#myModal1" >
                       <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="bottom" title="Delete Project">
                         <i class='glyphicon glyphicon-trash'></i>
                       </button>
@@ -172,7 +172,31 @@
           </table>
         </div><!-- /.table-responsive -->
 
-        <div class="modal modal-danger fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal modal-success fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Alert!</h4>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+                  <label for="exampleInputFile">File input</label>
+                  <input type="file" id="exampleInputFile">
+
+                  <p class="help-block">For multiple file you can zip it first and upload it then.</p>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <a href="#"><button type="button" class="btn btn-success">Upload File</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal modal-danger fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
@@ -190,6 +214,7 @@
             </div>
           </div>
         </div>
+
 
       </div><!-- /.box-body -->
       <div class="box-footer clearfix">

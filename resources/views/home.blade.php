@@ -314,10 +314,10 @@
               </div>
               <div class="col-md-3">
                 <ul class="chart-legend clearfix">
-                  <li style="font-size: large"><i class="fa fa-circle-o" style="color: #730099;"></i> P0</li>
-                  <li style="font-size: large"><i class="fa fa-circle-o" style="color: #2ea4bc"></i> P1</li>
-                  <li style="font-size: large"><i class="fa fa-circle-o" style="color: #40bf80"></i> P2</li>
-                  <li style="font-size: large"><i class="fa fa-circle-o" style="color: #66ff66"></i> P3</li>
+                  <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #730099;"></i> P0</li>
+                  <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #2ea4bc"></i> P1</li>
+                  <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #40bf80"></i> P2</li>
+                  <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #66ff66"></i> P3</li>
                 </ul>
               </div>
             </div>
@@ -366,10 +366,10 @@
                 </div>
                 <div class="col-md-3">
                   <ul class="chart-legend clearfix">
-                    <li style="font-size: large"><i class="fa fa-circle-o" style="color: #730099"></i> P0</li>
-                    <li style="font-size: large"><i class="fa fa-circle-o" style="color: #2ea4bc"></i> P1</li>
-                    <li style="font-size: large"><i class="fa fa-circle-o" style="color: #40bf80"></i> P2</li>
-                    <li style="font-size: large"><i class="fa fa-circle-o" style="color: #66ff66"></i> P3</li>
+                    <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #730099"></i> P0</li>
+                    <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #2ea4bc"></i> P1</li>
+                    <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #40bf80"></i> P2</li>
+                    <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #66ff66"></i> P3</li>
                   </ul>
                 </div>
               </div>
@@ -413,10 +413,10 @@
                 </div>
                 <div class="col-md-3">
                   <ul class="chart-legend clearfix">
-                    <li style="font-size: large"><i class="fa fa-circle-o" style="color: #730099"></i> P0</li>
-                    <li style="font-size: large"><i class="fa fa-circle-o" style="color: #2ea4bc"></i> P1</li>
-                    <li style="font-size: large"><i class="fa fa-circle-o" style="color: #40bf80"></i> P2</li>
-                    <li style="font-size: large"><i class="fa fa-circle-o" style="color: #66ff66"></i> P3</li>
+                    <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #730099"></i> P0</li>
+                    <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #2ea4bc"></i> P1</li>
+                    <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #40bf80"></i> P2</li>
+                    <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #66ff66"></i> P3</li>
                   </ul>
                 </div>
               </div>
@@ -460,10 +460,10 @@
                 </div>
                 <div class="col-md-3">
                   <ul class="chart-legend clearfix">
-                    <li style="font-size: large;"><i class="fa fa-circle-o" style="color: #730099"></i> P0</li>
-                    <li style="font-size: large;"><i class="fa fa-circle-o" style="color: #2ea4bc"></i> P1</li>
-                    <li style="font-size: large;"><i class="fa fa-circle-o" style="color: #40bf80"></i> P2</li>
-                    <li style="font-size: large;"><i class="fa fa-circle-o" style="color: #66ff66"></i> P3</li>
+                    <li style="font-size: medium;"><i class="fa fa-circle-o" style="color: #730099"></i> P0</li>
+                    <li style="font-size: medium;"><i class="fa fa-circle-o" style="color: #2ea4bc"></i> P1</li>
+                    <li style="font-size: medium;"><i class="fa fa-circle-o" style="color: #40bf80"></i> P2</li>
+                    <li style="font-size: medium;"><i class="fa fa-circle-o" style="color: #66ff66"></i> P3</li>
                   </ul>
                 </div>
               </div>
