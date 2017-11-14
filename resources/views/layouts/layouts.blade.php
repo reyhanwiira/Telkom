@@ -234,7 +234,7 @@ href="../../bower_components/googlefont/googlefont.css">
       <div class="pull-right hidden-xs">
         <b>Version</b> 1.1
       </div>
-      <strong>Copyright &copy; 2017 <a href="#">BINUS TEAM</a>.</strong> All rights reserved.
+      <strong>Copyright &copy; 2017 <a href="#">Telkom Indonesia By R.A.R</a>.</strong> All rights reserved.
     </footer>
 
     <!-- Control Sidebar -->

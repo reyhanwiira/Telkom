@@ -314,10 +314,10 @@
               </div>
               <div class="col-md-3">
                 <ul class="chart-legend clearfix">
-                  <li><i class="fa fa-circle-o" style="color: #730099"></i> P0</li>
-                  <li><i class="fa fa-circle-o" style="color: #2ea4bc"></i> P1</li>
-                  <li><i class="fa fa-circle-o" style="color: #40bf80"></i> P2</li>
-                  <li><i class="fa fa-circle-o" style="color: #66ff66"></i> P3</li>
+                  <li style="font-size: large"><i class="fa fa-circle-o" style="color: #730099;"></i> P0</li>
+                  <li style="font-size: large"><i class="fa fa-circle-o" style="color: #2ea4bc"></i> P1</li>
+                  <li style="font-size: large"><i class="fa fa-circle-o" style="color: #40bf80"></i> P2</li>
+                  <li style="font-size: large"><i class="fa fa-circle-o" style="color: #66ff66"></i> P3</li>
                 </ul>
               </div>
             </div>
@@ -326,22 +326,22 @@
             <ul class="nav nav-pills nav-stacked">
               <li>
                 <a href="#">P0
-                  <span class="pull-right text-red"><i class="fa fa-angle-down"></i> {{ $resume[0]->p0Proactive}}</span>
+                  <span class="pull-right text-red" style="font-size: medium;"><i class="fa fa-angle-down"></i> {{ $resume[0]->p0Proactive}}</span>
                 </a>
               </li>
               <li>
                 <a href="#">P1 
-                  <span class="pull-right text-green"><i class="fa fa-angle-up"></i> {{ $resume[0]->p1Proactive}}</span>
+                  <span class="pull-right text-green" style="font-size: medium;"><i class="fa fa-angle-up"></i> {{ $resume[0]->p1Proactive}}</span>
                 </a>
               </li>
               <li>
                 <a href="#">P2
-                  <span class="pull-right text-teal"><i class="fa fa-exchange"></i> {{ $resume[0]->p2Proactive}}</span>
+                  <span class="pull-right text-teal" style="font-size: medium;"><i class="fa fa-exchange"></i> {{ $resume[0]->p2Proactive}}</span>
                 </a>
               </li>
               <li>
                 <a href="#">P3
-                  <span class="pull-right text-teal"><i class="fa fa-exchange"></i> {{ $resume[0]->p3Proactive}}</span>
+                  <span class="pull-right text-teal" style="font-size: medium;"><i class="fa fa-exchange"></i> {{ $resume[0]->p3Proactive}}</span>
                 </a>
               </li>
             </ul>
@@ -366,10 +366,10 @@
                 </div>
                 <div class="col-md-3">
                   <ul class="chart-legend clearfix">
-                    <li><i class="fa fa-circle-o" style="color: #730099"></i> P0</li>
-                    <li><i class="fa fa-circle-o" style="color: #2ea4bc"></i> P1</li>
-                    <li><i class="fa fa-circle-o" style="color: #40bf80"></i> P2</li>
-                    <li><i class="fa fa-circle-o" style="color: #66ff66"></i> P3</li>
+                    <li style="font-size: large"><i class="fa fa-circle-o" style="color: #730099"></i> P0</li>
+                    <li style="font-size: large"><i class="fa fa-circle-o" style="color: #2ea4bc"></i> P1</li>
+                    <li style="font-size: large"><i class="fa fa-circle-o" style="color: #40bf80"></i> P2</li>
+                    <li style="font-size: large"><i class="fa fa-circle-o" style="color: #66ff66"></i> P3</li>
                   </ul>
                 </div>
               </div>
@@ -378,22 +378,22 @@
               <ul class="nav nav-pills nav-stacked">
                 <li>
                   <a href="#">P0
-                    <span class="pull-right text-red"><i class="fa fa-angle-down"></i> {{ $resume[0]->p0Raisa}}</span>
+                    <span class="pull-right text-red" style="font-size: medium;"><i class="fa fa-angle-down"></i> {{ $resume[0]->p0Raisa}}</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P1 
-                    <span class="pull-right text-green"><i class="fa fa-angle-up"></i> {{ $resume[0]->p1Raisa}}</span>
+                    <span class="pull-right text-green" style="font-size: medium;"><i class="fa fa-angle-up"></i> {{ $resume[0]->p1Raisa}}</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P2
-                    <span class="pull-right text-teal"><i class="fa fa-exchange"></i> {{ $resume[0]->p2Raisa}}</span>
+                    <span class="pull-right text-teal" style="font-size: medium;"><i class="fa fa-exchange"></i> {{ $resume[0]->p2Raisa}}</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P3
-                    <span class="pull-right text-teal"><i class="fa fa-exchange"></i> {{ $resume[0]->p3Raisa}}</span>
+                    <span class="pull-right text-teal" style="font-size: medium;"><i class="fa fa-exchange"></i> {{ $resume[0]->p3Raisa}}</span>
                   </a>
                 </li>
               </ul>
@@ -413,10 +413,10 @@
                 </div>
                 <div class="col-md-3">
                   <ul class="chart-legend clearfix">
-                    <li><i class="fa fa-circle-o" style="color: #730099"></i> P0</li>
-                    <li><i class="fa fa-circle-o" style="color: #2ea4bc"></i> P1</li>
-                    <li><i class="fa fa-circle-o" style="color: #40bf80"></i> P2</li>
-                    <li><i class="fa fa-circle-o" style="color: #66ff66"></i> P3</li>
+                    <li style="font-size: large"><i class="fa fa-circle-o" style="color: #730099"></i> P0</li>
+                    <li style="font-size: large"><i class="fa fa-circle-o" style="color: #2ea4bc"></i> P1</li>
+                    <li style="font-size: large"><i class="fa fa-circle-o" style="color: #40bf80"></i> P2</li>
+                    <li style="font-size: large"><i class="fa fa-circle-o" style="color: #66ff66"></i> P3</li>
                   </ul>
                 </div>
               </div>
@@ -425,22 +425,22 @@
               <ul class="nav nav-pills nav-stacked">
                 <li>
                   <a href="#">P0
-                    <span class="pull-right text-red"><i class="fa fa-angle-down"></i> {{ $resume[0]->p0Scn}}</span>
+                    <span class="pull-right text-red" style="font-size: medium;"><i class="fa fa-angle-down"></i> {{ $resume[0]->p0Scn}}</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P1 
-                    <span class="pull-right text-green"><i class="fa fa-angle-up"></i> {{ $resume[0]->p1Scn}}</span>
+                    <span class="pull-right text-green" style="font-size: medium;"><i class="fa fa-angle-up"></i> {{ $resume[0]->p1Scn}}</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P2
-                    <span class="pull-right text-teal"><i class="fa fa-exchange"></i> {{ $resume[0]->p2Scn}}</span>
+                    <span class="pull-right text-teal" style="font-size: medium;"><i class="fa fa-exchange"></i> {{ $resume[0]->p2Scn}}</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P3
-                    <span class="pull-right text-teal"><i class="fa fa-exchange"></i> {{ $resume[0]->p3Scn}}</span>
+                    <span class="pull-right text-teal" style="font-size: medium;"><i class="fa fa-exchange"></i> {{ $resume[0]->p3Scn}}</span>
                   </a>
                 </li>
               </ul>
@@ -460,10 +460,10 @@
                 </div>
                 <div class="col-md-3">
                   <ul class="chart-legend clearfix">
-                    <li><i class="fa fa-circle-o" style="color: #730099"></i> P0</li>
-                    <li><i class="fa fa-circle-o" style="color: #2ea4bc"></i> P1</li>
-                    <li><i class="fa fa-circle-o" style="color: #40bf80"></i> P2</li>
-                    <li><i class="fa fa-circle-o" style="color: #66ff66"></i> P3</li>
+                    <li style="font-size: large;"><i class="fa fa-circle-o" style="color: #730099"></i> P0</li>
+                    <li style="font-size: large;"><i class="fa fa-circle-o" style="color: #2ea4bc"></i> P1</li>
+                    <li style="font-size: large;"><i class="fa fa-circle-o" style="color: #40bf80"></i> P2</li>
+                    <li style="font-size: large;"><i class="fa fa-circle-o" style="color: #66ff66"></i> P3</li>
                   </ul>
                 </div>
               </div>
@@ -472,22 +472,22 @@
               <ul class="nav nav-pills nav-stacked">
                 <li>
                   <a href="#">P0
-                    <span class="pull-right text-red"><i class="fa fa-angle-down"></i> {{ $resume[0]->p0Other}}</span>
+                    <span class="pull-right text-red" style="font-size: medium;"><i class="fa fa-angle-down"></i> {{ $resume[0]->p0Other}}</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P1 
-                    <span class="pull-right text-green"><i class="fa fa-angle-up"></i> {{ $resume[0]->p1Other}}</span>
+                    <span class="pull-right text-green" style="font-size: medium;"><i class="fa fa-angle-up"></i> {{ $resume[0]->p1Other}}</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P2
-                    <span class="pull-right text-teal"><i class="fa fa-exchange"></i> {{ $resume[0]->p2Other}}</span>
+                    <span class="pull-right text-teal" style="font-size: medium;"><i class="fa fa-exchange"></i> {{ $resume[0]->p2Other}}</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P3
-                    <span class="pull-right text-teal"><i class="fa fa-exchange"></i> {{ $resume[0]->p3Other}}</span>
+                    <span class="pull-right text-teal" style="font-size: medium;"><i class="fa fa-exchange"></i> {{ $resume[0]->p3Other}}</span>
                   </a>
                 </li>
               </ul>
@@ -513,7 +513,7 @@
             <div class="col-md-12">
               <table id="example1" class="table table-bordered table-striped" style="width:100%; background-color: #cfe0e8;">
                 <tr>
-                  <th colspan="2"></th>
+                  <th colspan="2">Activity</th>
                   <th>Proactive</th>
                   <th>Raisa</th>
                   <th>SCN</th>
