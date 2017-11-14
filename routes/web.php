@@ -44,7 +44,7 @@ Route::group(['middleware'=>'auth'], function(){
 	});
 
 //ACTIVITY PROACTIVE
-	Route::get('addActivity','ProactiveController@createActivity');
+	Route::get('/tableProactive/addActPro','ProactiveController@createActivity');
 	Route::post('/tableProactive/{id}','ProactiveController@storeActPro');
 
 	Route::get('deleteActPro/{id}','ProactiveController@deleteActPro');

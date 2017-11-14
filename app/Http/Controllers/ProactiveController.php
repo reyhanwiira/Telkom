@@ -93,7 +93,7 @@ class ProactiveController extends Controller
 
     public function createActivity()
     {
-      return view('addActivity');
+      return view('/tableProactive.addActPro');
     }
  
      public function storeActPro(Request $request)

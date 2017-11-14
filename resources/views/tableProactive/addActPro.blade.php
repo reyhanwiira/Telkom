@@ -10,7 +10,7 @@
         <div class="box-header">
         </div><!-- /.box-header -->
         <!-- form start -->
-        <form role="form" method="post" action="{{ url('/tableRaisa/editPro') }}">
+        <form role="form" method="post" action="{{ url('/tableProactive/editPro') }}">
         {!! csrf_field() !!}
           <div class="box-body">
 
@@ -37,12 +37,6 @@
             <div class="form-group">
               <label>Evidence</label>
               <input type="text" class="form-control" name="evidence" />
-            </div>
-
-            <div class="form-group">
-              Input File (can attach more than one):
-              <br />
-              <input type="file" name="file[]" multiple />
             </div>
          </div><!-- /.box-body -->
 

@@ -48,7 +48,7 @@
               <td style="text-align: center;">{{ $proactive-> finishProject }}</td>
               <td>
                 <div class="btn-group" style="text-align: center;">
-                  <a href="{{ url('/tableProactive/'.$proactive->id.'/editProactive') }}">
+                  <a href="{{ url('/tableProactive/'.$proactive->id.'/editPro') }}">
                     <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Detail Project">
                       <i class='glyphicon glyphicon-search'></i>
                     </button>
