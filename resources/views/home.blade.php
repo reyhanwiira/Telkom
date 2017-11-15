@@ -33,26 +33,26 @@
 
     {
       value    : {{ $resume[0]->p0Proactive}},
-      color    : '#730099',
-      highlight: '#8600b3',
+      color    : '#1394ba',
+      highlight: '#2980b9',
       label    : 'P0'
     },
     {
       value    : {{ $resume[0]->p1Proactive}},
-      color    : '#2ea4bc',
-      highlight: '#32b3cd',
+      color    : '#0c3c55',
+      highlight: '#104e70',
       label    : 'P1'
     },
     {
       value    : {{ $resume[0]->p2Proactive }},
-      color    : '#40bf80',
-      highlight: '#53c68c',
+      color    : '#c02e1d',
+      highlight: '#de3421',
       label    : 'P2'
     },
     {
       value    : {{ $resume[0]->p3Proactive }},
-      color    : '#66ff66',
-      highlight: '#80ff80',
+      color    : '#f16b20',
+      highlight: '#f17127',
       label    : 'P3'
     }
     ]
@@ -62,7 +62,7 @@
       //String - The colour of each segment stroke
       segmentStrokeColor   : '#fff',
       //Number - The width of each segment stroke
-      segmentStrokeWidth   : 3,
+      segmentStrokeWidth   : 1,
       //Number - The percentage of the chart that we cut out of the middle
       percentageInnerCutout: 48, // This is 0 for Pie charts
       //Number - Amount of animation steps
@@ -102,26 +102,26 @@
     var PieData        = [
     {
       value    : {{ $resume[0]->p0Raisa}},
-      color    : '#730099',
-      highlight: '#8600b3',
+      color    : '#1394ba',
+      highlight: '#2980b9',
       label    : 'P0'
     },
     {
       value    : {{ $resume[0]->p1Raisa}},
-      color    : '#2ea4bc',
-      highlight: '#32b3cd',
+      color    : '#0c3c55',
+      highlight: '#104e70',
       label    : 'P1'
     },
     {
       value    : {{ $resume[0]->p2Raisa }},
-      color    : '#40bf80',
-      highlight: '#53c68c',
+      color    : '#c02e1d',
+      highlight: '#de3421',
       label    : 'P2'
     },
     {
       value    : {{ $resume[0]->p3Raisa }},
-      color    : '#66ff66',
-      highlight: '#80ff80',
+      color    : '#f16b20',
+      highlight: '#f17127',
       label    : 'P3'
     }
     ]
@@ -172,26 +172,26 @@
     var PieData        = [
     {
       value    : {{ $resume[0]->p0Scn}},
-      color    : '#730099',
-      highlight: '#8600b3',
+      color    : '#1394ba',
+      highlight: '#2980b9',
       label    : 'P0'
     },
     {
       value    : {{ $resume[0]->p1Scn}},
-      color    : '#2ea4bc',
-      highlight: '#32b3cd',
+      color    : '#0c3c55',
+      highlight: '#104e70',
       label    : 'P1'
     },
     {
       value    : {{ $resume[0]->p2Scn}},
-      color    : '#40bf80',
-      highlight: '#53c68c',
+      color    : '#c02e1d',
+      highlight: 'de3421',
       label    : 'P2'
     },
     {
       value    : {{ $resume[0]->p3Scn}},
-      color    : '#66ff66',
-      highlight: '#80ff80',
+      color    : '#f16b20',
+      highlight: '#f17127',
       label    : 'P3'
     }
     ]
@@ -242,26 +242,26 @@
     var PieData        = [
     {
       value    : {{ $resume[0]->p0Other}},
-      color    : '#730099',
-      highlight: '#8600b3',
+      color    : '#1394ba',
+      highlight: '#2980b9',
       label    : 'P0'
     },
     {
       value    : {{ $resume[0]->p1Other}},
-      color    : '#2ea4bc',
-      highlight: '#32b3cd',
+      color    : '#0c3c55',
+      highlight: '#104e70',
       label    : 'P1'
     },
     {
       value    : {{ $resume[0]->p2Other }},
-      color    : '#40bf80',
-      highlight: '#53c68c',
+      color    : '#c02e1d',
+      highlight: '#de3421',
       label    : 'P2'
     },
     {
       value    : {{ $resume[0]->p3Other }},
-      color    : '#66ff66',
-      highlight: '#80ff80',
+      color    : '#f16b20',
+      highlight: '#f17127',
       label    : 'P3'
     }
     ]
@@ -314,10 +314,10 @@
               </div>
               <div class="col-md-3">
                 <ul class="chart-legend clearfix">
-                  <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #730099;"></i> P0</li>
-                  <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #2ea4bc"></i> P1</li>
-                  <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #40bf80"></i> P2</li>
-                  <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #66ff66"></i> P3</li>
+                  <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #1394ba;"></i> P0</li>
+                  <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #0c3c55"></i> P1</li>
+                  <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #c02e1d"></i> P2</li>
+                  <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #f16b20"></i> P3</li>
                 </ul>
               </div>
             </div>
@@ -364,14 +364,12 @@
                     <canvas id="pieChart2" height="220"></canvas>
                   </div>
                 </div>
-                <div class="col-md-3">
-                  <ul class="chart-legend clearfix">
-                    <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #730099"></i> P0</li>
-                    <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #2ea4bc"></i> P1</li>
-                    <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #40bf80"></i> P2</li>
-                    <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #66ff66"></i> P3</li>
-                  </ul>
-                </div>
+                <ul class="chart-legend clearfix">
+                  <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #1394ba;"></i> P0</li>
+                  <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #0c3c55"></i> P1</li>
+                  <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #c02e1d"></i> P2</li>
+                  <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #f16b20"></i> P3</li>
+                </ul>
               </div>
             </div>
             <div class="box-footer no-padding">
@@ -413,10 +411,10 @@
                 </div>
                 <div class="col-md-3">
                   <ul class="chart-legend clearfix">
-                    <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #730099"></i> P0</li>
-                    <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #2ea4bc"></i> P1</li>
-                    <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #40bf80"></i> P2</li>
-                    <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #66ff66"></i> P3</li>
+                    <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #1394ba;"></i> P0</li>
+                    <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #0c3c55"></i> P1</li>
+                    <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #c02e1d"></i> P2</li>
+                    <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #f16b20"></i> P3</li>
                   </ul>
                 </div>
               </div>
@@ -460,10 +458,10 @@
                 </div>
                 <div class="col-md-3">
                   <ul class="chart-legend clearfix">
-                    <li style="font-size: medium;"><i class="fa fa-circle-o" style="color: #730099"></i> P0</li>
-                    <li style="font-size: medium;"><i class="fa fa-circle-o" style="color: #2ea4bc"></i> P1</li>
-                    <li style="font-size: medium;"><i class="fa fa-circle-o" style="color: #40bf80"></i> P2</li>
-                    <li style="font-size: medium;"><i class="fa fa-circle-o" style="color: #66ff66"></i> P3</li>
+                    <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #1394ba;"></i> P0</li>
+                    <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #0c3c55"></i> P1</li>
+                    <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #c02e1d"></i> P2</li>
+                    <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #f16b20"></i> P3</li>
                   </ul>
                 </div>
               </div>

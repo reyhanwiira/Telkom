@@ -225,13 +225,13 @@
                   </div>
                   <div class="col-md-4">
                     <ul class="chart-legend clearfix">
-                      <li><i class="fa fa-circle-o" style="color: #fff5cc"></i> : {{ $resume[0]->p0Proactive}}</li>
-                      <li><i class="fa fa-circle-o" style="color: #ffd1b3"></i> : {{ $resume[0]->p1Proactive}}</li>
-                      <li><i class="fa fa-circle-o" style="color: #ff9999"></i> : {{ $resume[0]->p2Proactive}}</li>
-                      <li><i class="fa fa-circle-o" style="color: #730099"></i> : {{ $resume[0]->p3Proactive}}</li>
-                      <li><i class="fa fa-circle-o" style="color: #2ea4bc"></i> : {{ $resume[0]->p0Raisa}}</li>
-                      <li><i class="fa fa-circle-o" style="color: #40bf80"></i> : {{ $resume[0]->p1Raisa}}</li>
-                      <li><i class="fa fa-circle-o" style="color: #66ff66"></i> : {{ $resume[0]->p2Raisa}}</li>
+                      <li style="font-size: large;"><i class="fa fa-circle-o" style="color: #fff5cc"></i> : {{ $resume[0]->p0Proactive}}</li>
+                      <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #ffd1b3"></i> : {{ $resume[0]->p1Proactive}}</li>
+                      <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #ff9999"></i> : {{ $resume[0]->p2Proactive}}</li>
+                      <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #730099"></i> : {{ $resume[0]->p3Proactive}}</li>
+                      <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #2ea4bc"></i> : {{ $resume[0]->p0Raisa}}</li>
+                      <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #40bf80"></i> : {{ $resume[0]->p1Raisa}}</li>
+                      <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #66ff66"></i> : {{ $resume[0]->p2Raisa}}</li>
                     </ul>
                   </div>
                 </div>
@@ -240,17 +240,17 @@
                 <ul class="nav nav-pills nav-stacked">
                   <li>
                     <a href="#">Active
-                      <span class="pull-right text-red"><i class="fa fa-angle-down"></i> 4</span>
+                      <span class="pull-right text-red" style="font-size: medium;"><i class="fa fa-angle-down"></i> 4</span>
                     </a>
                   </li>
                   <li>
                     <a href="#">Idle (tdk berprogress >2 Minggu) 
-                      <span class="pull-right text-green"><i class="fa fa-angle-up"></i> 4</span>
+                      <span class="pull-right text-green" style="font-size: medium;"><i class="fa fa-angle-up"></i> 4</span>
                     </a>
                   </li>
                   <li>
                     <a href="#">Persentase
-                      <span class="pull-right text-teal"><i class="fa fa-exchange"></i> 40%</span>
+                      <span class="pull-right text-teal" style="font-size: medium;"><i class="fa fa-exchange"></i> 40%</span>
                     </a>
                   </li>
                 </ul>
