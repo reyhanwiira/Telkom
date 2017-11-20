@@ -48,7 +48,7 @@
               <td style="text-align: center;">{{ $raisa-> finishProject }}</td>
               <td>
                 <div class="btn-group" style="text-align: center;">
-                  <a href="{{ url('/tableRaisa/'.$raisa->id.'/editraisa') }}">
+                  <a href="{{ url('/tableRaisa/'.$raisa->id.'/editRaisa') }}">
                     <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Detail Project">
                       <i class='glyphicon glyphicon-search'></i>
                     </button>

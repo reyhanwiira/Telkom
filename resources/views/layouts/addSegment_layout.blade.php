@@ -144,19 +144,6 @@
   <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
-      <!-- Sidebar user panel -->
-      <div class="user-panel">
-        <div class="pull-left image">
-          <img src="dist/img/avatar04.png" class="img-circle" alt="User Image" />
-        </div>
-        <div class="pull-left info">
-          @if(Auth::guest())
-          <p>Hi, Guest!</p>
-          @else
-          <p>Hi, {{ Auth::user()->name }}</p>
-          @endif
-        </div>
-      </div>
 
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
@@ -177,7 +164,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="{{ url('tableProActive') }}"><i class="fa fa-circle-o text-red"></i> Pro-Active</a></li>
+            <li><a href="{{ url('tableProactive') }}"><i class="fa fa-circle-o text-red"></i> Pro-Active</a></li>
             <li><a href="{{ url('tableRaisa') }}"><i class="fa fa-circle-o text-aqua"></i> RAISA</a></li>
             <li><a href="{{ url('tableScn') }}"><i class="fa fa-circle-o text-yellow"></i> SCN</a></li>
             <li><a href="{{ url('tableOthers') }}"><i class="fa fa-circle-o text-success"></i> OTHERS</a></li>
@@ -198,12 +185,6 @@
             <li><a href="{{ url('detailScn') }}"><i class="fa fa-circle-o text-yellow"></i> SCN</a></li>
             <li><a href="{{ url('detailOther') }}"><i class="fa fa-circle-o text-success"></i> OTHERS</a></li>
           </ul>
-        </li>
-
-        <li>
-          <a href="{{ url('chart') }}">
-            <i class="fa fa-pie-chart"></i> <span>Chart</span> <small class="fa fa pull-right"></small>
-          </a>
         </li>
 
       </section>

@@ -130,27 +130,6 @@ href="../../bower_components/googlefont/googlefont.css">
   <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
-      <!-- Sidebar user panel -->
-      <div class="user-panel">
-        <div class="pull-left image">
-          <img src="dist/img/avatar04.png" class="img-circle" alt="User Image" />
-        </div>
-        <div class="pull-left info">
-          @if(Auth::guest())
-          <p>Hi, Guest!</p>
-          @else
-          <p>{{ Auth::user()->name }}</p>
-          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-        </div>
-      </div>
-      <!-- search form -->
-      <form action="#" method="get" class="sidebar-form">
-        <div class="input-group">
-          
-        </div>
-      </form>
-      <!-- /.search form -->
-      @endif
       
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
@@ -196,12 +175,6 @@ href="../../bower_components/googlefont/googlefont.css">
             <li><a href="{{ url('detailScn') }}"><i class="fa fa-circle-o text-yellow"></i> SCN</a></li>
             <li><a href="{{ url('detailOther') }}"><i class="fa fa-circle-o text-success"></i> OTHERS</a></li>
           </ul>
-        </li>
-
-        <li>
-          <a href="{{ url('chart') }}">
-            <i class="fa fa-pie-chart"></i> <span>Chart</span> <small class="fa fa pull-right"></small>
-          </a>
         </li>
 
       </section>
