@@ -11,11 +11,6 @@
 |
 */
 
-
-Route::get('/detail', function() {
-	return view('detail');
-});
-
 Route::get('/chart', function() {
 	return view('chart');
 });
@@ -171,7 +166,7 @@ Route::get('deleteRaisa/{id}','RaisaController@delete');
 Route::get('/tableScn','ScnController@read');
 
 //CREATE DATA SCN
-Route::get('/tableScn/create','ScnController@create');
+Route::get('/tableScn/createScn','ScnController@create');
 Route::post('/tableScn','ScnController@store');
 
 //EDIT DAN UPDATE DATA SCN
@@ -214,15 +209,9 @@ Route::get('/detail','DetailController@index');
 
 //Detail Chart
 
-Route::get('/detail','DetailChartController@readChart');
-Route::get('/detail','ChartController@readChartDetail');
-Route::get('/detailProact','DetailChartController@readChart');
-Route::get('/detailProact','ChartController@readChartDetail');
-Route::get('/detailRaisa','DetailChartController@readChart');
-Route::get('/detailRaisa','ChartController@readChartDetail');
-Route::get('/detailScn','DetailChartController@readChart');
-Route::get('/detailScn','ChartController@readChartDetail');
-Route::get('/detailOther','DetailChartController@readChart');
+Route::get('/detailProact','ChartController@readChartDetailProact');
+Route::get('/detailRaisa','ChartController@readChartDetailRaisa');
+Route::get('/detailScn','ChartController@readChartDetailScn');
 Route::get('/detailOther','ChartController@readChartDetail');
 
 //=====================================================

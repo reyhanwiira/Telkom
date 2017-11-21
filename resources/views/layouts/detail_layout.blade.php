@@ -129,19 +129,6 @@ href="../../bower_components/googlefont/googlefont.css">
   <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
-      <!-- Sidebar user panel -->
-      <div class="user-panel">
-        <div class="pull-left image">
-          <img src="dist/img/avatar04.png" class="img-circle" alt="User Image" />
-        </div>
-        <div class="pull-left info">
-          @if(Auth::guest())
-          <p>Hi, Guest!</p>
-          @else
-          <p>Hi, {{ Auth::user()->name }}</p>
-          @endif
-        </div>
-      </div>
       
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
@@ -162,7 +149,7 @@ href="../../bower_components/googlefont/googlefont.css">
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="{{ url('tableProActive') }}"><i class="fa fa-circle-o text-red"></i> Pro-Active</a></li>
+            <li><a href="{{ url('tableProactive') }}"><i class="fa fa-circle-o text-red"></i> PROACTIVE</a></li>
             <li><a href="{{ url('tableRaisa') }}"><i class="fa fa-circle-o text-aqua"></i> RAISA</a></li>
             <li><a href="{{ url('tableScn') }}"><i class="fa fa-circle-o text-yellow"></i> SCN</a></li>
             <li><a href="{{ url('tableOthers') }}"><i class="fa fa-circle-o text-success"></i> OTHERS</a></li>
@@ -183,12 +170,6 @@ href="../../bower_components/googlefont/googlefont.css">
             <li><a href="{{ url('detailScn') }}"><i class="fa fa-circle-o text-yellow"></i> SCN</a></li>
             <li><a href="{{ url('detailOther') }}"><i class="fa fa-circle-o text-success"></i> OTHERS</a></li>
           </ul>
-        </li>
-
-        <li>
-          <a href="{{ url('chart') }}">
-            <i class="fa fa-pie-chart"></i> <span>Chart</span> <small class="fa fa pull-right"></small>
-          </a>
         </li>
         
       </li>
@@ -223,7 +204,7 @@ href="../../bower_components/googlefont/googlefont.css">
     <div class="pull-right hidden-xs">
       <b>Version</b> 1.1
     </div>
-    <strong>Copyright &copy; 2017 <a href="#">BINUS TEAM</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; 2017 <a href="#">Telkom Indonesia By R.A.R</a>.</strong> All rights reserved.
   </footer>
 
   <!-- Control Sidebar -->
