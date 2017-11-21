@@ -134,35 +134,34 @@
                 <td>{{ $activity->agenda }}</td>
                 <td>{{ $activity->actionPlan }}</td>
                 <td>{{ $activity->evidence }}</td>
-                <td>{{ $activity->upload }}</td>
+                <td>{{ $activity->original_filename }}</td>
                 <td>
 
 
                   <div class="btn-group">
-                    <a href="{{ url('/tableOthers/uploadOthers')}}">
-                      <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="left" title="Upload File">
-                        <i class='fa fa-upload'></i>
-                      </button>
-                    </a>
-
-                    <a href="{{ url('/tableOthers'.'/editOthers/'.$activity->upload) }}" download="{{ $activity->upload }}" >
-                      <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="left" title="Download File">
-                        <i class='fa fa-download'></i>
-                      </button>
-                    </a>
-
-                    <a href="{{ url('/tableOthers'.'/editActOthers/'.$activity->id) }}">
-                      <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="left" title="Edit File">
-                        <i class='fa fa-pencil'></i>
-                      </button>
-                    </a>
-
-                    <span data-toggle="modal" data-target="#myModal" >
-                    <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="bottom" title="Delete Project">
-                      <i class='glyphicon glyphicon-trash'></i>
+                  <a href="{{ url('/uploadActOthers/'.$activity->id) }}">
+                    <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Upload File">
+                      <i class='glyphicon glyphicon-floppy-open'></i>
                     </button>
-                  </span>
+                  </a>
+                  </div>
 
+                  <div class="btn-group">
+                  <a href="{{ url('/downloadPro/'.$activity->filename) }}"  download="{{ $activity->filename }}">
+                    <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Download File">
+                      <i class='glyphicon glyphicon-floppy-save'></i>
+                    </button>
+                  </a>
+                  </div>
+
+                  <div class="btn-group">
+                    <a href="{{ url('/tableOthers'.'/editActOthers/'.$activity->id) }}">
+                      <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Edit File">
+                        <i class='glyphicon glyphicon-edit'></i>
+                      </button>
+                    </a>
+
+                     <a href="{{ url('/deleteActOthers/'.$activity->id) }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="right" title="Delete"><i class='glyphicon glyphicon-trash'></i></button></a>
 
                   </div>
                 </td>

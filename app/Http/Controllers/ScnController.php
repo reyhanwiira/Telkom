@@ -12,6 +12,9 @@ use View;
 use Validator;
 use App\scn;
 use App\activity;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
+use Illuminate\Http\Response;
 
 
 class ScnController extends Controller
@@ -88,12 +91,35 @@ class ScnController extends Controller
     }
 
 
-    public function deleteActScn($id)
+    public function createActScn()
+    {
+      return view('/tableScn.addActScn');
+    }
+ 
+     public function storeActScn(Request $request)
+    {
+          
+        Activity::create([
+        
+        'tanggal'=>$request->input('tanggal'),
+        'agenda'=>$request->input('agenda'),
+        'actionPlan'=>$request->input('actionPlan'),
+        'evidence'=>$request->input('evidence'),
+        'lampiran'=>$request->input('lampiran')
+        
+      ]);
+
+      return redirect('tableScn');
+  }
+
+
+   public function deleteActScn($id)
    {
       $activity = Activity::where('id','=',$id)->delete();
 
       return back();
     }
+
 
     public function editActScn($id)
     {
@@ -102,6 +128,7 @@ class ScnController extends Controller
         return view('tableScn.editActScn',compact('activity'));
     }
 
+   
     public function updateActScn(Request $request, $id)
     {
         $activity = Activity::find($id);
@@ -115,6 +142,38 @@ class ScnController extends Controller
 
         return redirect::to('/tableScn');
     }
+
+    public function uploadIndexScn()
+    {
+        return view('/uploadActScn');
+    }
+
+    public function uploadScn(Request $request, $id)
+    {
+        $file = $request->file('filename');
+        $extension = $file->getClientOriginalExtension();
+        Storage::disk('local')->put($file->getFilename().'.'.$extension,  File::get($file));
+        $entry = Activity::find($id);
+        $entry->mime = $file->getClientMimeType();
+        $entry->original_filename = $file->getClientOriginalName();
+        $entry->filename = $file->getFilename().'.'.$extension;
+ 
+        $entry->update();
+
+
+        return redirect::to('/tableScn');
+    }
+
+    
+
+    public function downloadScn($filename)
+    {
+       $entry = Activity::where('filename', '=', $filename)->firstOrFail();
+        $file = Storage::disk('local')->get($entry->filename);
+ 
+        return (new Response($file, 200))
+              ->header('Content-Type', $entry->mime);
+   }
 
 
 }

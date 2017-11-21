@@ -74,10 +74,17 @@ Route::get('deleteActRaisa/{id}','RaisaController@deleteActRaisa');
 Route::get('/tableRaisa/editActRaisa/{id}','RaisaController@editActRaisa');
 Route::put('/editActRaisa/{id}','RaisaController@updateActRaisa');
 
+//IMPORT AND EXPORT RAISA
 Route::get('importRaisa', 'ExcelRaisaController@importRaisaRead');
 
 Route::post('importRaisa', 'ExcelRaisaController@importRaisa')->name('importRaisa');
 Route::get('downloadRaisa/{type}', 'ExcelRaisaController@ExportRaisa');
+
+//UPLOAD AND DOWNLOAD FILE RAISA
+Route::get('uploadActRaisa/{id}','RaisaController@uploadIndexRaisa');
+Route::post('uploadActRaisa/{id}','RaisaController@uploadRaisa');
+
+Route::get('downloadRaisa/{filename}','RaisaController@downloadRaisa');
 
 //======================================================================
 
@@ -89,6 +96,14 @@ Route::get('deleteActScn/{id}','ScnController@deleteActScn');
 
 Route::get('/tableScn/editActScn/{id}','ScnController@editActScn');
 Route::put('/editActScn/{id}','ScnController@updateActScn');
+
+
+//UPLOAD FILE PROACTIVE
+Route::get('uploadActScn/{id}','ScnController@uploadIndexScn');
+Route::post('uploadActScn/{id}','ScnController@uploadScn');
+
+Route::get('downloadScn/{filename}','ScnController@downloadScn');
+
 
 
 //IMPORT DAN EXPORT SCN
@@ -113,10 +128,11 @@ Route::put('/editActOthers/{id}','OthersController@updateActOthers');
 
 Route::post('/tableOthers','OthersController@uploadOthers');
 
-Route::get('/tableOthers/uploadOthers','OthersUploadController@indexUploadOthers') ;
-Route::post('/tableOthers/editOthers','OthersUploadController@showUploadFile') ;
+//UPLOAD FILE PROACTIVE
+Route::get('uploadActOthers/{id}','OthersController@uploadIndexOthers');
+Route::post('uploadActOthers/{id}','OthersController@uploadOthers');
 
-Route::get('/tableOthers/editOthers','OthersController@downloadFileOthers');
+Route::get('downloadOthers/{filename}','OthersController@downloadOthers');
 
 
 

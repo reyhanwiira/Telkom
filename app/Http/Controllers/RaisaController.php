@@ -12,6 +12,9 @@ use View;
 use Validator;
 use App\raisa;
 use App\activity;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
+use Illuminate\Http\Response;
 
 class RaisaController extends Controller
 {
@@ -136,4 +139,36 @@ class RaisaController extends Controller
 
         return redirect::to('/tableRaisa');
     }
+
+       public function uploadIndexRaisa()
+    {
+        return view('/uploadActRaisa');
+    }
+
+    public function uploadRaisa(Request $request, $id)
+    {
+        $file = $request->file('filename');
+        $extension = $file->getClientOriginalExtension();
+        Storage::disk('local')->put($file->getFilename().'.'.$extension,  File::get($file));
+        $entry = Activity::find($id);
+        $entry->mime = $file->getClientMimeType();
+        $entry->original_filename = $file->getClientOriginalName();
+        $entry->filename = $file->getFilename().'.'.$extension;
+ 
+        $entry->update();
+
+
+        return redirect::to('/tableRaisa');
+    }
+
+    
+
+    public function downloadRaisa($filename)
+    {
+       $entry = Activity::where('filename', '=', $filename)->firstOrFail();
+        $file = Storage::disk('local')->get($entry->filename);
+ 
+        return (new Response($file, 200))
+              ->header('Content-Type', $entry->mime);
+   }
 }

@@ -146,7 +146,7 @@
                   </div>
 
                   <div class="btn-group">
-                  <a href="{{ url('/downloadPro/'.$activity->filename) }}">
+                  <a href="{{ url('/downloadPro/'.$activity->filename) }}"  download="{{ $activity->filename }}">
                     <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Download File">
                       <i class='glyphicon glyphicon-floppy-save'></i>
                     </button>

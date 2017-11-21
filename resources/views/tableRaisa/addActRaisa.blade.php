@@ -38,12 +38,6 @@
               <label>Evidence</label>
               <input type="text" class="form-control" name="evidence" />
             </div>
-
-            <div class="form-group">
-              Input File (can attach more than one):
-              <br />
-              <input type="file" name="file[]" multiple />
-            </div>
          </div><!-- /.box-body -->
 
          <div class="box-footer">

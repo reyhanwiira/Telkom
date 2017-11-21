@@ -38,11 +38,6 @@
               <label>Evidence</label>
               <input type="text" class="form-control" name="evidence" />
             </div>
-
-            <div class="form-group">
-              <label>Lampiran</label>
-              <input type="text" class="form-control" name="lampiran" />
-            </div>
          </div><!-- /.box-body -->
 
          <div class="box-footer">

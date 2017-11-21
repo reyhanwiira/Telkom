@@ -12,6 +12,10 @@ use View;
 use Validator;
 use App\other;
 use App\activity;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
+use Illuminate\Http\Response;
+
 
 
 class OthersController extends Controller
@@ -136,5 +140,37 @@ class OthersController extends Controller
 
         return redirect::to('/tableOthers');
     }
+
+     public function uploadIndexOthers()
+    {
+        return view('/uploadActOthers');
+    }
+
+    public function uploadOthers(Request $request, $id)
+    {
+        $file = $request->file('filename');
+        $extension = $file->getClientOriginalExtension();
+        Storage::disk('local')->put($file->getFilename().'.'.$extension,  File::get($file));
+        $entry = Activity::find($id);
+        $entry->mime = $file->getClientMimeType();
+        $entry->original_filename = $file->getClientOriginalName();
+        $entry->filename = $file->getFilename().'.'.$extension;
+ 
+        $entry->update();
+
+
+        return redirect::to('/tableOthers');
+    }
+
+    
+
+    public function downloadOthers($filename)
+    {
+       $entry = Activity::where('filename', '=', $filename)->firstOrFail();
+        $file = Storage::disk('local')->get($entry->filename);
+ 
+        return (new Response($file, 200))
+              ->header('Content-Type', $entry->mime);
+   }
 
 }
