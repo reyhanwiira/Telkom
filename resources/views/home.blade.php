@@ -19,7 +19,7 @@
               <div class="col-md-3">
                 <ul class="chart-legend clearfix">
                   <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #1394ba;"></i> P0</li>
-                  <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #0c3c55"></i> P1</li>-
+                  <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #0c3c55"></i> P1</li>
                   <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #c02e1d"></i> P2</li>
                   <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #f16b20"></i> P3</li>
                 </ul>
@@ -201,7 +201,7 @@
   </div>
 
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-8">
       <!-- TABLE: LATEST ORDERS -->
       <div class="box box-primary">
         <div class="box-header with-border">
@@ -215,49 +215,49 @@
             <div class="col-md-12">
               <table id="example1" class="table table-bordered table-striped" style="width:100%; background-color: #cfe0e8;">
                 <tr>
-                  <th colspan="2" style="width: 30%;">ACTIVITY</th>
-                  <th style="width: 20%;">PROACTIVE</th>
-                  <th>RAISA</th>
-                  <th>SCN</th>
-                  <th>OTHERS</th>
+                  <th colspan="2" style="width: 100px;">ACTIVITY</th>
+                  <th style="text-align: center; width: 130px">PROACTIVE</th>
+                  <th style="text-align: center; width: 100px">RAISA</th>
+                  <th style="text-align: center; width: 100px">SCN</th>
+                  <th style="text-align: center; width: 100px">OTHERS</th>
                 </tr>
                 <tr>
                   <th rowspan="3" style=" vertical-align: middle;">Progress</th>
                   <td>P0(Usulan/Potensi)</td>
-                  <td><b>{{ $resume[0]->p0Proactive }}</b> | {{ $resume[0]->p0ProactiveLast }}</td>
-                  <td><b>{{ $resume[0]->p0Raisa }}</b> | {{ $resume[0]->p0RaisaLast }}</td>
-                  <td><b>{{ $resume[0]->p0Scn }}</b> | {{ $resume[0]->p0ScnLast }}</td>
-                  <td><b>{{ $resume[0]->p0Other }}</b> | {{ $resume[0]->p0OtherLast }}</td>
+                  <td style="text-align: center;"><b>{{ $resume[0]->p0Proactive }}</b> | {{ $resume[0]->p0ProactiveLast }}</td>
+                  <td style="text-align: center;"><b>{{ $resume[0]->p0Raisa }}</b> | {{ $resume[0]->p0RaisaLast }}</td>
+                  <td style="text-align: center;"><b>{{ $resume[0]->p0Scn }}</b> | {{ $resume[0]->p0ScnLast }}</td>
+                  <td style="text-align: center;"><b>{{ $resume[0]->p0Other }}</b> | {{ $resume[0]->p0OtherLast }}</td>
 
                 </tr>
                 <tr>
                   <td>P1(Req, Des)</td>
-                  <td><b>{{ $resume[0]->p1Proactive }}</b> | {{ $resume[0]-> p1ProactiveLast}}</td>
-                  <td><b>{{ $resume[0]->p1Raisa }}</b> | {{ $resume[0]-> p1RaisaLast}}</td>
-                  <td><b>{{ $resume[0]->p1Scn }}</b> | {{ $resume[0]-> p1ScnLast}}</td>
-                  <td><b>{{ $resume[0]->p1Other }}</b> | {{ $resume[0]-> p1OtherLast}}</td>
+                  <td style="text-align: center;"><b>{{ $resume[0]->p1Proactive }}</b> | {{ $resume[0]-> p1ProactiveLast}}</td>
+                  <td style="text-align: center;"><b>{{ $resume[0]->p1Raisa }}</b> | {{ $resume[0]-> p1RaisaLast}}</td>
+                  <td style="text-align: center;"><b>{{ $resume[0]->p1Scn }}</b> | {{ $resume[0]-> p1ScnLast}}</td>
+                  <td style="text-align: center;"><b>{{ $resume[0]->p1Other }}</b> | {{ $resume[0]-> p1OtherLast}}</td>
                 </tr>
                 <tr>
                   <td>P2(Submit)</td>
-                  <td><b>{{ $resume[0]->p2Proactive }}</b> | {{ $resume[0]-> p2ProactiveLast}}</td>
-                  <td><b>{{ $resume[0]->p2Raisa }}</b> | {{ $resume[0]-> p2RaisaLast}}</td>
-                  <td><b>{{ $resume[0]->p2Scn }}</b> | {{ $resume[0]-> p2ScnLast}}</td>
-                  <td><b>{{ $resume[0]->p2Other }}</b> | {{ $resume[0]-> p2OtherLast}}</td>
+                  <td style="text-align: center;"><b>{{ $resume[0]->p2Proactive }}</b> | {{ $resume[0]-> p2ProactiveLast}}</td>
+                  <td style="text-align: center;"><b>{{ $resume[0]->p2Raisa }}</b> | {{ $resume[0]-> p2RaisaLast}}</td>
+                  <td style="text-align: center;"><b>{{ $resume[0]->p2Scn }}</b> | {{ $resume[0]-> p2ScnLast}}</td>
+                  <td style="text-align: center;"><b>{{ $resume[0]->p2Other }}</b> | {{ $resume[0]-> p2OtherLast}}</td>
                 </tr>
                 <tr> 
                   <th>Done</th>
                   <td>P3(Proposal Ready)</td>
-                  <td><b>{{ $resume[0]->p3Proactive }}</b> | {{ $resume[0]-> p3ProactiveLast}}</td>
-                  <td><b>{{ $resume[0]->p3Raisa }}</b> | {{ $resume[0]-> p3RaisaLast}}</td>
-                  <td><b>{{ $resume[0]->p3Scn }}</b> | {{ $resume[0]-> p3ScnLast}}</td>
-                  <td><b>{{ $resume[0]->p3Other }}</b> | {{ $resume[0]-> p3OtherLast}}</td>
+                  <td style="text-align: center;"><b>{{ $resume[0]->p3Proactive }}</b> | {{ $resume[0]-> p3ProactiveLast}}</td>
+                  <td style="text-align: center;"><b>{{ $resume[0]->p3Raisa }}</b> | {{ $resume[0]-> p3RaisaLast}}</td>
+                  <td style="text-align: center;"><b>{{ $resume[0]->p3Scn }}</b> | {{ $resume[0]-> p3ScnLast}}</td>
+                  <td style="text-align: center;"><b>{{ $resume[0]->p3Other }}</b> | {{ $resume[0]-> p3OtherLast}}</td>
                 </tr>
                 <tr>
                   <th colspan="2">Total</th>
-                  <td><b><span id="proactiveAmount"></span></b> | 8</td>
-                  <td><b><span id="raisaAmount"></span></b> | 8</td>
-                  <td><b><span id="scnAmount"></span></b> | 8</td>
-                  <td><b><span id="otherAmount"></span></b> | 8</td>
+                  <td style="text-align: center;"><b><span id="proactiveAmount"></span></b> | 8</td>
+                  <td style="text-align: center;"><b><span id="raisaAmount"></span></b> | 8</td>
+                  <td style="text-align: center;"><b><span id="scnAmount"></span></b> | 8</td>
+                  <td style="text-align: center;"><b><span id="otherAmount"></span></b> | 8</td>
                 </tr>
               </table>
               <div class="box-footer clearfix">

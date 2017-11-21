@@ -173,57 +173,57 @@
         <div class="box-body">
           <div class="table-responsive">
             <div class="col-md-12">
-             <table id="example1" class="table table-bordered table-striped">
+             <table id="example2" class="table table-bordered table-striped">
               <thead>
                 <tr>
                   <th rowspan="2" style="text-align: center; vertical-align: middle; background-color: #3c8dbc">No</th>
-                  <th rowspan="2" style="text-align: center; vertical-align: middle; background-color: #3c8dbc">Solusi</th>
+                  <th rowspan="2" style="text-align: center; vertical-align: middle; width: 350px; background-color: #3c8dbc">Solusi</th>
                   <th rowspan="2" style="text-align: center; vertical-align: middle; background-color: #3c8dbc">TR</th>
                   <th rowspan="2" style="text-align: center; vertical-align: middle; background-color: #3c8dbc">Current Progress</th>
                   <th rowspan="2" style="text-align: center; vertical-align: middle; background-color: #3c8dbc">Progress Summary</th>
                   <th rowspan="2" style="text-align: center; vertical-align: middle; background-color: #3c8dbc">Status</th> 
                   <th colspan="2" style="text-align: center; background-color: #3c8dbc">Progress (%)</th>
                   <tr>
-                    <th style="text-align: center; background-color: #3c8dbc">Last</th>
-                    <th style="text-align: center; background-color: #3c8dbc">Current</th>
+                    <th style="text-align: center; background-color: #3c8dbc; width: 100px">Last</th>
+                    <th style="text-align: center; background-color: #3c8dbc; width: 100px">Current</th>
                   </tr> 
                 </tr>
               </thead>
               <tbody>
-                 <?php $no=1; ?>
-                @foreach($proactive as $proactive)
-                <tr>                  
-                  <td style="text-align: center;">{{ $no++ }}</td>
-                  <td style="text-align: center;">{{ $proactive->projectName }}</td>
-                  <td style="text-align: center;">{{ $proactive->segment }}</td>
-                  <td style="text-align: center;">{{ $proactive->currentProgress }}</td>
-                  <td style="text-align: center;">
-                    @if($proactive->current < $proactive->last)
-                    <span class="text-green">
-                      <i class="fa fa-arrow-down"></i>
-                    </span>
-                    @elseif($proactive->current > $proactive->last )
-                    <span class="text-green">
-                      <i class="fa fa-arrow-up"></i>
-                    </span>
-                    @elseif($proactive->last == $proactive->current)
-                    <span class="text-green">
-                      <i class="fa fa-arrow-right"></i>
-                    </span>
-                    @endif
-                  </td>
-                  <td style="text-align: center;">Status</td>
-                  <td style="text-align: center;">{{ $proactive->last }} %</td>
-                  <td style="text-align: center;">{{ $proactive->current }} %</td>
-                </tr>
-                @endforeach
-              </tbody>
-            </table>
-          </div>
-        </div><!-- /.table-responsive -->
+               <?php $no=1; ?>
+               @foreach($proactive as $proactive)
+               <tr>                  
+                <td style="text-align: center;">{{ $no++ }}</td>
+                <td style="text-align: center;">{{ $proactive->projectName }}</td>
+                <td style="text-align: center;">{{ $proactive->segment }}</td>
+                <td style="text-align: center;">{{ $proactive->currentProgress }}</td>
+                <td style="text-align: center;">
+                  @if($proactive->current < $proactive->last)
+                  <span class="text-green">
+                    <i class="fa fa-arrow-down"></i>
+                  </span>
+                  @elseif($proactive->current > $proactive->last )
+                  <span class="text-green">
+                    <i class="fa fa-arrow-up"></i>
+                  </span>
+                  @elseif($proactive->last == $proactive->current)
+                  <span class="text-green">
+                    <i class="fa fa-arrow-right"></i>
+                  </span>
+                  @endif
+                </td>
+                <td style="text-align: center;">Status</td>
+                <td style="text-align: center;">{{ $proactive->last }} %</td>
+                <td style="text-align: center;">{{ $proactive->current }} %</td>
+              </tr>
+              @endforeach
+            </tbody>
+          </table>
+        </div>
+      </div><!-- /.table-responsive -->
 
-        <script>
-          $(function () {
+      <script>
+        $(function () {
           /* ChartJS
            * -------
            * Here we will create a few charts using ChartJS

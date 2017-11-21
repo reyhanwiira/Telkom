@@ -173,19 +173,19 @@
         <div class="box-body">
           <div class="table-responsive">
             <div class="col-md-12">
-             <table id="example1" class="table table-bordered table-striped">
+             <table id="example2" class="table table-bordered table-striped">
               <thead>
                 <tr>
                   <th rowspan="2" style="text-align: center; vertical-align: middle; background-color: #3c8dbc">No</th>
-                  <th rowspan="2" style="text-align: center; vertical-align: middle; background-color: #3c8dbc">Solusi</th>
+                  <th rowspan="2" style="text-align: center; vertical-align: middle; width: 350px; background-color: #3c8dbc">Solusi</th>
                   <th rowspan="2" style="text-align: center; vertical-align: middle; background-color: #3c8dbc">TR</th>
                   <th rowspan="2" style="text-align: center; vertical-align: middle; background-color: #3c8dbc">Current Progress</th>
                   <th rowspan="2" style="text-align: center; vertical-align: middle; background-color: #3c8dbc">Progress Summary</th>
                   <th rowspan="2" style="text-align: center; vertical-align: middle; background-color: #3c8dbc">Status</th> 
                   <th colspan="2" style="text-align: center; background-color: #3c8dbc">Progress (%)</th>
                   <tr>
-                    <th style="text-align: center; background-color: #3c8dbc">Last</th>
-                    <th style="text-align: center; background-color: #3c8dbc">Current</th>
+                    <th style="text-align: center; background-color: #3c8dbc; width: 100px">Last</th>
+                    <th style="text-align: center; background-color: #3c8dbc; width: 100px">Current</th>
                   </tr> 
                 </tr>
               </thead>

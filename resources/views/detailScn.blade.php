@@ -173,19 +173,19 @@
         <div class="box-body">
           <div class="table-responsive">
             <div class="col-md-12">
-             <table id="example1" class="table table-bordered table-striped">
+             <table id="example2" class="table table-bordered table-striped">
               <thead>
                 <tr>
                   <th rowspan="2" style="text-align: center; vertical-align: middle; background-color: #3c8dbc">No</th>
-                  <th rowspan="2" style="text-align: center; vertical-align: middle; background-color: #3c8dbc">Solusi</th>
+                  <th rowspan="2" style="text-align: center; vertical-align: middle; width: 350px; background-color: #3c8dbc">Solusi</th>
                   <th rowspan="2" style="text-align: center; vertical-align: middle; background-color: #3c8dbc">TR</th>
                   <th rowspan="2" style="text-align: center; vertical-align: middle; background-color: #3c8dbc">Current Progress</th>
                   <th rowspan="2" style="text-align: center; vertical-align: middle; background-color: #3c8dbc">Progress Summary</th>
                   <th rowspan="2" style="text-align: center; vertical-align: middle; background-color: #3c8dbc">Status</th> 
                   <th colspan="2" style="text-align: center; background-color: #3c8dbc">Progress (%)</th>
                   <tr>
-                    <th style="text-align: center; background-color: #3c8dbc">Last</th>
-                    <th style="text-align: center; background-color: #3c8dbc">Current</th>
+                    <th style="text-align: center; background-color: #3c8dbc; width: 100px">Last</th>
+                    <th style="text-align: center; background-color: #3c8dbc; width: 100px">Current</th>
                   </tr> 
                 </tr>
               </thead>
@@ -221,30 +221,26 @@
             </table>
           </div>
         </div><!-- /.table-responsive -->
-      </div><!-- /.box-body -->
-    </div><!-- /.box -->
-  </div><!-- /.col -->
-</div>
 
-<!-- jQuery 3 -->
-<script src="../../bower_components/jquery/dist/jquery.min.js"></script>
-<!-- Bootstrap 3.3.7 -->
-<script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="../../bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-<!-- SlimScroll -->
-<script src="../../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-<!-- FastClick -->
-<script src="../../bower_components/fastclick/lib/fastclick.js"></script>
-<!-- AdminLTE App -->
-<script src="../../dist/js/adminlte.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="../../dist/js/demo.js"></script>
-<!-- ChartJS -->
-<script src="../../bower_components/Chart.js/Chart.js"></script>
-<!-- page script -->
+        <!-- jQuery 3 -->
+        <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+        <!-- Bootstrap 3.3.7 -->
+        <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="../../bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <!-- SlimScroll -->
+        <script src="../../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../../bower_components/fastclick/lib/fastclick.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../../dist/js/adminlte.min.js"></script>
+        <!-- AdminLTE for demo purposes -->
+        <script src="../../dist/js/demo.js"></script>
+        <!-- ChartJS -->
+        <script src="../../bower_components/Chart.js/Chart.js"></script>
+        <!-- page script -->
 
-<script>
-  $(function () {
+        <script>
+          $(function () {
     /* ChartJS
      * -------
      * Here we will create a few charts using ChartJS
@@ -420,5 +416,9 @@
   })
 </script>
 
+</div><!-- /.box-body -->
+</div><!-- /.box -->
+</div><!-- /.col -->
+</div>
 </section>
 @endsection
