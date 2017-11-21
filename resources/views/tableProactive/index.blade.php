@@ -22,7 +22,7 @@
               <th>Segment</th>
               <th>Description</th>
               <th>Customer</th>
-              <th>Last Action</th>
+              <th style="column-width: 200px">Last Action</th>
               <th>Next Action</th>
               <th>Status</th>
               <th>Information</th>
@@ -35,28 +35,28 @@
             <?php $no=1; ?>
             @foreach ($proactives as $proactive)
             <tr>
-              <td style="text-align: center;">{{ $no++ }}</td>
-              <td style="text-align: center;">{{ $proactive-> projectName }}</td>
-              <td style="text-align: center;">{{ $proactive-> segment }}</td>
-              <td style="text-align: center;">{{ $proactive-> description }}</td>
-              <td style="text-align: center;">{{ $proactive-> customer }}</td>
-              <td style="text-align: center;">{{ $proactive-> lastAction }}</td>
-              <td style="text-align: center;">{{ $proactive-> nextAction }}</td>
-              <td style="text-align: center;">{{ $proactive-> status }}</td>
-              <td style="text-align: center;">{{ $proactive-> information }}</td>
-              <td style="text-align: center;">{{ $proactive-> startProject }}</td>
-              <td style="text-align: center;">{{ $proactive-> finishProject }}</td>
+              <td style="text-align: center; font-size: 12px">{{ $no++ }}</td>
+              <td style="font-size: 12px;">{{ $proactive-> projectName }}</td>
+              <td style="text-align: center; font-size: 12px">{{ $proactive-> segment }}</td>
+              <td style="font-size: 12px;">{{ $proactive-> description }}</td>
+              <td style="text-align: center; font-size: 12px">{{ $proactive-> customer }}</td>
+              <td style="font-size: 12px;">{{ $proactive-> lastAction }}</td>
+              <td style="font-size: 12px;">{{ $proactive-> nextAction }}</td>
+              <td style="text-align: center; font-size: 12px">{{ $proactive-> status }}</td>
+              <td style="font-size: 12px">{{ $proactive-> information }}</td>
+              <td style="text-align: center; font-size: 12px">{{ $proactive-> startProject }}</td>
+              <td style="text-align: center; font-size: 12px">{{ $proactive-> finishProject }}</td>
               <td>
                 <div class="btn-group" style="text-align: center;">
                   <a href="{{ url('/tableProactive/'.$proactive->id.'/editPro') }}">
-                    <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Detail Project">
-                      <i class='glyphicon glyphicon-search'></i>
+                    <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Detail Project">
+                      <i class='glyphicon glyphicon-search' style="font-size: 12px"></i>
                     </button>
                   </a>
 
                   <span data-toggle="modal" data-target="#myModal" >
                     <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="bottom" title="Delete Project">
-                      <i class='glyphicon glyphicon-trash'></i>
+                      <i class='glyphicon glyphicon-trash' style="font-size: 12px"></i>
                     </button>
                   </span>
 

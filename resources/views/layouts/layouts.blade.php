@@ -161,7 +161,7 @@ href="../../bower_components/googlefont/googlefont.css">
           </ul>
         </li>
 
-        <li>
+        <li class="treeview">
           <a href="#">
             <i class="fa fa-pencil-square-o"></i>
             <span>Detail Project</span>

@@ -124,23 +124,27 @@ href="../../bower_components/googlefont/googlefont.css">
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="{{ url('tableProactive') }}"><i class="fa fa-circle-o"></i> Pro-Active</a></li>
-            <li><a href="{{ url('tableRaisa') }}"><i class="fa fa-circle-o"></i> RAISA</a></li>
-            <li><a href="{{ url('tableScn') }}"><i class="fa fa-circle-o"></i> SCN</a></li>
-            <li><a href="{{ url('tableOthers') }}"><i class="fa fa-circle-o"></i> OTHERS</a></li>
+            <li><a href="{{ url('tableProactive') }}"><i class="fa fa-circle-o text-red"></i> PROACTIVE</a></li>
+            <li><a href="{{ url('tableRaisa') }}"><i class="fa fa-circle-o text-aqua"></i> RAISA</a></li>
+            <li><a href="{{ url('tableScn') }}"><i class="fa fa-circle-o text-yellow"></i> SCN</a></li>
+            <li><a href="{{ url('tableOthers') }}"><i class="fa fa-circle-o text-success"></i> OTHERS</a></li>
           </ul>
         </li>
 
-        <li>
-          <a href="{{ url('detail') }}">
-            <i class="fa fa-pencil-square-o"></i> <span>Detail Project</span> <small class="fa fa pull-right"></small>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-pie-chart"></i>
+            <span>Detail Project</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
           </a>
-        </li>
-
-        <li>
-          <a href="{{ url('chart') }}">
-            <i class="fa fa-pie-chart"></i> <span>Chart</span> <small class="fa fa pull-right"></small>
-          </a>
+          <ul class="treeview-menu">
+            <li><a href="{{ url('detailProact') }}"><i class="fa fa-circle-o text-red"></i> PROACTIVE</a></li>
+            <li><a href="{{ url('detailRaisa') }}"><i class="fa fa-circle-o text-aqua"></i> RAISA</a></li>
+            <li><a href="{{ url('detailScn') }}"><i class="fa fa-circle-o text-yellow"></i> SCN</a></li>
+            <li><a href="{{ url('detailOther') }}"><i class="fa fa-circle-o text-success"></i> OTHERS</a></li>
+          </ul>
         </li>
 
       </section>
@@ -170,12 +174,6 @@ href="../../bower_components/googlefont/googlefont.css">
           <div class="box box-primary">
             <div class="box-header with-border">
               <h3 class="box-title">Import File</h3>
-
-              <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                </button>
-                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-              </div>
             </div>
             <!-- /.box-header -->
             <div class="box-body">

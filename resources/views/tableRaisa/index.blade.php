@@ -7,7 +7,7 @@
     <!-- TABLE: LATEST ORDERS -->
     <div class="box box-primary">
       <div class="box-header with-border">
-        <h3 class="box-title">raisa</h3>
+        <h3 class="box-title">RAISA</h3>
         <div class="box-tools pull-right">
           <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
         </div>
@@ -35,28 +35,28 @@
             <?php $no=1; ?>
             @foreach ($raisas as $raisa)
             <tr>
-              <td style="text-align: center;">{{ $no++ }}</td>
-              <td style="text-align: center;">{{ $raisa-> projectName }}</td>
-              <td style="text-align: center;">{{ $raisa-> segment }}</td>
-              <td style="text-align: center;">{{ $raisa-> description }}</td>
-              <td style="text-align: center;">{{ $raisa-> customer }}</td>
-              <td style="text-align: center;">{{ $raisa-> lastAction }}</td>
-              <td style="text-align: center;">{{ $raisa-> nextAction }}</td>
-              <td style="text-align: center;">{{ $raisa-> status }}</td>
-              <td style="text-align: center;">{{ $raisa-> information }}</td>
-              <td style="text-align: center;">{{ $raisa-> startProject }}</td>
-              <td style="text-align: center;">{{ $raisa-> finishProject }}</td>
+              <td style="text-align: center; font-size: 12px">{{ $no++ }}</td>
+              <td style="font-size: 12px;">{{ $raisa-> projectName }}</td>
+              <td style="text-align: center; font-size: 12px">{{ $raisa-> segment }}</td>
+              <td style="font-size: 12px;">{{ $raisa-> description }}</td>
+              <td style="text-align: center; font-size: 12px">{{ $raisa-> customer }}</td>
+              <td style="font-size: 12px;">{{ $raisa-> lastAction }}</td>
+              <td style="font-size: 12px;">{{ $raisa-> nextAction }}</td>
+              <td style="text-align: center; font-size: 12px">{{ $raisa-> status }}</td>
+              <td style="font-size: 12px;">{{ $raisa-> information }}</td>
+              <td style="text-align: center; font-size: 12px">{{ $raisa-> startProject }}</td>
+              <td style="text-align: center; font-size: 12px">{{ $raisa-> finishProject }}</td>
               <td>
                 <div class="btn-group" style="text-align: center;">
                   <a href="{{ url('/tableRaisa/'.$raisa->id.'/editRaisa') }}">
-                    <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Detail Project">
-                      <i class='glyphicon glyphicon-search'></i>
+                    <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Detail Project">
+                      <i class='glyphicon glyphicon-search' style="font-size: 12px"></i>
                     </button>
                   </a>
 
                   <span data-toggle="modal" data-target="#myModal" >
                     <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="bottom" title="Delete Project">
-                      <i class='glyphicon glyphicon-trash'></i>
+                      <i class='glyphicon glyphicon-trash' style="font-size: 12px"></i>
                     </button>
                   </span>
 

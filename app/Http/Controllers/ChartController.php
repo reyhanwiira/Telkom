@@ -12,6 +12,8 @@ use Validator;
 use App\activity;
 use App\resume;
 use App\raisa;
+use App\scn;
+use App\other;
 
 class ChartController extends Controller
 {
@@ -25,8 +27,9 @@ class ChartController extends Controller
     public function readChartDetailProact()
     {
     	$resume = Resume::all();
+        $proactive = Proactive::all();
 
-    	return view('detailProact', compact('resume'));
+    	return view('detailProact', compact('resume','proactive'));
     }
 
     public function readChartDetailRaisa()
@@ -40,14 +43,16 @@ class ChartController extends Controller
     public function readChartDetailScn()
     {
         $resume = Resume::all();
+        $scn = Scn::all();
 
-        return view('detailScn', compact('resume'));
+        return view('detailScn', compact('resume','scn'));
     }
 
     public function readChartDetail()
     {
         $resume = Resume::all();
+        $other = Other::all();
 
-        return view('detailOther', compact('resume'));
+        return view('detailOther', compact('resume','other'));
     }
 }

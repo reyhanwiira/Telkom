@@ -43,7 +43,7 @@
               <td style="font-size: 12px">{{ $other-> lastAction }}</td>
               <td style="font-size: 12px">{{ $other-> nextAction }}</td>
               <td style="text-align: center; font-size: 12px">{{ $other-> status }}</td>
-              <td style="">{{ $other-> information }}</td>
+              <td style="font-size: 12px">{{ $other-> information }}</td>
               <td style="text-align: center; font-size: 12px">{{ $other-> startProject }}</td>
               <td style="text-align: center; font-size: 12px">{{ $other-> finishProject }}</td>
               <td>

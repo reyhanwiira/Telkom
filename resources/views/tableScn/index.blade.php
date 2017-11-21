@@ -22,8 +22,8 @@
               <th>Segment</th>
               <th>Description</th>
               <th>Customer</th>
-              <th>Last Action</th>
-              <th>Next Action</th>
+              <th style="width: 10%;">Last Action</th>
+              <th style="width: 50%;">Next Action</th>
               <th>Status</th>
               <th>Information</th>
               <th>Start Project</th>
@@ -35,28 +35,28 @@
             <?php $no=1; ?>
             @foreach ($scns as $scn)
             <tr>
-              <td>{{ $no++ }}</td>
-              <td>{{ $scn-> projectName }}</td>
-              <td>{{ $scn-> segment }}</td>
-              <td>{{ $scn-> description }}</td>
-              <td>{{ $scn-> customer }}</td>
-              <td>{{ $scn-> lastAction }}</td>
-              <td>{{ $scn-> nextAction }}</td>
-              <td>{{ $scn-> status }}</td>
-              <td>{{ $scn-> information }}</td>
-              <td>{{ $scn-> startProject }}</td>
-              <td>{{ $scn-> finishProject }}</td>
+              <td style="text-align: center; font-size: 12px">{{ $no++ }}</td>
+              <td style="font-size: 12px">{{ $scn-> projectName }}</td>
+              <td style="text-align: center; font-size: 12px">{{ $scn-> segment }}</td>
+              <td style="font-size: 12px">{{ $scn-> description }}</td>
+              <td style="text-align: center; font-size: 12px">{{ $scn-> customer }}</td>
+              <td style="font-size: 12px">{{ $scn-> lastAction }}</td>
+              <td style="font-size: 12px">{{ $scn-> nextAction }}</td>
+              <td style="text-align: center; font-size: 12px">{{ $scn-> status }}</td>
+              <td style="text-align: center; font-size: 12px">{{ $scn-> information }}</td>
+              <td style="text-align: center; font-size: 12px">{{ $scn-> startProject }}</td>
+              <td style="text-align: center; font-size: 12px">{{ $scn-> finishProject }}</td>
               <td>
-                <div class="btn-group">
+                <div class="btn-group" style="text-align: center;">
                   <a href="{{ url('/tableScn/'.$scn->id.'/editScn') }}">
-                    <button type="button" class="btn btn-success" data-placement="top" title="Detail Project">
-                      <i class='glyphicon glyphicon-search'></i>
+                    <button type="button" class="btn btn-primary" data-placement="top" title="Detail Project">
+                      <i class='glyphicon glyphicon-search' style="font-size: 11px"></i>
                     </button>
                   </a>
 
                   <span data-toggle="modal" data-target="#myModal" >
                     <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="bottom" title="Delete Project">
-                      <i class='glyphicon glyphicon-trash'></i>
+                      <i class='glyphicon glyphicon-trash' style="font-size: 11px"></i>
                     </button>
                   </span>
 

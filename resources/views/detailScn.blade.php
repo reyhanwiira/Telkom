@@ -95,17 +95,17 @@
                 <ul class="nav nav-pills nav-stacked">
                   <li>
                     <a href="#">Active
-                      <span class="pull-right badge bg-green"><i class="fa fa-angle-up"></i> 4</span>
+                      <span class="pull-right text-green"><i class="fa fa-angle-up"></i> 4</span>
                     </a>
                   </li>
                   <li>
                     <a href="#">Idle (tdk berprogress >2 Minggu) 
-                      <span class="pull-right badge bg-teal"><i class="fa fa-angle-exchange"></i> 4</span>
+                      <span class="pull-right text-teal"><i class="fa fa-angle-exchange"></i> 4</span>
                     </a>
                   </li>
                   <li>
                     <a href="#">Persentase
-                      <span class="pull-right badge bg-green"><i class="fa fa-angle-up"></i> 42%</span>
+                      <span class="pull-right text-green"><i class="fa fa-angle-up"></i> 42%</span>
                     </a>
                   </li>
                 </ul>
@@ -190,16 +190,33 @@
                 </tr>
               </thead>
               <tbody>
+                <?php $no=1; ?>
+                @foreach($scn as $scn)
                 <tr>
-                  <td style="text-align: center;">Nilai dari Last</td>
-                  <td style="text-align: center;">Nilai dari Last</td>
-                  <td style="text-align: center;">Nilai dari Last</td>
-                  <td style="text-align: center;">Nilai dari Last</td>
-                  <td style="text-align: center;">Nilai dari Last</td>
-                  <td style="text-align: center;">Nilai dari Current</td>
-                  <td style="text-align: center;">Summary</td>
+                  <td style="text-align: center;">{{ $no++ }}</td>
+                  <td style="text-align: center;">{{ $scn->projectName }}</td>
+                  <td style="text-align: center;">{{ $scn->segment }}</td>
+                  <td style="text-align: center;">{{ $scn->currentProgress }}</td>
+                  <td style="text-align: center;">
+                    @if($scn->current < $scn->last)
+                    <span class="text-green">
+                      <i class="fa fa-arrow-down"></i>
+                    </span>
+                    @elseif($scn->current > $scn->last )
+                    <span class="text-green">
+                      <i class="fa fa-arrow-up"></i>
+                    </span>
+                    @elseif($scn->last == $scn->current)
+                    <span class="text-green">
+                      <i class="fa fa-arrow-right"></i>
+                    </span>
+                    @endif
+                  </td>
                   <td style="text-align: center;">Status</td>
+                  <td style="text-align: center;">{{ $scn->last }} %</td>
+                  <td style="text-align: center;">{{ $scn->current }} %</td>
                 </tr>
+                @endforeach
               </tbody>
             </table>
           </div>
@@ -242,43 +259,43 @@
     var PieData        = [
 
     {
-      value    : {{ $resume[0]->p0Proactive}},
+      value    : {{ $scn->where('currentProgress','Like','Initial Requirement')->count() }},
       color    : '#fff5cc',
       highlight: '#fff2cc',
       label    : 'Initial Requirement'
     },
     {
-      value    : {{ $resume[0]->p1Proactive}},
+      value    : {{ $scn->where('currentProgress','Like','Initial Solution')->count() }},
       color    : '#ffd1b3',
       highlight: '#ffe0cc',
       label    : 'Initial Solution'
     },
     {
-      value    : {{ $resume[0]->p2Proactive }},
+      value    : {{ $scn->where('currentProgress','Like','Menunggu Feedback & Gathering Req')->count() }},
       color    : '#ff9999',
       highlight: '#ffb3b3',
       label    : 'Menunggu Feedback & Gathering Req'
     },
     {
-      value    : {{ $resume[0]->p3Proactive }},
+      value    : {{ $scn->where('currentProgress','Like','Solution Design')->count() }},
       color    : '#730099',
       highlight: '#ac00e6',
       label    : 'Solution Design'
     },
     {
-      value    : {{ $resume[0]->p0Raisa}},
+      value    : {{ $scn->where('currentProgress','Like','Solution Development')->count() }},
       color    : '#2ea4bc',
       highlight: '#5bc2d7',
       label    : 'Solution Development'
     },
     {
-      value    : {{ $resume[0]->p1Raisa }},
+      value    : {{ $scn->where('currentProgress','Like','POC')->count() }},
       color    : '#40bf80',
       highlight: '#79d2a6',
       label    : 'POC'
     },
     {
-      value    : {{ $resume[0]->p2Raisa }},
+      value    : {{ $scn->where('currentProgress','Like','Proposal Ready')->count() }},
       color    : '#66ff66',
       highlight: '#99ff99',
       label    : 'Proposal Ready'
@@ -330,43 +347,43 @@
     var PieData        = [
 
     {
-      value    : {{ $resume[0]->p0Proactive}},
+      value    : {{ $scn->where('currentProgress','Like','Initial Requirement')->count() }},
       color    : '#fff5cc',
       highlight: '#fff2cc',
       label    : 'Initial Requirement'
     },
     {
-      value    : {{ $resume[0]->p1Proactive}},
+      value    : {{ $scn->where('currentProgress','Like','Initial Solution')->count() }},
       color    : '#ffd1b3',
       highlight: '#ffe0cc',
       label    : 'Initial Solution'
     },
     {
-      value    : {{ $resume[0]->p2Proactive }},
+      value    : {{ $scn->where('currentProgress','Like','Menunggu Feedback & Gathering Req')->count() }},
       color    : '#ff9999',
       highlight: '#ffb3b3',
       label    : 'Menunggu Feedback & Gathering Req'
     },
     {
-      value    : {{ $resume[0]->p3Proactive }},
+      value    : {{ $scn->where('currentProgress','Like','Solution Design')->count() }},
       color    : '#730099',
       highlight: '#ac00e6',
       label    : 'Solution Design'
     },
     {
-      value    : {{ $resume[0]->p0Raisa}},
+      value    : {{ $scn->where('currentProgress','Like','Solution Development')->count() }},
       color    : '#2ea4bc',
       highlight: '#5bc2d7',
       label    : 'Solution Development'
     },
     {
-      value    : {{ $resume[0]->p1Raisa }},
+      value    : {{ $scn->where('currentProgress','Like','POC')->count() }},
       color    : '#40bf80',
       highlight: '#79d2a6',
       label    : 'POC'
     },
     {
-      value    : {{ $resume[0]->p2Raisa }},
+      value    : {{ $scn->where('currentProgress','Like','Proposal Ready')->count() }},
       color    : '#66ff66',
       highlight: '#99ff99',
       label    : 'Proposal Ready'

@@ -161,7 +161,7 @@ href="../../bower_components/googlefont/googlefont.css">
 
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-pie-chart"></i>
+            <i class="fa fa-table"></i>
             <span>Table</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
@@ -175,9 +175,9 @@ href="../../bower_components/googlefont/googlefont.css">
           </ul>
         </li>
 
-        <li>
+        <li class="treeview">
           <a href="#">
-            <i class="fa fa-pencil-square-o"></i>
+            <i class="fa fa-pie-chart"></i>
             <span>Detail Project</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
@@ -203,7 +203,7 @@ href="../../bower_components/googlefont/googlefont.css">
       <section class="content-header">
         <h1>
           Project
-          <small></small>
+          <small>Summary</small>
         </h1>
         <ol class="breadcrumb">
           <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -274,7 +274,7 @@ href="../../bower_components/googlefont/googlefont.css">
         'searching'   : true,
         'ordering'    : true,
         'info'        : true,
-        'autoWidth'   : false
+        'autoWidth'   : true
       })
       $('#example4').DataTable({
         'paging'      : true,
@@ -282,7 +282,7 @@ href="../../bower_components/googlefont/googlefont.css">
         'searching'   : true,
         'ordering'    : true,
         'info'        : true,
-        'autoWidth'   : false
+        'autoWidth'   : true
       })
       $('#example5').DataTable({
         'paging'      : true,
@@ -290,7 +290,7 @@ href="../../bower_components/googlefont/googlefont.css">
         'searching'   : true,
         'ordering'    : true,
         'info'        : true,
-        'autoWidth'   : false
+        'autoWidth'   : true
       })
     })
   </script>

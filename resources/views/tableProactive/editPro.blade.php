@@ -139,27 +139,23 @@
 
                   <div class="btn-group">
                   <a href="{{ url('/uploadActPro/'.$activity->id) }}">
-                    <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Upload File">
+                    <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Upload File">
                       <i class='glyphicon glyphicon-floppy-open'></i>
                     </button>
                   </a>
                   </div>
 
-                   <div class="btn-group">
-                 <a href="{{ url('/downloadPro/'.$activity->filename) }}" download="{{ $activity->filename }}">
-                    <button type="button" class="btn btn-primary">
-                        <i class="glyphicon glyphicon-download">
-                            Download
-                        </i>
-                   </button>
-                </a>
-
+                  <div class="btn-group">
+                  <a href="{{ url('/downloadPro/'.$activity->filename) }}">
+                    <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Download File">
+                      <i class='glyphicon glyphicon-floppy-save'></i>
+                    </button>
+                  </a>
                   </div>
-
 
                   <div class="btn-group">
                     <a href="{{ url('/tableProactive'.'/editActPro/'.$activity->id) }}">
-                      <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Edit File">
+                      <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Edit File">
                         <i class='glyphicon glyphicon-edit'></i>
                       </button>
                     </a>
