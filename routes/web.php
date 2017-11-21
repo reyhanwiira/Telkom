@@ -52,6 +52,12 @@ Route::group(['middleware'=>'auth'], function(){
 	Route::get('/tableProactive/editActPro/{id}','ProactiveController@editActPro');
 	Route::put('/editActPro/{id}','ProactiveController@updateActPro');
 
+//UPLOAD FILE PROACTIVE
+	Route::get('uploadActPro/{id}','ProactiveController@uploadIndexPro');
+	Route::post('uploadActPro/{id}','ProactiveController@uploadPro');
+
+	Route::get('downloadPro/{filename}','ProactiveController@downloadPro');
+
 
 //EXPORT AND IMPORT PROACTIVE
 

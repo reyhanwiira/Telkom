@@ -1,0 +1,8 @@
+referensi project : 
+http://puguhjayadi.blogspot.co.id/2016/01/laravel-52-membuat-multiuser-login.html
+https://yoesuv.blogspot.co.id/2016/07/pencarianfilter-pada-laravel.html
+https://yoesuv.blogspot.co.id/2016/05/laravel-dropdown-select-option-dengan.html
+https://m.dotdev.co/writing-advanced-eloquent-search-query-filters-de8b6c2598db
+https://yoesuv.blogspot.co.id/2016/05/reset-password-pada-laravel.html
+https://www.youtube.com/watch?v=C2j7uMGT_HA&list=PLpBg5hzwO34skWv8balj0cxr94rXYbS1U
+https://laravel.com/docs/5.4

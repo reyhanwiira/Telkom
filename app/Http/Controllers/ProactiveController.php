@@ -12,6 +12,9 @@ use View;
 use App\proactive;
 use Validator;
 use App\activity;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
+use Illuminate\Http\Response;
 
 class ProactiveController extends Controller
 {
@@ -143,24 +146,36 @@ class ProactiveController extends Controller
         return redirect::to('/tableProactive');
     }
 
-    public function uploadPro(Request $request)
+    public function uploadIndexPro()
     {
-        $tambah = new Activity();
-        $tambah->judul = $request['upload'];
-
-
-        // Disini proses mendapatkan judul dan memindahkan letak gambar ke folder image
-        $file       = $request->file('import_file');
-        $fileName   = $file->getClientOriginalName();
-        $request->file('import_file')->move("upload/", $fileName);
-
-        $tambah->import_file = $fileName;
-        $tambah->save();
-
-        return redirect()->to('/');
-
+        return view('/uploadActPro');
     }
 
+    public function uploadPro(Request $request, $id)
+    {
+        $file = $request->file('filename');
+        $extension = $file->getClientOriginalExtension();
+        Storage::disk('local')->put($file->getFilename().'.'.$extension,  File::get($file));
+        $entry = Activity::find($id);
+        $entry->mime = $file->getClientMimeType();
+        $entry->original_filename = $file->getClientOriginalName();
+        $entry->filename = $file->getFilename().'.'.$extension;
+ 
+        $entry->update();
 
+
+        return redirect::to('/tableProactive');
+    }
+
+    
+
+    public function downloadPro($filename)
+    {
+       $entry = Activity::where('filename', '=', $filename)->firstOrFail();
+        $file = Storage::disk('local')->get($entry->filename);
+ 
+        return (new Response($file, 200))
+              ->header('Content-Type', $entry->mime);
+   }
 
 }

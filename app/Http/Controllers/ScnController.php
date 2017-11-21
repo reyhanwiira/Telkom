@@ -26,7 +26,7 @@ class ScnController extends Controller
 
     public function create()
     {
-      return view('tableScn.create');
+      return view('tableScn.createScn');
     }
  
  

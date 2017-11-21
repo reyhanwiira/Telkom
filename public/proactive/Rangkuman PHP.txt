@@ -1,0 +1,50 @@
+Memasukan code php
+1. Metode Standard XML Style : <?php ?>
+2. Metode Singkat SGML Style : <? ?> (php 5.5 keatas tidak lagi mendeukung)
+3. Metode ASP Style : <% %> (harus di setting secara manual)
+4. Metode Script : <script language="php"> </script> (jarang di gunakan)
+5. Metode PHP Instan (Gabungan SGML dan echo dalam satu tag)
+
+
+
+Penulisan Variable
+-Variable harus diawali dengan $
+-Variable tidak boleh di awali oleh angka
+-Variable bersifat Case Sensitive
+-Tidak perlu di deklarasikan terlebih dahulu
+-Variable bebas di isi dengan nilai apa saja(int,string,float dll)
+-Sebaiknya tidak membuat dengan nama variable yang sama yg telah di definisikan secara sistem oleh php(Predefined Variables)
+
+Perbedaan Variable dan Konstanta, jika di beri nilai variable dapat di ubah sedangkan konstanta tidak bisa
+
+Penulisan Konstanta
+
+-Menggunakan keyword const
+<?php
+   const situs = "www.duniailkom.com";
+   echo situs;  // www.duniailkom.com
+?>
+
+-Menggunakan fungsi define
+<?php
+   define("situs", "www.duniailkom.com");
+   echo situs;  // www.duniailkom.com
+?>
+
+Pembuatan konstanta dengan keyword const hanya dapat digunakan pada top-level scope, 
+yakni harus dalam lingkungan global PHP. Sehingga kita tidak bisa menggunakan const di dalam function, loop,
+atau kondisi if.
+Apabila anda membutuhkan konstanta di dalam fungsi, maka harus menggunakan keyword define.
+
+-Hanya dapat berisi tipe data tertentu(int,boolean,float,string)
+
+
+-Operator unary adalah operator yang hanya memiliki 1 operand, contohnya karakter – (tanda minus). 
+Tanda minus digunakan membuat sebuah angka menjadi negatif, contohnya: -5, atau karakter + untuk
+menegaskan nilai positif, contohnya: +5.
+
+-Operator binary adalah operator yang memiliki 2 operand. Operator jenis ini adalah yang paling banyak digunakan, 
+misalkan 5×2, atau 10/3.
+
+-Operator Ternary adalah operator yang memiliki 3 operand. Didalam PHP hanya dikenal 1 operator ternary, 
+yaitu operator kondisi (? :).
