@@ -1,5 +1,198 @@
 @extends('layouts.detail_layout')
+<!-- jQuery 3 -->
+<script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../../bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<!-- SlimScroll -->
+<script src="../../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../../bower_components/fastclick/lib/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../../dist/js/demo.js"></script>
+<!-- ChartJS -->
+<script src="../../bower_components/Chart.js/Chart.js"></script>
+<!-- page script -->
 
+<script>
+  $(function () {
+    /* ChartJS
+     * -------
+     * Here we will create a few charts using ChartJS
+     */
+
+    //-------------
+    //- PIE CHART -
+    //-------------
+    // Get context with jQuery - using jQuery's .get() method.
+    var pieChartCanvas = $('#pieChart5').get(0).getContext('2d')
+    var pieChart       = new Chart(pieChartCanvas)
+    var PieData        = [
+
+    {
+      value    : {{ $raisa->where('currentProgress','Like','Initial Requirement')->count() }},
+      color    : '#fff5cc',
+      highlight: '#fff2cc',
+      label    : 'Initial Requirement'
+    },
+    {
+      value    : {{ $raisa->where('currentProgress','Like','Initial Solution')->count() }},
+      color    : '#ffd1b3',
+      highlight: '#ffe0cc',
+      label    : 'Initial Solution'
+    },
+    {
+      value    : {{ $raisa->where('currentProgress','Like','Menunggu Feedback & Gathering Req')->count() }},
+      color    : '#ff9999',
+      highlight: '#ffb3b3',
+      label    : 'Menunggu Feedback & Gathering Req'
+    },
+    {
+      value    : {{ $raisa->where('currentProgress','Like','Solution Design')->count() }},
+      color    : '#730099',
+      highlight: '#ac00e6',
+      label    : 'Solution Design'
+    },
+    {
+      value    : {{ $raisa->where('currentProgress','Like','Solution Development')->count() }},
+      color    : '#2ea4bc',
+      highlight: '#5bc2d7',
+      label    : 'Solution Development'
+    },
+    {
+      value    : {{ $raisa->where('currentProgress','Like','POC')->count() }},
+      color    : '#40bf80',
+      highlight: '#79d2a6',
+      label    : 'POC'
+    },
+    {
+      value    : {{ $raisa->where('currentProgress','Like','Proposal Ready')->count() }},
+      color    : '#66ff66',
+      highlight: '#99ff99',
+      label    : 'Proposal Ready'
+    }
+
+    ]
+    var pieOptions     = {
+      //Boolean - Whether we should show a stroke on each segment
+      segmentShowStroke    : true,
+      //String - The colour of each segment stroke
+      segmentStrokeColor   : '#fff',
+      //Number - The width of each segment stroke
+      segmentStrokeWidth   : 2,
+      //Number - The percentage of the chart that we cut out of the middle
+      percentageInnerCutout: 48, // This is 0 for Pie charts
+      //Number - Amount of animation steps
+      animationSteps       : 100,
+      //String - Animation easing effect
+      animationEasing      : 'easeOutBounce',
+      //Boolean - Whether we animate the rotation of the Doughnut
+      animateRotate        : true,
+      //Boolean - Whether we animate scaling the Doughnut from the centre
+      animateScale         : false,
+      //Boolean - whether to make the chart responsive to window resizing
+      responsive           : true,
+      // Boolean - whether to maintain the starting aspect ratio or not when responsive, if set to false, will take up entire container
+      maintainAspectRatio  : true,
+      //String - A legend template
+      legendTemplate       : '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<segments.length; i++){%><li><span style="background-color:<%=segments[i].fillColor%>"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>'
+    }
+    //Create pie or douhnut chart
+    // You can switch between pie and douhnut using the method below.
+    pieChart.Doughnut(PieData, pieOptions)
+  })
+</script>
+<script>
+  $(function () {
+    /* ChartJS
+     * -------
+     * Here we will create a few charts using ChartJS
+     */
+
+    //-------------
+    //- PIE CHART -
+    //-------------
+    // Get context with jQuery - using jQuery's .get() method.
+    var pieChartCanvas = $('#pieChart6').get(0).getContext('2d')
+    var pieChart       = new Chart(pieChartCanvas)
+    var PieData        = [
+
+    {
+      value    : {{ $raisa->where('currentProgress','Like','Initial Requirement')->count() }},
+      color    : '#fff5cc',
+      highlight: '#fff2cc',
+      label    : 'Initial Requirement'
+    },
+    {
+      value    : {{ $raisa->where('currentProgress','Like','Initial Solution')->count() }},
+      color    : '#ffd1b3',
+      highlight: '#ffe0cc',
+      label    : 'Initial Solution'
+    },
+    {
+      value    : {{ $raisa->where('currentProgress','Like','Menunggu Feedback & Gathering Req')->count() }},
+      color    : '#ff9999',
+      highlight: '#ffb3b3',
+      label    : 'Menunggu Feedback & Gathering Req'
+    },
+    {
+      value    : {{ $raisa->where('currentProgress','Like','Solution Design')->count() }},
+      color    : '#730099',
+      highlight: '#ac00e6',
+      label    : 'Solution Design'
+    },
+    {
+      value    : {{ $raisa->where('currentProgress','Like','Solution Development')->count() }},
+      color    : '#2ea4bc',
+      highlight: '#5bc2d7',
+      label    : 'Solution Development'
+    },
+    {
+      value    : {{ $raisa->where('currentProgress','Like','POC')->count() }},
+      color    : '#40bf80',
+      highlight: '#79d2a6',
+      label    : 'POC'
+    },
+    {
+      value    : {{ $raisa->where('currentProgress','Like','Proposal Ready')->count() }},
+      color    : '#66ff66',
+      highlight: '#99ff99',
+      label    : 'Proposal Ready'
+    }
+
+
+    ]
+    var pieOptions     = {
+      //Boolean - Whether we should show a stroke on each segment
+      segmentShowStroke    : true,
+      //String - The colour of each segment stroke
+      segmentStrokeColor   : '#fff',
+      //Number - The width of each segment stroke
+      segmentStrokeWidth   : 2,
+      //Number - The percentage of the chart that we cut out of the middle
+      percentageInnerCutout: 48, // This is 0 for Pie charts
+      //Number - Amount of animation steps
+      animationSteps       : 100,
+      //String - Animation easing effect
+      animationEasing      : 'easeOutBounce',
+      //Boolean - Whether we animate the rotation of the Doughnut
+      animateRotate        : true,
+      //Boolean - Whether we animate scaling the Doughnut from the centre
+      animateScale         : false,
+      //Boolean - whether to make the chart responsive to window resizing
+      responsive           : true,
+      // Boolean - whether to maintain the starting aspect ratio or not when responsive, if set to false, will take up entire container
+      maintainAspectRatio  : true,
+      //String - A legend template
+      legendTemplate       : '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<segments.length; i++){%><li><span style="background-color:<%=segments[i].fillColor%>"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>'
+    }
+    //Create pie or douhnut chart
+    // You can switch between pie and douhnut using the method below.
+    pieChart.Doughnut(PieData, pieOptions)
+  })
+</script>
 
 @section('content')
 <section class="content">
@@ -8,9 +201,9 @@
       <div class="box box-primary">
         <div class="box-header with-border">
           <i class="fa fa-bar-chart-o"></i>
-          <h3 class="box-title">RAISA CHART</h3>
+          <h3 class="box-title">Donut Chart</h3>
           <p></p>
-          <h3 class="box-title">Breakdown Pengawalan status "P1" untuk RAISA Initiatives</h3>
+          <h3 class="box-title">Breakdown Pengawalan status "P1" untuk raisa Initiatives</h3>
           <div class="box-tools pull-right">
             <button class="btn btn-box-tool" data-widget="collapse">
               <i class="fa fa-minus"></i>
@@ -191,16 +384,27 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td style="text-align: center;">Nilai dari Last</td>
-                  <td style="text-align: center;">Nilai dari Last</td>
-                  <td style="text-align: center;">Nilai dari Last</td>
-                  <td style="text-align: center;">Nilai dari Last</td>
-                  <td style="text-align: center;">Nilai dari Last</td>
-                  <td style="text-align: center;">Nilai dari Current</td>
-                  <td style="text-align: center;">Summary</td>
+                <?php $no=1; ?>
+                  @foreach($raisa as $raisa)
+                <tr>                  
+                  <td style="text-align: center;">{{ $no++ }}</td>
+                  <td style="text-align: center;">{{ $raisa->projectName }}</td>
+                  <td style="text-align: center;">{{ $raisa->segment }}</td>
+                  <td style="text-align: center;">{{ $raisa->currentProgress }}</td>
+                  <td style="text-align: center;">
+                    @if($raisa->current < $raisa->last)
+                      Project berkurang
+                    @elseif($raisa->current > $raisa->last )
+                      project bertambah
+                    @elseif($raisa->last == $raisa->current)
+                      project tetap
+                    @endif
+                  </td>
                   <td style="text-align: center;">Status</td>
+                  <td style="text-align: center;">{{ $raisa->last }} %</td>
+                  <td style="text-align: center;">{{ $raisa->current }} %</td>
                 </tr>
+                  @endforeach
               </tbody>
             </table>
           </div>
@@ -209,200 +413,6 @@
     </div><!-- /.box -->
   </div><!-- /.col -->
 </div>
-
-<!-- jQuery 3 -->
-<script src="../../bower_components/jquery/dist/jquery.min.js"></script>
-<!-- Bootstrap 3.3.7 -->
-<script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="../../bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-<!-- SlimScroll -->
-<script src="../../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-<!-- FastClick -->
-<script src="../../bower_components/fastclick/lib/fastclick.js"></script>
-<!-- AdminLTE App -->
-<script src="../../dist/js/adminlte.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="../../dist/js/demo.js"></script>
-<!-- ChartJS -->
-<script src="../../bower_components/Chart.js/Chart.js"></script>
-<!-- page script -->
-
-<script>
-  $(function () {
-    /* ChartJS
-     * -------
-     * Here we will create a few charts using ChartJS
-     */
-
-    //-------------
-    //- PIE CHART -
-    //-------------
-    // Get context with jQuery - using jQuery's .get() method.
-    var pieChartCanvas = $('#pieChart5').get(0).getContext('2d')
-    var pieChart       = new Chart(pieChartCanvas)
-    var PieData        = [
-
-    {
-      value    : {{ $resume[0]->p0Proactive}},
-      color    : '#fff5cc',
-      highlight: '#fff2cc',
-      label    : 'Initial Requirement'
-    },
-    {
-      value    : {{ $resume[0]->p1Proactive}},
-      color    : '#ffd1b3',
-      highlight: '#ffe0cc',
-      label    : 'Initial Solution'
-    },
-    {
-      value    : {{ $resume[0]->p2Proactive }},
-      color    : '#ff9999',
-      highlight: '#ffb3b3',
-      label    : 'Menunggu Feedback & Gathering Req'
-    },
-    {
-      value    : {{ $resume[0]->p3Proactive }},
-      color    : '#730099',
-      highlight: '#ac00e6',
-      label    : 'Solution Design'
-    },
-    {
-      value    : {{ $resume[0]->p0Raisa}},
-      color    : '#2ea4bc',
-      highlight: '#5bc2d7',
-      label    : 'Solution Development'
-    },
-    {
-      value    : {{ $resume[0]->p1Raisa }},
-      color    : '#40bf80',
-      highlight: '#79d2a6',
-      label    : 'POC'
-    },
-    {
-      value    : {{ $resume[0]->p2Raisa }},
-      color    : '#66ff66',
-      highlight: '#99ff99',
-      label    : 'Proposal Ready'
-    }
-
-    ]
-    var pieOptions     = {
-      //Boolean - Whether we should show a stroke on each segment
-      segmentShowStroke    : true,
-      //String - The colour of each segment stroke
-      segmentStrokeColor   : '#fff',
-      //Number - The width of each segment stroke
-      segmentStrokeWidth   : 2,
-      //Number - The percentage of the chart that we cut out of the middle
-      percentageInnerCutout: 48, // This is 0 for Pie charts
-      //Number - Amount of animation steps
-      animationSteps       : 100,
-      //String - Animation easing effect
-      animationEasing      : 'easeOutBounce',
-      //Boolean - Whether we animate the rotation of the Doughnut
-      animateRotate        : true,
-      //Boolean - Whether we animate scaling the Doughnut from the centre
-      animateScale         : false,
-      //Boolean - whether to make the chart responsive to window resizing
-      responsive           : true,
-      // Boolean - whether to maintain the starting aspect ratio or not when responsive, if set to false, will take up entire container
-      maintainAspectRatio  : true,
-      //String - A legend template
-      legendTemplate       : '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<segments.length; i++){%><li><span style="background-color:<%=segments[i].fillColor%>"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>'
-    }
-    //Create pie or douhnut chart
-    // You can switch between pie and douhnut using the method below.
-    pieChart.Doughnut(PieData, pieOptions)
-  })
-</script>
-<script>
-  $(function () {
-    /* ChartJS
-     * -------
-     * Here we will create a few charts using ChartJS
-     */
-
-    //-------------
-    //- PIE CHART -
-    //-------------
-    // Get context with jQuery - using jQuery's .get() method.
-    var pieChartCanvas = $('#pieChart6').get(0).getContext('2d')
-    var pieChart       = new Chart(pieChartCanvas)
-    var PieData        = [
-
-    {
-      value    : {{ $resume[0]->p0Proactive}},
-      color    : '#fff5cc',
-      highlight: '#fff2cc',
-      label    : 'Initial Requirement'
-    },
-    {
-      value    : {{ $resume[0]->p1Proactive}},
-      color    : '#ffd1b3',
-      highlight: '#ffe0cc',
-      label    : 'Initial Solution'
-    },
-    {
-      value    : {{ $resume[0]->p2Proactive }},
-      color    : '#ff9999',
-      highlight: '#ffb3b3',
-      label    : 'Menunggu Feedback & Gathering Req'
-    },
-    {
-      value    : {{ $resume[0]->p3Proactive }},
-      color    : '#730099',
-      highlight: '#ac00e6',
-      label    : 'Solution Design'
-    },
-    {
-      value    : {{ $resume[0]->p0Raisa}},
-      color    : '#2ea4bc',
-      highlight: '#5bc2d7',
-      label    : 'Solution Development'
-    },
-    {
-      value    : {{ $resume[0]->p1Raisa }},
-      color    : '#40bf80',
-      highlight: '#79d2a6',
-      label    : 'POC'
-    },
-    {
-      value    : {{ $resume[0]->p2Raisa }},
-      color    : '#66ff66',
-      highlight: '#99ff99',
-      label    : 'Proposal Ready'
-    }
-
-    ]
-    var pieOptions     = {
-      //Boolean - Whether we should show a stroke on each segment
-      segmentShowStroke    : true,
-      //String - The colour of each segment stroke
-      segmentStrokeColor   : '#fff',
-      //Number - The width of each segment stroke
-      segmentStrokeWidth   : 2,
-      //Number - The percentage of the chart that we cut out of the middle
-      percentageInnerCutout: 48, // This is 0 for Pie charts
-      //Number - Amount of animation steps
-      animationSteps       : 100,
-      //String - Animation easing effect
-      animationEasing      : 'easeOutBounce',
-      //Boolean - Whether we animate the rotation of the Doughnut
-      animateRotate        : true,
-      //Boolean - Whether we animate scaling the Doughnut from the centre
-      animateScale         : false,
-      //Boolean - whether to make the chart responsive to window resizing
-      responsive           : true,
-      // Boolean - whether to maintain the starting aspect ratio or not when responsive, if set to false, will take up entire container
-      maintainAspectRatio  : true,
-      //String - A legend template
-      legendTemplate       : '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<segments.length; i++){%><li><span style="background-color:<%=segments[i].fillColor%>"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>'
-    }
-    //Create pie or douhnut chart
-    // You can switch between pie and douhnut using the method below.
-    pieChart.Doughnut(PieData, pieOptions)
-  })
-</script>
 
 </section>
 @endsection
