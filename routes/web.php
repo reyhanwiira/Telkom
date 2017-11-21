@@ -203,7 +203,7 @@ Route::get('/detail','DetailController@index');
 
 //Detail Chart
 
-Route::get('/detailPro','ChartController@readChartDetail');
+Route::get('/detailProact','ChartController@readChartDetailProact');
 Route::get('/detailRaisa','ChartController@readChartDetailRaisa');
 Route::get('/detailScn','ChartController@readChartDetailScn');
 Route::get('/detailOther','ChartController@readChartDetail');

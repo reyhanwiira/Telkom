@@ -1,4 +1,5 @@
 @extends('layouts.detail_layout')
+
 @section('content')
 <section class="content">
   <div class="row">

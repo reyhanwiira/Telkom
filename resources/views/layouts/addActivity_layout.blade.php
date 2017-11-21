@@ -164,7 +164,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="{{ url('tableProactive') }}"><i class="fa fa-circle-o text-red"></i> Pro-Active</a></li>
+            <li><a href="{{ url('tableProactive') }}"><i class="fa fa-circle-o text-red"></i> PROACTIVE</a></li>
             <li><a href="{{ url('tableRaisa') }}"><i class="fa fa-circle-o text-aqua"></i> RAISA</a></li>
             <li><a href="{{ url('tableScn') }}"><i class="fa fa-circle-o text-yellow"></i> SCN</a></li>
             <li><a href="{{ url('tableOthers') }}"><i class="fa fa-circle-o text-success"></i> OTHERS</a></li>
@@ -180,7 +180,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="{{ url('detailPro') }}"><i class="fa fa-circle-o text-red"></i> PROACTIVE</a></li>
+            <li><a href="{{ url('detailProact') }}"><i class="fa fa-circle-o text-red"></i> PROACTIVE</a></li>
             <li><a href="{{ url('detailRaisa') }}"><i class="fa fa-circle-o text-aqua"></i> RAISA</a></li>
             <li><a href="{{ url('detailScn') }}"><i class="fa fa-circle-o text-yellow"></i> SCN</a></li>
             <li><a href="{{ url('detailOther') }}"><i class="fa fa-circle-o text-success"></i> OTHERS</a></li>

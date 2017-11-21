@@ -7,9 +7,9 @@
       <div class="box box-primary">
         <div class="box-header with-border">
           <i class="fa fa-bar-chart-o"></i>
-          <h3 class="box-title">Donut Chart</h3>
+          <h3 class="box-title">PROACTIVE Chart</h3>
           <p></p>
-          <h3 class="box-title">Breakdown Pengawalan status "P1" untuk Others Initiatives</h3>
+          <h3 class="box-title">Breakdown Pengawalan status "P1" untuk PROACTIVE Initiatives</h3>
           <div class="box-tools pull-right">
             <button class="btn btn-box-tool" data-widget="collapse">
               <i class="fa fa-minus"></i>
@@ -95,17 +95,17 @@
                 <ul class="nav nav-pills nav-stacked">
                   <li>
                     <a href="#">Active
-                      <span class="pull-right badge bg-green"><i class="fa fa-angle-up"></i> 4</span>
+                      <span class="pull-right text-green"><i class="fa fa-angle-up"></i> 4</span>
                     </a>
                   </li>
                   <li>
                     <a href="#">Idle (tdk berprogress >2 Minggu) 
-                      <span class="pull-right badge bg-teal"><i class="fa fa-angle-exchange"></i> 4</span>
+                      <span class="pull-right text-teal"><i class="fa fa-exchange"></i> 4</span>
                     </a>
                   </li>
                   <li>
                     <a href="#">Persentase
-                      <span class="pull-right badge bg-green"><i class="fa fa-angle-up"></i> 42%</span>
+                      <span class="pull-right text-green"><i class="fa fa-angle-up"></i> 42%</span>
                     </a>
                   </li>
                 </ul>
@@ -204,26 +204,30 @@
             </table>
           </div>
         </div><!-- /.table-responsive -->
+      </div><!-- /.box-body -->
+    </div><!-- /.box -->
+  </div><!-- /.col -->
+</div>
 
-        <!-- jQuery 3 -->
-        <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
-        <!-- Bootstrap 3.3.7 -->
-        <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script src="../../bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-        <!-- SlimScroll -->
-        <script src="../../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-        <!-- FastClick -->
-        <script src="../../bower_components/fastclick/lib/fastclick.js"></script>
-        <!-- AdminLTE App -->
-        <script src="../../dist/js/adminlte.min.js"></script>
-        <!-- AdminLTE for demo purposes -->
-        <script src="../../dist/js/demo.js"></script>
-        <!-- ChartJS -->
-        <script src="../../bower_components/Chart.js/Chart.js"></script>
-        <!-- page script -->
+<!-- jQuery 3 -->
+<script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../../bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<!-- SlimScroll -->
+<script src="../../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../../bower_components/fastclick/lib/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../../dist/js/demo.js"></script>
+<!-- ChartJS -->
+<script src="../../bower_components/Chart.js/Chart.js"></script>
+<!-- page script -->
 
-        <script>
-          $(function () {
+<script>
+  $(function () {
     /* ChartJS
      * -------
      * Here we will create a few charts using ChartJS
@@ -399,11 +403,6 @@
     pieChart.Doughnut(PieData, pieOptions)
   })
 </script>
-
-</div><!-- /.box-body -->
-</div><!-- /.box -->
-</div><!-- /.col -->
-</div>
 
 </section>
 @endsection

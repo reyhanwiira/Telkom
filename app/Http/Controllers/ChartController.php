@@ -25,7 +25,7 @@ class ChartController extends Controller
     {
     	$resume = Resume::all();
 
-    	return view('detail', compact('resume'));
+    	return view('detailProact', compact('resume'));
     }
 
     public function readChartDetailRaisa()
