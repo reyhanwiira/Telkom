@@ -22,7 +22,7 @@
               <th>Segment</th>
               <th>Description</th>
               <th>Customer</th>
-              <th style="column-width: 200px">Last Action</th>
+              <th>Last Action</th>
               <th>Next Action</th>
               <th>Status</th>
               <th>Information</th>
@@ -91,10 +91,10 @@
     <div class="box-footer clearfix">
       <div class="row">
         <div class="col-xs-2 text-center">
-          <a href="{{ url('tableProactive/createProactive') }}" class="btn btn-block btn-social"><i class="fa fa-plus-square-o"></i> Place New Project</a>
+          <a href="{{ url('tableProactive/createProactive') }}" class="btn btn-block btn-social btn-linkedin"><i class="fa fa-plus-square-o"></i> Place New Project</a>
         </div>
         <div class="col-xs-2 text-center">
-          <a href="{{ url('importProactive') }}" target="_blank" class="btn btn-block btn-social"><i class="fa fa-download"></i> Import</a>
+          <a href="{{ url('importProactive') }}" target="_blank" class="btn btn-block btn-social btn-linkedin"><i class="fa fa-download"></i> Import</a>
         </div>
         <div class="col-xs-2 text-center">
           
@@ -103,10 +103,10 @@
            
         </div>
         <div class="col-xs-2 text-center">
-          <a href="{{ url('downloadProactive','xlsx') }}" target="_blank" class="btn btn-block btn-social"><i class="fa fa-upload"></i> Export</a> 
+          <a href="{{ url('downloadProactive','xlsx') }}" target="_blank" class="btn btn-block btn-social btn-linkedin"><i class="fa fa-upload"></i> Export</a> 
         </div>
         <div class="col-xs-2 text-center">
-          <a href="{{ url('tableProactive/printProactive') }}" target="_blank" class="btn btn-block btn-social"><i class="fa fa-print"></i> Print</a>
+          <a href="{{ url('tableProactive/printProactive') }}" target="_blank" class="btn btn-block btn-social btn-linkedin"><i class="fa fa-print"></i> Print</a>
         </div>
       </div>
     </div><!-- /.box-footer -->

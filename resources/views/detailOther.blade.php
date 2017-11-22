@@ -47,17 +47,17 @@
                 <ul class="nav nav-pills nav-stacked">
                   <li>
                     <a href="#">Active
-                      <span class="pull-right text-red"><i class="fa fa-angle-down"></i> 4</span>
+                      <span class="pull-right text-green" style="font-size: medium;"> 4</span>
                     </a>
                   </li>
                   <li>
                     <a href="#">Idle (tdk berprogress >2 Minggu) 
-                      <span class="pull-right text-green"><i class="fa fa-angle-up"></i> 4</span>
+                      <span class="pull-right text-red" style="font-size: medium;"> 4</span>
                     </a>
                   </li>
                   <li>
                     <a href="#">Persentase
-                      <span class="pull-right text-teal"><i class="fa fa-exchange"></i> 40%</span>
+                      <span class="pull-right text-primary" style="font-size: medium;"> 40%</span>
                     </a>
                   </li>
                 </ul>
@@ -95,17 +95,17 @@
                 <ul class="nav nav-pills nav-stacked">
                   <li>
                     <a href="#">Active
-                      <span class="pull-right text-green"><i class="fa fa-angle-up"></i> 4</span>
+                      <span class="pull-right text-green" style="font-size: medium;"> 4</span>
                     </a>
                   </li>
                   <li>
                     <a href="#">Idle (tdk berprogress >2 Minggu) 
-                      <span class="pull-right text-teal"><i class="fa fa-angle-exchange"></i> 4</span>
+                      <span class="pull-right text-red" style="font-size: medium;"></i> 4</span>
                     </a>
                   </li>
                   <li>
                     <a href="#">Persentase
-                      <span class="pull-right text-green"><i class="fa fa-angle-up"></i> 42%</span>
+                      <span class="pull-right text-primary" style="font-size: medium;"> 42%</span>
                     </a>
                   </li>
                 </ul>
@@ -175,17 +175,17 @@
              <table id="example4" class="table table-bordered table-striped">
               <thead>
                 <tr>
-                  <th rowspan="2" style="text-align: center; vertical-align: middle; background-color: #3c8dbc">No</th>
-                  <th rowspan="2" style="text-align: center; vertical-align: middle; width: 350px; background-color: #3c8dbc">Solusi</th>
-                  <th rowspan="2" style="text-align: center; vertical-align: middle; background-color: #3c8dbc">TR</th>
-                  <th rowspan="2" style="text-align: center; vertical-align: middle; background-color: #3c8dbc">Current Progress</th>
-                  <th rowspan="2" style="text-align: center; vertical-align: middle; background-color: #3c8dbc">Progress Summary</th>
-                  <th rowspan="2" style="text-align: center; vertical-align: middle; background-color: #3c8dbc">Status</th> 
-                  <th colspan="2" style="text-align: center; background-color: #3c8dbc">Progress (%)</th>
+                  <th rowspan="2" style="text-align: center; vertical-align: middle;">No</th>
+                  <th rowspan="2" style="text-align: center; vertical-align: middle; width: 350px;">Solusi</th>
+                  <th rowspan="2" style="text-align: center; vertical-align: middle;">TR</th>
+                  <th rowspan="2" style="text-align: center; vertical-align: middle; width: 200px">Current Progress</th>
+                  <th colspan="2" style="text-align: center;">Progress (%)</th>
+                  <th rowspan="2" style="text-align: center; vertical-align: middle; width: 150px">Progress Summary</th>
+                  <th rowspan="2" style="text-align: center; vertical-align: middle;">Status</th>
                   <tr>
-                    <th style="text-align: center; background-color: #3c8dbc; width: 100px">Last</th>
-                    <th style="text-align: center; background-color: #3c8dbc; width: 100px">Current</th>
-                  </tr> 
+                    <th style="text-align: center; width: 100px">Last</th>
+                    <th style="text-align: center; width: 100px">Current</th>
+                  </tr>  
                 </tr>
               </thead>
               <tbody>
@@ -196,6 +196,8 @@
                   <td style="text-align: center;">{{ $other->projectName }}</td>
                   <td style="text-align: center;">{{ $other->segment }}</td>
                   <td style="text-align: center;">{{ $other->currentProgress }}</td>
+                  <td style="text-align: center;">{{ $other->last }} %</td>
+                  <td style="text-align: center;">{{ $other->current }} %</td>
                   <td style="text-align: center;">
                     @if($other->current < $other->last)
                     <span class="text-green">
@@ -212,8 +214,6 @@
                     @endif
                   </td>
                   <td style="text-align: center;">Status</td>
-                  <td style="text-align: center;">{{ $other->last }} %</td>
-                  <td style="text-align: center;">{{ $other->current }} %</td>
                 </tr>
                 @endforeach
               </tbody>

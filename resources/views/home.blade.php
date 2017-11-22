@@ -30,22 +30,22 @@
             <ul class="nav nav-pills nav-stacked">
               <li>
                 <a href="#">P0
-                  <span class="pull-right text-red" style="font-size: medium;"><i class="fa fa-angle-down"></i> {{ $resume[0]->p0Proactive}}</span>
+                  <span class="pull-right" style="font-size: medium; color: #1394ba;"> {{ $resume[0]->p0Proactive}}</span>
                 </a>
               </li>
               <li>
                 <a href="#">P1 
-                  <span class="pull-right text-green" style="font-size: medium;"><i class="fa fa-angle-up"></i> {{ $resume[0]->p1Proactive}}</span>
+                  <span class="pull-right" style="font-size: medium; color: #0c3c55;"> {{ $resume[0]->p1Proactive}}</span>
                 </a>
               </li>
               <li>
                 <a href="#">P2
-                  <span class="pull-right text-teal" style="font-size: medium;"><i class="fa fa-exchange"></i> {{ $resume[0]->p2Proactive}}</span>
+                  <span class="pull-right" style="font-size: medium; color: #c02e1d;"> {{ $resume[0]->p2Proactive}}</span>
                 </a>
               </li>
               <li>
                 <a href="#">P3
-                  <span class="pull-right text-teal" style="font-size: medium;"><i class="fa fa-exchange"></i> {{ $resume[0]->p3Proactive}}</span>
+                  <span class="pull-right" style="font-size: medium; color: #f16b20;"> {{ $resume[0]->p3Proactive}}</span>
                 </a>
               </li>
             </ul>
@@ -80,22 +80,22 @@
               <ul class="nav nav-pills nav-stacked">
                 <li>
                   <a href="#">P0
-                    <span class="pull-right text-red" style="font-size: medium;"><i class="fa fa-angle-down"></i> {{ $resume[0]->p0Raisa}}</span>
+                    <span class="pull-right" style="font-size: medium; color: #1394ba;"> {{ $resume[0]->p0Raisa}}</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P1 
-                    <span class="pull-right text-green" style="font-size: medium;"><i class="fa fa-angle-up"></i> {{ $resume[0]->p1Raisa}}</span>
+                    <span class="pull-right" style="font-size: medium; color: #0c3c55;"> {{ $resume[0]->p1Raisa}}</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P2
-                    <span class="pull-right text-teal" style="font-size: medium;"><i class="fa fa-exchange"></i> {{ $resume[0]->p2Raisa}}</span>
+                    <span class="pull-right" style="font-size: medium; color: #c02e1d;"> {{ $resume[0]->p2Raisa}}</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P3
-                    <span class="pull-right text-teal" style="font-size: medium;"><i class="fa fa-exchange"></i> {{ $resume[0]->p3Raisa}}</span>
+                    <span class="pull-right" style="font-size: medium; color: #f16b20;"> {{ $resume[0]->p3Raisa}}</span>
                   </a>
                 </li>
               </ul>
@@ -127,22 +127,22 @@
               <ul class="nav nav-pills nav-stacked">
                 <li>
                   <a href="#">P0
-                    <span class="pull-right text-red" style="font-size: medium;"><i class="fa fa-angle-down"></i> {{ $resume[0]->p0Scn}}</span>
+                    <span class="pull-right" style="font-size: medium; color: #1394ba;"> {{ $resume[0]->p0Scn}}</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P1 
-                    <span class="pull-right text-green" style="font-size: medium;"><i class="fa fa-angle-up"></i> {{ $resume[0]->p1Scn}}</span>
+                    <span class="pull-right" style="font-size: medium; color: #0c3c55;"> {{ $resume[0]->p1Scn}}</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P2
-                    <span class="pull-right text-teal" style="font-size: medium;"><i class="fa fa-exchange"></i> {{ $resume[0]->p2Scn}}</span>
+                    <span class="pull-right" style="font-size: medium; color: #c02e1d;"> {{ $resume[0]->p2Scn}}</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P3
-                    <span class="pull-right text-teal" style="font-size: medium;"><i class="fa fa-exchange"></i> {{ $resume[0]->p3Scn}}</span>
+                    <span class="pull-right" style="font-size: medium; color: #f16b20;"> {{ $resume[0]->p3Scn}}</span>
                   </a>
                 </li>
               </ul>
@@ -174,22 +174,22 @@
               <ul class="nav nav-pills nav-stacked">
                 <li>
                   <a href="#">P0
-                    <span class="pull-right text-red" style="font-size: medium;"><i class="fa fa-angle-down"></i> {{ $resume[0]->p0Other}}</span>
+                    <span class="pull-right" style="font-size: medium; color: #1394ba;"> {{ $resume[0]->p0Other}}</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P1 
-                    <span class="pull-right text-green" style="font-size: medium;"><i class="fa fa-angle-up"></i> {{ $resume[0]->p1Other}}</span>
+                    <span class="pull-right" style="font-size: medium; color: #0c3c55;"> {{ $resume[0]->p1Other}}</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P2
-                    <span class="pull-right text-teal" style="font-size: medium;"><i class="fa fa-exchange"></i> {{ $resume[0]->p2Other}}</span>
+                    <span class="pull-right" style="font-size: medium; color: #c02e1d;"> {{ $resume[0]->p2Other}}</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P3
-                    <span class="pull-right text-teal" style="font-size: medium;"><i class="fa fa-exchange"></i> {{ $resume[0]->p3Other}}</span>
+                    <span class="pull-right" style="font-size: medium; color: #f16b20;"> {{ $resume[0]->p3Other}}</span>
                   </a>
                 </li>
               </ul>
@@ -201,7 +201,7 @@
   </div>
 
   <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-12">
       <!-- TABLE: LATEST ORDERS -->
       <div class="box box-primary">
         <div class="box-header with-border">
@@ -213,16 +213,16 @@
         <div class="box-body">
           <div class="table-responsive">
             <div class="col-md-12">
-              <table id="example1" class="table table-bordered table-striped" style="width:100%; background-color: #cfe0e8;">
-                <tr>
-                  <th colspan="2" style="width: 100px;">ACTIVITY</th>
+              <table id="example1" class="table table-bordered table-striped table-condensed" style="width:100%;">
+                <tr style="color: #3C8DBC">
+                  <th colspan="2" style="width: 50px;">ACTIVITY</th>
                   <th style="text-align: center; width: 130px">PROACTIVE</th>
                   <th style="text-align: center; width: 100px">RAISA</th>
                   <th style="text-align: center; width: 100px">SCN</th>
                   <th style="text-align: center; width: 100px">OTHERS</th>
                 </tr>
                 <tr>
-                  <th rowspan="3" style=" vertical-align: middle;">Progress</th>
+                  <th rowspan="3" style=" vertical-align: middle; width: 150px;">Progress</th>
                   <td>P0(Usulan/Potensi)</td>
                   <td style="text-align: center;"><b>{{ $resume[0]->p0Proactive }}</b> | {{ $resume[0]->p0ProactiveLast }}</td>
                   <td style="text-align: center;"><b>{{ $resume[0]->p0Raisa }}</b> | {{ $resume[0]->p0RaisaLast }}</td>
@@ -231,21 +231,21 @@
 
                 </tr>
                 <tr>
-                  <td>P1(Req, Des)</td>
+                  <td style="width: 50px;"">P1(Req, Des)</td>
                   <td style="text-align: center;"><b>{{ $resume[0]->p1Proactive }}</b> | {{ $resume[0]-> p1ProactiveLast}}</td>
                   <td style="text-align: center;"><b>{{ $resume[0]->p1Raisa }}</b> | {{ $resume[0]-> p1RaisaLast}}</td>
                   <td style="text-align: center;"><b>{{ $resume[0]->p1Scn }}</b> | {{ $resume[0]-> p1ScnLast}}</td>
                   <td style="text-align: center;"><b>{{ $resume[0]->p1Other }}</b> | {{ $resume[0]-> p1OtherLast}}</td>
                 </tr>
                 <tr>
-                  <td>P2(Submit)</td>
+                  <td style="width: 50px;"">P2(Submit)</td>
                   <td style="text-align: center;"><b>{{ $resume[0]->p2Proactive }}</b> | {{ $resume[0]-> p2ProactiveLast}}</td>
                   <td style="text-align: center;"><b>{{ $resume[0]->p2Raisa }}</b> | {{ $resume[0]-> p2RaisaLast}}</td>
                   <td style="text-align: center;"><b>{{ $resume[0]->p2Scn }}</b> | {{ $resume[0]-> p2ScnLast}}</td>
                   <td style="text-align: center;"><b>{{ $resume[0]->p2Other }}</b> | {{ $resume[0]-> p2OtherLast}}</td>
                 </tr>
                 <tr> 
-                  <th>Done</th>
+                  <th style="width: 50px;"">Done</th>
                   <td>P3(Proposal Ready)</td>
                   <td style="text-align: center;"><b>{{ $resume[0]->p3Proactive }}</b> | {{ $resume[0]-> p3ProactiveLast}}</td>
                   <td style="text-align: center;"><b>{{ $resume[0]->p3Raisa }}</b> | {{ $resume[0]-> p3RaisaLast}}</td>

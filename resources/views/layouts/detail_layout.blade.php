@@ -330,7 +330,6 @@ href="../../bower_components/googlefont/googlefont.css">
 </script>
 <script>
   $(function () {
-    $('#example1').DataTable()
     $('#example2').DataTable({
       'paging'      : true,
       'lengthChange': true,
