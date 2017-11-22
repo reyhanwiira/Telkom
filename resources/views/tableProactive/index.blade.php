@@ -54,11 +54,7 @@
                     </button>
                   </a>
 
-                  <span data-toggle="modal" data-target="#myModal" >
-                    <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="bottom" title="Delete Project">
-                      <i class='glyphicon glyphicon-trash' style="font-size: 12px"></i>
-                    </button>
-                  </span>
+                  <a href="deletePro/{{ $proactive->id }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class='glyphicon glyphicon-trash' style="font-size: 12px"></i></button></a>
 
                 </div>
               </td>
@@ -91,7 +87,7 @@
     <div class="box-footer clearfix">
       <div class="row">
         <div class="col-xs-2 text-center">
-          <a href="{{ url('tableProactive/createProactive') }}" class="btn btn-block btn-social btn-linkedin"><i class="fa fa-plus-square-o"></i> Place New Project</a>
+          <a href="{{ url('tableProactive/createProactive') }}" class="btn btn-block btn-social btn-linkedin"><i class="fa fa-plus-square-o"></i> New Project</a>
         </div>
         <div class="col-xs-2 text-center">
           <a href="{{ url('importProactive') }}" target="_blank" class="btn btn-block btn-social btn-linkedin"><i class="fa fa-download"></i> Import</a>

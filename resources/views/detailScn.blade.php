@@ -241,184 +241,184 @@
 
         <script>
           $(function () {
-    /* ChartJS
-     * -------
-     * Here we will create a few charts using ChartJS
-     */
+          /* ChartJS
+           * -------
+           * Here we will create a few charts using ChartJS
+           */
 
-    //-------------
-    //- PIE CHART -
-    //-------------
-    // Get context with jQuery - using jQuery's .get() method.
-    var pieChartCanvas = $('#pieChart5').get(0).getContext('2d')
-    var pieChart       = new Chart(pieChartCanvas)
-    var PieData        = [
+          //-------------
+          //- PIE CHART -
+          //-------------
+          // Get context with jQuery - using jQuery's .get() method.
+          var pieChartCanvas = $('#pieChart5').get(0).getContext('2d')
+          var pieChart       = new Chart(pieChartCanvas)
+          var PieData        = [
 
-    {
-      value    : {{ $scn->where('currentProgress','Like','Initial Requirement')->count() }},
-      color    : '#fff5cc',
-      highlight: '#fff2cc',
-      label    : 'Initial Requirement'
-    },
-    {
-      value    : {{ $scn->where('currentProgress','Like','Initial Solution')->count() }},
-      color    : '#ffd1b3',
-      highlight: '#ffe0cc',
-      label    : 'Initial Solution'
-    },
-    {
-      value    : {{ $scn->where('currentProgress','Like','Menunggu Feedback & Gathering Req')->count() }},
-      color    : '#ff9999',
-      highlight: '#ffb3b3',
-      label    : 'Menunggu Feedback & Gathering Req'
-    },
-    {
-      value    : {{ $scn->where('currentProgress','Like','Solution Design')->count() }},
-      color    : '#730099',
-      highlight: '#ac00e6',
-      label    : 'Solution Design'
-    },
-    {
-      value    : {{ $scn->where('currentProgress','Like','Solution Development')->count() }},
-      color    : '#2ea4bc',
-      highlight: '#5bc2d7',
-      label    : 'Solution Development'
-    },
-    {
-      value    : {{ $scn->where('currentProgress','Like','POC')->count() }},
-      color    : '#40bf80',
-      highlight: '#79d2a6',
-      label    : 'POC'
-    },
-    {
-      value    : {{ $scn->where('currentProgress','Like','Proposal Ready')->count() }},
-      color    : '#66ff66',
-      highlight: '#99ff99',
-      label    : 'Proposal Ready'
-    }
+          {
+            value    : {{ $scn->where('currentProgress','Like','Initial Requirement')->count() }},
+            color    : '#fff5cc',
+            highlight: '#fff2cc',
+            label    : 'Initial Requirement'
+          },
+          {
+            value    : {{ $scn->where('currentProgress','Like','Initial Solution')->count() }},
+            color    : '#ffd1b3',
+            highlight: '#ffe0cc',
+            label    : 'Initial Solution'
+          },
+          {
+            value    : {{ $scn->where('currentProgress','Like','Menunggu Feedback & Gathering Req')->count() }},
+            color    : '#ff9999',
+            highlight: '#ffb3b3',
+            label    : 'Menunggu Feedback & Gathering Req'
+          },
+          {
+            value    : {{ $scn->where('currentProgress','Like','Solution Design')->count() }},
+            color    : '#730099',
+            highlight: '#ac00e6',
+            label    : 'Solution Design'
+          },
+          {
+            value    : {{ $scn->where('currentProgress','Like','Solution Development')->count() }},
+            color    : '#2ea4bc',
+            highlight: '#5bc2d7',
+            label    : 'Solution Development'
+          },
+          {
+            value    : {{ $scn->where('currentProgress','Like','POC')->count() }},
+            color    : '#40bf80',
+            highlight: '#79d2a6',
+            label    : 'POC'
+          },
+          {
+            value    : {{ $scn->where('currentProgress','Like','Proposal Ready')->count() }},
+            color    : '#66ff66',
+            highlight: '#99ff99',
+            label    : 'Proposal Ready'
+          }
 
-    ]
-    var pieOptions     = {
-      //Boolean - Whether we should show a stroke on each segment
-      segmentShowStroke    : true,
-      //String - The colour of each segment stroke
-      segmentStrokeColor   : '#fff',
-      //Number - The width of each segment stroke
-      segmentStrokeWidth   : 2,
-      //Number - The percentage of the chart that we cut out of the middle
-      percentageInnerCutout: 48, // This is 0 for Pie charts
-      //Number - Amount of animation steps
-      animationSteps       : 100,
-      //String - Animation easing effect
-      animationEasing      : 'easeOutBounce',
-      //Boolean - Whether we animate the rotation of the Doughnut
-      animateRotate        : true,
-      //Boolean - Whether we animate scaling the Doughnut from the centre
-      animateScale         : false,
-      //Boolean - whether to make the chart responsive to window resizing
-      responsive           : true,
-      // Boolean - whether to maintain the starting aspect ratio or not when responsive, if set to false, will take up entire container
-      maintainAspectRatio  : true,
-      //String - A legend template
-      legendTemplate       : '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<segments.length; i++){%><li><span style="background-color:<%=segments[i].fillColor%>"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>'
-    }
-    //Create pie or douhnut chart
-    // You can switch between pie and douhnut using the method below.
-    pieChart.Doughnut(PieData, pieOptions)
-  })
-</script>
-<script>
-  $(function () {
-    /* ChartJS
-     * -------
-     * Here we will create a few charts using ChartJS
-     */
+          ]
+          var pieOptions     = {
+            //Boolean - Whether we should show a stroke on each segment
+            segmentShowStroke    : true,
+            //String - The colour of each segment stroke
+            segmentStrokeColor   : '#fff',
+            //Number - The width of each segment stroke
+            segmentStrokeWidth   : 2,
+            //Number - The percentage of the chart that we cut out of the middle
+            percentageInnerCutout: 48, // This is 0 for Pie charts
+            //Number - Amount of animation steps
+            animationSteps       : 100,
+            //String - Animation easing effect
+            animationEasing      : 'easeOutBounce',
+            //Boolean - Whether we animate the rotation of the Doughnut
+            animateRotate        : true,
+            //Boolean - Whether we animate scaling the Doughnut from the centre
+            animateScale         : false,
+            //Boolean - whether to make the chart responsive to window resizing
+            responsive           : true,
+            // Boolean - whether to maintain the starting aspect ratio or not when responsive, if set to false, will take up entire container
+            maintainAspectRatio  : true,
+            //String - A legend template
+            legendTemplate       : '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<segments.length; i++){%><li><span style="background-color:<%=segments[i].fillColor%>"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>'
+          }
+          //Create pie or douhnut chart
+          // You can switch between pie and douhnut using the method below.
+          pieChart.Doughnut(PieData, pieOptions)
+          })
+        </script>
+        <script>
+          $(function () {
+            /* ChartJS
+             * -------
+             * Here we will create a few charts using ChartJS
+             */
 
-    //-------------
-    //- PIE CHART -
-    //-------------
-    // Get context with jQuery - using jQuery's .get() method.
-    var pieChartCanvas = $('#pieChart6').get(0).getContext('2d')
-    var pieChart       = new Chart(pieChartCanvas)
-    var PieData        = [
+            //-------------
+            //- PIE CHART -
+            //-------------
+            // Get context with jQuery - using jQuery's .get() method.
+            var pieChartCanvas = $('#pieChart6').get(0).getContext('2d')
+            var pieChart       = new Chart(pieChartCanvas)
+            var PieData        = [
 
-    {
-      value    : {{ $scn->where('currentProgress','Like','Initial Requirement')->count() }},
-      color    : '#fff5cc',
-      highlight: '#fff2cc',
-      label    : 'Initial Requirement'
-    },
-    {
-      value    : {{ $scn->where('currentProgress','Like','Initial Solution')->count() }},
-      color    : '#ffd1b3',
-      highlight: '#ffe0cc',
-      label    : 'Initial Solution'
-    },
-    {
-      value    : {{ $scn->where('currentProgress','Like','Menunggu Feedback & Gathering Req')->count() }},
-      color    : '#ff9999',
-      highlight: '#ffb3b3',
-      label    : 'Menunggu Feedback & Gathering Req'
-    },
-    {
-      value    : {{ $scn->where('currentProgress','Like','Solution Design')->count() }},
-      color    : '#730099',
-      highlight: '#ac00e6',
-      label    : 'Solution Design'
-    },
-    {
-      value    : {{ $scn->where('currentProgress','Like','Solution Development')->count() }},
-      color    : '#2ea4bc',
-      highlight: '#5bc2d7',
-      label    : 'Solution Development'
-    },
-    {
-      value    : {{ $scn->where('currentProgress','Like','POC')->count() }},
-      color    : '#40bf80',
-      highlight: '#79d2a6',
-      label    : 'POC'
-    },
-    {
-      value    : {{ $scn->where('currentProgress','Like','Proposal Ready')->count() }},
-      color    : '#66ff66',
-      highlight: '#99ff99',
-      label    : 'Proposal Ready'
-    }
+            {
+              value    : {{ $scn->where('currentProgress','Like','Initial Requirement')->count() }},
+              color    : '#fff5cc',
+              highlight: '#fff2cc',
+              label    : 'Initial Requirement'
+            },
+            {
+              value    : {{ $scn->where('currentProgress','Like','Initial Solution')->count() }},
+              color    : '#ffd1b3',
+              highlight: '#ffe0cc',
+              label    : 'Initial Solution'
+            },
+            {
+              value    : {{ $scn->where('currentProgress','Like','Menunggu Feedback & Gathering Req')->count() }},
+              color    : '#ff9999',
+              highlight: '#ffb3b3',
+              label    : 'Menunggu Feedback & Gathering Req'
+            },
+            {
+              value    : {{ $scn->where('currentProgress','Like','Solution Design')->count() }},
+              color    : '#730099',
+              highlight: '#ac00e6',
+              label    : 'Solution Design'
+            },
+            {
+              value    : {{ $scn->where('currentProgress','Like','Solution Development')->count() }},
+              color    : '#2ea4bc',
+              highlight: '#5bc2d7',
+              label    : 'Solution Development'
+            },
+            {
+              value    : {{ $scn->where('currentProgress','Like','POC')->count() }},
+              color    : '#40bf80',
+              highlight: '#79d2a6',
+              label    : 'POC'
+            },
+            {
+              value    : {{ $scn->where('currentProgress','Like','Proposal Ready')->count() }},
+              color    : '#66ff66',
+              highlight: '#99ff99',
+              label    : 'Proposal Ready'
+            }
 
-    ]
-    var pieOptions     = {
-      //Boolean - Whether we should show a stroke on each segment
-      segmentShowStroke    : true,
-      //String - The colour of each segment stroke
-      segmentStrokeColor   : '#fff',
-      //Number - The width of each segment stroke
-      segmentStrokeWidth   : 2,
-      //Number - The percentage of the chart that we cut out of the middle
-      percentageInnerCutout: 48, // This is 0 for Pie charts
-      //Number - Amount of animation steps
-      animationSteps       : 100,
-      //String - Animation easing effect
-      animationEasing      : 'easeOutBounce',
-      //Boolean - Whether we animate the rotation of the Doughnut
-      animateRotate        : true,
-      //Boolean - Whether we animate scaling the Doughnut from the centre
-      animateScale         : false,
-      //Boolean - whether to make the chart responsive to window resizing
-      responsive           : true,
-      // Boolean - whether to maintain the starting aspect ratio or not when responsive, if set to false, will take up entire container
-      maintainAspectRatio  : true,
-      //String - A legend template
-      legendTemplate       : '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<segments.length; i++){%><li><span style="background-color:<%=segments[i].fillColor%>"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>'
-    }
-    //Create pie or douhnut chart
-    // You can switch between pie and douhnut using the method below.
-    pieChart.Doughnut(PieData, pieOptions)
-  })
-</script>
-
-</div><!-- /.box-body -->
-</div><!-- /.box -->
-</div><!-- /.col -->
+            ]
+            var pieOptions     = {
+              //Boolean - Whether we should show a stroke on each segment
+              segmentShowStroke    : true,
+              //String - The colour of each segment stroke
+              segmentStrokeColor   : '#fff',
+              //Number - The width of each segment stroke
+              segmentStrokeWidth   : 2,
+              //Number - The percentage of the chart that we cut out of the middle
+              percentageInnerCutout: 48, // This is 0 for Pie charts
+              //Number - Amount of animation steps
+              animationSteps       : 100,
+              //String - Animation easing effect
+              animationEasing      : 'easeOutBounce',
+              //Boolean - Whether we animate the rotation of the Doughnut
+              animateRotate        : true,
+              //Boolean - Whether we animate scaling the Doughnut from the centre
+              animateScale         : false,
+              //Boolean - whether to make the chart responsive to window resizing
+              responsive           : true,
+              // Boolean - whether to maintain the starting aspect ratio or not when responsive, if set to false, will take up entire container
+              maintainAspectRatio  : true,
+              //String - A legend template
+              legendTemplate       : '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<segments.length; i++){%><li><span style="background-color:<%=segments[i].fillColor%>"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>'
+            }
+            //Create pie or douhnut chart
+            // You can switch between pie and douhnut using the method below.
+            pieChart.Doughnut(PieData, pieOptions)
+          })
+        </script>
+      </div><!-- /.box-body -->
+    </div><!-- /.box -->
+  </div><!-- /.col -->
 </div>
+
 </section>
 @endsection

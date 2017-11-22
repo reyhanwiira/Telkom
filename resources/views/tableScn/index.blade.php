@@ -50,15 +50,11 @@
                 <div class="btn-group" style="text-align: center;">
                   <a href="{{ url('/tableScn/'.$scn->id.'/editScn') }}">
                     <button type="button" class="btn btn-primary" data-placement="top" title="Detail Project">
-                      <i class='glyphicon glyphicon-search' style="font-size: 11px"></i>
+                      <i class='glyphicon glyphicon-search' style="font-size: 12px"></i>
                     </button>
                   </a>
 
-                  <span data-toggle="modal" data-target="#myModal" >
-                    <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="bottom" title="Delete Project">
-                      <i class='glyphicon glyphicon-trash' style="font-size: 11px"></i>
-                    </button>
-                  </span>
+                  <a href="deleteScn/{{ $scn->id }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class='glyphicon glyphicon-trash' style="font-size: 12px"></i></button></a>
 
                 </div>
               </td>
