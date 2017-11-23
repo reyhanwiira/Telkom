@@ -32,13 +32,13 @@
                   </div>
                   <div class="col-md-4">
                     <ul class="chart-legend clearfix">
-                      <li><i class="fa fa-circle-o" style="color: #fff5cc"></i> : {{ $resume[0]->p0Proactive}}</li>
-                      <li><i class="fa fa-circle-o" style="color: #ffd1b3"></i> : {{ $resume[0]->p1Proactive}}</li>
-                      <li><i class="fa fa-circle-o" style="color: #ff9999"></i> : {{ $resume[0]->p2Proactive}}</li>
-                      <li><i class="fa fa-circle-o" style="color: #730099"></i> : {{ $resume[0]->p3Proactive}}</li>
-                      <li><i class="fa fa-circle-o" style="color: #2ea4bc"></i> : {{ $resume[0]->p0Raisa}}</li>
-                      <li><i class="fa fa-circle-o" style="color: #40bf80"></i> : {{ $resume[0]->p1Raisa}}</li>
-                      <li><i class="fa fa-circle-o" style="color: #66ff66"></i> : {{ $resume[0]->p2Raisa}}</li>
+                      <li><i class="fa fa-circle-o" style="color: #fff5cc"></i> : {{ $other->where('currentProgress','Like','Initial Requirement')->count() }}</li>
+                      <li><i class="fa fa-circle-o" style="color: #ffd1b3"></i> : {{ $other->where('currentProgress','Like','Initial Solution')->count() }}</li>
+                      <li><i class="fa fa-circle-o" style="color: #ff9999"></i> : {{ $other->where('currentProgress','Like','Menunggu Feedback & Gathering Req')->count() }}</li>
+                      <li><i class="fa fa-circle-o" style="color: #730099"></i> : {{ $other->where('currentProgress','Like','Solution Design')->count() }}</li>
+                      <li><i class="fa fa-circle-o" style="color: #2ea4bc"></i> : {{ $other->where('currentProgress','Like','Solution Development')->count() }}</li>
+                      <li><i class="fa fa-circle-o" style="color: #40bf80"></i> : {{ $other->where('currentProgress','Like','POC')->count() }}</li>
+                      <li><i class="fa fa-circle-o" style="color: #66ff66"></i> : {{ $other->where('currentProgress','Like','Proposal Ready')->count() }}</li>
                     </ul>
                   </div>
                 </div>
@@ -80,13 +80,13 @@
                   </div>
                   <div class="col-md-4">
                     <ul class="chart-legend clearfix">
-                      <li><i class="fa fa-circle-o" style="color: #fff5cc"></i> : {{ $resume[0]->p0Proactive}}</li>
-                      <li><i class="fa fa-circle-o" style="color: #ffd1b3"></i> : {{ $resume[0]->p1Proactive}}</li>
-                      <li><i class="fa fa-circle-o" style="color: #ff9999"></i> : {{ $resume[0]->p2Proactive}}</li>
-                      <li><i class="fa fa-circle-o" style="color: #730099"></i> : {{ $resume[0]->p3Proactive}}</li>
-                      <li><i class="fa fa-circle-o" style="color: #2ea4bc"></i> : {{ $resume[0]->p0Raisa}}</li>
-                      <li><i class="fa fa-circle-o" style="color: #40bf80"></i> : {{ $resume[0]->p1Raisa}}</li>
-                      <li><i class="fa fa-circle-o" style="color: #66ff66"></i> : {{ $resume[0]->p2Raisa}}</li>
+                      <li><i class="fa fa-circle-o" style="color: #fff5cc"></i> : {{ $other->where('currentProgress','Like','Initial Requirement')->count() }}</li>
+                      <li><i class="fa fa-circle-o" style="color: #ffd1b3"></i> : {{ $other->where('currentProgress','Like','Initial Solution')->count() }}</li>
+                      <li><i class="fa fa-circle-o" style="color: #ff9999"></i> : {{ $other->where('currentProgress','Like','Menunggu Feedback & Gathering Req')->count() }}</li>
+                      <li><i class="fa fa-circle-o" style="color: #730099"></i> : {{ $other->where('currentProgress','Like','Solution Design')->count() }}</li>
+                      <li><i class="fa fa-circle-o" style="color: #2ea4bc"></i> : {{ $other->where('currentProgress','Like','Solution Development')->count() }}</li>
+                      <li><i class="fa fa-circle-o" style="color: #40bf80"></i> : {{ $other->where('currentProgress','Like','POC')->count() }}</li>
+                      <li><i class="fa fa-circle-o" style="color: #66ff66"></i> : {{ $other->where('currentProgress','Like','Proposal Ready')->count() }}</li>
                     </ul>
                   </div>
                 </div>
@@ -220,6 +220,23 @@
             </table>
           </div>
         </div><!-- /.table-responsive -->
+
+        <!-- jQuery 3 -->
+        <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+        <!-- Bootstrap 3.3.7 -->
+        <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="../../bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <!-- SlimScroll -->
+        <script src="../../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../../bower_components/fastclick/lib/fastclick.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../../dist/js/adminlte.min.js"></script>
+        <!-- AdminLTE for demo purposes -->
+        <script src="../../dist/js/demo.js"></script>
+        <!-- ChartJS -->
+        <script src="../../bower_components/Chart.js/Chart.js"></script>
+        <!-- page script -->
 
       <script>
         $(function () {
