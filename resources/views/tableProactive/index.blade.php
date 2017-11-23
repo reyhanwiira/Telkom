@@ -87,7 +87,7 @@
     <div class="box-footer clearfix">
       <div class="row">
         <div class="col-xs-2 text-center">
-          <a href="{{ url('tableProactive/createProactive') }}" class="btn btn-block btn-social btn-linkedin"><i class="fa fa-plus-square-o"></i> New Project</a>
+          <a href="{{ url('tableProactive/createPro') }}" class="btn btn-block btn-social btn-linkedin"><i class="fa fa-plus-square-o"></i> New Project</a>
         </div>
         <div class="col-xs-2 text-center">
           <a href="{{ url('importProactive') }}" target="_blank" class="btn btn-block btn-social btn-linkedin"><i class="fa fa-download"></i> Import</a>

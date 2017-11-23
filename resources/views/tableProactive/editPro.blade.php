@@ -15,7 +15,7 @@
             </div>
           </div>
           <!-- form start -->
-          <form role="form" method="post" action="{{ url('/tableProactives/'.$proactive->id) }}">
+          <form role="form" method="post" action="{{ url('/tableProactive/'.$proactive->id) }}">
             {{ method_field('PUT') }}
             {!! csrf_field() !!}
 
@@ -67,6 +67,16 @@
                   <option value="Solution Development" <?php if($proactive['currentProgress']=="Solution Development") echo 'selected="selected"'; ?>>Solution Development</option>
                   <option value="POC" <?php if($proactive['currentProgress']=="POC") echo 'selected="selected"'; ?>>POC</option>
                   <option value="Proposal Ready" <?php if($proactive['currentProgress']=="Proposal Ready") echo 'selected="selected"'; ?>>Proposal Ready</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>Status</label>
+                <select class="form-control select2" name="status" style="width: 100%;">
+                  <option value="P0" <?php if($proactive['status']=="P0") echo 'selected="selected"'; ?>>P0</option>
+                  <option value="P1" <?php if($proactive['status']=="P1") echo 'selected="selected"'; ?>>P1</option>
+                  <option value="P2" <?php if($proactive['status']=="P2") echo 'selected="selected"'; ?>>P2</option>
+                  <option value="P3" <?php if($proactive['status']=="P3") echo 'selected="selected"'; ?>>P3</option>
                 </select>
               </div>
 

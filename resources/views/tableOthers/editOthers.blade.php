@@ -75,6 +75,16 @@
                 <textarea class="form-control" rows="3" placeholder="Enter ..." name="information"><?php echo $other['information'] ?></textarea>
               </div>
 
+               <div class="form-group">
+                <label>Status</label>
+                <select class="form-control select2" name="status" style="width: 100%;">
+                  <option value="P0" <?php if($other['status']=="P0") echo 'selected="selected"'; ?>>P0</option>
+                  <option value="P1" <?php if($other['status']=="P1") echo 'selected="selected"'; ?>>P1</option>
+                  <option value="P2" <?php if($other['status']=="P2") echo 'selected="selected"'; ?>>P2</option>
+                  <option value="P3" <?php if($other['status']=="P3") echo 'selected="selected"'; ?>>P3</option>
+                </select>
+              </div>
+
               <div class="form-group">
                <label>Start Project</label>
                <div class="input-group">

@@ -46,10 +46,17 @@ class OthersController extends Controller
         'lastAction'=>$request->input('lastAction'),
         'nextAction'=>$request->input('nextAction'),
         'status'=>$request->input('status'),
-        'information'=>$request->input('status'),
+        'information'=>$request->input('information'),
         'currentProgress'=>$request->input('currentProgress'),
         'startProject'=>$request->input('startProject'),
-        'finishProject'=>$request->input('finishProject')
+        'finishProject'=>$request->input('finishProject'),
+        'AMSegment'=>$request->input('AMSegment'),
+        'keahlian'=>$request->input('keahlian'),
+        'EstRevenue'=>$request->input('EstRevenue'),
+        'deliverable'=>$request->input('deliverable'),
+        'benefit'=>$request->input('benefit'),
+        'supportAP'=>$request->input('supportAP'),
+        'agenda'=>$request->input('agenda')
         
       ]);
       return Redirect::to('/tableOthers');
@@ -78,6 +85,13 @@ class OthersController extends Controller
         $other->currentProgress=$request->input('currentProgress');
         $other->startProject=$request->input('startProject');
         $other->finishProject=$request->input('finishProject');
+        $other->AMSegment=$request->input('AMSegment');
+        $other->keahlian=$request->input('keahlian');
+        $other->EstRevenue=$request->input('EstRevenue');
+        $other->deliverable=$request->input('deliverable');
+        $other->benefit=$request->input('benefit');
+        $other->supportAP=$request->input('supportAP');
+        $other->agenda=$request->input('other');
         
         $other->update();
 

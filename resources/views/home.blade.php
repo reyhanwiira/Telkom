@@ -25,6 +25,7 @@
                 </ul>
               </div>
             </div>
+            <span id="presentaseProactive"></span> %
           </div>
           <div class="box-footer no-padding">
             <ul class="nav nav-pills nav-stacked">
@@ -76,6 +77,7 @@
                 </ul>
               </div>
             </div>
+            <span id="presentaseRaisa"></span> %
             <div class="box-footer no-padding">
               <ul class="nav nav-pills nav-stacked">
                 <li>
@@ -122,6 +124,7 @@
                   </ul>
                 </div>
               </div>
+              <span id="presentaseScn"></span> %
             </div>
             <div class="box-footer no-padding">
               <ul class="nav nav-pills nav-stacked">
@@ -169,6 +172,7 @@
                   </ul>
                 </div>
               </div>
+              <span id="presentaseOthers"></span> %
             </div>
             <div class="box-footer no-padding">
               <ul class="nav nav-pills nav-stacked">
@@ -567,6 +571,27 @@
 </script>
 
 <script>
+
+var proactiveAmount = {{ $proactives0 + $proactives1 + $proactives2 + $proactives3 }}
+var raisaAmount = {{ $raisa0 + $raisa1 + $raisa2 + $raisa3 }}
+var scnAmount = {{ $scn0 + $scn1 + $scn2 + $scn3 }}
+var otherAmount = {{ $others0 + $others1 + $others2 + $others3 }}
+document.getElementById("proactiveAmount").innerHTML = proactiveAmount;
+document.getElementById("raisaAmount").innerHTML = raisaAmount;
+document.getElementById("scnAmount").innerHTML = scnAmount;
+document.getElementById("otherAmount").innerHTML = otherAmount;
+
+
+var presentaseProactive = {{ ($proactives2 + $proactives3) / ($proactives0 + $proactives1 + $proactives2 + $proactives3)*100}}
+var presentaseRaisa = {{ ($raisa2 + $raisa3) / ($raisa0 + $raisa1 + $raisa2 + $raisa3)*100}}
+var presentaseScn = {{ ($scn2 + $scn3) / ($scn0 + $scn1 + $scn2 + $scn3)*100}}
+var presentaseOthers = {{ ($others2 + $others3) / ($others0 + $others1 + $others2 + $others3)*100}}
+    
+document.getElementById("presentaseProactive").innerHTML = presentaseProactive.toFixed(2);
+document.getElementById("presentaseRaisa").innerHTML = presentaseRaisa.toFixed(2);
+document.getElementById("presentaseScn").innerHTML = presentaseScn.toFixed(2);
+document.getElementById("presentaseOthers").innerHTML = presentaseOthers.toFixed(2);
+
 
 </script>
 </section>

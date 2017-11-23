@@ -63,6 +63,17 @@
             </div>
 
             <div class="form-group">
+              <label>Status</label>
+              <select class="form-control select2" name="status">
+                <option value="P0">P0</option>
+                <option value="P1">P1</option>
+                <option value="P2">P2</option>
+                <option value="P3">P3</option>
+              </select>
+            </div>
+
+
+            <div class="form-group">
               <label>Information</label>
               <textarea class="form-control" rows="3" placeholder="Enter ..." name="information"></textarea>
             </div>

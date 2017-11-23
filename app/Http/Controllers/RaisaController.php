@@ -44,10 +44,16 @@ class RaisaController extends Controller
         'lastAction'=>$request->input('lastAction'),
         'nextAction'=>$request->input('nextAction'),
         'status'=>$request->input('status'),
-        'information'=>$request->input('status'),
+        'information'=>$request->input('information'),
         'currentProgress'=>$request->input('currentProgress'),
         'startProject'=>$request->input('startProject'),
-        'finishProject'=>$request->input('finishProject')
+        'finishProject'=>$request->input('finishProject'),
+        'AMSegment'=>$request->input('AMSegment'),
+        'keahlian'=>$request->input('keahlian'),
+        'EstRevenue'=>$request->input('EstRevenue'),
+        'deliverable'=>$request->input('deliverable'),
+        'benefit'=>$request->input('benefit'),
+        'supportAP'=>$request->input('supportAP')
         
       ]);
       return Redirect::to('/tableRaisa');
@@ -76,6 +82,12 @@ class RaisaController extends Controller
         $raisa->currentProgress=$request->input('currentProgress');
         $raisa->startProject=$request->input('startProject');
         $raisa->finishProject=$request->input('finishProject');
+        $raisa->AMSegment=$request->input('AMSegment');
+        $raisa->keahlian=$request->input('keahlian');
+        $raisa->EstRevenue=$request->input('EstRevenue');
+        $raisa->deliverable=$request->input('deliverable');
+        $raisa->benefit=$request->input('benefit');
+        $raisa->supportAP=$request->input('supportAP');
         
         $raisa->update();
 
