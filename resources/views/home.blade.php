@@ -86,14 +86,17 @@
                 <li>
                   <a href="#">P1 
                     <span class="pull-right" style="font-size: medium; color: #0c3c55;">{{ $raisa1 }}</span>
+                  </a>
                 </li>
                 <li>
                   <a href="#">P2
                     <span class="pull-right" style="font-size: medium; color: #c02e1d;">{{ $raisa2 }}</span>
+                  </a>
                 </li>
                 <li>
                   <a href="#">P3
                     <span class="pull-right" style="font-size: medium; color: #f16b20;">{{ $raisa3 }}</span>
+                  </a>
                  </li>
               </ul>
             </div>
