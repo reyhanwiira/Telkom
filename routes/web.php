@@ -26,17 +26,26 @@ Route::get('/addSegment', function() {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/editResume',function(){
-	return view('editResume'); 
-});
+
+
+
 
 Route::group(['middleware'=>'auth'], function(){
 	
+	//HOME
+
 	Route::get('/', function () {
 		return view('home');
 	});
+
+	Route::get('/home', 'HomeController@index')->name('home');
+
+	//HOME DASBOARD
+
+	Route::get('/home', 'HomeController@donutPro');
+	
+
 
 //ACTIVITY PROACTIVE
 	Route::get('/tableProactive/addActPro','ProactiveController@createActivity');
@@ -212,14 +221,8 @@ Route::get('/tableOthers/printOthers','OthersController@print');
 
 Route::get('/detail','DetailController@index');
 
-//Dashboard chart
 
-Route::get('/home','ChartController@readChart');
-//resume
 
-Route::get('/editResume','ResumeController@readResume');
-Route::get('/{id}/editResume','ResumeController@editResume');
-Route::put('/{id}','ResumeController@updateResume');
 
 Route::get('/detail','DetailController@index');
 

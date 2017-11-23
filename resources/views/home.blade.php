@@ -30,22 +30,22 @@
             <ul class="nav nav-pills nav-stacked">
               <li>
                 <a href="#">P0
-                  <span class="pull-right" style="font-size: medium; color: #1394ba;"> {{ $resume[0]->p0Proactive}}</span>
+                  <span class="pull-right" style="font-size: medium; color: #1394ba;">{{ $proactives0 }} </span>
                 </a>
               </li>
               <li>
                 <a href="#">P1 
-                  <span class="pull-right" style="font-size: medium; color: #0c3c55;"> {{ $resume[0]->p1Proactive}}</span>
+                  <span class="pull-right" style="font-size: medium; color: #0c3c55;">{{ $proactives1 }}</span>
                 </a>
               </li>
               <li>
                 <a href="#">P2
-                  <span class="pull-right" style="font-size: medium; color: #c02e1d;"> {{ $resume[0]->p2Proactive}}</span>
+                  <span class="pull-right" style="font-size: medium; color: #c02e1d;">{{ $proactives2 }}</span>
                 </a>
               </li>
               <li>
                 <a href="#">P3
-                  <span class="pull-right" style="font-size: medium; color: #f16b20;"> {{ $resume[0]->p3Proactive}}</span>
+                  <span class="pull-right" style="font-size: medium; color: #f16b20;">{{ $proactives3 }}</span>
                 </a>
               </li>
             </ul>
@@ -80,24 +80,21 @@
               <ul class="nav nav-pills nav-stacked">
                 <li>
                   <a href="#">P0
-                    <span class="pull-right" style="font-size: medium; color: #1394ba;"> {{ $resume[0]->p0Raisa}}</span>
+                    <span class="pull-right" style="font-size: medium; color: #1394ba;">{{ $raisa0 }}</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P1 
-                    <span class="pull-right" style="font-size: medium; color: #0c3c55;"> {{ $resume[0]->p1Raisa}}</span>
-                  </a>
+                    <span class="pull-right" style="font-size: medium; color: #0c3c55;">{{ $raisa1 }}</span>
                 </li>
                 <li>
                   <a href="#">P2
-                    <span class="pull-right" style="font-size: medium; color: #c02e1d;"> {{ $resume[0]->p2Raisa}}</span>
-                  </a>
+                    <span class="pull-right" style="font-size: medium; color: #c02e1d;">{{ $raisa2 }}</span>
                 </li>
                 <li>
                   <a href="#">P3
-                    <span class="pull-right" style="font-size: medium; color: #f16b20;"> {{ $resume[0]->p3Raisa}}</span>
-                  </a>
-                </li>
+                    <span class="pull-right" style="font-size: medium; color: #f16b20;">{{ $raisa3 }}</span>
+                 </li>
               </ul>
             </div>
           </div>
@@ -127,22 +124,22 @@
               <ul class="nav nav-pills nav-stacked">
                 <li>
                   <a href="#">P0
-                    <span class="pull-right" style="font-size: medium; color: #1394ba;"> {{ $resume[0]->p0Scn}}</span>
+                    <span class="pull-right" style="font-size: medium; color: #1394ba;">{{ $scn0 }}</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P1 
-                    <span class="pull-right" style="font-size: medium; color: #0c3c55;"> {{ $resume[0]->p1Scn}}</span>
+                    <span class="pull-right" style="font-size: medium; color: #0c3c55;">{{ $scn1 }}</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P2
-                    <span class="pull-right" style="font-size: medium; color: #c02e1d;"> {{ $resume[0]->p2Scn}}</span>
+                    <span class="pull-right" style="font-size: medium; color: #c02e1d;">{{ $scn2 }}</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P3
-                    <span class="pull-right" style="font-size: medium; color: #f16b20;"> {{ $resume[0]->p3Scn}}</span>
+                    <span class="pull-right" style="font-size: medium; color: #f16b20;">{{ $scn3 }}</span>
                   </a>
                 </li>
               </ul>
@@ -174,22 +171,22 @@
               <ul class="nav nav-pills nav-stacked">
                 <li>
                   <a href="#">P0
-                    <span class="pull-right" style="font-size: medium; color: #1394ba;"> {{ $resume[0]->p0Other}}</span>
+                    <span class="pull-right" style="font-size: medium; color: #1394ba;">{{ $others0 }}</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P1 
-                    <span class="pull-right" style="font-size: medium; color: #0c3c55;"> {{ $resume[0]->p1Other}}</span>
+                    <span class="pull-right" style="font-size: medium; color: #0c3c55;">{{ $others1 }}</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P2
-                    <span class="pull-right" style="font-size: medium; color: #c02e1d;"> {{ $resume[0]->p2Other}}</span>
+                    <span class="pull-right" style="font-size: medium; color: #c02e1d;">{{ $others2 }}</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P3
-                    <span class="pull-right" style="font-size: medium; color: #f16b20;"> {{ $resume[0]->p3Other}}</span>
+                    <span class="pull-right" style="font-size: medium; color: #f16b20;">{{ $others3 }}</span>
                   </a>
                 </li>
               </ul>
@@ -224,44 +221,42 @@
                 <tr>
                   <th rowspan="3" style=" vertical-align: middle; width: 150px;">Progress</th>
                   <td>P0(Usulan/Potensi)</td>
-                  <td style="text-align: center;"><b>{{ $resume[0]->p0Proactive }}</b> | {{ $resume[0]->p0ProactiveLast }}</td>
-                  <td style="text-align: center;"><b>{{ $resume[0]->p0Raisa }}</b> | {{ $resume[0]->p0RaisaLast }}</td>
-                  <td style="text-align: center;"><b>{{ $resume[0]->p0Scn }}</b> | {{ $resume[0]->p0ScnLast }}</td>
-                  <td style="text-align: center;"><b>{{ $resume[0]->p0Other }}</b> | {{ $resume[0]->p0OtherLast }}</td>
+                  <td style="text-align: center;"><b>{{ $proactives0 }}</td>
+                  <td style="text-align: center;"><b>{{ $raisa0 }}</td>
+                  <td style="text-align: center;"><b>{{ $scn0 }}</td>
+                  <td style="text-align: center;"><b>{{ $others0 }}</td>
 
                 </tr>
                 <tr>
-                  <td style="width: 50px;"">P1(Req, Des)</td>
-                  <td style="text-align: center;"><b>{{ $resume[0]->p1Proactive }}</b> | {{ $resume[0]-> p1ProactiveLast}}</td>
-                  <td style="text-align: center;"><b>{{ $resume[0]->p1Raisa }}</b> | {{ $resume[0]-> p1RaisaLast}}</td>
-                  <td style="text-align: center;"><b>{{ $resume[0]->p1Scn }}</b> | {{ $resume[0]-> p1ScnLast}}</td>
-                  <td style="text-align: center;"><b>{{ $resume[0]->p1Other }}</b> | {{ $resume[0]-> p1OtherLast}}</td>
+                  <td style="width: 50px;">P1(Req, Des)</td>
+                  <td style="text-align: center;"><b>{{ $proactives1 }}</td>
+                  <td style="text-align: center;"><b>{{ $raisa1 }}</td>
+                  <td style="text-align: center;"><b>{{ $scn1 }}</td>
+                  <td style="text-align: center;"><b>{{ $others1 }}</td>
                 </tr>
                 <tr>
-                  <td style="width: 50px;"">P2(Submit)</td>
-                  <td style="text-align: center;"><b>{{ $resume[0]->p2Proactive }}</b> | {{ $resume[0]-> p2ProactiveLast}}</td>
-                  <td style="text-align: center;"><b>{{ $resume[0]->p2Raisa }}</b> | {{ $resume[0]-> p2RaisaLast}}</td>
-                  <td style="text-align: center;"><b>{{ $resume[0]->p2Scn }}</b> | {{ $resume[0]-> p2ScnLast}}</td>
-                  <td style="text-align: center;"><b>{{ $resume[0]->p2Other }}</b> | {{ $resume[0]-> p2OtherLast}}</td>
+                  <td style="width: 50px;">P2(Submit)</td>
+                  <td style="text-align: center;"><b>{{ $proactives2 }}</td>
+                  <td style="text-align: center;"><b>{{ $raisa2 }}</td>
+                  <td style="text-align: center;"><b>{{ $scn2 }}</td>
+                  <td style="text-align: center;"><b>{{ $others2 }}</td>
                 </tr>
                 <tr> 
-                  <th style="width: 50px;"">Done</th>
-                  <td>P3(Proposal Ready)</td>
-                  <td style="text-align: center;"><b>{{ $resume[0]->p3Proactive }}</b> | {{ $resume[0]-> p3ProactiveLast}}</td>
-                  <td style="text-align: center;"><b>{{ $resume[0]->p3Raisa }}</b> | {{ $resume[0]-> p3RaisaLast}}</td>
-                  <td style="text-align: center;"><b>{{ $resume[0]->p3Scn }}</b> | {{ $resume[0]-> p3ScnLast}}</td>
-                  <td style="text-align: center;"><b>{{ $resume[0]->p3Other }}</b> | {{ $resume[0]-> p3OtherLast}}</td>
+                  <th style="width: 50px;">Done</th>
+                  <td>P3 Proposal Ready</td>
+                  <td style="text-align: center;"><b>{{ $proactives3 }}</td>
+                  <td style="text-align: center;"><b>{{ $raisa3 }}</td>
+                  <td style="text-align: center;"><b>{{ $scn3 }}</td>
+                  <td style="text-align: center;"><b>{{ $others3 }}</td>
                 </tr>
                 <tr>
                   <th colspan="2">Total</th>
-                  <td style="text-align: center;"><b><span id="proactiveAmount"></span></b> | 8</td>
-                  <td style="text-align: center;"><b><span id="raisaAmount"></span></b> | 8</td>
-                  <td style="text-align: center;"><b><span id="scnAmount"></span></b> | 8</td>
-                  <td style="text-align: center;"><b><span id="otherAmount"></span></b> | 8</td>
+                  <td style="text-align: center;"><b><span id="proactiveAmount"></span></b> </td>
+                  <td style="text-align: center;"><b><span id="raisaAmount"></span></b>  </td>
+                  <td style="text-align: center;"><b><span id="scnAmount"></span></b>  </td>
+                  <td style="text-align: center;"><b><span id="otherAmount"></span></b>  </td>
                 </tr>
               </table>
-              <div class="box-footer clearfix">
-                <a href="{{ url('/'.$resume[0]->id.'/editResume') }}" type="button" class="btn btn-primary"><i class="fa fa-wrench"></i> Edit Data</a>
                 </a>
               </div>
             </div>
@@ -304,25 +299,25 @@
     var PieData        = [
 
     {
-      value    : {{ $resume[0]->p0Proactive}},
+      value    : {{ $proactives0 }},
       color    : '#1394ba',
       highlight: '#2980b9',
       label    : 'P0'
     },
     {
-      value    : {{ $resume[0]->p1Proactive}},
+      value    : {{ $proactives1 }},
       color    : '#0c3c55',
       highlight: '#104e70',
       label    : 'P1'
     },
     {
-      value    : {{ $resume[0]->p2Proactive }},
+      value    : {{ $proactives2 }},
       color    : '#c02e1d',
       highlight: '#de3421',
       label    : 'P2'
     },
     {
-      value    : {{ $resume[0]->p3Proactive }},
+      value    : {{ $proactives3 }},
       color    : '#f16b20',
       highlight: '#f17127',
       label    : 'P3'
@@ -373,25 +368,25 @@
     var pieChart       = new Chart(pieChartCanvas)
     var PieData        = [
     {
-      value    : {{ $resume[0]->p0Raisa}},
+      value    : {{ $raisa0 }},
       color    : '#1394ba',
       highlight: '#2980b9',
       label    : 'P0'
     },
     {
-      value    : {{ $resume[0]->p1Raisa}},
+      value    : {{ $raisa1 }},
       color    : '#0c3c55',
       highlight: '#104e70',
       label    : 'P1'
     },
     {
-      value    : {{ $resume[0]->p2Raisa }},
+      value    : {{ $raisa2 }},
       color    : '#c02e1d',
       highlight: '#de3421',
       label    : 'P2'
     },
     {
-      value    : {{ $resume[0]->p3Raisa }},
+      value    : {{ $raisa3 }},
       color    : '#f16b20',
       highlight: '#f17127',
       label    : 'P3'
@@ -443,25 +438,25 @@
     var pieChart       = new Chart(pieChartCanvas)
     var PieData        = [
     {
-      value    : {{ $resume[0]->p0Scn}},
+      value    : {{ $scn0 }},
       color    : '#1394ba',
       highlight: '#2980b9',
       label    : 'P0'
     },
     {
-      value    : {{ $resume[0]->p1Scn}},
+      value    : {{ $scn1 }},
       color    : '#0c3c55',
       highlight: '#104e70',
       label    : 'P1'
     },
     {
-      value    : {{ $resume[0]->p2Scn}},
+      value    : {{ $scn2 }},
       color    : '#c02e1d',
       highlight: 'de3421',
       label    : 'P2'
     },
     {
-      value    : {{ $resume[0]->p3Scn}},
+      value    : {{ $scn3 }},
       color    : '#f16b20',
       highlight: '#f17127',
       label    : 'P3'
@@ -513,25 +508,25 @@
     var pieChart       = new Chart(pieChartCanvas)
     var PieData        = [
     {
-      value    : {{ $resume[0]->p0Other}},
+      value    : {{ $others0 }},
       color    : '#1394ba',
       highlight: '#2980b9',
       label    : 'P0'
     },
     {
-      value    : {{ $resume[0]->p1Other}},
+      value    : {{ $others1 }},
       color    : '#0c3c55',
       highlight: '#104e70',
       label    : 'P1'
     },
     {
-      value    : {{ $resume[0]->p2Other }},
+      value    : {{ $others2 }},
       color    : '#c02e1d',
       highlight: '#de3421',
       label    : 'P2'
     },
     {
-      value    : {{ $resume[0]->p3Other }},
+      value    : {{ $others3 }},
       color    : '#f16b20',
       highlight: '#f17127',
       label    : 'P3'
@@ -570,16 +565,6 @@
 
 <script>
 
-  var proactiveAmount = {{ $resume[0]->p0Proactive + $resume[0]->p1Proactive + $resume[0]->p2Proactive + $resume[0]->p3Proactive }}
-  var raisaAmount = {{ $resume[0]->p0Raisa + $resume[0]->p1Raisa + $resume[0]->p2Raisa + $resume[0]->p3Raisa }}
-  var scnAmount = {{ $resume[0]->p0Scn + $resume[0]->p1Scn + $resume[0]->p2Scn + $resume[0]->p3Scn }}
-  var otherAmount = {{ $resume[0]->p0Other + $resume[0]->p1Other + $resume[0]->p2Other + $resume[0]->p3Other }}
-
-
-  document.getElementById("proactiveAmount").innerHTML = proactiveAmount;
-  document.getElementById("raisaAmount").innerHTML = raisaAmount;
-  document.getElementById("scnAmount").innerHTML = scnAmount;
-  document.getElementById("otherAmount").innerHTML = otherAmount;
 </script>
 </section>
 @endsection
