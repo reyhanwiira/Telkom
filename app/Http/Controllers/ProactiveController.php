@@ -47,7 +47,8 @@ class ProactiveController extends Controller
         'lastAction'=>$request->input('lastAction'),
         'nextAction'=>$request->input('nextAction'),
         'currentProgress'=>$request->input('currentProgress'),
-         'status'=>$request->input('status'),
+        'status'=>$request->input('status'),
+        'lastStatus'=>$request->input('LastStatus'),
         'information'=>$request->input('information'),
         'startProject'=>$request->input('startProject'),
         'finishProject'=>$request->input('finishProject'),
@@ -83,6 +84,7 @@ class ProactiveController extends Controller
         $proactive->nextAction=$request->input('nextAction');
         $proactive->currentProgress=$request->input('currentProgress');
         $proactive->status=$request->input('status');
+        $proactive->lastStatus=$request->input('lastStatus');
         $proactive->information=$request->input('information');
         $proactive->startProject=$request->input('startProject');
         $proactive->finishProject=$request->input('finishProject');
@@ -92,7 +94,6 @@ class ProactiveController extends Controller
         $proactive->deliverable=$request->input('deliverable');
         $proactive->benefit=$request->input('benefit');
         $proactive->supportAP=$request->input('supportAP');
-        $proactive->agenda=$request->input('agenda');
         
         $proactive->update();
 

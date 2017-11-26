@@ -128,6 +128,10 @@
               <input type="text" class="form-control" placeholder="Enter ..." name="supportAP" />
             </div>
 
+             <div class="form-group">
+              <input type="hidden" class="form-control" name="lastStatus" value="0" />
+            </div>
+
          </div><!-- /.box-body -->
 
          <div class="box-footer">
