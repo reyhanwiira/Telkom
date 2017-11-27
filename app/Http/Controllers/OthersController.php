@@ -101,7 +101,6 @@ class OthersController extends Controller
         $other->information=$request->input('information');
         $other->currentProgress=$request->input('currentProgress');
         $other->startProject=$request->input('startProject');
-<<<<<<< HEAD
         $other->finishProject=$request->input('finishProject');        
 
         $other->otherInitialRequirementCount=$other->where('currentProgress','Like','Initial Requirement')->count();

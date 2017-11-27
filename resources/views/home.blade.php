@@ -31,40 +31,96 @@
             <ul class="nav nav-pills nav-stacked">
               <li>
                 <a href="#">Persentase
-                  <span class="pull-right" style="font-size: medium; color: #ff0000;">  <span id="presentaseProactive"></span>  </span>
+                  <span class="pull-right" style="font-size: medium; color: #ff0000;">  <span id="presentaseProactive"></span>  % </span>
                 </a>
               </li>
               <li>
                 <a href="#">P0
-                  <span class="pull-right" style="font-size: medium; color: #1394ba;">{{ $proactives0 }} </span>
+                  <span class="pull-right" style="font-size: medium; color: #1394ba;">{{ $proactives0 }} 
+                    @if($proactives0  < $lastProactives0)
+                    <span class="text-green">
+                      <i class="fa fa-arrow-down"></i>
+                    </span>
+                    @elseif($proactives0 > $lastProactives0 )
+                    <span class="text-green">
+                      <i class="fa fa-arrow-up"></i>
+                    </span>
+                    @elseif($proactives0 = $lastProactives0)
+                    <span class="text-green">
+                      <i class="fa fa-arrow-right"></i>
+                    </span>
+                    @endif
+                  </span>
                   <span class="pull-right" style="font-size: medium; padding: 0px 15px;"> | </span>
                   <span class="pull-right" style="font-size: medium; color: #b3b3b3;">{{ $lastProactives0 }} </span>
                 </a>
               </li>
               <li>
                 <a href="#">P1 
-                  <span class="pull-right" style="font-size: medium; color: #0c3c55;">{{ $proactives1 }}</span>
+                  <span class="pull-right" style="font-size: medium; color: #0c3c55;">{{ $proactives1 }}
+                    @if($proactives1  < $lastProactives1)
+                    <span class="text-green">
+                      <i class="fa fa-arrow-down"></i>
+                    </span>
+                    @elseif($proactives1 > $lastProactives1 )
+                    <span class="text-green">
+                      <i class="fa fa-arrow-up"></i>
+                    </span>
+                    @elseif($proactives1 = $lastProactives1)
+                    <span class="text-green">
+                      <i class="fa fa-arrow-right"></i>
+                    </span>
+                    @endif
+                  </span>
                   <span class="pull-right" style="font-size: medium; padding: 0px 15px;"> | </span>
                   <span class="pull-right" style="font-size: medium; color: #b3b3b3;">{{ $lastProactives1 }} </span>
                 </a>
               </li>
               <li>
                 <a href="#">P2
-                  <span class="pull-right" style="font-size: medium; color: #c02e1d;">{{ $proactives2 }}</span>
+                  <span class="pull-right" style="font-size: medium; color: #c02e1d;">{{ $proactives2 }}
+                    @if($proactives2  < $lastProactives2)
+                    <span class="text-green">
+                      <i class="fa fa-arrow-down"></i>
+                    </span>
+                    @elseif($proactives2 > $lastProactives2 )
+                    <span class="text-green">
+                      <i class="fa fa-arrow-up"></i>
+                    </span>
+                    @elseif($proactives2 = $lastProactives2)
+                    <span class="text-green">
+                      <i class="fa fa-arrow-right"></i>
+                    </span>
+                    @endif
+                  </span>
                   <span class="pull-right" style="font-size: medium; padding: 0px 15px;"> | </span>
                   <span class="pull-right" style="font-size: medium; color: #b3b3b3;">{{ $lastProactives2 }} </span>
                 </a>
               </li>
               <li>
                 <a href="#">P3
-                  <span class="pull-right" style="font-size: medium; color: #f16b20;">{{ $proactives3 }}</span>
+                  <span class="pull-right" style="font-size: medium; color: #f16b20;">{{ $proactives3 }} 
+                    @if($proactives3  < $lastProactives3)
+                    <span class="text-green">
+                      <i class="fa fa-arrow-down"></i>
+                    </span>
+                    @elseif($proactives3 > $lastProactives3 )
+                    <span class="text-green">
+                      <i class="fa fa-arrow-up"></i>
+                    </span>
+                    @elseif($proactives3 = $lastProactives3)
+                    <span class="text-green">
+                      <i class="fa fa-arrow-right"></i>
+                    </span>
+                    @endif
+                  </span>
                   <span class="pull-right" style="font-size: medium; padding: 0px 15px;"> | </span>
                   <span class="pull-right" style="font-size: medium; color: #b3b3b3;">{{ $lastProactives3 }} </span>
                 </a>
               </li>
               <li>
                 <a href="#">Total
-                  <span class="pull-right" style="font-size: medium; color: #cc00cc;">  <span id="proactiveAmount"></span>  </span>
+                  <span class="pull-right" style="font-size: medium; color: #cc00cc;">  <span id="proactiveAmount"></span> <span id="proactiveProgress"></span> </span>
                   <span class="pull-right" style="font-size: medium; padding: 0px 15px;"> | </span>
                   <span class="pull-right" style="font-size: medium; color: #b3b3b3;"> <span id="lastProactiveAmount"></span> </span>
                 </a>
@@ -102,33 +158,90 @@
               <ul class="nav nav-pills nav-stacked">
                 <li>
                   <a href="#">Persentase
-                    <span class="pull-right" style="font-size: medium; color: #ff0000;">  <span id="presentaseRaisa"></span>  </span>
+                    <span class="pull-right" style="font-size: medium; color: #ff0000;">  <span id="presentaseRaisa"></span> % </span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P0
-                    <span class="pull-right" style="font-size: medium; color: #1394ba;">{{ $raisa0 }} </span>
+                    <span class="pull-right" style="font-size: medium; color: #1394ba;">{{ $raisa0 }} 
+                      @if($raisa0  < $lastRaisa0)
+                      <span class="text-green">
+                        <i class="fa fa-arrow-down"></i>
+                      </span>
+                      @elseif($raisa0 > $lastRaisa0 )
+                      <span class="text-green">
+                        <i class="fa fa-arrow-up"></i>
+                      </span>
+                      @elseif($raisa0 = $lastRaisa0)
+                      <span class="text-green">
+                        <i class="fa fa-arrow-right"></i>
+                      </span>
+                      @endif
+                    </span>
                     <span class="pull-right" style="font-size: medium; padding: 0px 15px;"> | </span>
                     <span class="pull-right" style="font-size: medium; color: #b3b3b3;"> {{ $lastRaisa0 }} </span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P1 
-                    <span class="pull-right" style="font-size: medium; color: #0c3c55;">{{ $raisa1 }}</span>
+                    <span class="pull-right" style="font-size: medium; color: #0c3c55;">{{ $raisa1 }} 
+                      @if($raisa1  < $lastRaisa1)
+                      <span class="text-green">
+                        <i class="fa fa-arrow-down"></i>
+                      </span>
+                      @elseif($raisa1 > $lastRaisa1 )
+                      <span class="text-green">
+                        <i class="fa fa-arrow-up"></i>
+                      </span>
+                      @elseif($raisa1 = $lastRaisa1)
+                      <span class="text-green">
+                        <i class="fa fa-arrow-right"></i>
+                      </span>
+                      @endif
+                    </span>
                     <span class="pull-right" style="font-size: medium; padding: 0px 15px;"> | </span>
                     <span class="pull-right" style="font-size: medium; color: #b3b3b3;"> {{ $lastRaisa1 }} </span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P2
-                    <span class="pull-right" style="font-size: medium; color: #c02e1d;">{{ $raisa2 }}</span>
+                    <span class="pull-right" style="font-size: medium; color: #c02e1d;">{{ $raisa2 }} 
+                      @if($raisa2  < $lastRaisa2)
+                      <span class="text-green">
+                        <i class="fa fa-arrow-down"></i>
+                      </span>
+                      @elseif($raisa2 > $lastRaisa2 )
+                      <span class="text-green">
+                        <i class="fa fa-arrow-up"></i>
+                      </span>
+                      @elseif($raisa2 = $lastRaisa2)
+                      <span class="text-green">
+                        <i class="fa fa-arrow-right"></i>
+                      </span>
+                      @endif
+                    </span>
                     <span class="pull-right" style="font-size: medium; padding: 0px 15px;"> | </span>
-                    <span class="pull-right" style="font-size: medium; color: #b3b3b3;"> {{ $lastRaisa2 }} </span>
+                    <span class="pull-right" style="font-size: medium; color: #b3b3b3;"> {{ $lastRaisa2 }} 
+                    </span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P3
-                    <span class="pull-right" style="font-size: medium; color: #f16b20;">{{ $raisa3 }}</span>
+                    <span class="pull-right" style="font-size: medium; color: #f16b20;">{{ $raisa3 }}
+                      @if($raisa3  < $lastRaisa3)
+                      <span class="text-green">
+                        <i class="fa fa-arrow-down"></i>
+                      </span>
+                      @elseif($raisa3 > $lastRaisa3 )
+                      <span class="text-green">
+                        <i class="fa fa-arrow-up"></i>
+                      </span>
+                      @elseif($raisa3 = $lastRaisa3)
+                      <span class="text-green">
+                        <i class="fa fa-arrow-right"></i>
+                      </span>
+                      @endif
+                    </span>
                     <span class="pull-right" style="font-size: medium; padding: 0px 15px;"> | </span>
                     <span class="pull-right" style="font-size: medium; color: #b3b3b3;"> {{ $lastRaisa3 }} </span>
                   </a>
@@ -157,7 +270,7 @@
                 </div>
                 <div class="col-md-3">
                   <ul class="chart-legend clearfix">
-                    <li style="font-size: medium"><i class="fa fa-circle" style="color: #1394ba;"></i> P0</li>
+                    <li style="font-size: medium"><i class="fa fa-circle" style="color: #1394ba;"></i>P0</li>
                     <li style="font-size: medium"><i class="fa fa-circle" style="color: #0c3c55"></i> P1</li>
                     <li style="font-size: medium"><i class="fa fa-circle" style="color: #c02e1d"></i> P2</li>
                     <li style="font-size: medium"><i class="fa fa-circle" style="color: #f16b20"></i> P3</li>
@@ -170,33 +283,89 @@
               <ul class="nav nav-pills nav-stacked">
                 <li>
                   <a href="#">Persentase
-                    <span class="pull-right" style="font-size: medium; color: #ff0000;">  <span id="presentaseScn"></span>  </span>
+                    <span class="pull-right" style="font-size: medium; color: #ff0000;">  <span id="presentaseScn"></span> % </span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P0
-                    <span class="pull-right" style="font-size: medium; color: #1394ba;">{{ $scn0 }}</span>
+                    <span class="pull-right" style="font-size: medium; color: #1394ba;">{{ $scn0 }}
+                      @if($scn0  < $lastScn0)
+                      <span class="text-green">
+                        <i class="fa fa-arrow-down"></i>
+                      </span>
+                      @elseif($scn0 > $lastScn0 )
+                      <span class="text-green">
+                        <i class="fa fa-arrow-up"></i>
+                      </span>
+                      @elseif($scn0 = $lastScn0)
+                      <span class="text-green">
+                        <i class="fa fa-arrow-right"></i>
+                      </span>
+                      @endif
+                    </span>
                     <span class="pull-right" style="font-size: medium; padding: 0px 15px;"> | </span>
                     <span class="pull-right" style="font-size: medium; color: #b3b3b3;"> {{ $lastScn0 }} </span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P1 
-                    <span class="pull-right" style="font-size: medium; color: #0c3c55;">{{ $scn1 }}</span>
+                    <span class="pull-right" style="font-size: medium; color: #0c3c55;">{{ $scn1 }}
+                      @if($scn1  < $lastScn1)
+                      <span class="text-green">
+                        <i class="fa fa-arrow-down"></i>
+                      </span>
+                      @elseif($scn1 > $lastScn1 )
+                      <span class="text-green">
+                        <i class="fa fa-arrow-up"></i>
+                      </span>
+                      @elseif($scn1 = $lastScn1)
+                      <span class="text-green">
+                        <i class="fa fa-arrow-right"></i>
+                      </span>
+                      @endif
+                    </span>
                     <span class="pull-right" style="font-size: medium; padding: 0px 15px;"> | </span>
                     <span class="pull-right" style="font-size: medium; color: #b3b3b3;"> {{ $lastScn1 }} </span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P2
-                    <span class="pull-right" style="font-size: medium; color: #c02e1d;">{{ $scn2 }}</span>
+                    <span class="pull-right" style="font-size: medium; color: #c02e1d;">{{ $scn2 }}
+                      @if($scn2  < $lastScn2)
+                    <span class="text-green">
+                      <i class="fa fa-arrow-down"></i>
+                    </span>
+                    @elseif($scn2 > $lastScn2 )
+                    <span class="text-green">
+                      <i class="fa fa-arrow-up"></i>
+                    </span>
+                    @elseif($scn2 = $lastScn2)
+                    <span class="text-green">
+                      <i class="fa fa-arrow-right"></i>
+                    </span>
+                    @endif
+                    </span>
                     <span class="pull-right" style="font-size: medium; padding: 0px 15px;"> | </span>
                     <span class="pull-right" style="font-size: medium; color: #b3b3b3;"> {{ $lastScn2 }} </span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P3
-                    <span class="pull-right" style="font-size: medium; color: #f16b20;">{{ $scn3 }}</span>
+                    <span class="pull-right" style="font-size: medium; color: #f16b20;">{{ $scn3 }}
+                      @if($scn3  < $lastScn3)
+                    <span class="text-green">
+                      <i class="fa fa-arrow-down"></i>
+                    </span>
+                    @elseif($scn3 > $lastScn3 )
+                    <span class="text-green">
+                      <i class="fa fa-arrow-up"></i>
+                    </span>
+                    @elseif($scn3 = $lastScn3)
+                    <span class="text-green">
+                      <i class="fa fa-arrow-right"></i>
+                    </span>
+                    @endif
+                    </span>
                     <span class="pull-right" style="font-size: medium; padding: 0px 15px;"> | </span>
                     <span class="pull-right" style="font-size: medium; color: #b3b3b3;"> {{ $lastScn3 }} </span>
                   </a>
@@ -232,46 +401,102 @@
                   </ul>
                 </div>
               </div>
-          
+
             </div>
             <div class="box-footer no-padding">
               <ul class="nav nav-pills nav-stacked">
                 <li>
                   <a href="#">Persentase
-                    <span class="pull-right" style="font-size: medium; color: #ff0000;">  <span id="presentaseOthers"></span>  </span>
+                    <span class="pull-right" style="font-size: medium; color: #ff0000;">  <span id="presentaseOthers"></span> %</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P0
-                    <span class="pull-right" style="font-size: medium; color: #1394ba;">{{ $others0 }}</span>
+                    <span class="pull-right" style="font-size: medium; color: #1394ba;">{{ $others0 }}
+                      @if($others0  < $lastOthers0)
+                    <span class="text-green">
+                      <i class="fa fa-arrow-down"></i>
+                    </span>
+                    @elseif($others0  > $lastOthers0)
+                    <span class="text-green">
+                      <i class="fa fa-arrow-up"></i>
+                    </span>
+                    @elseif($others0  = $lastOthers0)
+                    <span class="text-green">
+                      <i class="fa fa-arrow-right"></i>
+                    </span>
+                    @endif
+                    </span>
                     <span class="pull-right" style="font-size: medium; padding: 0px 15px;"> | </span>
                     <span class="pull-right" style="font-size: medium; color: #b3b3b3;"> {{ $lastOthers0 }} </span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P1 
-                    <span class="pull-right" style="font-size: medium; color: #0c3c55;">{{ $others1 }}</span>
+                    <span class="pull-right" style="font-size: medium; color: #0c3c55;">{{ $others1 }}
+                      @if($others1  < $lastOthers1)
+                    <span class="text-green">
+                      <i class="fa fa-arrow-down"></i>
+                    </span>
+                    @elseif($others1  > $lastOthers1)
+                    <span class="text-green">
+                      <i class="fa fa-arrow-up"></i>
+                    </span>
+                    @elseif($others1  = $lastOthers1)
+                    <span class="text-green">
+                      <i class="fa fa-arrow-right"></i>
+                    </span>
+                    @endif
+                    </span>
                     <span class="pull-right" style="font-size: medium; padding: 0px 15px;"> | </span>
                     <span class="pull-right" style="font-size: medium; color: #b3b3b3;"> {{ $lastOthers1 }} </span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P2
-                    <span class="pull-right" style="font-size: medium; color: #c02e1d;">{{ $others2 }}</span>
+                    <span class="pull-right" style="font-size: medium; color: #c02e1d;">{{ $others2 }}
+                      @if($others2  < $lastOthers2)
+                    <span class="text-green">
+                      <i class="fa fa-arrow-down"></i>
+                    </span>
+                    @elseif($others2  > $lastOthers2)
+                    <span class="text-green">
+                      <i class="fa fa-arrow-up"></i>
+                    </span>
+                    @elseif($others2  = $lastOthers2)
+                    <span class="text-green">
+                      <i class="fa fa-arrow-right"></i>
+                    </span>
+                    @endif
+                    </span>
                     <span class="pull-right" style="font-size: medium; padding: 0px 15px;"> | </span>
                     <span class="pull-right" style="font-size: medium; color: #b3b3b3;"> {{ $lastOthers2 }} </span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P3
-                    <span class="pull-right" style="font-size: medium; color: #f16b20;">{{ $others3 }}</span>
+                    <span class="pull-right" style="font-size: medium; color: #f16b20;">{{ $others3 }}
+                      @if($others3  < $lastOthers3)
+                    <span class="text-green">
+                      <i class="fa fa-arrow-down"></i>
+                    </span>
+                    @elseif($others3  > $lastOthers3)
+                    <span class="text-green">
+                      <i class="fa fa-arrow-up"></i>
+                    </span>
+                    @elseif($others3  = $lastOthers3)
+                    <span class="text-green">
+                      <i class="fa fa-arrow-right"></i>
+                    </span>
+                    @endif
+                    </span>
                     <span class="pull-right" style="font-size: medium; padding: 0px 15px;"> | </span>
                     <span class="pull-right" style="font-size: medium; color: #b3b3b3;"> {{ $lastOthers3 }} </span>
                   </a>
                 </li>
                 <li>
                   <a href="#">Total
-                    <span class="pull-right" style="font-size: medium; color: #cc00cc;">  <span id="otherAmount"></span>  </span>
+                    <span class="pull-right" style="font-size: medium; color: #cc00cc;">  <span id="otherAmount"></span> </span>
                     <span class="pull-right" style="font-size: medium; padding: 0px 15px;"> | </span>
                     <span class="pull-right" style="font-size: medium; color: #b3b3b3;"> <span id="lastOthersAmount"></span> </span>
                   </a>
@@ -284,24 +509,24 @@
     </div>
   </div>
 
-<!-- jQuery 3 -->
-<script src="../../bower_components/jquery/dist/jquery.min.js"></script>
-<!-- Bootstrap 3.3.7 -->
-<script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="../../bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-<!-- SlimScroll -->
-<script src="../../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-<!-- FastClick -->
-<script src="../../bower_components/fastclick/lib/fastclick.js"></script>
-<!-- AdminLTE App -->
-<script src="../../dist/js/adminlte.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="../../dist/js/demo.js"></script>
-<!-- page script -->
-<!-- ChartJS -->
-<script src="../../bower_components/Chart.js/Chart.js"></script>
+  <!-- jQuery 3 -->
+  <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+  <!-- Bootstrap 3.3.7 -->
+  <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="../../bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+  <!-- SlimScroll -->
+  <script src="../../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+  <!-- FastClick -->
+  <script src="../../bower_components/fastclick/lib/fastclick.js"></script>
+  <!-- AdminLTE App -->
+  <script src="../../dist/js/adminlte.min.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="../../dist/js/demo.js"></script>
+  <!-- page script -->
+  <!-- ChartJS -->
+  <script src="../../bower_components/Chart.js/Chart.js"></script>
 
-<script>
+  <script>
   $(function () {
     /* ChartJS
      * -------
@@ -372,7 +597,7 @@
 </script>
 
 <script>
-  $(function () {
+$(function () {
     /* ChartJS
      * -------
      * Here we will create a few charts using ChartJS
@@ -442,7 +667,7 @@
 </script>
 
 <script>
-  $(function () {
+$(function () {
     /* ChartJS
      * -------
      * Here we will create a few charts using ChartJS
@@ -512,7 +737,7 @@
 </script>
 
 <script>
-  $(function () {
+$(function () {
     /* ChartJS
      * -------
      * Here we will create a few charts using ChartJS
@@ -605,12 +830,14 @@ var presentaseProactive = {{ ($proactives2 + $proactives3) / ($proactives0 + $pr
 var presentaseRaisa = {{ ($raisa2 + $raisa3) / ($raisa0 + $raisa1 + $raisa2 + $raisa3)*100}}
 var presentaseScn = {{ ($scn2 + $scn3) / ($scn0 + $scn1 + $scn2 + $scn3)*100}}
 var presentaseOthers = {{ ($others2 + $others3) / ($others0 + $others1 + $others2 + $others3)*100}}
-    
+
+
+var proactiveProgress;
+
 document.getElementById("presentaseProactive").innerHTML = presentaseProactive.toFixed(2);
 document.getElementById("presentaseRaisa").innerHTML = presentaseRaisa.toFixed(2);
 document.getElementById("presentaseScn").innerHTML = presentaseScn.toFixed(2);
 document.getElementById("presentaseOthers").innerHTML = presentaseOthers.toFixed(2);
-
 
 </script>
 </section>

@@ -55,11 +55,6 @@
                       <span class="pull-right text-red" style="font-size: medium;"> 4</span>
                     </a>
                   </li>
-                  <li>
-                    <a href="#">Persentase
-                      <span class="pull-right text-primary" style="font-size: medium;"> 40%</span>
-                    </a>
-                  </li>
                 </ul>
               </div>  
             </div>
@@ -101,11 +96,6 @@
                   <li>
                     <a href="#">Idle (tdk berprogress >2 Minggu) 
                       <span class="pull-right text-red" style="font-size: medium;"> 4</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">Persentase
-                      <span class="pull-right text-primary" style="font-size: medium;"> 42%</span>
                     </a>
                   </li>
                 </ul>
@@ -173,7 +163,7 @@
         <div class="box-body">
           <div class="table-responsive">
             <div class="col-md-12">
-             <table id="example2" class="table table-striped" style="border-color: black">
+             <table id="example2" class="table table-striped table-bordered" style="border-color: black">
               <thead>
                 <tr>
                   <th rowspan="2" style="text-align: center; vertical-align: middle; border-color: black;">No</th>
@@ -181,11 +171,11 @@
                   <th rowspan="2" style="text-align: center; vertical-align: middle; border-color: black">TR</th>
                   <th rowspan="2" style="text-align: center; vertical-align: middle; width: 200px; border-color: black">Current Progress</th>
                   <th colspan="2" style="text-align: center; border-color: black">Progress (%)</th>
-                  <th rowspan="2" style="text-align: center; vertical-align: middle; width: 150px; border-color: black;">Progress Summary</th>
+                  <th rowspan="2" style="text-align: center; vertical-align: middle; width: 150px; border-color: black; border-left:0px;">Progress Summary</th>
                   <th rowspan="2" style="text-align: center; vertical-align: middle; border-color: black">Status</th>
-                  <tr>
-                    <th style="text-align: center; width: 100px; border-color: black">Last</th>
-                    <th style="text-align: center; width: 100px; border-color: black;">Current</th>
+                  <tr style="border-right:0px;">
+                    <th style="text-align: center; width: 100px; border-color: black;">Last</th>
+                    <th style="text-align: center; width: 100px; border-color: black; border-right:0px;">Current</th>
                   </tr>  
                 </tr>
               </thead>
