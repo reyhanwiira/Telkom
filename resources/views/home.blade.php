@@ -18,40 +18,59 @@
               </div>
               <div class="col-md-3">
                 <ul class="chart-legend clearfix">
-                  <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #1394ba;"></i> P0</li>
-                  <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #0c3c55"></i> P1</li>
-                  <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #c02e1d"></i> P2</li>
-                  <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #f16b20"></i> P3</li>
+                  <li style="font-size: medium"><i class="fa fa-circle" style="color: #1394ba;"></i> P0</li>
+                  <li style="font-size: medium"><i class="fa fa-circle" style="color: #0c3c55"></i> P1</li>
+                  <li style="font-size: medium"><i class="fa fa-circle" style="color: #c02e1d"></i> P2</li>
+                  <li style="font-size: medium"><i class="fa fa-circle" style="color: #f16b20"></i> P3</li>
                 </ul>
               </div>
             </div>
-            <span id="presentaseProactive"></span> %
+            
           </div>
           <div class="box-footer no-padding">
             <ul class="nav nav-pills nav-stacked">
               <li>
+                <a href="#">Persentase
+                  <span class="pull-right" style="font-size: medium; color: #ff0000;">  <span id="presentaseProactive"></span>  </span>
+                </a>
+              </li>
+              <li>
                 <a href="#">P0
-                  <span class="pull-right" style="font-size: medium; color: #1394ba;">{{ $proactives0 }}</span>
+                  <span class="pull-right" style="font-size: medium; color: #1394ba;">{{ $proactives0 }} </span>
+                  <span class="pull-right" style="font-size: medium; padding: 0px 15px;"> | </span>
+                  <span class="pull-right" style="font-size: medium; color: #b3b3b3;">{{ $lastProactives0 }} </span>
                 </a>
               </li>
               <li>
                 <a href="#">P1 
                   <span class="pull-right" style="font-size: medium; color: #0c3c55;">{{ $proactives1 }}</span>
+                  <span class="pull-right" style="font-size: medium; padding: 0px 15px;"> | </span>
+                  <span class="pull-right" style="font-size: medium; color: #b3b3b3;">{{ $lastProactives1 }} </span>
                 </a>
               </li>
               <li>
                 <a href="#">P2
                   <span class="pull-right" style="font-size: medium; color: #c02e1d;">{{ $proactives2 }}</span>
+                  <span class="pull-right" style="font-size: medium; padding: 0px 15px;"> | </span>
+                  <span class="pull-right" style="font-size: medium; color: #b3b3b3;">{{ $lastProactives2 }} </span>
                 </a>
               </li>
               <li>
                 <a href="#">P3
-                
                   <span class="pull-right" style="font-size: medium; color: #f16b20;">{{ $proactives3 }}</span>
+                  <span class="pull-right" style="font-size: medium; padding: 0px 15px;"> | </span>
+                  <span class="pull-right" style="font-size: medium; color: #b3b3b3;">{{ $lastProactives3 }} </span>
+                </a>
+              </li>
+              <li>
+                <a href="#">Total
+                  <span class="pull-right" style="font-size: medium; color: #cc00cc;">  <span id="proactiveAmount"></span>  </span>
+                  <span class="pull-right" style="font-size: medium; padding: 0px 15px;"> | </span>
+                  <span class="pull-right" style="font-size: medium; color: #b3b3b3;"> <span id="lastProactiveAmount"></span> </span>
                 </a>
               </li>
             </ul>
-          </div>  
+          </div>    
         </div>
       </div>
     </div>      
@@ -71,36 +90,56 @@
                   </div>
                 </div>
                 <ul class="chart-legend clearfix">
-                  <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #1394ba;"></i> P0</li>
-                  <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #0c3c55"></i> P1</li>
-                  <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #c02e1d"></i> P2</li>
-                  <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #f16b20"></i> P3</li>
+                  <li style="font-size: medium"><i class="fa fa-circle" style="color: #1394ba;"></i> P0</li>
+                  <li style="font-size: medium"><i class="fa fa-circle" style="color: #0c3c55"></i> P1</li>
+                  <li style="font-size: medium"><i class="fa fa-circle" style="color: #c02e1d"></i> P2</li>
+                  <li style="font-size: medium"><i class="fa fa-circle" style="color: #f16b20"></i> P3</li>
                 </ul>
               </div>
             </div>
-            <span id="presentaseRaisa"></span> %
+            
             <div class="box-footer no-padding">
               <ul class="nav nav-pills nav-stacked">
                 <li>
+                  <a href="#">Persentase
+                    <span class="pull-right" style="font-size: medium; color: #ff0000;">  <span id="presentaseRaisa"></span>  </span>
+                  </a>
+                </li>
+                <li>
                   <a href="#">P0
-                    <span class="pull-right" style="font-size: medium; color: #1394ba;">{{ $raisa0 }}</span>
+                    <span class="pull-right" style="font-size: medium; color: #1394ba;">{{ $raisa0 }} </span>
+                    <span class="pull-right" style="font-size: medium; padding: 0px 15px;"> | </span>
+                    <span class="pull-right" style="font-size: medium; color: #b3b3b3;"> {{ $lastRaisa0 }} </span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P1 
                     <span class="pull-right" style="font-size: medium; color: #0c3c55;">{{ $raisa1 }}</span>
+                    <span class="pull-right" style="font-size: medium; padding: 0px 15px;"> | </span>
+                    <span class="pull-right" style="font-size: medium; color: #b3b3b3;"> {{ $lastRaisa1 }} </span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P2
                     <span class="pull-right" style="font-size: medium; color: #c02e1d;">{{ $raisa2 }}</span>
+                    <span class="pull-right" style="font-size: medium; padding: 0px 15px;"> | </span>
+                    <span class="pull-right" style="font-size: medium; color: #b3b3b3;"> {{ $lastRaisa2 }} </span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P3
                     <span class="pull-right" style="font-size: medium; color: #f16b20;">{{ $raisa3 }}</span>
+                    <span class="pull-right" style="font-size: medium; padding: 0px 15px;"> | </span>
+                    <span class="pull-right" style="font-size: medium; color: #b3b3b3;"> {{ $lastRaisa3 }} </span>
                   </a>
-                 </li>
+                </li>
+                <li>
+                  <a href="#">Total
+                    <span class="pull-right" style="font-size: medium; color: #cc00cc;">  <span id="raisaAmount"></span>  </span>
+                    <span class="pull-right" style="font-size: medium; padding: 0px 15px;"> | </span>
+                    <span class="pull-right" style="font-size: medium; color: #b3b3b3;"> <span id="lastRaisaAmount"></span> </span>
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
@@ -118,35 +157,55 @@
                 </div>
                 <div class="col-md-3">
                   <ul class="chart-legend clearfix">
-                    <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #1394ba;"></i> P0</li>
-                    <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #0c3c55"></i> P1</li>
-                    <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #c02e1d"></i> P2</li>
-                    <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #f16b20"></i> P3</li>
+                    <li style="font-size: medium"><i class="fa fa-circle" style="color: #1394ba;"></i> P0</li>
+                    <li style="font-size: medium"><i class="fa fa-circle" style="color: #0c3c55"></i> P1</li>
+                    <li style="font-size: medium"><i class="fa fa-circle" style="color: #c02e1d"></i> P2</li>
+                    <li style="font-size: medium"><i class="fa fa-circle" style="color: #f16b20"></i> P3</li>
                   </ul>
                 </div>
               </div>
-              <span id="presentaseScn"></span> %
+              
             </div>
             <div class="box-footer no-padding">
               <ul class="nav nav-pills nav-stacked">
                 <li>
+                  <a href="#">Persentase
+                    <span class="pull-right" style="font-size: medium; color: #ff0000;">  <span id="presentaseScn"></span>  </span>
+                  </a>
+                </li>
+                <li>
                   <a href="#">P0
                     <span class="pull-right" style="font-size: medium; color: #1394ba;">{{ $scn0 }}</span>
+                    <span class="pull-right" style="font-size: medium; padding: 0px 15px;"> | </span>
+                    <span class="pull-right" style="font-size: medium; color: #b3b3b3;"> {{ $lastScn0 }} </span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P1 
                     <span class="pull-right" style="font-size: medium; color: #0c3c55;">{{ $scn1 }}</span>
+                    <span class="pull-right" style="font-size: medium; padding: 0px 15px;"> | </span>
+                    <span class="pull-right" style="font-size: medium; color: #b3b3b3;"> {{ $lastScn1 }} </span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P2
                     <span class="pull-right" style="font-size: medium; color: #c02e1d;">{{ $scn2 }}</span>
+                    <span class="pull-right" style="font-size: medium; padding: 0px 15px;"> | </span>
+                    <span class="pull-right" style="font-size: medium; color: #b3b3b3;"> {{ $lastScn2 }} </span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P3
                     <span class="pull-right" style="font-size: medium; color: #f16b20;">{{ $scn3 }}</span>
+                    <span class="pull-right" style="font-size: medium; padding: 0px 15px;"> | </span>
+                    <span class="pull-right" style="font-size: medium; color: #b3b3b3;"> {{ $lastScn3 }} </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">Total
+                    <span class="pull-right" style="font-size: medium; color: #cc00cc;">  <span id="scnAmount"></span>  </span>
+                    <span class="pull-right" style="font-size: medium; padding: 0px 15px;"> | </span>
+                    <span class="pull-right" style="font-size: medium; color: #b3b3b3;"> <span id="lastScnAmount"></span> </span>
                   </a>
                 </li>
               </ul>
@@ -166,35 +225,55 @@
                 </div>
                 <div class="col-md-3">
                   <ul class="chart-legend clearfix">
-                    <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #1394ba;"></i> P0</li>
-                    <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #0c3c55"></i> P1</li>
-                    <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #c02e1d"></i> P2</li>
-                    <li style="font-size: medium"><i class="fa fa-circle-o" style="color: #f16b20"></i> P3</li>
+                    <li style="font-size: medium"><i class="fa fa-circle" style="color: #1394ba;"></i> P0</li>
+                    <li style="font-size: medium"><i class="fa fa-circle" style="color: #0c3c55"></i> P1</li>
+                    <li style="font-size: medium"><i class="fa fa-circle" style="color: #c02e1d"></i> P2</li>
+                    <li style="font-size: medium"><i class="fa fa-circle" style="color: #f16b20"></i> P3</li>
                   </ul>
                 </div>
               </div>
-              <span id="presentaseOthers"></span> %
+          
             </div>
             <div class="box-footer no-padding">
               <ul class="nav nav-pills nav-stacked">
                 <li>
+                  <a href="#">Persentase
+                    <span class="pull-right" style="font-size: medium; color: #ff0000;">  <span id="presentaseOthers"></span>  </span>
+                  </a>
+                </li>
+                <li>
                   <a href="#">P0
                     <span class="pull-right" style="font-size: medium; color: #1394ba;">{{ $others0 }}</span>
+                    <span class="pull-right" style="font-size: medium; padding: 0px 15px;"> | </span>
+                    <span class="pull-right" style="font-size: medium; color: #b3b3b3;"> {{ $lastOthers0 }} </span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P1 
                     <span class="pull-right" style="font-size: medium; color: #0c3c55;">{{ $others1 }}</span>
+                    <span class="pull-right" style="font-size: medium; padding: 0px 15px;"> | </span>
+                    <span class="pull-right" style="font-size: medium; color: #b3b3b3;"> {{ $lastOthers1 }} </span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P2
                     <span class="pull-right" style="font-size: medium; color: #c02e1d;">{{ $others2 }}</span>
+                    <span class="pull-right" style="font-size: medium; padding: 0px 15px;"> | </span>
+                    <span class="pull-right" style="font-size: medium; color: #b3b3b3;"> {{ $lastOthers2 }} </span>
                   </a>
                 </li>
                 <li>
                   <a href="#">P3
                     <span class="pull-right" style="font-size: medium; color: #f16b20;">{{ $others3 }}</span>
+                    <span class="pull-right" style="font-size: medium; padding: 0px 15px;"> | </span>
+                    <span class="pull-right" style="font-size: medium; color: #b3b3b3;"> {{ $lastOthers3 }} </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">Total
+                    <span class="pull-right" style="font-size: medium; color: #cc00cc;">  <span id="otherAmount"></span>  </span>
+                    <span class="pull-right" style="font-size: medium; padding: 0px 15px;"> | </span>
+                    <span class="pull-right" style="font-size: medium; color: #b3b3b3;"> <span id="lastOthersAmount"></span> </span>
                   </a>
                 </li>
               </ul>
@@ -203,75 +282,6 @@
         </div>
       </div>
     </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-12">
-      <!-- TABLE: LATEST ORDERS -->
-      <div class="box box-primary">
-        <div class="box-header with-border">
-          <h3 class="box-title">Data Table</h3>
-          <div class="box-tools pull-right">
-            <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-          </div>
-        </div><!-- /.box-header -->
-        <div class="box-body">
-          <div class="table-responsive">
-            <div class="col-md-12">
-              <table id="example1" class="table table-bordered table-striped table-condensed" style="width:100%;">
-                <tr style="color: #3C8DBC">
-                  <th colspan="2" style="width: 50px;">ACTIVITY</th>
-                  <th style="text-align: center; width: 130px">PROACTIVE</th>
-                  <th style="text-align: center; width: 100px">RAISA</th>
-                  <th style="text-align: center; width: 100px">SCN</th>
-                  <th style="text-align: center; width: 100px">OTHERS</th>
-                </tr>
-                <tr>
-                  <th rowspan="3" style=" vertical-align: middle; width: 150px;">Progress</th>
-                  <td>P0(Usulan/Potensi)</td>
-                  <td style="text-align: center;"><b>{{ $lastProactives0 }} | {{ $proactives0 }}</td>
-                  <td style="text-align: center;"><b>{{ $lastRaisa0 }} | {{ $raisa0 }}</td>
-                  <td style="text-align: center;"><b>{{ $lastScn0 }} | {{ $scn0 }}</td>
-                  <td style="text-align: center;"><b>{{ $lastOthers0 }} | {{ $others0 }}</td>
-
-                </tr>
-                <tr>
-                  <td style="width: 50px;">P1(Req, Des)</td>
-                  <td style="text-align: center;"><b>{{ $lastProactives1 }} | {{ $proactives1 }}</td>
-                  <td style="text-align: center;"><b>{{ $lastRaisa1 }} | {{ $raisa1 }}</td>
-                  <td style="text-align: center;"><b>{{ $lastScn1 }} | {{ $scn1 }}</td>
-                  <td style="text-align: center;"><b>{{ $lastOthers1 }} | {{ $others1 }}</td>
-                </tr>
-                <tr>
-                  <td style="width: 50px;">P2(Submit)</td>
-                  <td style="text-align: center;"><b>{{ $lastProactives2 }} | {{ $proactives2 }}</td>
-                  <td style="text-align: center;"><b>{{ $lastRaisa2 }} | {{ $raisa2 }}</td>
-                  <td style="text-align: center;"><b>{{ $lastScn2 }} | {{ $scn2 }}</td>
-                  <td style="text-align: center;"><b>{{ $lastOthers2 }}  {{ $others2 }}</td>
-                </tr>
-                <tr> 
-                  <th style="width: 50px;">Done</th>
-                  <td>P3 Proposal Ready</td>
-                  <td style="text-align: center;"><b>{{ $lastProactives3 }} | {{ $proactives3 }}</td>
-                  <td style="text-align: center;"><b>{{ $lastRaisa3 }} | {{ $raisa3 }}</td>
-                  <td style="text-align: center;"><b>{{ $lastScn3}} | {{ $scn3 }}</td>
-                  <td style="text-align: center;"><b>{{ $lastOthers3 }} | {{ $others3 }}</td>
-                </tr>
-                <tr>
-                  <th colspan="2">Total</th>
-                  <td style="text-align: center;"><b><span id="lastProactiveAmount"></span></b> | <b><span id="proactiveAmount"></span></b> </td>
-                  <td style="text-align: center;"><b><span id="lastRaisaAmount"></span></b> | <b><span id="raisaAmount"></span></b>  </td>
-                  <td style="text-align: center;"><b><span id="lastScnAmount"></span></b> | <b><span id="scnAmount"></span></b>  </td>
-                  <td style="text-align: center;"><b><span id="lastOthersAmount"></span></b> | <b><span id="otherAmount"></span></b>  </td>
-                </tr>
-              </table>
-                </a>
-              </div>
-            </div>
-          </div><!-- /.table-responsive -->
-        </div><!-- /.box-body -->
-      </div><!-- /.box -->
-    </div><!-- /.col -->
   </div>
 
 <!-- jQuery 3 -->

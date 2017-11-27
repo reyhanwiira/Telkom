@@ -32,13 +32,13 @@
                   </div>
                   <div class="col-md-4">
                     <ul class="chart-legend clearfix">
-                      <li><i class="fa fa-circle-o" style="color: #fff5cc"></i> : {{ $raisa->where('currentProgress','Like','Initial Requirement')->count() }}</li>
-                      <li><i class="fa fa-circle-o" style="color: #ffd1b3"></i> : {{ $raisa->where('currentProgress','Like','Initial Solution')->count() }}</li>
-                      <li><i class="fa fa-circle-o" style="color: #ff9999"></i> : {{ $raisa->where('currentProgress','Like','Menunggu Feedback & Gathering Req')->count() }}</li>
-                      <li><i class="fa fa-circle-o" style="color: #730099"></i> : {{ $raisa->where('currentProgress','Like','Solution Design')->count() }}</li>
-                      <li><i class="fa fa-circle-o" style="color: #2ea4bc"></i> : {{ $raisa->where('currentProgress','Like','Solution Development')->count() }}</li>
-                      <li><i class="fa fa-circle-o" style="color: #40bf80"></i> : {{ $raisa->where('currentProgress','Like','POC')->count() }}</li>
-                      <li><i class="fa fa-circle-o" style="color: #66ff66"></i> : {{ $raisa->where('currentProgress','Like','Proposal Ready')->count() }}</li>
+                      <li><i class="fa fa-circle" style="color: #fff5cc"></i> : {{ $raisa->where('currentProgress','Like','Initial Requirement')->count() }}</li>
+                      <li><i class="fa fa-circle" style="color: #ffd1b3"></i> : {{ $raisa->where('currentProgress','Like','Initial Solution')->count() }}</li>
+                      <li><i class="fa fa-circle" style="color: #ff9999"></i> : {{ $raisa->where('currentProgress','Like','Menunggu Feedback & Gathering Req')->count() }}</li>
+                      <li><i class="fa fa-circle" style="color: #730099"></i> : {{ $raisa->where('currentProgress','Like','Solution Design')->count() }}</li>
+                      <li><i class="fa fa-circle" style="color: #2ea4bc"></i> : {{ $raisa->where('currentProgress','Like','Solution Development')->count() }}</li>
+                      <li><i class="fa fa-circle" style="color: #40bf80"></i> : {{ $raisa->where('currentProgress','Like','POC')->count() }}</li>
+                      <li><i class="fa fa-circle" style="color: #66ff66"></i> : {{ $raisa->where('currentProgress','Like','Proposal Ready')->count() }}</li>
                     </ul>
                   </div>
                 </div>
@@ -80,13 +80,13 @@
                   </div>
                   <div class="col-md-4">
                     <ul class="chart-legend clearfix">
-                      <li><i class="fa fa-circle-o" style="color: #fff5cc"></i> : {{ $raisa->where('currentProgress','Like','Initial Requirement')->count() }}</li>
-                      <li><i class="fa fa-circle-o" style="color: #ffd1b3"></i> : {{ $raisa->where('currentProgress','Like','Initial Solution')->count() }}</li>
-                      <li><i class="fa fa-circle-o" style="color: #ff9999"></i> : {{ $raisa->where('currentProgress','Like','Menunggu Feedback & Gathering Req')->count() }}</li>
-                      <li><i class="fa fa-circle-o" style="color: #730099"></i> : {{ $raisa->where('currentProgress','Like','Solution Design')->count() }}</li>
-                      <li><i class="fa fa-circle-o" style="color: #2ea4bc"></i> : {{ $raisa->where('currentProgress','Like','Solution Development')->count() }}</li>
-                      <li><i class="fa fa-circle-o" style="color: #40bf80"></i> : {{ $raisa->where('currentProgress','Like','POC')->count() }}</li>
-                      <li><i class="fa fa-circle-o" style="color: #66ff66"></i> : {{ $raisa->where('currentProgress','Like','Proposal Ready')->count() }}</li>
+                      <li><i class="fa fa-circle" style="color: #fff5cc"></i> : {{ $raisa->where('currentProgress','Like','Initial Requirement')->count() }}</li>
+                      <li><i class="fa fa-circle" style="color: #ffd1b3"></i> : {{ $raisa->where('currentProgress','Like','Initial Solution')->count() }}</li>
+                      <li><i class="fa fa-circle" style="color: #ff9999"></i> : {{ $raisa->where('currentProgress','Like','Menunggu Feedback & Gathering Req')->count() }}</li>
+                      <li><i class="fa fa-circle" style="color: #730099"></i> : {{ $raisa->where('currentProgress','Like','Solution Design')->count() }}</li>
+                      <li><i class="fa fa-circle" style="color: #2ea4bc"></i> : {{ $raisa->where('currentProgress','Like','Solution Development')->count() }}</li>
+                      <li><i class="fa fa-circle" style="color: #40bf80"></i> : {{ $raisa->where('currentProgress','Like','POC')->count() }}</li>
+                      <li><i class="fa fa-circle" style="color: #66ff66"></i> : {{ $raisa->where('currentProgress','Like','Proposal Ready')->count() }}</li>
                     </ul>
                   </div>
                 </div>
@@ -173,19 +173,19 @@
         <div class="box-body">
           <div class="table-responsive">
             <div class="col-md-12">
-             <table id="example2" class="table table-bordered table-striped">
+             <table id="example2" class="table table-striped" style="border-color: black">
               <thead>
                 <tr>
-                  <th rowspan="2" style="text-align: center; vertical-align: middle;">No</th>
-                  <th rowspan="2" style="text-align: center; vertical-align: middle; width: 350px;">Solusi</th>
-                  <th rowspan="2" style="text-align: center; vertical-align: middle;">TR</th>
-                  <th rowspan="2" style="text-align: center; vertical-align: middle; width: 200px">Current Progress</th>
-                  <th colspan="2" style="text-align: center;">Progress (%)</th>
-                  <th rowspan="2" style="text-align: center; vertical-align: middle; width: 150px">Progress Summary</th>
-                  <th rowspan="2" style="text-align: center; vertical-align: middle;">Status</th>
+                  <th rowspan="2" style="text-align: center; vertical-align: middle; border-color: black">No</th>
+                  <th rowspan="2" style="text-align: center; vertical-align: middle; width: 350px; border-color: black">Solusi</th>
+                  <th rowspan="2" style="text-align: center; vertical-align: middle; border-color: black">TR</th>
+                  <th rowspan="2" style="text-align: center; vertical-align: middle; width: 200px; border-color: black">Current Progress</th>
+                  <th colspan="2" style="text-align: center; border-color: black">Progress (%)</th>
+                  <th rowspan="2" style="text-align: center; vertical-align: middle; width: 150px; border-color: black">Progress Summary</th>
+                  <th rowspan="2" style="text-align: center; vertical-align: middle; border-color: black">Status</th>
                   <tr>
-                    <th style="text-align: center; width: 100px">Last</th>
-                    <th style="text-align: center; width: 100px">Current</th>
+                    <th style="text-align: center; width: 100px; border-color: black">Last</th>
+                    <th style="text-align: center; width: 100px; border-color: black">Current</th>
                   </tr>  
                 </tr>
               </thead>
@@ -193,13 +193,13 @@
                 <?php $no=1; ?>
                 @foreach($raisa as $raisa)
                 <tr>                  
-                  <td style="text-align: center;">{{ $no++ }}</td>
-                  <td style="text-align: center;">{{ $raisa->projectName }}</td>
-                  <td style="text-align: center;">{{ $raisa->segment }}</td>
-                  <td style="text-align: center;">{{ $raisa->currentProgress }}</td>
-                  <td style="text-align: center;">{{ $raisa->last }} %</td>
-                  <td style="text-align: center;">{{ $raisa->current }} %</td>
-                  <td style="text-align: center;">
+                  <td style="text-align: center; border-color: black">{{ $no++ }}</td>
+                  <td style="text-align: center; border-color: black">{{ $raisa->projectName }}</td>
+                  <td style="text-align: center; border-color: black">{{ $raisa->segment }}</td>
+                  <td style="text-align: center; border-color: black">{{ $raisa->currentProgress }}</td>
+                  <td style="text-align: center; border-color: black">{{ $raisa->last }} %</td>
+                  <td style="text-align: center; border-color: black">{{ $raisa->current }} %</td>
+                  <td style="text-align: center; border-color: black">
                     @if($raisa->current < $raisa->last)
                     <span class="text-green">
                       <i class="fa fa-arrow-down"></i>
@@ -214,7 +214,7 @@
                     </span>
                     @endif
                   </td>
-                  <td style="text-align: center;">Status</td>
+                  <td style="text-align: center; border-color: black">Status</td>
                 </tr>
                 @endforeach
               </tbody>
