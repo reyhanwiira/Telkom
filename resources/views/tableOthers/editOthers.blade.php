@@ -117,6 +117,13 @@ s
                </div><!-- /.input group -->
              </div><!-- /.form group -->
 
+<<<<<<< HEAD
+             
+
+
+
+           </div><!-- /.box-body -->
+=======
              <div class="form-group">
               <label>AM Segment</label>
               <input type="text" class="form-control" placeholder="Enter ..." name="AMSegment" value="{{$other ->AMSegment}}" />
@@ -141,6 +148,7 @@ s
               <label>Benefit</label>
               <input type="text" class="form-control" placeholder="Enter ..." name="benefit" value="{{$other ->benefit}}" />
             </div>
+>>>>>>> 6a4f99d1b67590de4d05c9086037a64181ce2338
 
             <div class="form-group">
               <label>Support AP</label>

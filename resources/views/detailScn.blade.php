@@ -32,13 +32,13 @@
                   </div>
                   <div class="col-md-4">
                     <ul class="chart-legend clearfix">
-                      <li><i class="fa fa-circle-o" style="color: #fff5cc"></i> : {{ $resume[0]->p0Proactive}}</li>
-                      <li><i class="fa fa-circle-o" style="color: #ffd1b3"></i> : {{ $resume[0]->p1Proactive}}</li>
-                      <li><i class="fa fa-circle-o" style="color: #ff9999"></i> : {{ $resume[0]->p2Proactive}}</li>
-                      <li><i class="fa fa-circle-o" style="color: #730099"></i> : {{ $resume[0]->p3Proactive}}</li>
-                      <li><i class="fa fa-circle-o" style="color: #2ea4bc"></i> : {{ $resume[0]->p0Raisa}}</li>
-                      <li><i class="fa fa-circle-o" style="color: #40bf80"></i> : {{ $resume[0]->p1Raisa}}</li>
-                      <li><i class="fa fa-circle-o" style="color: #66ff66"></i> : {{ $resume[0]->p2Raisa}}</li>
+                      <li><i class="fa fa-circle-o" style="color: #fff5cc"></i> : {{ $scn->where('currentProgress','Like','Initial Requirement')->count() }}</li>
+                      <li><i class="fa fa-circle-o" style="color: #ffd1b3"></i> : {{ $scn->where('currentProgress','Like','Initial Solution')->count() }}</li>
+                      <li><i class="fa fa-circle-o" style="color: #ff9999"></i> : {{ $scn->where('currentProgress','Like','Menunggu Feedback & Gathering Req')->count() }}</li>
+                      <li><i class="fa fa-circle-o" style="color: #730099"></i> : {{ $scn->where('currentProgress','Like','Solution Design')->count() }}</li>
+                      <li><i class="fa fa-circle-o" style="color: #2ea4bc"></i> : {{ $scn->where('currentProgress','Like','Solution Development')->count() }}</li>
+                      <li><i class="fa fa-circle-o" style="color: #40bf80"></i> : {{ $scn->where('currentProgress','Like','POC')->count() }}</li>
+                      <li><i class="fa fa-circle-o" style="color: #66ff66"></i> : {{ $scn->where('currentProgress','Like','Proposal Ready')->count() }}</li>
                     </ul>
                   </div>
                 </div>
@@ -80,13 +80,13 @@
                   </div>
                   <div class="col-md-4">
                     <ul class="chart-legend clearfix">
-                      <li><i class="fa fa-circle-o" style="color: #fff5cc"></i> : {{ $resume[0]->p0Proactive}}</li>
-                      <li><i class="fa fa-circle-o" style="color: #ffd1b3"></i> : {{ $resume[0]->p1Proactive}}</li>
-                      <li><i class="fa fa-circle-o" style="color: #ff9999"></i> : {{ $resume[0]->p2Proactive}}</li>
-                      <li><i class="fa fa-circle-o" style="color: #730099"></i> : {{ $resume[0]->p3Proactive}}</li>
-                      <li><i class="fa fa-circle-o" style="color: #2ea4bc"></i> : {{ $resume[0]->p0Raisa}}</li>
-                      <li><i class="fa fa-circle-o" style="color: #40bf80"></i> : {{ $resume[0]->p1Raisa}}</li>
-                      <li><i class="fa fa-circle-o" style="color: #66ff66"></i> : {{ $resume[0]->p2Raisa}}</li>
+                      <li><i class="fa fa-circle-o" style="color: #fff5cc"></i> : {{ $scn->where('currentProgress','Like','Initial Requirement')->count() }}</li>
+                      <li><i class="fa fa-circle-o" style="color: #ffd1b3"></i> : {{ $scn->where('currentProgress','Like','Initial Solution')->count() }}</li>
+                      <li><i class="fa fa-circle-o" style="color: #ff9999"></i> : {{ $scn->where('currentProgress','Like','Menunggu Feedback & Gathering Req')->count() }}</li>
+                      <li><i class="fa fa-circle-o" style="color: #730099"></i> : {{ $scn->where('currentProgress','Like','Solution Design')->count() }}</li>
+                      <li><i class="fa fa-circle-o" style="color: #2ea4bc"></i> : {{ $scn->where('currentProgress','Like','Solution Development')->count() }}</li>
+                      <li><i class="fa fa-circle-o" style="color: #40bf80"></i> : {{ $scn->where('currentProgress','Like','POC')->count() }}</li>
+                      <li><i class="fa fa-circle-o" style="color: #66ff66"></i> : {{ $scn->where('currentProgress','Like','Proposal Ready')->count() }}</li>
                     </ul>
                   </div>
                 </div>

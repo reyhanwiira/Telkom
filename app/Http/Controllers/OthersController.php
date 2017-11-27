@@ -17,7 +17,6 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Http\Response;
 
 
-
 class OthersController extends Controller
 {
 
@@ -28,6 +27,12 @@ class OthersController extends Controller
     	return view('tableOthers.index', compact('others'));
     }
 
+
+    public function readCount(){
+        $other = Other::all();
+
+        return view('/detailOther', compact('other'));
+    }
     public function createOthers()
     {
       return view('tableOthers.createOthers');
@@ -66,14 +71,26 @@ class OthersController extends Controller
     public function editOthers($id)
     {
         $other = other::find($id);
-        $activitys= Activity::all(); 
+        $activitys= Activity::all();
 
-      return view('tableOthers.editOthers',compact('other','activitys'));
+
+      return view('tableOthers.editOthers',compact('other','activitys','other'));
     }
+
 
     public function updateOthers(Request $request, $id)
     {
         $other = other::find($id);
+
+        
+        $other->otherInitialRequirementCountLast=$other->otherInitialRequirementCount;
+        $other->otherInitialSolutionCountLast=$other->otherInitialSolutionCount;
+        $other->otherFeedbackCountLast=$other->otherFeedbackCount;
+        $other->otherSolutionDesignCountLast=$other->otherSolutionDesignCount;
+        $other->otherSolutionDevelopmentCountLast=$other->otherSolutionDevelopmentCount;
+        $other->otherPOCCountLast=$other->otherPOCCount;
+        $other->otherProposalReadyCountLast=$other->otherProposalReadyCount;
+        
         $other->projectName=$request->input('projectName');
         $other->segment=$request->input('segment');
         $other->description=$request->input('description');
@@ -84,6 +101,19 @@ class OthersController extends Controller
         $other->information=$request->input('information');
         $other->currentProgress=$request->input('currentProgress');
         $other->startProject=$request->input('startProject');
+<<<<<<< HEAD
+        $other->finishProject=$request->input('finishProject');        
+
+        $other->otherInitialRequirementCount=$other->where('currentProgress','Like','Initial Requirement')->count();
+        $other->otherInitialSolutionCount=$other->where('currentProgress','Like','Initial Solution')->count();
+        $other->otherFeedbackCount=$other->where('currentProgress','Like','Menunggu Feedback & Gathering Req')->count();
+        $other->otherSolutionDesignCount=$other->where('currentProgress','Like','Solution Design')->count();
+        $other->otherSolutionDevelopmentCount=$other->where('currentProgress','Like','Solution Development')->count();
+        $other->otherPOCCount=$other->where('currentProgress','Like','POC')->count();
+        $other->otherProposalReadyCount=$other->where('currentProgress','Like','Proposal Ready')->count();
+
+
+=======
         $other->finishProject=$request->input('finishProject');
         $other->AMSegment=$request->input('AMSegment');
         $other->keahlian=$request->input('keahlian');
@@ -93,10 +123,12 @@ class OthersController extends Controller
         $other->supportAP=$request->input('supportAP');
         $other->agenda=$request->input('other');
         
+>>>>>>> 6a4f99d1b67590de4d05c9086037a64181ce2338
         $other->update();
 
       return redirect::to('/tableOthers');
     }
+
 
       public function deleteOthers($id)
    {
