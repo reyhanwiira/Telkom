@@ -81,6 +81,18 @@
               </div>
 
               <div class="form-group">
+                <label>Last Status</label>
+                <select class="form-control select2" name="lastStatus" style="width: 100%;">
+                  <option value="0" <?php if($raisa['lastStatus']=="0") echo 'selected="selected"'; ?>>0</option>
+                  <option value="P0" <?php if($raisa['lastStatus']=="P0") echo 'selected="selected"'; ?>>P0</option>
+                  <option value="P1" <?php if($raisa['lastStatus']=="P1") echo 'selected="selected"'; ?>>P1</option>
+                  <option value="P2" <?php if($raisa['lastStatus']=="P2") echo 'selected="selected"'; ?>>P2</option>
+                  <option value="P3" <?php if($raisa['lastStatus']=="P3") echo 'selected="selected"'; ?>>P3</option>
+                </select>
+              </div>
+
+
+              <div class="form-group">
                 <label>Information</label>
                 <textarea class="form-control" rows="3" placeholder="Enter ..." name="information"><?php echo $raisa['information'] ?></textarea>
               </div>

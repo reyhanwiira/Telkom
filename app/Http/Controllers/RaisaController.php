@@ -44,6 +44,7 @@ class RaisaController extends Controller
         'lastAction'=>$request->input('lastAction'),
         'nextAction'=>$request->input('nextAction'),
         'status'=>$request->input('status'),
+        'lastStatus'=>$request->input('lastStatus'),
         'information'=>$request->input('information'),
         'currentProgress'=>$request->input('currentProgress'),
         'startProject'=>$request->input('startProject'),
@@ -78,6 +79,7 @@ class RaisaController extends Controller
         $raisa->lastAction=$request->input('lastAction');
         $raisa->nextAction=$request->input('nextAction');
         $raisa->status=$request->input('status');
+        $raisa->lastStatus=$request->input('lastStatus');
         $raisa->information=$request->input('information');
         $raisa->currentProgress=$request->input('currentProgress');
         $raisa->startProject=$request->input('startProject');

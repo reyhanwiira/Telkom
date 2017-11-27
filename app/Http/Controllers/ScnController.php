@@ -45,6 +45,7 @@ class ScnController extends Controller
         'lastAction'=>$request->input('lastAction'),
         'nextAction'=>$request->input('nextAction'),
         'status'=>$request->input('status'),
+        'lastStatus'=>$request->input('lastStatus'),
         'information'=>$request->input('information'),
         'currentProgress'=>$request->input('currentProgress'),
         'startProject'=>$request->input('startProject'),
@@ -54,8 +55,7 @@ class ScnController extends Controller
         'EstRevenue'=>$request->input('EstRevenue'),
         'deliverable'=>$request->input('deliverable'),
         'benefit'=>$request->input('benefit'),
-        'supportAP'=>$request->input('supportAP'),
-        'agenda'=>$request->input('agenda')
+        'supportAP'=>$request->input('supportAP')
         
       ]);
       return Redirect::to('tableScn');   
@@ -80,6 +80,7 @@ class ScnController extends Controller
         $scn->lastAction=$request->input('lastAction');
         $scn->nextAction=$request->input('nextAction');
         $scn->status=$request->input('status');
+        $scn->lastStatus=$request->input('lastStatus');
         $scn->information=$request->input('information');
         $scn->currentProgress=$request->input('currentProgress');
         $scn->startProject=$request->input('startProject');
@@ -90,7 +91,7 @@ class ScnController extends Controller
         $scn->deliverable=$request->input('deliverable');
         $scn->benefit=$request->input('benefit');
         $scn->supportAP=$request->input('supportAP');
-        $scn->agenda=$request->input('agenda');
+        
         
         $scn->update();
 

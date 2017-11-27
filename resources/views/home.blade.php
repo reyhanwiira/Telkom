@@ -229,40 +229,40 @@
                 <tr>
                   <th rowspan="3" style=" vertical-align: middle; width: 150px;">Progress</th>
                   <td>P0(Usulan/Potensi)</td>
-                  <td style="text-align: center;"><b>{{ $proactives0 }} | {{ $lastProactives0 }} </td>
-                  <td style="text-align: center;"><b>{{ $raisa0 }}</td>
-                  <td style="text-align: center;"><b>{{ $scn0 }}</td>
-                  <td style="text-align: center;"><b>{{ $others0 }}</td>
+                  <td style="text-align: center;"><b>{{ $lastProactives0 }} | {{ $proactives0 }}</td>
+                  <td style="text-align: center;"><b>{{ $lastRaisa0 }} | {{ $raisa0 }}</td>
+                  <td style="text-align: center;"><b>{{ $lastScn0 }} | {{ $scn0 }}</td>
+                  <td style="text-align: center;"><b>{{ $lastOthers0 }} | {{ $others0 }}</td>
 
                 </tr>
                 <tr>
                   <td style="width: 50px;">P1(Req, Des)</td>
-                  <td style="text-align: center;"><b>{{ $proactives1 }} | {{ $lastProactives1 }} </td>
-                  <td style="text-align: center;"><b>{{ $raisa1 }}</td>
-                  <td style="text-align: center;"><b>{{ $scn1 }}</td>
-                  <td style="text-align: center;"><b>{{ $others1 }}</td>
+                  <td style="text-align: center;"><b>{{ $lastProactives1 }} | {{ $proactives1 }}</td>
+                  <td style="text-align: center;"><b>{{ $lastRaisa1 }} | {{ $raisa1 }}</td>
+                  <td style="text-align: center;"><b>{{ $lastScn1 }} | {{ $scn1 }}</td>
+                  <td style="text-align: center;"><b>{{ $lastOthers1 }} | {{ $others1 }}</td>
                 </tr>
                 <tr>
                   <td style="width: 50px;">P2(Submit)</td>
-                  <td style="text-align: center;"><b>{{ $proactives2 }} | {{ $lastProactives2 }} </td>
-                  <td style="text-align: center;"><b>{{ $raisa2 }}</td>
-                  <td style="text-align: center;"><b>{{ $scn2 }}</td>
-                  <td style="text-align: center;"><b>{{ $others2 }}</td>
+                  <td style="text-align: center;"><b>{{ $lastProactives2 }} | {{ $proactives2 }}</td>
+                  <td style="text-align: center;"><b>{{ $lastRaisa2 }} | {{ $raisa2 }}</td>
+                  <td style="text-align: center;"><b>{{ $lastScn2 }} | {{ $scn2 }}</td>
+                  <td style="text-align: center;"><b>{{ $lastOthers2 }}  {{ $others2 }}</td>
                 </tr>
                 <tr> 
                   <th style="width: 50px;">Done</th>
                   <td>P3 Proposal Ready</td>
-                  <td style="text-align: center;"><b>{{ $proactives3 }} | {{ $lastProactives3 }} </td>
-                  <td style="text-align: center;"><b>{{ $raisa3 }}</td>
-                  <td style="text-align: center;"><b>{{ $scn3 }}</td>
-                  <td style="text-align: center;"><b>{{ $others3 }}</td>
+                  <td style="text-align: center;"><b>{{ $lastProactives3 }} | {{ $proactives3 }}</td>
+                  <td style="text-align: center;"><b>{{ $lastRaisa3 }} | {{ $raisa3 }}</td>
+                  <td style="text-align: center;"><b>{{ $lastScn3}} | {{ $scn3 }}</td>
+                  <td style="text-align: center;"><b>{{ $lastOthers3 }} | {{ $others3 }}</td>
                 </tr>
                 <tr>
                   <th colspan="2">Total</th>
-                  <td style="text-align: center;"><b><span id="proactiveAmount"></span></b> | <b><span id="lastProactiveAmount"></span></b> </td>
-                  <td style="text-align: center;"><b><span id="raisaAmount"></span></b>  </td>
-                  <td style="text-align: center;"><b><span id="scnAmount"></span></b>  </td>
-                  <td style="text-align: center;"><b><span id="otherAmount"></span></b>  </td>
+                  <td style="text-align: center;"><b><span id="lastProactiveAmount"></span></b> | <b><span id="proactiveAmount"></span></b> </td>
+                  <td style="text-align: center;"><b><span id="lastRaisaAmount"></span></b> | <b><span id="raisaAmount"></span></b>  </td>
+                  <td style="text-align: center;"><b><span id="lastScnAmount"></span></b> | <b><span id="scnAmount"></span></b>  </td>
+                  <td style="text-align: center;"><b><span id="lastOthersAmount"></span></b> | <b><span id="otherAmount"></span></b>  </td>
                 </tr>
               </table>
                 </a>
@@ -583,7 +583,13 @@ document.getElementById("scnAmount").innerHTML = scnAmount;
 document.getElementById("otherAmount").innerHTML = otherAmount;
 
 var lastProactiveAmount = {{ $lastProactives0 + $lastProactives1 + $lastProactives2 + $lastProactives3 }}
+var lastRaisaAmount = {{ $lastRaisa0 + $lastRaisa1 + $lastRaisa2 + $lastRaisa3 }}
+var lastScnAmount = {{ $lastScn0 + $lastScn1 + $lastScn2 + $lastScn3 }}
+var lastOthersAmount = {{ $lastOthers0 + $lastOthers1 + $lastOthers2 + $lastOthers3 }}
 document.getElementById("lastProactiveAmount").innerHTML = lastProactiveAmount;
+document.getElementById("lastRaisaAmount").innerHTML = lastRaisaAmount;
+document.getElementById("lastScnAmount").innerHTML = lastScnAmount;
+document.getElementById("lastOthersAmount").innerHTML = lastOthersAmount;
 
 var presentaseProactive = {{ ($proactives2 + $proactives3) / ($proactives0 + $proactives1 + $proactives2 + $proactives3)*100}}
 var presentaseRaisa = {{ ($raisa2 + $raisa3) / ($raisa0 + $raisa1 + $raisa2 + $raisa3)*100}}

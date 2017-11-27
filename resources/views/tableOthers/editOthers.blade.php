@@ -84,6 +84,18 @@
                   <option value="P3" <?php if($other['status']=="P3") echo 'selected="selected"'; ?>>P3</option>
                 </select>
               </div>
+s
+              <div class="form-group">
+                <label>Last Status</label>
+                <select class="form-control select2" name="lastStatus" style="width: 100%;">
+                  <option value="0" <?php if($other['lastStatus']=="0") echo 'selected="selected"'; ?>>0</option>
+                  <option value="P0" <?php if($other['lastStatus']=="P0") echo 'selected="selected"'; ?>>P0</option>
+                  <option value="P1" <?php if($other['lastStatus']=="P1") echo 'selected="selected"'; ?>>P1</option>
+                  <option value="P2" <?php if($other['lastStatus']=="P2") echo 'selected="selected"'; ?>>P2</option>
+                  <option value="P3" <?php if($other['lastStatus']=="P3") echo 'selected="selected"'; ?>>P3</option>
+                </select>
+              </div>
+
 
               <div class="form-group">
                <label>Start Project</label>

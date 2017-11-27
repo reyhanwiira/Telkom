@@ -128,6 +128,10 @@
             </div>
          </div><!-- /.box-body -->
 
+         <div class="form-group">
+              <input type="hidden" class="form-control" name="lastStatus" value="0" />
+            </div>
+
          <div class="box-footer">
           <button type="submit" class="btn btn-primary">Submit</button>
         </div>
