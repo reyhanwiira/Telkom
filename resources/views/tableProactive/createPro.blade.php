@@ -63,6 +63,17 @@
             </div>
 
             <div class="form-group">
+              <label>Status</label>
+              <select class="form-control select2" name="status">
+                <option value="P0">P0</option>
+                <option value="P1">P1</option>
+                <option value="P2">P2</option>
+                <option value="P3">P3</option>
+              </select>
+            </div>
+
+
+            <div class="form-group">
               <label>Information</label>
               <textarea class="form-control" rows="3" placeholder="Enter ..." name="information"></textarea>
             </div>
@@ -115,6 +126,10 @@
              <div class="form-group">
               <label>Support AP</label>
               <input type="text" class="form-control" placeholder="Enter ..." name="supportAP" />
+            </div>
+
+             <div class="form-group">
+              <input type="hidden" class="form-control" name="lastStatus" value="0" />
             </div>
 
          </div><!-- /.box-body -->

@@ -51,10 +51,17 @@ class OthersController extends Controller
         'lastAction'=>$request->input('lastAction'),
         'nextAction'=>$request->input('nextAction'),
         'status'=>$request->input('status'),
-        'information'=>$request->input('status'),
+        'information'=>$request->input('information'),
         'currentProgress'=>$request->input('currentProgress'),
         'startProject'=>$request->input('startProject'),
-        'finishProject'=>$request->input('finishProject')
+        'finishProject'=>$request->input('finishProject'),
+        'AMSegment'=>$request->input('AMSegment'),
+        'keahlian'=>$request->input('keahlian'),
+        'EstRevenue'=>$request->input('EstRevenue'),
+        'deliverable'=>$request->input('deliverable'),
+        'benefit'=>$request->input('benefit'),
+        'supportAP'=>$request->input('supportAP'),
+        'agenda'=>$request->input('agenda')
         
       ]);
       return Redirect::to('/tableOthers');
@@ -94,6 +101,7 @@ class OthersController extends Controller
         $other->information=$request->input('information');
         $other->currentProgress=$request->input('currentProgress');
         $other->startProject=$request->input('startProject');
+<<<<<<< HEAD
         $other->finishProject=$request->input('finishProject');        
 
         $other->otherInitialRequirementCount=$other->where('currentProgress','Like','Initial Requirement')->count();
@@ -105,6 +113,17 @@ class OthersController extends Controller
         $other->otherProposalReadyCount=$other->where('currentProgress','Like','Proposal Ready')->count();
 
 
+=======
+        $other->finishProject=$request->input('finishProject');
+        $other->AMSegment=$request->input('AMSegment');
+        $other->keahlian=$request->input('keahlian');
+        $other->EstRevenue=$request->input('EstRevenue');
+        $other->deliverable=$request->input('deliverable');
+        $other->benefit=$request->input('benefit');
+        $other->supportAP=$request->input('supportAP');
+        $other->agenda=$request->input('other');
+        
+>>>>>>> 6a4f99d1b67590de4d05c9086037a64181ce2338
         $other->update();
 
       return redirect::to('/tableOthers');

@@ -33,18 +33,11 @@ Auth::routes();
 
 Route::group(['middleware'=>'auth'], function(){
 	
-	//HOME
-
-	Route::get('/', function () {
-		return view('home');
-	});
-
-	Route::get('/home', 'HomeController@index')->name('home');
 
 	//HOME DASBOARD
 
 	Route::get('/home', 'HomeController@donutPro');
-	
+
 
 
 //ACTIVITY PROACTIVE

@@ -25,12 +25,13 @@
                 </ul>
               </div>
             </div>
+            <span id="presentaseProactive"></span> %
           </div>
           <div class="box-footer no-padding">
             <ul class="nav nav-pills nav-stacked">
               <li>
                 <a href="#">P0
-                  <span class="pull-right" style="font-size: medium; color: #1394ba;">{{ $proactives0 }} </span>
+                  <span class="pull-right" style="font-size: medium; color: #1394ba;">{{ $proactives0 }}</span>
                 </a>
               </li>
               <li>
@@ -45,6 +46,7 @@
               </li>
               <li>
                 <a href="#">P3
+                
                   <span class="pull-right" style="font-size: medium; color: #f16b20;">{{ $proactives3 }}</span>
                 </a>
               </li>
@@ -76,6 +78,7 @@
                 </ul>
               </div>
             </div>
+            <span id="presentaseRaisa"></span> %
             <div class="box-footer no-padding">
               <ul class="nav nav-pills nav-stacked">
                 <li>
@@ -86,14 +89,17 @@
                 <li>
                   <a href="#">P1 
                     <span class="pull-right" style="font-size: medium; color: #0c3c55;">{{ $raisa1 }}</span>
+                  </a>
                 </li>
                 <li>
                   <a href="#">P2
                     <span class="pull-right" style="font-size: medium; color: #c02e1d;">{{ $raisa2 }}</span>
+                  </a>
                 </li>
                 <li>
                   <a href="#">P3
                     <span class="pull-right" style="font-size: medium; color: #f16b20;">{{ $raisa3 }}</span>
+                  </a>
                  </li>
               </ul>
             </div>
@@ -119,6 +125,7 @@
                   </ul>
                 </div>
               </div>
+              <span id="presentaseScn"></span> %
             </div>
             <div class="box-footer no-padding">
               <ul class="nav nav-pills nav-stacked">
@@ -166,6 +173,7 @@
                   </ul>
                 </div>
               </div>
+              <span id="presentaseOthers"></span> %
             </div>
             <div class="box-footer no-padding">
               <ul class="nav nav-pills nav-stacked">
@@ -221,7 +229,7 @@
                 <tr>
                   <th rowspan="3" style=" vertical-align: middle; width: 150px;">Progress</th>
                   <td>P0(Usulan/Potensi)</td>
-                  <td style="text-align: center;"><b>{{ $proactives0 }}</td>
+                  <td style="text-align: center;"><b>{{ $proactives0 }} | {{ $lastProactives0 }} </td>
                   <td style="text-align: center;"><b>{{ $raisa0 }}</td>
                   <td style="text-align: center;"><b>{{ $scn0 }}</td>
                   <td style="text-align: center;"><b>{{ $others0 }}</td>
@@ -229,14 +237,14 @@
                 </tr>
                 <tr>
                   <td style="width: 50px;">P1(Req, Des)</td>
-                  <td style="text-align: center;"><b>{{ $proactives1 }}</td>
+                  <td style="text-align: center;"><b>{{ $proactives1 }} | {{ $lastProactives1 }} </td>
                   <td style="text-align: center;"><b>{{ $raisa1 }}</td>
                   <td style="text-align: center;"><b>{{ $scn1 }}</td>
                   <td style="text-align: center;"><b>{{ $others1 }}</td>
                 </tr>
                 <tr>
                   <td style="width: 50px;">P2(Submit)</td>
-                  <td style="text-align: center;"><b>{{ $proactives2 }}</td>
+                  <td style="text-align: center;"><b>{{ $proactives2 }} | {{ $lastProactives2 }} </td>
                   <td style="text-align: center;"><b>{{ $raisa2 }}</td>
                   <td style="text-align: center;"><b>{{ $scn2 }}</td>
                   <td style="text-align: center;"><b>{{ $others2 }}</td>
@@ -244,14 +252,14 @@
                 <tr> 
                   <th style="width: 50px;">Done</th>
                   <td>P3 Proposal Ready</td>
-                  <td style="text-align: center;"><b>{{ $proactives3 }}</td>
+                  <td style="text-align: center;"><b>{{ $proactives3 }} | {{ $lastProactives3 }} </td>
                   <td style="text-align: center;"><b>{{ $raisa3 }}</td>
                   <td style="text-align: center;"><b>{{ $scn3 }}</td>
                   <td style="text-align: center;"><b>{{ $others3 }}</td>
                 </tr>
                 <tr>
                   <th colspan="2">Total</th>
-                  <td style="text-align: center;"><b><span id="proactiveAmount"></span></b> </td>
+                  <td style="text-align: center;"><b><span id="proactiveAmount"></span></b> | <b><span id="lastProactiveAmount"></span></b> </td>
                   <td style="text-align: center;"><b><span id="raisaAmount"></span></b>  </td>
                   <td style="text-align: center;"><b><span id="scnAmount"></span></b>  </td>
                   <td style="text-align: center;"><b><span id="otherAmount"></span></b>  </td>
@@ -564,6 +572,29 @@
 </script>
 
 <script>
+
+var proactiveAmount = {{ $proactives0 + $proactives1 + $proactives2 + $proactives3 }}
+var raisaAmount = {{ $raisa0 + $raisa1 + $raisa2 + $raisa3 }}
+var scnAmount = {{ $scn0 + $scn1 + $scn2 + $scn3 }}
+var otherAmount = {{ $others0 + $others1 + $others2 + $others3 }}
+document.getElementById("proactiveAmount").innerHTML = proactiveAmount;
+document.getElementById("raisaAmount").innerHTML = raisaAmount;
+document.getElementById("scnAmount").innerHTML = scnAmount;
+document.getElementById("otherAmount").innerHTML = otherAmount;
+
+var lastProactiveAmount = {{ $lastProactives0 + $lastProactives1 + $lastProactives2 + $lastProactives3 }}
+document.getElementById("lastProactiveAmount").innerHTML = lastProactiveAmount;
+
+var presentaseProactive = {{ ($proactives2 + $proactives3) / ($proactives0 + $proactives1 + $proactives2 + $proactives3)*100}}
+var presentaseRaisa = {{ ($raisa2 + $raisa3) / ($raisa0 + $raisa1 + $raisa2 + $raisa3)*100}}
+var presentaseScn = {{ ($scn2 + $scn3) / ($scn0 + $scn1 + $scn2 + $scn3)*100}}
+var presentaseOthers = {{ ($others2 + $others3) / ($others0 + $others1 + $others2 + $others3)*100}}
+    
+document.getElementById("presentaseProactive").innerHTML = presentaseProactive.toFixed(2);
+document.getElementById("presentaseRaisa").innerHTML = presentaseRaisa.toFixed(2);
+document.getElementById("presentaseScn").innerHTML = presentaseScn.toFixed(2);
+document.getElementById("presentaseOthers").innerHTML = presentaseOthers.toFixed(2);
+
 
 </script>
 </section>

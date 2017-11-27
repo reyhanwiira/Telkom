@@ -12,22 +12,16 @@
   <link rel="stylesheet" href="../../bower_components/font-awesome/css/font-awesome.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="../../bower_components/Ionicons/css/ionicons.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="../../bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
    folder instead of downloading all of them to reduce the load. -->
-   <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
-
-   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
-
-<!-- Google Font -->
-<link rel="stylesheet"
-href="../../bower_components/googlefont/googlefont.css">
+  <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+  <!-- Google Font -->
+  <link rel="stylesheet"
+  href="../../bower_components/googlefont/googlefont.css">
 </head>
 <!-- ADD THE CLASS sidebar-collapse TO HIDE THE SIDEBAR PRIOR TO LOADING THE SITE -->
 <body class="hold-transition skin-blue sidebar-collapse sidebar-mini">
@@ -334,15 +328,15 @@ href="../../bower_components/googlefont/googlefont.css">
       'paging'      : true,
       'lengthChange': true,
       'searching'   : true,
-      'ordering'    : true,
+      'ordering'    : false,
       'info'        : true,
-      'autoWidth'   : false
+      'autoWidth'   : true
     })
     $('#example3').DataTable({
       'paging'      : true,
       'lengthChange': true,
       'searching'   : true,
-      'ordering'    : true,
+      'ordering'    : false,
       'info'        : true,
       'autoWidth'   : true
     })
@@ -350,7 +344,7 @@ href="../../bower_components/googlefont/googlefont.css">
       'paging'      : true,
       'lengthChange': true,
       'searching'   : true,
-      'ordering'    : true,
+      'ordering'    : false,
       'info'        : true,
       'autoWidth'   : true
     })
@@ -358,7 +352,7 @@ href="../../bower_components/googlefont/googlefont.css">
       'paging'      : true,
       'lengthChange': true,
       'searching'   : true,
-      'ordering'    : true,
+      'ordering'    : false,
       'info'        : true,
       'autoWidth'   : true
     })

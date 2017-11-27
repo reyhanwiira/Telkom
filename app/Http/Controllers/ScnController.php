@@ -38,17 +38,24 @@ class ScnController extends Controller
           
         Scn::create([
         
-        'projectName'=>$request->input('projectName'),
+       'projectName'=>$request->input('projectName'),
         'segment'=>$request->input('segment'),
         'description'=>$request->input('description'),
         'customer'=>$request->input('customer'),
         'lastAction'=>$request->input('lastAction'),
         'nextAction'=>$request->input('nextAction'),
         'status'=>$request->input('status'),
-        'information'=>$request->input('status'),
+        'information'=>$request->input('information'),
         'currentProgress'=>$request->input('currentProgress'),
         'startProject'=>$request->input('startProject'),
-        'finishProject'=>$request->input('finishProject')
+        'finishProject'=>$request->input('finishProject'),
+        'AMSegment'=>$request->input('AMSegment'),
+        'keahlian'=>$request->input('keahlian'),
+        'EstRevenue'=>$request->input('EstRevenue'),
+        'deliverable'=>$request->input('deliverable'),
+        'benefit'=>$request->input('benefit'),
+        'supportAP'=>$request->input('supportAP'),
+        'agenda'=>$request->input('agenda')
         
       ]);
       return Redirect::to('tableScn');   
@@ -77,6 +84,13 @@ class ScnController extends Controller
         $scn->currentProgress=$request->input('currentProgress');
         $scn->startProject=$request->input('startProject');
         $scn->finishProject=$request->input('finishProject');
+        $scn->AMSegment=$request->input('AMSegment');
+        $scn->keahlian=$request->input('keahlian');
+        $scn->EstRevenue=$request->input('EstRevenue');
+        $scn->deliverable=$request->input('deliverable');
+        $scn->benefit=$request->input('benefit');
+        $scn->supportAP=$request->input('supportAP');
+        $scn->agenda=$request->input('agenda');
         
         $scn->update();
 

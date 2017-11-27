@@ -46,11 +46,19 @@ class ProactiveController extends Controller
         'customer'=>$request->input('customer'),
         'lastAction'=>$request->input('lastAction'),
         'nextAction'=>$request->input('nextAction'),
-        'status'=>$request->input('status'),
-        'information'=>$request->input('information'),
         'currentProgress'=>$request->input('currentProgress'),
+        'status'=>$request->input('status'),
+        'lastStatus'=>$request->input('LastStatus'),
+        'information'=>$request->input('information'),
         'startProject'=>$request->input('startProject'),
-        'finishProject'=>$request->input('finishProject')
+        'finishProject'=>$request->input('finishProject'),
+        'AMSegment'=>$request->input('AMSegment'),
+        'keahlian'=>$request->input('keahlian'),
+        'EstRevenue'=>$request->input('EstRevenue'),
+        'deliverable'=>$request->input('deliverable'),
+        'benefit'=>$request->input('benefit'),
+        'supportAP'=>$request->input('supportAP')
+
         
       ]);
       return Redirect::to('/tableProactive');
@@ -74,13 +82,21 @@ class ProactiveController extends Controller
         $proactive->customer=$request->input('customer');
         $proactive->lastAction=$request->input('lastAction');
         $proactive->nextAction=$request->input('nextAction');
-        $proactive->status=$request->input('status');
-        $proactive->information=$request->input('information');
         $proactive->currentProgress=$request->input('currentProgress');
+        $proactive->status=$request->input('status');
+        $proactive->lastStatus=$request->input('lastStatus');
+        $proactive->information=$request->input('information');
         $proactive->startProject=$request->input('startProject');
         $proactive->finishProject=$request->input('finishProject');
+        $proactive->AMSegment=$request->input('AMSegment');
+        $proactive->keahlian=$request->input('keahlian');
+        $proactive->EstRevenue=$request->input('EstRevenue');
+        $proactive->deliverable=$request->input('deliverable');
+        $proactive->benefit=$request->input('benefit');
+        $proactive->supportAP=$request->input('supportAP');
         
         $proactive->update();
+
 
       return redirect::to('/tableProactive');
     }

@@ -25,10 +25,6 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-       return view('home');
-    }
 
     public function donutPro()
     {
@@ -36,6 +32,10 @@ class HomeController extends Controller
         $proactives1 = Proactive::where('status','=', 'P1')->count();
         $proactives2 = Proactive::where('status','=', 'P2')->count();
         $proactives3 = Proactive::where('status','=', 'P3')->count();
+        $lastProactives0 = Proactive::where('lastStatus','=', 'P0')->count();
+        $lastProactives1 = Proactive::where('lastStatus','=', 'P1')->count();
+        $lastProactives2 = Proactive::where('lastStatus','=', 'P2')->count();
+        $lastProactives3 = Proactive::where('lastStatus','=', 'P3')->count();
         $raisa0 = Raisa::where('status','=', 'P0')->count();
         $raisa1 = Raisa::where('status','=', 'P1')->count();
         $raisa2 = Raisa::where('status','=', 'P2')->count();
@@ -49,7 +49,7 @@ class HomeController extends Controller
         $others2 = Other::where('status','=', 'P2')->count();
         $others3 = Other::where('status','=', 'P3')->count();
 
-        return view('home', compact('proactives0','proactives1','proactives2','proactives3','raisa0','raisa1','raisa2','raisa3','scn0','scn1','scn2','scn3','others0','others1','others2','others3'));
+        return view('home', compact('proactives0','proactives1','proactives2','proactives3','lastProactives0','lastProactives1','lastProactives2','lastProactives3','raisa0','raisa1','raisa2','raisa3','scn0','scn1','scn2','scn3','others0','others1','others2','others3'));
     }
 
  

@@ -68,6 +68,16 @@
             </div>
 
             <div class="form-group">
+              <label>Status</label>
+              <select class="form-control select2" name="status">
+                <option value="P0">P0</option>
+                <option value="P1">P1</option>
+                <option value="P2">P2</option>
+                <option value="P3">P3</option>
+              </select>
+            </div>
+
+            <div class="form-group">
              <label>Start Project</label>
              <div class="input-group">
                <div class="input-group-addon">
@@ -87,6 +97,35 @@
              </div><!-- /.input group -->
            </div><!-- /.form group -->
 
+           <div class="form-group">
+              <label>AM Segment</label>
+              <input type="text" class="form-control" placeholder="Enter ..." name="AMSegment" />
+            </div>
+
+             <div class="form-group">
+              <label>Keahlian yang dibutuhkan</label>
+              <input type="text" class="form-control" placeholder="Enter ..." name="keahlian" />
+            </div>
+
+             <div class="form-group">
+              <label>Est. Revenue</label>
+              <input type="text" class="form-control" placeholder="Enter ..." name="EstRevenue" />
+            </div>
+
+             <div class="form-group">
+              <label>Deliverable</label>
+              <input type="text" class="form-control" placeholder="Enter ..." name="deliverable" />
+            </div>
+
+             <div class="form-group">
+              <label>Benefit</label>
+              <input type="text" class="form-control" placeholder="Enter ..." name="benefit" />
+            </div>
+
+             <div class="form-group">
+              <label>Support AP</label>
+              <input type="text" class="form-control" placeholder="Enter ..." name="supportAP" />
+            </div>
          </div><!-- /.box-body -->
 
          <div class="box-footer">
