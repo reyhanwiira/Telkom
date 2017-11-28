@@ -173,7 +173,7 @@
         <div class="box-body">
           <div class="table-responsive">
             <div class="col-md-12">
-             <table id="example2" class="table table-striped" style="border-color: black">
+             <table id="example2" class="table table-bordered table-striped" style="border-color: black">
               <thead>
                 <tr>
                   <th rowspan="2" style="text-align: center; vertical-align: middle; border-color: black">No</th>

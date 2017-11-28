@@ -17,35 +17,35 @@
          <table id="example4" class="table table-bordered table-striped">
           <thead>
             <tr>
-              <th>No</th>
-              <th>Project</th>
-              <th>Segment</th>
-              <th>Description</th>
-              <th>Customer</th>
-              <th style="width: 10%;">Last Action</th>
-              <th style="width: 50%;">Next Action</th>
-              <th>Status</th>
-              <th>Information</th>
-              <th>Start Project</th>
-              <th>Finish Project</th>
-              <th>Action</th> 
+              <th style="border-color: black">No</th>
+              <th style="border-color: black">Project</th>
+              <th style="border-color: black">Segment</th>
+              <th style="border-color: black">Description</th>
+              <th style="border-color: black">Customer</th>
+              <th style="width: 10%; border-color: black">Last Action</th>
+              <th style="width: 50%; border-color: black">Next Action</th>
+              <th style="border-color: black">Status</th>
+              <th style="border-color: black">Information</th>
+              <th style="border-color: black">Start Project</th>
+              <th style="border-color: black">Finish Project</th>
+              <th style="border-color: black">Action</th> 
             </tr>
           </thead>
           <tbody>
             <?php $no=1; ?>
             @foreach ($others as $other)
             <tr>
-              <td style="text-align: center; font-size: 12px">{{ $no++ }}</td>
-              <td style="font-size: 12px">{{ $other-> projectName }}</td>
-              <td style="text-align: center; font-size: 12px">{{ $other-> segment }}</td>
-              <td style="font-size: 12px">{{ $other-> description }}</td>
-              <td style="text-align: center; font-size: 12px">{{ $other-> customer }}</td>
-              <td style="font-size: 12px">{{ $other-> lastAction }}</td>
-              <td style="font-size: 12px">{{ $other-> nextAction }}</td>
-              <td style="text-align: center; font-size: 12px">{{ $other-> status }}</td>
-              <td style="font-size: 12px">{{ $other-> information }}</td>
-              <td style="text-align: center; font-size: 12px">{{ $other-> startProject }}</td>
-              <td style="text-align: center; font-size: 12px">{{ $other-> finishProject }}</td>
+              <td style="text-align: center; font-size: 12px; border-color: black">{{ $no++ }}</td>
+              <td style="font-size: 12px; border-color: black">{{ $other-> projectName }}</td>
+              <td style="text-align: center; font-size: 12px; border-color: black">{{ $other-> segment }}</td>
+              <td style="font-size: 12px; border-color: black">{{ $other-> description }}</td>
+              <td style="text-align: center; font-size: 12px; border-color: black">{{ $other-> customer }}</td>
+              <td style="font-size: 12px; border-color: black">{{ $other-> lastAction }}</td>
+              <td style="font-size: 12px; border-color: black">{{ $other-> nextAction }}</td>
+              <td style="text-align: center; font-size: 12px; border-color: black">{{ $other-> status }}</td>
+              <td style="font-size: 12px;border-color: black">{{ $other-> information }}</td>
+              <td style="text-align: center; font-size: 12px; border-color: black">{{ $other-> startProject }}</td>
+              <td style="text-align: center; font-size: 12px; border-color: black">{{ $other-> finishProject }}</td>
               <td>
                 <div class="btn-group" style="text-align: center">
                   <a href="{{ url('/tableOthers/'.$other->id.'/editOthers') }}">
@@ -91,7 +91,7 @@
           <a href="{{ url('tableOthers/createOthers') }}" class="btn btn-block btn-social btn-linkedin"><i class="fa fa-plus-square-o"></i> New Project</a>
         </div>
         <div class="col-xs-2 text-center">
-          <a href="{{ url('importOthers') }}" target="_blank" class="btn btn-block btn-social btn-linkedin"><i class="fa fa-download"></i> Import</a>
+         
         </div>
         <div class="col-xs-2 text-center">
           
@@ -100,10 +100,10 @@
          
         </div>
         <div class="col-xs-2 text-center">
-          <a href="{{ url('downloadOthers','xlsx') }}" target="_blank" class="btn btn-block btn-social btn-linkedin"><i class="fa fa-upload"></i> Export</a> 
+          <a href="{{ url('importOthers') }}" target="_blank" class="btn btn-block btn-social btn-linkedin"><i class="fa fa-upload"></i> Import</a>
         </div>
         <div class="col-xs-2 text-center">
-          <a href="{{ url('tableOthers/printOthers') }}" target="_blank" class="btn btn-block btn-social btn-linkedin"><i class="fa fa-print"></i> Print</a>
+          <a href="{{ url('downloadOthers','xlsx') }}" target="_blank" class="btn btn-block btn-social btn-linkedin"><i class="fa fa-download"></i> Export</a> 
         </div>
       </div>
     </div><!-- /.box-footer -->
