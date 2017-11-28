@@ -36,10 +36,9 @@ class ProactiveController extends Controller
  
  
     public function storePro(Request $request)
-    {
-          
+    {   
         Proactive::create([
-        
+           
         'projectName'=>$request->input('projectName'),
         'segment'=>$request->input('segment'),
         'description'=>$request->input('description'),
@@ -47,6 +46,7 @@ class ProactiveController extends Controller
         'lastAction'=>$request->input('lastAction'),
         'nextAction'=>$request->input('nextAction'),
         'currentProgress'=>$request->input('currentProgress'),
+        'progress'=>$request->input('progress'),
         'status'=>$request->input('status'),
         'lastStatus'=>$request->input('LastStatus'),
         'information'=>$request->input('information'),
@@ -58,7 +58,6 @@ class ProactiveController extends Controller
         'deliverable'=>$request->input('deliverable'),
         'benefit'=>$request->input('benefit'),
         'supportAP'=>$request->input('supportAP')
-
         
       ]);
       return Redirect::to('/tableProactive');
@@ -94,7 +93,7 @@ class ProactiveController extends Controller
         $proactive->deliverable=$request->input('deliverable');
         $proactive->benefit=$request->input('benefit');
         $proactive->supportAP=$request->input('supportAP');
-        
+
         $proactive->update();
 
 

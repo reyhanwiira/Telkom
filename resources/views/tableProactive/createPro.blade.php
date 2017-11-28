@@ -50,17 +50,14 @@
             </div>
 
             <div class="form-group">
-              <label>Current Progress</label>
-              <select class="form-control select2" name="currentProgress">
-                <option value="Initial Requirement" selected="selected">Initial Requirement</option>
-                <option value="Initial Solusi">Initial Solusi</option>
-                <option value="Waiting Feedback & Requirement Gathering">Waiting Feedback & Requirement Gathering</option>
-                <option value="Solution Design">Solution Design</option>
-                <option value="Solution Development">Solution Development</option>
-                <option value="POC">POC</option>
-                <option value="Proposal Ready">Proposal Ready</option>
-              </select>
+              <label>Progress</label>
+              <input type="text" class="form-control pull-right" placeholder="Enter ..." id="progress" name="progress">
             </div>
+
+            <div class="form-group">
+              <input type="hidden" class="form-control" name="currentProgress" id="currentProgress">
+            </div>
+        
 
             <div class="form-group">
               <label>Status</label>
@@ -143,5 +140,26 @@
   </div><!--/.col (left) -->
 </div>   <!-- /.row -->
 </section><!-- /.content -->
+  
 
+<script type="text/javascript">
+  var progress = document.getElementById("progress");
+  var currentProgress = document.getElementById("currentProgress");
+  var validation;
+  
+  var progress2 = document.getElementById("progress");
+  var currentProgress2 = document.getElementById("currentProgress");
+  var validation2;
+  
+  if(progress.value < 10){
+    validation = "Initial Requirement";
+  }else if(progress2.value > 11){
+    validation2 ="Initial Solution";
+  }
+
+  currentProgress.innerHTML = validation;
+
+  currentProgress.innerHTML = validation2;
+
+</script>
 @endsection
