@@ -10,7 +10,7 @@
         <div class="box-header">
         </div><!-- /.box-header -->
         <!-- form start -->
-        <form role="form" method="post" action="{{ url('/tableProactive') }}">
+        <form role="form" method="post" name="form" action="{{ url('/tableProactive') }}">
           {!! csrf_field() !!}
           <div class="box-body">
 
@@ -132,7 +132,7 @@
          </div><!-- /.box-body -->
 
          <div class="box-footer">
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-primary" onclick="val();">Submit</button>
         </div>
       </form>
     </div><!-- /.box -->
@@ -142,24 +142,4 @@
 </section><!-- /.content -->
   
 
-<script type="text/javascript">
-  var progress = document.getElementById("progress");
-  var currentProgress = document.getElementById("currentProgress");
-  var validation;
-  
-  var progress2 = document.getElementById("progress");
-  var currentProgress2 = document.getElementById("currentProgress");
-  var validation2;
-  
-  if(progress.value < 10){
-    validation = "Initial Requirement";
-  }else if(progress2.value > 11){
-    validation2 ="Initial Solution";
-  }
-
-  currentProgress.innerHTML = validation;
-
-  currentProgress.innerHTML = validation2;
-
-</script>
 @endsection

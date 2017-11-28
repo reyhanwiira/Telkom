@@ -120,9 +120,23 @@
               </li>
               <li>
                 <a href="#">Total
-                  <span class="pull-right" style="font-size: medium; color: #cc00cc;">  <span id="proactiveAmount"></span> <span id="proactiveProgress"></span> </span>
+                  <span class="pull-right" style="font-size: medium; color: #cc00cc;">  {{$proactives0 + $proactives1 + $proactives2 + $proactives3}} 
+                    @if($proactives0 + $proactives1 + $proactives2 + $proactives3 < $lastProactives0 + $lastProactives1 + $lastProactives2 + $lastProactives3)
+                    <span class="text-green">
+                      <i class="fa fa-arrow-down"></i>
+                    </span>
+                    @elseif($proactives0 + $proactives1 + $proactives2 + $proactives3  > $lastProactives0 + $lastProactives1 + $lastProactives2 + $lastProactives3)
+                    <span class="text-green">
+                      <i class="fa fa-arrow-up"></i>
+                    </span>
+                    @elseif($proactives0 + $proactives1 + $proactives2 + $proactives3 = $lastProactives0 + $lastProactives1 + $lastProactives2 + $lastProactives3)
+                    <span class="text-green">
+                      <i class="fa fa-arrow-right"></i>
+                    </span>
+                    @endif
+                  </span>
                   <span class="pull-right" style="font-size: medium; padding: 0px 15px;"> | </span>
-                  <span class="pull-right" style="font-size: medium; color: #b3b3b3;"> <span id="lastProactiveAmount"></span> </span>
+                  <span class="pull-right" style="font-size: medium; color: #b3b3b3;"> {{$lastProactives0 + $lastProactives1 + $lastProactives2 + $lastProactives3}} </span>
                 </a>
               </li>
             </ul>
@@ -808,31 +822,12 @@ $(function () {
 
 <script>
 
-var proactiveAmount = {{ $proactives0 + $proactives1 + $proactives2 + $proactives3 }}
-var raisaAmount = {{ $raisa0 + $raisa1 + $raisa2 + $raisa3 }}
-var scnAmount = {{ $scn0 + $scn1 + $scn2 + $scn3 }}
-var otherAmount = {{ $others0 + $others1 + $others2 + $others3 }}
-document.getElementById("proactiveAmount").innerHTML = proactiveAmount;
-document.getElementById("raisaAmount").innerHTML = raisaAmount;
-document.getElementById("scnAmount").innerHTML = scnAmount;
-document.getElementById("otherAmount").innerHTML = otherAmount;
-
-var lastProactiveAmount = {{ $lastProactives0 + $lastProactives1 + $lastProactives2 + $lastProactives3 }}
-var lastRaisaAmount = {{ $lastRaisa0 + $lastRaisa1 + $lastRaisa2 + $lastRaisa3 }}
-var lastScnAmount = {{ $lastScn0 + $lastScn1 + $lastScn2 + $lastScn3 }}
-var lastOthersAmount = {{ $lastOthers0 + $lastOthers1 + $lastOthers2 + $lastOthers3 }}
-document.getElementById("lastProactiveAmount").innerHTML = lastProactiveAmount;
-document.getElementById("lastRaisaAmount").innerHTML = lastRaisaAmount;
-document.getElementById("lastScnAmount").innerHTML = lastScnAmount;
-document.getElementById("lastOthersAmount").innerHTML = lastOthersAmount;
-
 var presentaseProactive = {{ ($proactives2 + $proactives3) / ($proactives0 + $proactives1 + $proactives2 + $proactives3)*100}}
 var presentaseRaisa = {{ ($raisa2 + $raisa3) / ($raisa0 + $raisa1 + $raisa2 + $raisa3)*100}}
 var presentaseScn = {{ ($scn2 + $scn3) / ($scn0 + $scn1 + $scn2 + $scn3)*100}}
 var presentaseOthers = {{ ($others2 + $others3) / ($others0 + $others1 + $others2 + $others3)*100}}
 
 
-var proactiveProgress;
 
 document.getElementById("presentaseProactive").innerHTML = presentaseProactive.toFixed(2);
 document.getElementById("presentaseRaisa").innerHTML = presentaseRaisa.toFixed(2);

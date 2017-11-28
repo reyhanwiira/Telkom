@@ -60,9 +60,7 @@ class HomeController extends Controller
         $lastOthers1 = Other::where('lastStatus','=', 'P1')->count();
         $lastOthers2 = Other::where('lastStatus','=', 'P2')->count();
         $lastOthers3 = Other::where('lastStatus','=', 'P3')->count();
-
         return view('home', compact('proactives0','proactives1','proactives2','proactives3','lastProactives0','lastProactives1','lastProactives2','lastProactives3','raisa0','raisa1','raisa2','raisa3','lastRaisa0','lastRaisa1','lastRaisa2','lastRaisa3','scn0','scn1','scn2','scn3','lastScn0','lastScn1','lastScn2','lastScn3','others0','others1','others2','others3','lastOthers0','lastOthers1','lastOthers2','lastOthers3'));
     }
-
  
 }
