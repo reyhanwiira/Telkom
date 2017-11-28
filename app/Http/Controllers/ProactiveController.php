@@ -38,7 +38,7 @@ class ProactiveController extends Controller
   public function storePro(Request $request)
   {   
 
-    if($request->input('progress')>0&&$request->input('progress')<10){
+    if($request->input('progress')>=0&&$request->input('progress')<=10){
         Proactive::create([  
             'projectName'=>$request->input('projectName'),
             'segment'=>$request->input('segment'),
@@ -61,8 +61,7 @@ class ProactiveController extends Controller
             'supportAP'=>$request->input('supportAP')
 
             ]);
-}
-    else if($request->input('progress')>10&&$request->input('progress')<20){
+}else if($request->input('progress')>=11&&$request->input('progress')<=20){
         Proactive::create([  
             'projectName'=>$request->input('projectName'),
             'segment'=>$request->input('segment'),
@@ -85,10 +84,126 @@ class ProactiveController extends Controller
             'supportAP'=>$request->input('supportAP')
 
             ]);
+}else if($request->input('progress')>=21&&$request->input('progress')<=30){
+        Proactive::create([  
+            'projectName'=>$request->input('projectName'),
+            'segment'=>$request->input('segment'),
+            'description'=>$request->input('description'),
+            'customer'=>$request->input('customer'),
+            'lastAction'=>$request->input('lastAction'),
+            'nextAction'=>$request->input('nextAction'),
+            'progress'=>$request->input('progress'),
+            'currentProgress'=>'Menunggu Feedback & Gathering Req',
+            'status'=>$request->input('status'),
+            'lastStatus'=>$request->input('LastStatus'),
+            'information'=>$request->input('information'),
+            'startProject'=>$request->input('startProject'),
+            'finishProject'=>$request->input('finishProject'),
+            'AMSegment'=>$request->input('AMSegment'),
+            'keahlian'=>$request->input('keahlian'),
+            'EstRevenue'=>$request->input('EstRevenue'),
+            'deliverable'=>$request->input('deliverable'),
+            'benefit'=>$request->input('benefit'),
+            'supportAP'=>$request->input('supportAP')
+
+            ]);
+}else if($request->input('progress')>=31&&$request->input('progress')<=60){
+        Proactive::create([  
+            'projectName'=>$request->input('projectName'),
+            'segment'=>$request->input('segment'),
+            'description'=>$request->input('description'),
+            'customer'=>$request->input('customer'),
+            'lastAction'=>$request->input('lastAction'),
+            'nextAction'=>$request->input('nextAction'),
+            'progress'=>$request->input('progress'),
+            'currentProgress'=>'Solution Design',
+            'status'=>$request->input('status'),
+            'lastStatus'=>$request->input('LastStatus'),
+            'information'=>$request->input('information'),
+            'startProject'=>$request->input('startProject'),
+            'finishProject'=>$request->input('finishProject'),
+            'AMSegment'=>$request->input('AMSegment'),
+            'keahlian'=>$request->input('keahlian'),
+            'EstRevenue'=>$request->input('EstRevenue'),
+            'deliverable'=>$request->input('deliverable'),
+            'benefit'=>$request->input('benefit'),
+            'supportAP'=>$request->input('supportAP')
+
+            ]);
+}else if($request->input('progress')>=61&&$request->input('progress')<=90){
+        Proactive::create([  
+            'projectName'=>$request->input('projectName'),
+            'segment'=>$request->input('segment'),
+            'description'=>$request->input('description'),
+            'customer'=>$request->input('customer'),
+            'lastAction'=>$request->input('lastAction'),
+            'nextAction'=>$request->input('nextAction'),
+            'progress'=>$request->input('progress'),
+            'currentProgress'=>'Solution Development',
+            'status'=>$request->input('status'),
+            'lastStatus'=>$request->input('LastStatus'),
+            'information'=>$request->input('information'),
+            'startProject'=>$request->input('startProject'),
+            'finishProject'=>$request->input('finishProject'),
+            'AMSegment'=>$request->input('AMSegment'),
+            'keahlian'=>$request->input('keahlian'),
+            'EstRevenue'=>$request->input('EstRevenue'),
+            'deliverable'=>$request->input('deliverable'),
+            'benefit'=>$request->input('benefit'),
+            'supportAP'=>$request->input('supportAP')
+
+            ]);
+}else if($request->input('progress')>=91&&$request->input('progress')<=99){
+        Proactive::create([  
+            'projectName'=>$request->input('projectName'),
+            'segment'=>$request->input('segment'),
+            'description'=>$request->input('description'),
+            'customer'=>$request->input('customer'),
+            'lastAction'=>$request->input('lastAction'),
+            'nextAction'=>$request->input('nextAction'),
+            'progress'=>$request->input('progress'),
+            'currentProgress'=>'POC',
+            'status'=>$request->input('status'),
+            'lastStatus'=>$request->input('LastStatus'),
+            'information'=>$request->input('information'),
+            'startProject'=>$request->input('startProject'),
+            'finishProject'=>$request->input('finishProject'),
+            'AMSegment'=>$request->input('AMSegment'),
+            'keahlian'=>$request->input('keahlian'),
+            'EstRevenue'=>$request->input('EstRevenue'),
+            'deliverable'=>$request->input('deliverable'),
+            'benefit'=>$request->input('benefit'),
+            'supportAP'=>$request->input('supportAP')
+
+            ]);
+}else if($request->input('progress')==100){
+        Proactive::create([  
+            'projectName'=>$request->input('projectName'),
+            'segment'=>$request->input('segment'),
+            'description'=>$request->input('description'),
+            'customer'=>$request->input('customer'),
+            'lastAction'=>$request->input('lastAction'),
+            'nextAction'=>$request->input('nextAction'),
+            'progress'=>$request->input('progress'),
+            'currentProgress'=>'Proposal Ready',
+            'status'=>$request->input('status'),
+            'lastStatus'=>$request->input('LastStatus'),
+            'information'=>$request->input('information'),
+            'startProject'=>$request->input('startProject'),
+            'finishProject'=>$request->input('finishProject'),
+            'AMSegment'=>$request->input('AMSegment'),
+            'keahlian'=>$request->input('keahlian'),
+            'EstRevenue'=>$request->input('EstRevenue'),
+            'deliverable'=>$request->input('deliverable'),
+            'benefit'=>$request->input('benefit'),
+            'supportAP'=>$request->input('supportAP')
+
+            ]);
 }
 
 return Redirect::to('/tableProactive');
 }
+
 
 
 public function editPro($id)
