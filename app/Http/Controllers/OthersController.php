@@ -42,17 +42,42 @@ class OthersController extends Controller
     public function storeOthers(Request $request)
     {
           
-        Other::create([
-        
+         if($request->input('progress')>=0&&$request->input('progress')<=10){
+        Other::create([  
+            'projectName'=>$request->input('projectName'),
+            'segment'=>$request->input('segment'),
+            'description'=>$request->input('description'),
+            'customer'=>$request->input('customer'),
+            'lastAction'=>$request->input('lastAction'),
+            'nextAction'=>$request->input('nextAction'),
+            'progress'=>$request->input('progress'),
+            'currentProgress'=>'Initial Requirement',
+            'status'=>$request->input('status'),
+            'lastStatus'=>$request->input('LastStatus'),
+            'information'=>$request->input('information'),
+            'startProject'=>$request->input('startProject'),
+            'finishProject'=>$request->input('finishProject'),
+            'AMSegment'=>$request->input('AMSegment'),
+            'keahlian'=>$request->input('keahlian'),
+            'EstRevenue'=>$request->input('EstRevenue'),
+            'deliverable'=>$request->input('deliverable'),
+            'benefit'=>$request->input('benefit'),
+            'supportAP'=>$request->input('supportAP')
+
+            ]);
+}else if($request->input('progress')>=11&&$request->input('progress')<=20){
+    Other::create([  
         'projectName'=>$request->input('projectName'),
         'segment'=>$request->input('segment'),
         'description'=>$request->input('description'),
         'customer'=>$request->input('customer'),
         'lastAction'=>$request->input('lastAction'),
         'nextAction'=>$request->input('nextAction'),
+        'progress'=>$request->input('progress'),
+        'currentProgress'=>'Initial Solution',
         'status'=>$request->input('status'),
+        'lastStatus'=>$request->input('LastStatus'),
         'information'=>$request->input('information'),
-        'currentProgress'=>$request->input('currentProgress'),
         'startProject'=>$request->input('startProject'),
         'finishProject'=>$request->input('finishProject'),
         'AMSegment'=>$request->input('AMSegment'),
@@ -60,10 +85,125 @@ class OthersController extends Controller
         'EstRevenue'=>$request->input('EstRevenue'),
         'deliverable'=>$request->input('deliverable'),
         'benefit'=>$request->input('benefit'),
-        'supportAP'=>$request->input('supportAP'),
-        'agenda'=>$request->input('agenda')
-        
-      ]);
+        'supportAP'=>$request->input('supportAP')
+
+        ]);
+}else if($request->input('progress')>=21&&$request->input('progress')<=30){
+    Other::create([  
+        'projectName'=>$request->input('projectName'),
+        'segment'=>$request->input('segment'),
+        'description'=>$request->input('description'),
+        'customer'=>$request->input('customer'),
+        'lastAction'=>$request->input('lastAction'),
+        'nextAction'=>$request->input('nextAction'),
+        'progress'=>$request->input('progress'),
+        'currentProgress'=>'Menunggu Feedback & Gathering Req',
+        'status'=>$request->input('status'),
+        'lastStatus'=>$request->input('LastStatus'),
+        'information'=>$request->input('information'),
+        'startProject'=>$request->input('startProject'),
+        'finishProject'=>$request->input('finishProject'),
+        'AMSegment'=>$request->input('AMSegment'),
+        'keahlian'=>$request->input('keahlian'),
+        'EstRevenue'=>$request->input('EstRevenue'),
+        'deliverable'=>$request->input('deliverable'),
+        'benefit'=>$request->input('benefit'),
+        'supportAP'=>$request->input('supportAP')
+
+        ]);
+}else if($request->input('progress')>=31&&$request->input('progress')<=60){
+    Other::create([  
+        'projectName'=>$request->input('projectName'),
+        'segment'=>$request->input('segment'),
+        'description'=>$request->input('description'),
+        'customer'=>$request->input('customer'),
+        'lastAction'=>$request->input('lastAction'),
+        'nextAction'=>$request->input('nextAction'),
+        'progress'=>$request->input('progress'),
+        'currentProgress'=>'Solution Design',
+        'status'=>$request->input('status'),
+        'lastStatus'=>$request->input('LastStatus'),
+        'information'=>$request->input('information'),
+        'startProject'=>$request->input('startProject'),
+        'finishProject'=>$request->input('finishProject'),
+        'AMSegment'=>$request->input('AMSegment'),
+        'keahlian'=>$request->input('keahlian'),
+        'EstRevenue'=>$request->input('EstRevenue'),
+        'deliverable'=>$request->input('deliverable'),
+        'benefit'=>$request->input('benefit'),
+        'supportAP'=>$request->input('supportAP')
+
+        ]);
+}else if($request->input('progress')>=61&&$request->input('progress')<=90){
+    Other::create([  
+        'projectName'=>$request->input('projectName'),
+        'segment'=>$request->input('segment'),
+        'description'=>$request->input('description'),
+        'customer'=>$request->input('customer'),
+        'lastAction'=>$request->input('lastAction'),
+        'nextAction'=>$request->input('nextAction'),
+        'progress'=>$request->input('progress'),
+        'currentProgress'=>'Solution Development',
+        'status'=>$request->input('status'),
+        'lastStatus'=>$request->input('LastStatus'),
+        'information'=>$request->input('information'),
+        'startProject'=>$request->input('startProject'),
+        'finishProject'=>$request->input('finishProject'),
+        'AMSegment'=>$request->input('AMSegment'),
+        'keahlian'=>$request->input('keahlian'),
+        'EstRevenue'=>$request->input('EstRevenue'),
+        'deliverable'=>$request->input('deliverable'),
+        'benefit'=>$request->input('benefit'),
+        'supportAP'=>$request->input('supportAP')
+
+        ]);
+}else if($request->input('progress')>=91&&$request->input('progress')<=99){
+    Other::create([  
+        'projectName'=>$request->input('projectName'),
+        'segment'=>$request->input('segment'),
+        'description'=>$request->input('description'),
+        'customer'=>$request->input('customer'),
+        'lastAction'=>$request->input('lastAction'),
+        'nextAction'=>$request->input('nextAction'),
+        'progress'=>$request->input('progress'),
+        'currentProgress'=>'POC',
+        'status'=>$request->input('status'),
+        'lastStatus'=>$request->input('LastStatus'),
+        'information'=>$request->input('information'),
+        'startProject'=>$request->input('startProject'),
+        'finishProject'=>$request->input('finishProject'),
+        'AMSegment'=>$request->input('AMSegment'),
+        'keahlian'=>$request->input('keahlian'),
+        'EstRevenue'=>$request->input('EstRevenue'),
+        'deliverable'=>$request->input('deliverable'),
+        'benefit'=>$request->input('benefit'),
+        'supportAP'=>$request->input('supportAP')
+
+        ]);
+}else if($request->input('progress')==100){
+    Other::create([  
+        'projectName'=>$request->input('projectName'),
+        'segment'=>$request->input('segment'),
+        'description'=>$request->input('description'),
+        'customer'=>$request->input('customer'),
+        'lastAction'=>$request->input('lastAction'),
+        'nextAction'=>$request->input('nextAction'),
+        'progress'=>$request->input('progress'),
+        'currentProgress'=>'Proposal Ready',
+        'status'=>$request->input('status'),
+        'lastStatus'=>$request->input('LastStatus'),
+        'information'=>$request->input('information'),
+        'startProject'=>$request->input('startProject'),
+        'finishProject'=>$request->input('finishProject'),
+        'AMSegment'=>$request->input('AMSegment'),
+        'keahlian'=>$request->input('keahlian'),
+        'EstRevenue'=>$request->input('EstRevenue'),
+        'deliverable'=>$request->input('deliverable'),
+        'benefit'=>$request->input('benefit'),
+        'supportAP'=>$request->input('supportAP')
+
+        ]);
+}
       return Redirect::to('/tableOthers');
 
     }
@@ -83,38 +223,20 @@ class OthersController extends Controller
         $other = other::find($id);
 
         
-        $other->otherInitialRequirementCountLast=$other->otherInitialRequirementCount;
-        $other->otherInitialSolutionCountLast=$other->otherInitialSolutionCount;
-        $other->otherFeedbackCountLast=$other->otherFeedbackCount;
-        $other->otherSolutionDesignCountLast=$other->otherSolutionDesignCount;
-        $other->otherSolutionDevelopmentCountLast=$other->otherSolutionDevelopmentCount;
-        $other->otherPOCCountLast=$other->otherPOCCount;
-        $other->otherProposalReadyCountLast=$other->otherProposalReadyCount;
-        
+       $other->last=$other->progress;
+    if($request->input('progress')>=0&&$request->input('progress')<=10){
         $other->projectName=$request->input('projectName');
         $other->segment=$request->input('segment');
         $other->description=$request->input('description');
         $other->customer=$request->input('customer');
         $other->lastAction=$request->input('lastAction');
         $other->nextAction=$request->input('nextAction');
+        $other->progress=$request->input('progress');
+        $other->currentProgress='Initial Requirement';
         $other->status=$request->input('status');
+        $other->lastStatus=$request->input('lastStatus');
         $other->information=$request->input('information');
-        $other->currentProgress=$request->input('currentProgress');
         $other->startProject=$request->input('startProject');
-        $other->finishProject=$request->input('finishProject');        
-
-        $other->otherInitialRequirementCount=$other->where('currentProgress','Like','Initial Requirement')->count();
-        $other->otherInitialSolutionCount=$other->where('currentProgress','Like','Initial Solution')->count();
-        $other->otherFeedbackCount=$other->where('currentProgress','Like','Menunggu Feedback & Gathering Req')->count();
-        $other->otherSolutionDesignCount=$other->where('currentProgress','Like','Solution Design')->count();
-        $other->otherSolutionDevelopmentCount=$other->where('currentProgress','Like','Solution Development')->count();
-        $other->otherPOCCount=$other->where('currentProgress','Like','POC')->count();
-        $other->otherProposalReadyCount=$other->where('currentProgress','Like','Proposal Ready')->count();
-<<<<<<< HEAD
-        
-=======
-
->>>>>>> 670510996b61696c9771cb10e6704bc44842914a
         $other->finishProject=$request->input('finishProject');
         $other->AMSegment=$request->input('AMSegment');
         $other->keahlian=$request->input('keahlian');
@@ -122,13 +244,131 @@ class OthersController extends Controller
         $other->deliverable=$request->input('deliverable');
         $other->benefit=$request->input('benefit');
         $other->supportAP=$request->input('supportAP');
-        $other->agenda=$request->input('other');
-<<<<<<< HEAD
+
+    }else if($request->input('progress')>=11&&$request->input('progress')<=20){
+        $other->projectName=$request->input('projectName');
+        $other->segment=$request->input('segment');
+        $other->description=$request->input('description');
+        $other->customer=$request->input('customer');
+        $other->lastAction=$request->input('lastAction');
+        $other->nextAction=$request->input('nextAction');
+        $other->progress=$request->input('progress');
+        $other->currentProgress='Initial Solution';
+        $other->status=$request->input('status');
+        $other->lastStatus=$request->input('lastStatus');
+        $other->information=$request->input('information');
+        $other->startProject=$request->input('startProject');
+        $other->finishProject=$request->input('finishProject');
+        $other->AMSegment=$request->input('AMSegment');
+        $other->keahlian=$request->input('keahlian');
+        $other->EstRevenue=$request->input('EstRevenue');
+        $other->deliverable=$request->input('deliverable');
+        $other->benefit=$request->input('benefit');
+        $other->supportAP=$request->input('supportAP');
+    }else if($request->input('progress')>=21&&$request->input('progress')<=30){
+        $other->projectName=$request->input('projectName');
+        $other->segment=$request->input('segment');
+        $other->description=$request->input('description');
+        $other->customer=$request->input('customer');
+        $other->lastAction=$request->input('lastAction');
+        $other->nextAction=$request->input('nextAction');
+        $other->progress=$request->input('progress');
+        $other->currentProgress='Menunggu Feedback & Gathering Req';
+        $other->status=$request->input('status');
+        $other->lastStatus=$request->input('lastStatus');
+        $other->information=$request->input('information');
+        $other->startProject=$request->input('startProject');
+        $other->finishProject=$request->input('finishProject');
+        $other->AMSegment=$request->input('AMSegment');
+        $other->keahlian=$request->input('keahlian');
+        $other->EstRevenue=$request->input('EstRevenue');
+        $other->deliverable=$request->input('deliverable');
+        $other->benefit=$request->input('benefit');
+        $other->supportAP=$request->input('supportAP');
+    }else if($request->input('progress')>=31&&$request->input('progress')<=60){
+        $other->projectName=$request->input('projectName');
+        $other->segment=$request->input('segment');
+        $other->description=$request->input('description');
+        $other->customer=$request->input('customer');
+        $other->lastAction=$request->input('lastAction');
+        $other->nextAction=$request->input('nextAction');
+        $other->progress=$request->input('progress');
+        $other->currentProgress='Solution Design';
+        $other->status=$request->input('status');
+        $other->lastStatus=$request->input('lastStatus');
+        $other->information=$request->input('information');
+        $other->startProject=$request->input('startProject');
+        $other->finishProject=$request->input('finishProject');
+        $other->AMSegment=$request->input('AMSegment');
+        $other->keahlian=$request->input('keahlian');
+        $other->EstRevenue=$request->input('EstRevenue');
+        $other->deliverable=$request->input('deliverable');
+        $other->benefit=$request->input('benefit');
+        $other->supportAP=$request->input('supportAP');
+    }else if($request->input('progress')>=61&&$request->input('progress')<=90){
+        $other->projectName=$request->input('projectName');
+        $other->segment=$request->input('segment');
+        $other->description=$request->input('description');
+        $other->customer=$request->input('customer');
+        $other->lastAction=$request->input('lastAction');
+        $other->nextAction=$request->input('nextAction');
+        $other->progress=$request->input('progress');
+        $other->currentProgress='Solution Development';
+        $other->status=$request->input('status');
+        $other->lastStatus=$request->input('lastStatus');
+        $other->information=$request->input('information');
+        $other->startProject=$request->input('startProject');
+        $other->finishProject=$request->input('finishProject');
+        $other->AMSegment=$request->input('AMSegment');
+        $other->keahlian=$request->input('keahlian');
+        $other->EstRevenue=$request->input('EstRevenue');
+        $other->deliverable=$request->input('deliverable');
+        $other->benefit=$request->input('benefit');
+        $other->supportAP=$request->input('supportAP');
+    }else if($request->input('progress')>=91&&$request->input('progress')<=99){
+        $other->projectName=$request->input('projectName');
+        $other->segment=$request->input('segment');
+        $other->description=$request->input('description');
+        $other->customer=$request->input('customer');
+        $other->lastAction=$request->input('lastAction');
+        $other->nextAction=$request->input('nextAction');
+        $other->progress=$request->input('progress');
+        $other->currentProgress='POC';
+        $other->status=$request->input('status');
+        $other->lastStatus=$request->input('lastStatus');
+        $other->information=$request->input('information');
+        $other->startProject=$request->input('startProject');
+        $other->finishProject=$request->input('finishProject');
+        $other->AMSegment=$request->input('AMSegment');
+        $other->keahlian=$request->input('keahlian');
+        $other->EstRevenue=$request->input('EstRevenue');
+        $other->deliverable=$request->input('deliverable');
+        $other->benefit=$request->input('benefit');
+        $other->supportAP=$request->input('supportAP');
+    }else{
+        $other->projectName=$request->input('projectName');
+        $other->segment=$request->input('segment');
+        $other->description=$request->input('description');
+        $other->customer=$request->input('customer');
+        $other->lastAction=$request->input('lastAction');
+        $other->nextAction=$request->input('nextAction');
+        $other->progress=$request->input('progress');
+        $other->currentProgress='Proposal Ready';
+        $other->status=$request->input('status');
+        $other->lastStatus=$request->input('lastStatus');
+        $other->information=$request->input('information');
+        $other->startProject=$request->input('startProject');
+        $other->finishProject=$request->input('finishProject');
+        $other->AMSegment=$request->input('AMSegment');
+        $other->keahlian=$request->input('keahlian');
+        $other->EstRevenue=$request->input('EstRevenue');
+        $other->deliverable=$request->input('deliverable');
+        $other->benefit=$request->input('benefit');
+        $other->supportAP=$request->input('supportAP');
+    }
+
         
         $other->update();
-=======
-
->>>>>>> 670510996b61696c9771cb10e6704bc44842914a
 
       return redirect::to('/tableOthers');
     }
@@ -158,14 +398,22 @@ class OthersController extends Controller
     public function storeActOthers(Request $request)
     {
           
-        Activity::create([
-        
-        'tanggal'=>$request->input('tanggal'),
-        'agenda'=>$request->input('agenda'),
-        'actionPlan'=>$request->input('actionPlan'),
-        'evidence'=>$request->input('evidence')
-        
-      ]);
+    $entry = new Activity();
+    $entry->tanggal=$request->input('tanggal');
+    $entry->agenda=$request->input('agenda');
+    $entry->actionPlan=$request->input('actionPlan');
+    $entry->lampiran=$request->input('lampiran');
+
+
+    $file = $request->file('filename');
+    $extension = $file->getClientOriginalExtension();
+    Storage::disk('local')->put($file->getFilename().'.'.$extension,  File::get($file));
+    
+    $entry->mime = $file->getClientMimeType();
+    $entry->original_filename = $file->getClientOriginalName();
+    $entry->filename = $file->getFilename().'.'.$extension;
+
+    $entry->save();
 
       return redirect('tableOthers');
   }
@@ -183,8 +431,7 @@ class OthersController extends Controller
         $activity->tanggal=$request->input('tanggal');
         $activity->agenda=$request->input('agenda');
         $activity->actionPlan=$request->input('actionPlan');
-        $activity->evidence=$request->input('evidence');
-        $activity->lampiran=$request->input('lampiran');
+    
 
         $activity->update();
 

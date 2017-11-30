@@ -379,10 +379,8 @@ public function updatePro(Request $request, $id)
       return view('/tableProactive.addActPro');
   }
 
-<<<<<<< HEAD
-  public function storeActPro(Request $request)
-  {
-=======
+
+
 public function storeActPro(Request $request, $id)
 {
     $entry = new Activity();
@@ -390,7 +388,7 @@ public function storeActPro(Request $request, $id)
     $entry->agenda=$request->input('agenda');
     $entry->actionPlan=$request->input('actionPlan');
     $entry->lampiran=$request->input('lampiran');
->>>>>>> 288f5bcfacfe11a47b72d38e44d102817a0a1ad2
+
 
     $file = $request->file('filename');
     $extension = $file->getClientOriginalExtension();
