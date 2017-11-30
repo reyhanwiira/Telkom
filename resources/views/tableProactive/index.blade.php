@@ -14,21 +14,21 @@
       </div><!-- /.box-header -->
       <div class="box-body">
         <div class="table-responsive">
-         <table id="example4" class="table table-bordered table-striped">
+         <table id="example4" class="table table-bordered table-striped" style="border-color: black">
           <thead>
             <tr>
-              <th style="border-color: black">No</th>
-              <th style="border-color: black">Project</th>
-              <th style="border-color: black">Segment</th>
-              <th style="border-color: black">Description</th>
-              <th style="border-color: black">Customer</th>
-              <th style="border-color: black">Last Action</th>
-              <th style="border-color: black">Next Action</th>
-              <th style="border-color: black">Status</th>
-              <th style="border-color: black">Information</th>
-              <th style="border-color: black">Start Project</th>
-              <th style="border-color: black">Finish Project</th>
-              <th style="border-color: black">Action</th> 
+              <th style="border-color: black; border-bottom-width: 0px">No</th>
+              <th style="border-color: black; border-bottom-width: 0px">Project</th>
+              <th style="border-color: black; border-bottom-width: 0px">Segment</th>
+              <th style="border-color: black; border-bottom-width: 0px">Description</th>
+              <th style="border-color: black; border-bottom-width: 0px">Customer</th>
+              <th style="border-color: black; border-bottom-width: 0px">Last Action</th>
+              <th style="border-color: black; border-bottom-width: 0px">Next Action</th>
+              <th style="border-color: black; border-bottom-width: 0px">Status</th>
+              <th style="border-color: black; border-bottom-width: 0px">Information</th>
+              <th style="border-color: black; border-bottom-width: 0px">Start Project</th>
+              <th style="border-color: black; border-bottom-width: 0px">Finish Project</th>
+              <th style="border-color: black; border-bottom-width: 0px">Action</th> 
             </tr>
           </thead>
           <tbody>
@@ -36,7 +36,7 @@
             @foreach ($proactives as $proactive)
             <tr>
               <td style="text-align: center; font-size: 12px; border-color: black">{{ $no++ }}</td>
-              <td style="font-size: 12px;">{{ $proactive-> projectName }}</td>
+              <td style="font-size: 12px;border-color: black">{{ $proactive-> projectName }}</td>
               <td style="text-align: center; font-size: 12px; border-color: black">{{ $proactive-> segment }}</td>
               <td style="font-size: 12px; border-color: black">{{ $proactive-> description }}</td>
               <td style="text-align: center; font-size: 12px; border-color: black">{{ $proactive-> customer }}</td>
