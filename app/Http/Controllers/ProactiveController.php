@@ -256,18 +256,23 @@ public function createActivity()
   return view('/tableProactive.addActPro');
 }
 
-public function storeActPro(Request $request)
+public function storeActPro(Request $request, $id)
 {
+    $entry = new Activity();
+    $entry->tanggal=$request->input('tanggal');
+    $entry->agenda=$request->input('agenda');
+    $entry->actionPlan=$request->input('actionPlan');
+    $entry->lampiran=$request->input('lampiran');
 
-    Activity::create([
+    $file = $request->file('filename');
+    $extension = $file->getClientOriginalExtension();
+    Storage::disk('local')->put($file->getFilename().'.'.$extension,  File::get($file));
+    
+    $entry->mime = $file->getClientMimeType();
+    $entry->original_filename = $file->getClientOriginalName();
+    $entry->filename = $file->getFilename().'.'.$extension;
 
-        'tanggal'=>$request->input('tanggal'),
-        'agenda'=>$request->input('agenda'),
-        'actionPlan'=>$request->input('actionPlan'),
-        'evidence'=>$request->input('evidence'),
-        'lampiran'=>$request->input('lampiran')
-        
-        ]);
+    $entry->save();
 
     return redirect('tableProactive');
 }
@@ -295,8 +300,7 @@ public function updateActPro(Request $request, $id)
     $activity->tanggal=$request->input('tanggal');
     $activity->agenda=$request->input('agenda');
     $activity->actionPlan=$request->input('actionPlan');
-    $activity->evidence=$request->input('evidence');
-    $activity->lampiran=$request->input('lampiran');
+    
 
     $activity->update();
 
