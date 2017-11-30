@@ -10,11 +10,10 @@
         <div class="box-header">
         </div><!-- /.box-header -->
         <!-- form start -->
-        <form role="form" method="post" action="{{ url('/tableRaisa/editRaisa') }}">
-        {!! csrf_field() !!}
-          <div class="box-body">
+         <form action="" method="post" enctype="multipart/form-data">
+        {{ csrf_field() }}
 
-            <div class="form-group">
+        <div class="form-group">
                  <label>Date</label>
                  <div class="input-group">
                    <div class="input-group-addon">
@@ -33,17 +32,14 @@
               <label>Action Plan</label>
               <input type="text" class="form-control" name="actionPlan" />
             </div>
-
-            <div class="form-group">
-              <label>Evidence</label>
-              <input type="text" class="form-control" name="evidence" />
-            </div>
-         </div><!-- /.box-body -->
-
-         <div class="box-footer">
-          <button type="submit" class="btn btn-primary">Submit</button>
+        <div class="form-group">
+        <label for="file">Select File</label>
+        <input type="file" name="filename" id="file[]" multiple value="">
+        <div class="box-footer text-center">
         </div>
-      </form>
+  <input class="btn btn-primary" type="submit" name="upload" id="upload" value="Upload">
+</div>
+    </form>
     </div><!-- /.box -->
 
   </div><!--/.col (left) -->

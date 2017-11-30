@@ -57,25 +57,16 @@
                 <textarea class="form-control" rows="3" placeholder="Enter ..." name="nextAction"><?php echo $other['nextAction'] ?></textarea>
               </div>
 
-              <div class="form-group">
-                <label>Current Progress</label>
-                <select class="form-control select2" name="currentProgress" style="width: 100%;">
-                  <option value="Initial Requirement" <?php if($other['currentProgress']=="Initial Requirement") echo 'selected="selected"'; ?>>Initial Requirement</option>
-                  <option value="Initial Solution" <?php if($other['currentProgress']=="Initial Solution") echo 'selected="selected"'; ?>>Initial Solusi</option>
-                  <option value="Waiting Feedback & Requirement Gathering" <?php if($other['currentProgress']=="Waiting Feedback & Requirement Gathering") echo 'selected="selected"'; ?>>Waiting Feedback & Requirement Gathering</option>
-                  <option value="Solution Design" <?php if($other['currentProgress']=="Solution Design") echo 'selected="selected"'; ?>>Solution Design</option>
-                  <option value="Solution Development" <?php if($other['currentProgress']=="Solution Development") echo 'selected="selected"'; ?>>Solution Development</option>
-                  <option value="POC" <?php if($other['currentProgress']=="POC") echo 'selected="selected"'; ?>>POC</option>
-                  <option value="Proposal Ready" <?php if($other['currentProgress']=="Proposal Ready") echo 'selected="selected"'; ?>>Proposal Ready</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label>Information</label>
-                <textarea class="form-control" rows="3" placeholder="Enter ..." name="information"><?php echo $other['information'] ?></textarea>
-              </div>
-
                <div class="form-group">
+              <label>Progress</label>
+              <input type="text" class="form-control pull-right" placeholder="Enter ..." id="progress" name="progress" value="{{$other->progress}}">
+            </div>
+
+            <div class="form-group">
+              <input type="hidden" class="form-control" name="currentProgress" id="currentProgress">
+            </div>
+
+              <div class="form-group">
                 <label>Status</label>
                 <select class="form-control select2" name="status" style="width: 100%;">
                   <option value="P0" <?php if($other['status']=="P0") echo 'selected="selected"'; ?>>P0</option>
@@ -84,7 +75,7 @@
                   <option value="P3" <?php if($other['status']=="P3") echo 'selected="selected"'; ?>>P3</option>
                 </select>
               </div>
-s
+
               <div class="form-group">
                 <label>Last Status</label>
                 <select class="form-control select2" name="lastStatus" style="width: 100%;">
@@ -96,6 +87,11 @@ s
                 </select>
               </div>
 
+
+              <div class="form-group">
+                <label>Information</label>
+                <textarea class="form-control" rows="3" placeholder="Enter ..." name="information"><?php echo $other['information'] ?></textarea>
+              </div>
 
               <div class="form-group">
                <label>Start Project</label>
@@ -117,13 +113,6 @@ s
                </div><!-- /.input group -->
              </div><!-- /.form group -->
 
-<<<<<<< HEAD
-             
-
-
-
-           </div><!-- /.box-body -->
-=======
              <div class="form-group">
               <label>AM Segment</label>
               <input type="text" class="form-control" placeholder="Enter ..." name="AMSegment" value="{{$other ->AMSegment}}" />
@@ -148,7 +137,6 @@ s
               <label>Benefit</label>
               <input type="text" class="form-control" placeholder="Enter ..." name="benefit" value="{{$other ->benefit}}" />
             </div>
->>>>>>> 6a4f99d1b67590de4d05c9086037a64181ce2338
 
             <div class="form-group">
               <label>Support AP</label>
@@ -163,7 +151,7 @@ s
         </form>
       </div><!-- /.box -->
 
-      <!-- TABLE: Activity Record -->
+      <!-- TABLE: LATEST ORDERS -->
       <div class="box box-primary">
         <div class="box-header with-border">
           <h3 class="box-title">Activity Record</h3>
@@ -173,83 +161,68 @@ s
         </div><!-- /.box-header -->
         <div class="box-body">
           <div class="table-responsive">
-            <div class="col-md-12">
-             <table id="example2" class="table table-bordered table-striped">
-              <thead>
-                <tr>
-                  <th style="width: 20px">No</th>
-                  <th>Tanggal</th>
-                  <th>Agenda</th>
-                  <th>Action Plan</th>
-                  <th>Evidence</th>
-                  <th>Lampiran</th>
-                  <th style="width: 150px">Action</th>
-                </tr>
-              </thead>
-              <tbody>
-                <?php $no=1; ?>
-                @foreach ($activitys as $activity)
-                <tr>
-                  <td>{{ $no++ }}</td>
-                  <td>{{ $activity->tanggal }}</td>
-                  <td>{{ $activity->agenda }}</td>
-                  <td>{{ $activity->actionPlan }}</td>
-                  <td>{{ $activity->evidence }}</td>
-                  <td>{{ $activity->original_filename }}</td>
-                  <td>
-                    <div class="btn-group">
-                      <a href="{{ url('/uploadActOthers/'.$activity->id) }}">
-                        <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Upload File">
-                          <i class='glyphicon glyphicon-floppy-open' style="font-size: 12px"></i>
-                        </button>
-                      </a>
+           <table id="example2" class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width: : 50px">No</th>
+                <th>Tanggal</th>
+                <th>Agenda</th>
+                <th>Action Plan</th>
+                <th>Evidence</th>
+                <th>Lampiran</th>
+                <th style="width: : 150px">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <?php $no=1; ?>
+              @foreach ($activitys as $activity)
+              <tr>
+                <td>{{ $no++ }}</td>
+                <td>{{ $activity->tanggal }}</td>
+                <td>{{ $activity->agenda }}</td>
+                <td>{{ $activity->actionPlan }}</td>
+                <td>{{ $activity->evidence }}</td>
+                <td>{{ $activity->original_filename }}</td>
+                <td>
 
-                      <a href="{{ url('/downloadPro/'.$activity->filename) }}"  download="{{ $activity->filename }}">
-                        <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Download File">
-                          <i class='glyphicon glyphicon-floppy-save' style="font-size: 12px"></i>
-                        </button>
-                      </a>
-                  
-                      <a href="{{ url('/tableOthers'.'/editActOthers/'.$activity->id) }}">
-                        <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Edit File">
-                          <i class='glyphicon glyphicon-edit' style="font-size: 12px"></i>
-                        </button>
-                      </a>
+                  <div class="btn-group">
+                    <a href="{{ url('/uploadActOthers/'.$activity->id) }}">
+                      <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Upload File">
+                        <i class='glyphicon glyphicon-floppy-open' style="font-size: 12px"></i>
+                      </button>
+                    </a>
 
-                      <a href="{{ url('/deleteActOthers/'.$activity->id) }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete"><i class='glyphicon glyphicon-trash' style="font-size: 12px"></i></button></a>
-                    </div>
-                  </td>
-                </tr>
-                @endforeach
-              </tbody>
-            </table>
-          </div>
+                    <a href="{{ url('/downloadPro/'.$activity->filename) }}"  download="{{ $activity->filename }}">
+                      <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Download File">
+                        <i class='glyphicon glyphicon-floppy-save' style="font-size: 12px"></i>
+                      </button>
+                    </a>
+
+                    <a href="{{ url('/tableOthers'.'/editActOthers/'.$activity->id) }}">
+                      <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Edit File">
+                        <i class='glyphicon glyphicon-edit' style="font-size: 12px"></i>
+                      </button>
+                    </a>
+
+                    <a href="{{ url('/deleteActOthers/'.$activity->id) }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="right" title="Delete"><i class='glyphicon glyphicon-trash' style="font-size: 12px"></i></button></a>
+
+                  </div>
+                </td>
+              </tr>
+              @endforeach
+            </tbody>
+
+          </table>
         </div><!-- /.table-responsive -->
 
-        <div class="modal modal-danger fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Alert!</h4>
-              </div>
-              <div class="modal-body">
-                Are You Sure want to delete this Activity ?, this cannot be undo!
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                <a href="{{ url('/deleteActOthers/'.$activity->id) }}"><button type="button" class="btn btn-danger">Delete Project</button>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+
       </div><!-- /.box-body -->
       <div class="box-footer clearfix">
+
         <a href="{{ url('tableOthers/addActOthers') }}" class="btn btn-primary pull-left">New Activity</a>
+
       </div><!-- /.box-footer -->
     </div><!-- /.box -->
-
   </div><!--/.col (left) -->
 </div>   <!-- /.row -->
 </section><!-- /.content -->

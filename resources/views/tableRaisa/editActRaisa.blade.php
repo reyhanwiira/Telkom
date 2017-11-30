@@ -35,11 +35,6 @@
               <input type="text" class="form-control" name="actionPlan" value="{{ $activity->actionPlan }}"/>
             </div>
 
-            <div class="form-group">
-              <label>Evidence</label>
-              <input type="text" class="form-control" name="evidence" value="{{ $activity->evidence }}"/>
-            </div>
-
          </div><!-- /.box-body -->
 
          <div class="box-footer">

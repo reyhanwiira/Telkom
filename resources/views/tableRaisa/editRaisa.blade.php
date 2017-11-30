@@ -57,18 +57,14 @@
                 <textarea class="form-control" rows="3" placeholder="Enter ..." name="nextAction"><?php echo $raisa['nextAction'] ?></textarea>
               </div>
 
-              <div class="form-group">
-                <label>Current Progress</label>
-                <select class="form-control select2" name="currentProgress" style="width: 100%;">
-                  <option value="Initial Requirement" <?php if($raisa['currentProgress']=="Initial Requirement") echo 'selected="selected"'; ?>>Initial Requirement</option>
-                  <option value="Initial Solution" <?php if($raisa['currentProgress']=="Initial Solution") echo 'selected="selected"'; ?>>Initial Solusi</option>
-                  <option value="Waiting Feedback & Requirement Gathering" <?php if($raisa['currentProgress']=="Waiting Feedback & Requirement Gathering") echo 'selected="selected"'; ?>>Waiting Feedback & Requirement Gathering</option>
-                  <option value="Solution Design" <?php if($raisa['currentProgress']=="Solution Design") echo 'selected="selected"'; ?>>Solution Design</option>
-                  <option value="Solution Development" <?php if($raisa['currentProgress']=="Solution Development") echo 'selected="selected"'; ?>>Solution Development</option>
-                  <option value="POC" <?php if($raisa['currentProgress']=="POC") echo 'selected="selected"'; ?>>POC</option>
-                  <option value="Proposal Ready" <?php if($raisa['currentProgress']=="Proposal Ready") echo 'selected="selected"'; ?>>Proposal Ready</option>
-                </select>
-              </div>
+               <div class="form-group">
+              <label>Progress</label>
+              <input type="text" class="form-control pull-right" placeholder="Enter ..." id="progress" name="progress" value="{{$raisa->progress}}">
+            </div>
+
+            <div class="form-group">
+              <input type="hidden" class="form-control" name="currentProgress" id="currentProgress">
+            </div>
 
               <div class="form-group">
                 <label>Status</label>
@@ -196,7 +192,7 @@
                       </button>
                     </a>
 
-                    <a href="{{ url('/downloadPro/'.$activity->filename) }}"  download="{{ $activity->filename }}">
+                    <a href="{{ url('/downloadPro/'.$activity->original_filename) }}"  download="{{ $activity->original_filename }}">
                       <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Download File">
                         <i class='glyphicon glyphicon-floppy-save' style="font-size: 12px"></i>
                       </button>

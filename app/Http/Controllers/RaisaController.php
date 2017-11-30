@@ -35,18 +35,42 @@ class RaisaController extends Controller
     public function store(Request $request)
     {
           
-        Raisa::create([
-        
+      if($request->input('progress')>=0&&$request->input('progress')<=10){
+        Raisa::create([  
+            'projectName'=>$request->input('projectName'),
+            'segment'=>$request->input('segment'),
+            'description'=>$request->input('description'),
+            'customer'=>$request->input('customer'),
+            'lastAction'=>$request->input('lastAction'),
+            'nextAction'=>$request->input('nextAction'),
+            'progress'=>$request->input('progress'),
+            'currentProgress'=>'Initial Requirement',
+            'status'=>$request->input('status'),
+            'lastStatus'=>$request->input('LastStatus'),
+            'information'=>$request->input('information'),
+            'startProject'=>$request->input('startProject'),
+            'finishProject'=>$request->input('finishProject'),
+            'AMSegment'=>$request->input('AMSegment'),
+            'keahlian'=>$request->input('keahlian'),
+            'EstRevenue'=>$request->input('EstRevenue'),
+            'deliverable'=>$request->input('deliverable'),
+            'benefit'=>$request->input('benefit'),
+            'supportAP'=>$request->input('supportAP')
+
+            ]);
+}else if($request->input('progress')>=11&&$request->input('progress')<=20){
+    Raisa::create([  
         'projectName'=>$request->input('projectName'),
         'segment'=>$request->input('segment'),
         'description'=>$request->input('description'),
         'customer'=>$request->input('customer'),
         'lastAction'=>$request->input('lastAction'),
         'nextAction'=>$request->input('nextAction'),
+        'progress'=>$request->input('progress'),
+        'currentProgress'=>'Initial Solution',
         'status'=>$request->input('status'),
-        'lastStatus'=>$request->input('lastStatus'),
+        'lastStatus'=>$request->input('LastStatus'),
         'information'=>$request->input('information'),
-        'currentProgress'=>$request->input('currentProgress'),
         'startProject'=>$request->input('startProject'),
         'finishProject'=>$request->input('finishProject'),
         'AMSegment'=>$request->input('AMSegment'),
@@ -55,8 +79,126 @@ class RaisaController extends Controller
         'deliverable'=>$request->input('deliverable'),
         'benefit'=>$request->input('benefit'),
         'supportAP'=>$request->input('supportAP')
+
+        ]);
+}else if($request->input('progress')>=21&&$request->input('progress')<=30){
+    Raisa::create([  
+        'projectName'=>$request->input('projectName'),
+        'segment'=>$request->input('segment'),
+        'description'=>$request->input('description'),
+        'customer'=>$request->input('customer'),
+        'lastAction'=>$request->input('lastAction'),
+        'nextAction'=>$request->input('nextAction'),
+        'progress'=>$request->input('progress'),
+        'currentProgress'=>'Menunggu Feedback & Gathering Req',
+        'status'=>$request->input('status'),
+        'lastStatus'=>$request->input('LastStatus'),
+        'information'=>$request->input('information'),
+        'startProject'=>$request->input('startProject'),
+        'finishProject'=>$request->input('finishProject'),
+        'AMSegment'=>$request->input('AMSegment'),
+        'keahlian'=>$request->input('keahlian'),
+        'EstRevenue'=>$request->input('EstRevenue'),
+        'deliverable'=>$request->input('deliverable'),
+        'benefit'=>$request->input('benefit'),
+        'supportAP'=>$request->input('supportAP')
+
+        ]);
+}else if($request->input('progress')>=31&&$request->input('progress')<=60){
+    Raisa::create([  
+        'projectName'=>$request->input('projectName'),
+        'segment'=>$request->input('segment'),
+        'description'=>$request->input('description'),
+        'customer'=>$request->input('customer'),
+        'lastAction'=>$request->input('lastAction'),
+        'nextAction'=>$request->input('nextAction'),
+        'progress'=>$request->input('progress'),
+        'currentProgress'=>'Solution Design',
+        'status'=>$request->input('status'),
+        'lastStatus'=>$request->input('LastStatus'),
+        'information'=>$request->input('information'),
+        'startProject'=>$request->input('startProject'),
+        'finishProject'=>$request->input('finishProject'),
+        'AMSegment'=>$request->input('AMSegment'),
+        'keahlian'=>$request->input('keahlian'),
+        'EstRevenue'=>$request->input('EstRevenue'),
+        'deliverable'=>$request->input('deliverable'),
+        'benefit'=>$request->input('benefit'),
+        'supportAP'=>$request->input('supportAP')
+
+        ]);
+}else if($request->input('progress')>=61&&$request->input('progress')<=90){
+    Raisa::create([  
+        'projectName'=>$request->input('projectName'),
+        'segment'=>$request->input('segment'),
+        'description'=>$request->input('description'),
+        'customer'=>$request->input('customer'),
+        'lastAction'=>$request->input('lastAction'),
+        'nextAction'=>$request->input('nextAction'),
+        'progress'=>$request->input('progress'),
+        'currentProgress'=>'Solution Development',
+        'status'=>$request->input('status'),
+        'lastStatus'=>$request->input('LastStatus'),
+        'information'=>$request->input('information'),
+        'startProject'=>$request->input('startProject'),
+        'finishProject'=>$request->input('finishProject'),
+        'AMSegment'=>$request->input('AMSegment'),
+        'keahlian'=>$request->input('keahlian'),
+        'EstRevenue'=>$request->input('EstRevenue'),
+        'deliverable'=>$request->input('deliverable'),
+        'benefit'=>$request->input('benefit'),
+        'supportAP'=>$request->input('supportAP')
+
+        ]);
+}else if($request->input('progress')>=91&&$request->input('progress')<=99){
+    Raisa::create([  
+        'projectName'=>$request->input('projectName'),
+        'segment'=>$request->input('segment'),
+        'description'=>$request->input('description'),
+        'customer'=>$request->input('customer'),
+        'lastAction'=>$request->input('lastAction'),
+        'nextAction'=>$request->input('nextAction'),
+        'progress'=>$request->input('progress'),
+        'currentProgress'=>'POC',
+        'status'=>$request->input('status'),
+        'lastStatus'=>$request->input('LastStatus'),
+        'information'=>$request->input('information'),
+        'startProject'=>$request->input('startProject'),
+        'finishProject'=>$request->input('finishProject'),
+        'AMSegment'=>$request->input('AMSegment'),
+        'keahlian'=>$request->input('keahlian'),
+        'EstRevenue'=>$request->input('EstRevenue'),
+        'deliverable'=>$request->input('deliverable'),
+        'benefit'=>$request->input('benefit'),
+        'supportAP'=>$request->input('supportAP')
+
+        ]);
+}else if($request->input('progress')==100){
+    Raisa::create([  
+        'projectName'=>$request->input('projectName'),
+        'segment'=>$request->input('segment'),
+        'description'=>$request->input('description'),
+        'customer'=>$request->input('customer'),
+        'lastAction'=>$request->input('lastAction'),
+        'nextAction'=>$request->input('nextAction'),
+        'progress'=>$request->input('progress'),
+        'currentProgress'=>'Proposal Ready',
+        'status'=>$request->input('status'),
+        'lastStatus'=>$request->input('LastStatus'),
+        'information'=>$request->input('information'),
+        'startProject'=>$request->input('startProject'),
+        'finishProject'=>$request->input('finishProject'),
+        'AMSegment'=>$request->input('AMSegment'),
+        'keahlian'=>$request->input('keahlian'),
+        'EstRevenue'=>$request->input('EstRevenue'),
+        'deliverable'=>$request->input('deliverable'),
+        'benefit'=>$request->input('benefit'),
+        'supportAP'=>$request->input('supportAP')
+
+        ]);
+}
         
-      ]);
+      
       return Redirect::to('/tableRaisa');
       
     }
@@ -72,16 +214,21 @@ class RaisaController extends Controller
     public function update(Request $request, $id)
     {
         $raisa = raisa::find($id);
+     
+
+    $raisa->last=$raisa->progress;
+    if($request->input('progress')>=0&&$request->input('progress')<=10){
         $raisa->projectName=$request->input('projectName');
         $raisa->segment=$request->input('segment');
         $raisa->description=$request->input('description');
         $raisa->customer=$request->input('customer');
         $raisa->lastAction=$request->input('lastAction');
         $raisa->nextAction=$request->input('nextAction');
+        $raisa->progress=$request->input('progress');
+        $raisa->currentProgress='Initial Requirement';
         $raisa->status=$request->input('status');
         $raisa->lastStatus=$request->input('lastStatus');
         $raisa->information=$request->input('information');
-        $raisa->currentProgress=$request->input('currentProgress');
         $raisa->startProject=$request->input('startProject');
         $raisa->finishProject=$request->input('finishProject');
         $raisa->AMSegment=$request->input('AMSegment');
@@ -90,6 +237,128 @@ class RaisaController extends Controller
         $raisa->deliverable=$request->input('deliverable');
         $raisa->benefit=$request->input('benefit');
         $raisa->supportAP=$request->input('supportAP');
+
+    }else if($request->input('progress')>=11&&$request->input('progress')<=20){
+        $raisa->projectName=$request->input('projectName');
+        $raisa->segment=$request->input('segment');
+        $raisa->description=$request->input('description');
+        $raisa->customer=$request->input('customer');
+        $raisa->lastAction=$request->input('lastAction');
+        $raisa->nextAction=$request->input('nextAction');
+        $raisa->progress=$request->input('progress');
+        $raisa->currentProgress='Initial Solution';
+        $raisa->status=$request->input('status');
+        $raisa->lastStatus=$request->input('lastStatus');
+        $raisa->information=$request->input('information');
+        $raisa->startProject=$request->input('startProject');
+        $raisa->finishProject=$request->input('finishProject');
+        $raisa->AMSegment=$request->input('AMSegment');
+        $raisa->keahlian=$request->input('keahlian');
+        $raisa->EstRevenue=$request->input('EstRevenue');
+        $raisa->deliverable=$request->input('deliverable');
+        $raisa->benefit=$request->input('benefit');
+        $raisa->supportAP=$request->input('supportAP');
+    }else if($request->input('progress')>=21&&$request->input('progress')<=30){
+        $raisa->projectName=$request->input('projectName');
+        $raisa->segment=$request->input('segment');
+        $raisa->description=$request->input('description');
+        $raisa->customer=$request->input('customer');
+        $raisa->lastAction=$request->input('lastAction');
+        $raisa->nextAction=$request->input('nextAction');
+        $raisa->progress=$request->input('progress');
+        $raisa->currentProgress='Menunggu Feedback & Gathering Req';
+        $raisa->status=$request->input('status');
+        $raisa->lastStatus=$request->input('lastStatus');
+        $raisa->information=$request->input('information');
+        $raisa->startProject=$request->input('startProject');
+        $raisa->finishProject=$request->input('finishProject');
+        $raisa->AMSegment=$request->input('AMSegment');
+        $raisa->keahlian=$request->input('keahlian');
+        $raisa->EstRevenue=$request->input('EstRevenue');
+        $raisa->deliverable=$request->input('deliverable');
+        $raisa->benefit=$request->input('benefit');
+        $raisa->supportAP=$request->input('supportAP');
+    }else if($request->input('progress')>=31&&$request->input('progress')<=60){
+        $raisa->projectName=$request->input('projectName');
+        $raisa->segment=$request->input('segment');
+        $raisa->description=$request->input('description');
+        $raisa->customer=$request->input('customer');
+        $raisa->lastAction=$request->input('lastAction');
+        $raisa->nextAction=$request->input('nextAction');
+        $raisa->progress=$request->input('progress');
+        $raisa->currentProgress='Solution Design';
+        $raisa->status=$request->input('status');
+        $raisa->lastStatus=$request->input('lastStatus');
+        $raisa->information=$request->input('information');
+        $raisa->startProject=$request->input('startProject');
+        $raisa->finishProject=$request->input('finishProject');
+        $raisa->AMSegment=$request->input('AMSegment');
+        $raisa->keahlian=$request->input('keahlian');
+        $raisa->EstRevenue=$request->input('EstRevenue');
+        $raisa->deliverable=$request->input('deliverable');
+        $raisa->benefit=$request->input('benefit');
+        $raisa->supportAP=$request->input('supportAP');
+    }else if($request->input('progress')>=61&&$request->input('progress')<=90){
+        $raisa->projectName=$request->input('projectName');
+        $raisa->segment=$request->input('segment');
+        $raisa->description=$request->input('description');
+        $raisa->customer=$request->input('customer');
+        $raisa->lastAction=$request->input('lastAction');
+        $raisa->nextAction=$request->input('nextAction');
+        $raisa->progress=$request->input('progress');
+        $raisa->currentProgress='Solution Development';
+        $raisa->status=$request->input('status');
+        $raisa->lastStatus=$request->input('lastStatus');
+        $raisa->information=$request->input('information');
+        $raisa->startProject=$request->input('startProject');
+        $raisa->finishProject=$request->input('finishProject');
+        $raisa->AMSegment=$request->input('AMSegment');
+        $raisa->keahlian=$request->input('keahlian');
+        $raisa->EstRevenue=$request->input('EstRevenue');
+        $raisa->deliverable=$request->input('deliverable');
+        $raisa->benefit=$request->input('benefit');
+        $raisa->supportAP=$request->input('supportAP');
+    }else if($request->input('progress')>=91&&$request->input('progress')<=99){
+        $raisa->projectName=$request->input('projectName');
+        $raisa->segment=$request->input('segment');
+        $raisa->description=$request->input('description');
+        $raisa->customer=$request->input('customer');
+        $raisa->lastAction=$request->input('lastAction');
+        $raisa->nextAction=$request->input('nextAction');
+        $raisa->progress=$request->input('progress');
+        $raisa->currentProgress='POC';
+        $raisa->status=$request->input('status');
+        $raisa->lastStatus=$request->input('lastStatus');
+        $raisa->information=$request->input('information');
+        $raisa->startProject=$request->input('startProject');
+        $raisa->finishProject=$request->input('finishProject');
+        $raisa->AMSegment=$request->input('AMSegment');
+        $raisa->keahlian=$request->input('keahlian');
+        $raisa->EstRevenue=$request->input('EstRevenue');
+        $raisa->deliverable=$request->input('deliverable');
+        $raisa->benefit=$request->input('benefit');
+        $raisa->supportAP=$request->input('supportAP');
+    }else{
+        $raisa->projectName=$request->input('projectName');
+        $raisa->segment=$request->input('segment');
+        $raisa->description=$request->input('description');
+        $raisa->customer=$request->input('customer');
+        $raisa->lastAction=$request->input('lastAction');
+        $raisa->nextAction=$request->input('nextAction');
+        $raisa->progress=$request->input('progress');
+        $raisa->currentProgress='Proposal Ready';
+        $raisa->status=$request->input('status');
+        $raisa->lastStatus=$request->input('lastStatus');
+        $raisa->information=$request->input('information');
+        $raisa->startProject=$request->input('startProject');
+        $raisa->finishProject=$request->input('finishProject');
+        $raisa->AMSegment=$request->input('AMSegment');
+        $raisa->keahlian=$request->input('keahlian');
+        $raisa->EstRevenue=$request->input('EstRevenue');
+        $raisa->deliverable=$request->input('deliverable');
+        $raisa->benefit=$request->input('benefit');
+        $raisa->supportAP=$request->input('supportAP');
+    }
         
         $raisa->update();
 
@@ -112,15 +381,22 @@ class RaisaController extends Controller
      public function storeActRaisa(Request $request)
     {
           
-        Activity::create([
-        
-        'tanggal'=>$request->input('tanggal'),
-        'agenda'=>$request->input('agenda'),
-        'actionPlan'=>$request->input('actionPlan'),
-        'evidence'=>$request->input('evidence'),
-        'lampiran'=>$request->input('lampiran')
-        
-      ]);
+       $entry = new Activity();
+    $entry->tanggal=$request->input('tanggal');
+    $entry->agenda=$request->input('agenda');
+    $entry->actionPlan=$request->input('actionPlan');
+    $entry->lampiran=$request->input('lampiran');
+
+
+    $file = $request->file('filename');
+    $extension = $file->getClientOriginalExtension();
+    Storage::disk('local')->put($file->getFilename().'.'.$extension,  File::get($file));
+    
+    $entry->mime = $file->getClientMimeType();
+    $entry->original_filename = $file->getClientOriginalName();
+    $entry->filename = $file->getFilename().'.'.$extension;
+
+    $entry->save();
 
       return redirect('tableRaisa');
   }
@@ -142,14 +418,13 @@ class RaisaController extends Controller
 
     public function updateActRaisa(Request $request, $id)
     {
-        $activity = Activity::find($id);
-        $activity->tanggal=$request->input('tanggal');
-        $activity->agenda=$request->input('agenda');
-        $activity->actionPlan=$request->input('actionPlan');
-        $activity->evidence=$request->input('evidence');
-        $activity->lampiran=$request->input('lampiran');
+       $activity = Activity::find($id);
+    $activity->tanggal=$request->input('tanggal');
+    $activity->agenda=$request->input('agenda');
+    $activity->actionPlan=$request->input('actionPlan');
+    
 
-        $activity->update();
+    $activity->update();
 
         return redirect::to('/tableRaisa');
     }
@@ -177,9 +452,9 @@ class RaisaController extends Controller
 
     
 
-    public function downloadRaisa($filename)
+    public function downloadRaisa($original_filename)
     {
-       $entry = Activity::where('filename', '=', $filename)->firstOrFail();
+       $entry = Activity::where('original_filename', '=', $original_filename)->firstOrFail();
         $file = Storage::disk('local')->get($entry->filename);
  
         return (new Response($file, 200))
