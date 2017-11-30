@@ -168,15 +168,12 @@
                 <tr>
                   <th rowspan="2" style="text-align: center; vertical-align: middle; border-color: black;">No</th>
                   <th rowspan="2" style="text-align: center; vertical-align: middle; width: 350px; border-color: black">Solusi</th>
-                  <th rowspan="2" style="text-align: center; vertical-align: middle; border-color: black">TR</th>
+                  <th rowspan="2" style="text-align: center; vertical-align: middle; border-color: black">Segment</th>
                   <th rowspan="2" style="text-align: center; vertical-align: middle; width: 200px; border-color: black">Current Progress</th>
-                  <th colspan="2" style="text-align: center; border-color: black">Progress (%)</th>
-                  <th rowspan="2" style="text-align: center; vertical-align: middle; width: 150px; border-color: black; border-left:0px;">Progress Summary</th>
-                  <th rowspan="2" style="text-align: center; vertical-align: middle; border-color: black">Status</th>
-                  <tr style="border-right:0px;">
-                    <th style="text-align: center; width: 100px; border-color: black;">Last</th>
-                    <th style="text-align: center; width: 100px; border-color: black; border-right:0px;">Current</th>
-                  </tr>  
+                  <th style="text-align: center;border-color: black;">Last Progress</th>
+                  <th style="text-align: center;border-color: black;">Current Progress</th>
+                  <th rowspan="2" style="text-align: center; vertical-align: middle; border-color: black;">Progress Summary</th>
+                  <th rowspan="2" style="text-align: center; vertical-align: middle; border-color: black">Status</th>  
                 </tr>
               </thead>
               <tbody style="border-color: black">

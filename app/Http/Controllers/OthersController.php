@@ -110,7 +110,11 @@ class OthersController extends Controller
         $other->otherSolutionDevelopmentCount=$other->where('currentProgress','Like','Solution Development')->count();
         $other->otherPOCCount=$other->where('currentProgress','Like','POC')->count();
         $other->otherProposalReadyCount=$other->where('currentProgress','Like','Proposal Ready')->count();
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> 670510996b61696c9771cb10e6704bc44842914a
         $other->finishProject=$request->input('finishProject');
         $other->AMSegment=$request->input('AMSegment');
         $other->keahlian=$request->input('keahlian');
@@ -119,8 +123,12 @@ class OthersController extends Controller
         $other->benefit=$request->input('benefit');
         $other->supportAP=$request->input('supportAP');
         $other->agenda=$request->input('other');
+<<<<<<< HEAD
         
         $other->update();
+=======
+
+>>>>>>> 670510996b61696c9771cb10e6704bc44842914a
 
       return redirect::to('/tableOthers');
     }
