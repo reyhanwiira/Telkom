@@ -26,33 +26,22 @@ class ChartController extends Controller
 
     public function readChartDetailProact()
     {
-    	$resume = Resume::all();
-        $proactive = Proactive::all();
+        $proactive = Proactive::where('status','=','P1')->get();
 
-    	return view('detailProact', compact('resume','proactive'));
+    	return view('detailProact', compact('proactive'));
     }
 
     public function readChartDetailRaisa()
     {
-        $resume = Resume::all();
-        $raisa = Raisa::all();
+        $raisa = Raisa::where('status','=','P1')->get();
 
-        return view('detailRaisa', compact('resume','raisa'));
-    }
-
-    public function readChartDetailScn()
-    {
-        $resume = Resume::all();
-        $scn = Scn::all();
-
-        return view('detailScn', compact('resume','scn'));
+        return view('detailRaisa', compact('raisa'));
     }
 
     public function readChartDetail()
     {
-        $resume = Resume::all();
-        $other = Other::all();
+        $other = Other::where('status','=','P1')->get();
 
-        return view('detailOther', compact('resume','other'));
+        return view('detailOther', compact('other'));
     }
 }
