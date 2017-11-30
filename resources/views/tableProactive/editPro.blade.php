@@ -57,18 +57,14 @@
                 <textarea class="form-control" rows="3" placeholder="Enter ..." name="nextAction"><?php echo $proactive['nextAction'] ?></textarea>
               </div>
 
-              <div class="form-group">
-                <label>Current Progress</label>
-                <select class="form-control select2" name="currentProgress" style="width: 100%;">
-                  <option value="Initial Requirement" <?php if($proactive['currentProgress']=="Initial Requirement") echo 'selected="selected"'; ?>>Initial Requirement</option>
-                  <option value="Initial Solution" <?php if($proactive['currentProgress']=="Initial Solution") echo 'selected="selected"'; ?>>Initial Solusi</option>
-                  <option value="Waiting Feedback & Requirement Gathering" <?php if($proactive['currentProgress']=="Waiting Feedback & Requirement Gathering") echo 'selected="selected"'; ?>>Waiting Feedback & Requirement Gathering</option>
-                  <option value="Solution Design" <?php if($proactive['currentProgress']=="Solution Design") echo 'selected="selected"'; ?>>Solution Design</option>
-                  <option value="Solution Development" <?php if($proactive['currentProgress']=="Solution Development") echo 'selected="selected"'; ?>>Solution Development</option>
-                  <option value="POC" <?php if($proactive['currentProgress']=="POC") echo 'selected="selected"'; ?>>POC</option>
-                  <option value="Proposal Ready" <?php if($proactive['currentProgress']=="Proposal Ready") echo 'selected="selected"'; ?>>Proposal Ready</option>
-                </select>
-              </div>
+            <div class="form-group">
+              <label>Progress</label>
+              <input type="text" class="form-control pull-right" placeholder="Enter ..." id="progress" name="progress" value="{{$proactive->progress}}">
+            </div>
+
+            <div class="form-group">
+              <input type="hidden" class="form-control" name="currentProgress" id="currentProgress">
+            </div>
 
               <div class="form-group">
                 <label>Status</label>

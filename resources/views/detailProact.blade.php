@@ -185,7 +185,7 @@
                 <td style="text-align: center; border-color: black">{{ $proactive->segment }}</td>
                 <td style="text-align: center; border-color: black">{{ $proactive->currentProgress }}</td>
                 <td style="text-align: center; border-color: black">{{ $proactive->last }} %</td>
-                <td style="text-align: center; border-color: black">{{ $proactive->current }} %</td>
+                <td style="text-align: center; border-color: black">{{ $proactive->progress }} %</td>
                 <td style="text-align: center; border-color: black">
                   @if($proactive->current < $proactive->last)
                   <span class="text-green">
