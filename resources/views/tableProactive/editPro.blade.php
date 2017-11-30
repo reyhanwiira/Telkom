@@ -195,7 +195,7 @@
                       </button>
                     </a>
                   
-                    <a href="{{ url('/downloadPro/'.$activity->filename) }}"  download="{{ $activity->filename }}">
+                    <a href="{{ url('/downloadPro/'.$activity->original_filename) }}"  download="{{ $activity->original_filename }}">
                       <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Download File">
                         <i class='glyphicon glyphicon-floppy-save' style="font-size: 12px"></i>
                       </button>
@@ -219,7 +219,7 @@
       </div><!-- /.box-body -->
       <div class="box-footer clearfix">
 
-        <a href="{{ url('tableProactive/addActPro') }}" class="btn btn-primary pull-left">New Activity</a>
+        <a href="{{ url('/addActPro') }}" class="btn btn-primary pull-left">New Activity</a>
 
       </div><!-- /.box-footer -->
     </div><!-- /.box -->

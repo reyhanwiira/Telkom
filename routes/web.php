@@ -53,7 +53,7 @@ Route::group(['middleware'=>'auth'], function(){
 	Route::get('uploadActPro/{id}','ProactiveController@uploadIndexPro');
 	Route::post('uploadActPro/{id}','ProactiveController@uploadPro');
 
-	Route::get('downloadPro/{filename}','ProactiveController@downloadPro');
+	Route::get('downloadPro/{original_filename}','ProactiveController@downloadPro');
 
 
 //EXPORT AND IMPORT PROACTIVE

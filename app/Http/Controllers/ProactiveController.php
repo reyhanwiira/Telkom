@@ -326,9 +326,9 @@ public function uploadPro(Request $request, $id)
 
 
 
-public function downloadPro($filename)
+public function downloadPro($original_filename)
 {
-   $entry = Activity::where('filename', '=', $filename)->firstOrFail();
+   $entry = Activity::where('original_filename', '=', $original_filename)->firstOrFail();
    $file = Storage::disk('local')->get($entry->filename);
 
    return (new Response($file, 200))
