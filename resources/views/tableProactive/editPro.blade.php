@@ -168,7 +168,6 @@
                 <th>Tanggal</th>
                 <th>Agenda</th>
                 <th>Action Plan</th>
-                <th>Evidence</th>
                 <th>Lampiran</th>
                 <th style="width: 150px">Action</th>
               </tr>
@@ -181,7 +180,6 @@
                 <td>{{ $activity->tanggal }}</td>
                 <td>{{ $activity->agenda }}</td>
                 <td>{{ $activity->actionPlan }}</td>
-                <td>{{ $activity->evidence }}</td>
                 <td>{{ $activity->original_filename }}</td>
                 <td>
                   <div class="btn-group">
@@ -215,7 +213,7 @@
       </div><!-- /.box-body -->
       <div class="box-footer clearfix">
 
-        <a href="{{ url('/addActPro') }}" class="btn btn-primary pull-left">New Activity</a>
+        <a href="{{ url('/tableProactive/addActPro') }}" class="btn btn-primary pull-left">New Activity</a>
 
       </div><!-- /.box-footer -->
     </div><!-- /.box -->
