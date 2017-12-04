@@ -32,13 +32,13 @@
                   </div>
                   <div class="col-md-4">
                     <ul class="chart-legend clearfix">
-                      <li><i class="fa fa-circle" style="color: #fff5cc"></i> : {{ $proactive->where('currentProgress','Like','Initial Requirement')->count() }}</li>
-                      <li><i class="fa fa-circle" style="color: #ffd1b3"></i> : {{ $proactive->where('currentProgress','Like','Initial Solution')->count() }}</li>
-                      <li><i class="fa fa-circle" style="color: #ff9999"></i> : {{ $proactive->where('currentProgress','Like','Menunggu Feedback & Gathering Req')->count() }}</li>
-                      <li><i class="fa fa-circle" style="color: #730099"></i> : {{ $proactive->where('currentProgress','Like','Solution Design')->count() }}</li>
-                      <li><i class="fa fa-circle" style="color: #2ea4bc"></i> : {{ $proactive->where('currentProgress','Like','Solution Development')->count() }}</li>
-                      <li><i class="fa fa-circle" style="color: #40bf80"></i> : {{ $proactive->where('currentProgress','Like','POC')->count() }}</li>
-                      <li><i class="fa fa-circle" style="color: #66ff66"></i> : {{ $proactive->where('currentProgress','Like','Proposal Ready')->count() }}</li>
+                      <li><i class="fa fa-circle" style="color: #fff5cc"></i> : {{ $proactive->where('lastCurrentProgress','Like','Initial Requirement')->count() }}</li>
+                      <li><i class="fa fa-circle" style="color: #ffd1b3"></i> : {{ $proactive->where('lastCurrentProgress','Like','Initial Solution')->count() }}</li>
+                      <li><i class="fa fa-circle" style="color: #ff9999"></i> : {{ $proactive->where('lastCurrentProgress','Like','Menunggu Feedback & Gathering Req')->count() }}</li>
+                      <li><i class="fa fa-circle" style="color: #730099"></i> : {{ $proactive->where('lastCurrentProgress','Like','Solution Design')->count() }}</li>
+                      <li><i class="fa fa-circle" style="color: #2ea4bc"></i> : {{ $proactive->where('lastCurrentProgress','Like','Solution Development')->count() }}</li>
+                      <li><i class="fa fa-circle" style="color: #40bf80"></i> : {{ $proactive->where('lastCurrentProgress','Like','POC')->count() }}</li>
+                      <li><i class="fa fa-circle" style="color: #66ff66"></i> : {{ $proactive->where('lastCurrentProgress','Like','Proposal Ready')->count() }}</li>
                     </ul>
                   </div>
                 </div>

@@ -388,11 +388,6 @@ public function createActivity()
   return view('/tableProactive.addActPro');
 }
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 4d5f3acc41a2b220884815b120ebef1c34deead9
 public function storeActPro(Request $request, $id)
 {
     $entry = new Activity();
