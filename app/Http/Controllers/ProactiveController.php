@@ -38,6 +38,9 @@ class ProactiveController extends Controller
   public function storePro(Request $request)
   {   
 
+    $activeProject = Proactive::where('status','=','P1')->where('updated_at','<=',$deadline)->count();
+    $inactiveProject = Proactive::where('status','=','P1')->where('updated_at','>=',$deadline)->count();
+
     if($request->input('progress')>=0&&$request->input('progress')<=10){
         Proactive::create([  
             'projectName'=>$request->input('projectName'),
@@ -59,7 +62,6 @@ class ProactiveController extends Controller
             'deliverable'=>$request->input('deliverable'),
             'benefit'=>$request->input('benefit'),
             'supportAP'=>$request->input('supportAP')
-
             ]);
 }else if($request->input('progress')>=11&&$request->input('progress')<=20){
     Proactive::create([  
@@ -227,6 +229,7 @@ public function updatePro(Request $request, $id)
         $proactive->lastAction=$request->input('lastAction');
         $proactive->nextAction=$request->input('nextAction');
         $proactive->progress=$request->input('progress');
+        $proactive->lastCurrentProgress = $proactive->currentProgress;
         $proactive->currentProgress='Initial Requirement';
         $proactive->status=$request->input('status');
         $proactive->lastStatus=$request->input('lastStatus');
@@ -248,6 +251,7 @@ public function updatePro(Request $request, $id)
         $proactive->lastAction=$request->input('lastAction');
         $proactive->nextAction=$request->input('nextAction');
         $proactive->progress=$request->input('progress');
+        $proactive->lastCurrentProgress = $proactive->currentProgress;
         $proactive->currentProgress='Initial Solution';
         $proactive->status=$request->input('status');
         $proactive->lastStatus=$request->input('lastStatus');
@@ -268,6 +272,7 @@ public function updatePro(Request $request, $id)
         $proactive->lastAction=$request->input('lastAction');
         $proactive->nextAction=$request->input('nextAction');
         $proactive->progress=$request->input('progress');
+        $proactive->lastCurrentProgress = $proactive->currentProgress;
         $proactive->currentProgress='Menunggu Feedback & Gathering Req';
         $proactive->status=$request->input('status');
         $proactive->lastStatus=$request->input('lastStatus');
@@ -288,6 +293,7 @@ public function updatePro(Request $request, $id)
         $proactive->lastAction=$request->input('lastAction');
         $proactive->nextAction=$request->input('nextAction');
         $proactive->progress=$request->input('progress');
+        $proactive->lastCurrentProgress = $proactive->currentProgress;
         $proactive->currentProgress='Solution Design';
         $proactive->status=$request->input('status');
         $proactive->lastStatus=$request->input('lastStatus');
@@ -308,6 +314,7 @@ public function updatePro(Request $request, $id)
         $proactive->lastAction=$request->input('lastAction');
         $proactive->nextAction=$request->input('nextAction');
         $proactive->progress=$request->input('progress');
+        $proactive->lastCurrentProgress = $proactive->currentProgress;
         $proactive->currentProgress='Solution Development';
         $proactive->status=$request->input('status');
         $proactive->lastStatus=$request->input('lastStatus');
@@ -328,6 +335,7 @@ public function updatePro(Request $request, $id)
         $proactive->lastAction=$request->input('lastAction');
         $proactive->nextAction=$request->input('nextAction');
         $proactive->progress=$request->input('progress');
+        $proactive->lastCurrentProgress = $proactive->currentProgress;
         $proactive->currentProgress='POC';
         $proactive->status=$request->input('status');
         $proactive->lastStatus=$request->input('lastStatus');
@@ -348,6 +356,7 @@ public function updatePro(Request $request, $id)
         $proactive->lastAction=$request->input('lastAction');
         $proactive->nextAction=$request->input('nextAction');
         $proactive->progress=$request->input('progress');
+        $proactive->lastCurrentProgress = $proactive->currentProgress;
         $proactive->currentProgress='Proposal Ready';
         $proactive->status=$request->input('status');
         $proactive->lastStatus=$request->input('lastStatus');
@@ -361,28 +370,24 @@ public function updatePro(Request $request, $id)
         $proactive->benefit=$request->input('benefit');
         $proactive->supportAP=$request->input('supportAP');
     }
-        $proactive->update();
-        return redirect::to('/tableProactive');
-    }
+    $proactive->update();
+    return redirect::to('/tableProactive');
+}
 
-    public function deletePro($id)
-    {
-      $proactive = Proactive::where('id','=',$id)->delete();
+public function deletePro($id)
+{
+  $proactive = Proactive::where('id','=',$id)->delete();
 
-      return Redirect::to('/tableProactive');
-  }
+  return Redirect::to('/tableProactive');
+}
 
 
 
-  public function createActivity()
-  {
-      return view('/tableProactive.addActPro');
-  }
+public function createActivity()
+{
+  return view('/tableProactive.addActPro');
+}
 
-<<<<<<< HEAD
-  public function storeActPro(Request $request)
-  {
-=======
 public function storeActPro(Request $request, $id)
 {
     $entry = new Activity();
@@ -390,7 +395,7 @@ public function storeActPro(Request $request, $id)
     $entry->agenda=$request->input('agenda');
     $entry->actionPlan=$request->input('actionPlan');
     $entry->lampiran=$request->input('lampiran');
->>>>>>> 288f5bcfacfe11a47b72d38e44d102817a0a1ad2
+
 
     $file = $request->file('filename');
     $extension = $file->getClientOriginalExtension();
@@ -460,11 +465,11 @@ public function uploadPro(Request $request, $id)
 
 public function downloadPro($original_filename)
 {
- $entry = Activity::where('original_filename', '=', $original_filename)->firstOrFail();
- $file = Storage::disk('local')->get($entry->filename);
+   $entry = Activity::where('original_filename', '=', $original_filename)->firstOrFail();
+   $file = Storage::disk('local')->get($entry->filename);
 
- return (new Response($file, 200))
- ->header('Content-Type', $entry->mime);
+   return (new Response($file, 200))
+   ->header('Content-Type', $entry->mime);
 }
 
 }

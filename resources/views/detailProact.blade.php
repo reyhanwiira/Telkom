@@ -47,12 +47,16 @@
                 <ul class="nav nav-pills nav-stacked">
                   <li>
                     <a href="#">Active
-                      <span class="pull-right text-green" style="font-size: medium;"> 4</span>
+                      <span class="pull-right text-green" style="font-size: medium;">
+                        {{$activeProject}}
+                      </span>
                     </a>
                   </li>
                   <li>
                     <a href="#">Idle (tdk berprogress >2 Minggu) 
-                      <span class="pull-right text-red" style="font-size: medium;"> 4</span>
+                      <span class="pull-right text-red" style="font-size: medium;">
+                        {{$inactiveProject}}
+                      </span>
                     </a>
                   </li>
                 </ul>
@@ -189,19 +193,24 @@
                 <td style="text-align: center; border-color: black">
                   @if($proactive->current < $proactive->last)
                   <span class="text-green">
-                    <i class="fa fa-arrow-down"></i>
+                    <i class="fa fa-chevron-down"></i>
                   </span>
                   @elseif($proactive->current > $proactive->last )
                   <span class="text-green">
-                    <i class="fa fa-arrow-up"></i>
+                    <i class="fa fa-chevron-up"></i>
                   </span>
-                  @elseif($proactive->last == $proactive->current)
+                  @elseif($proactive->current == $proactive->last)
                   <span class="text-green">
-                    <i class="fa fa-arrow-right"></i>
+                    <i class="fa fa-chevron-right"></i>
                   </span>
                   @endif
                 </td>
-                <td style="text-align: center; border-color: black">Status</td>
+
+                <td style="text-align: center; border-color: black">
+                  @if($proactive->updated_at->subDays(14) >= $current_time) <i>merah</i>
+                  @elseif($proactive->updated_at->subDays(14) <= $current_time) <i>ijo</i>
+                  @endif
+                </td>
               </tr>
               @endforeach
             </tbody>

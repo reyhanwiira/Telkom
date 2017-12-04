@@ -14,6 +14,7 @@ use App\resume;
 use App\raisa;
 use App\scn;
 use App\other;
+use Carbon\Carbon;
 
 class ChartController extends Controller
 {
@@ -26,9 +27,13 @@ class ChartController extends Controller
 
     public function readChartDetailProact()
     {
+        $current_time = Carbon::now();
+        $deadline = Carbon::now()->addWeeks(2);
         $proactive = Proactive::where('status','=','P1')->get();
 
-    	return view('detailProact', compact('proactive'));
+        $activeProject = Proactive::where('status','=','P1')->where('updated_at','<=',$deadline)->count();
+        $inactiveProject = Proactive::where('status','=','P1')->where('updated_at','>=',$deadline)->count();
+    	return view('detailProact', compact('proactive','current_time','activeProject','inactiveProject'));
     }
 
     public function readChartDetailRaisa()

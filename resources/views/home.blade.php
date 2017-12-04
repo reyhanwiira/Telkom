@@ -198,8 +198,9 @@
             <ul class="nav nav-pills nav-stacked">
               <li>
                 <a href="#">Persentase
-                  <span class="pull-right" style="font-size:medium; color:#ff0000;"> <span id="presentaseRaisa"></span> % 
-                  @if( ($raisa2 + $raisa3) / ($raisa0 + $raisa1 + $raisa2 + $raisa3)*100 >  ($lastRaisa2 + $lastRaisa3) / ($lastRaisa0 + $lastRaisa1 + $lastRaisa2 + $lastRaisa3)*100)
+                  <span class="pull-right" style="font-size:medium; color:#ff0000;"> @if($raisa1!=0 || $raisa2!=0 || $raisa3!=0 || $raisa0!=0)<span id="presentaseRaisa"></span>@elseif($raisa1==0 || $raisa2==0 || $raisa3==0 || $raisa0==0) ?> %@endif 
+                  @if($raisa1!=0 || $raisa2!=0 || $raisa3!=0 || $raisa0!=0)
+                  @if( ($raisa2 + $raisa3) / ($lastRaisa0 + $lastRaisa1 + $lastRaisa2 + $lastRaisa3)*100 >  ($lastRaisa2 + $lastRaisa3) / ($lastRaisa0 + $lastRaisa1 + $lastRaisa2 + $lastRaisa3)*100)
                       <span class="text-green">
                         <i class="fa fa-arrow-up" style="font-size: 13px"></i>
                       </span>
@@ -208,11 +209,37 @@
                         <i class="fa fa-chevron-right" style="font-size: 13px"></i>
                       </span>
                       @elseif(($raisa2 + $raisa3) / ($raisa0 + $raisa1 + $raisa2 + $raisa3)*100 == ($lastRaisa2 + $lastRaisa3) / ($lastRaisa0 + $lastRaisa1 + $lastRaisa2 + $lastRaisa3)*100)
-                        <i class="fa fa-chevron-right" style="font-size: 13px"></i>
-                      @endif                  
+                        <span>
+                          <i class="fa fa-chevron-right" style="font-size: 13px"></i>
+                        </span>
+                      @endif               
+                      @endif
                 </span>
                   <span class="pull-right"> | </span>
                   <span class="pull-right" style="font-size: medium; color: #ff0000;">  <span id="presentaseRaisaLast"></span>  % </span>
+                </a>
+              </li>
+              <li>
+                <a href="#">P0
+                  <div class="pull-right" style="word-spacing: 5px">
+                    <span style="font-size: medium; color: #b3b3b3;">{{ $lastRaisa0 }} </span>
+                    <span style="font-size: medium; "> | </span>
+                    <span style="font-size: medium; color: #0c3c55;">{{ $raisa0 }} 
+                      @if($raisa0  > $lastRaisa0)
+                      <span class="text-green">
+                        <i class="fa fa-chevron-up" style="font-size: 13px"></i>
+                      </span>
+                      @elseif($raisa0 < $lastRaisa0 )
+                      <span class="text-green">
+                        <i class="fa fa-minus" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="Terjadi perpindahan dari P1 ke P2"></i>
+                      </span>
+                      @elseif($raisa0 = $lastRaisa0 )
+                      <span class="text-green">
+                        <i class="fa fa-chevron-right" style="font-size: 13px"></i>
+                      </span>
+                      @endif
+                    </span>
+                  </div>
                 </a>
               </li>
               <li>
@@ -778,19 +805,10 @@ $(function () {
 </script>
 
 <script>
-var presentaseProactive = {{ ($proactives2 + $proactives3) / ($proactives0 + $proactives1 + $proactives2 + $proactives3)*100}}
-var presentaseProactiveLast = {{ ($lastProactives2 + $lastProactives3) / ($lastProactives0 + $lastProactives1 + $lastProactives2 + $lastProactives3)*100}}
 var presentaseRaisa = {{ ($raisa2 + $raisa3) / ($raisa0 + $raisa1 + $raisa2 + $raisa3)*100}}
 var presentaseRaisaLast = {{ ($lastRaisa2 + $lastRaisa3) / ($lastRaisa0 + $lastRaisa1 + $lastRaisa2 + $lastRaisa3)*100}}
-var presentaseOthers = {{ ($others2 + $others3) / ($others0 + $others1 + $others2 + $others3)*100}}
-var presentaseOthersLast = {{ ($lastOthers2 + $lastOthers3) / ($lastOthers0 + $lastOthers1 + $lastOthers2 + $lastOthers3)*100}}
-
-document.getElementById("presentaseProactive").innerHTML = presentaseProactive.toFixed(2);
-document.getElementById("presentaseProactiveLast").innerHTML = presentaseProactiveLast.toFixed(2);
 document.getElementById("presentaseRaisa").innerHTML = presentaseRaisa.toFixed(2);
 document.getElementById("presentaseRaisaLast").innerHTML = presentaseRaisaLast.toFixed(2);
-document.getElementById("presentaseOthers").innerHTML = presentaseOthers.toFixed(2);
-document.getElementById("presentaseOthersLast").innerHTML = presentaseOthersLast.toFixed(2);
 
 
 
