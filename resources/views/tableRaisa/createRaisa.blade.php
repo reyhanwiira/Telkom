@@ -53,16 +53,12 @@
             </div>
 
             <div class="form-group">
-              <label>Current Progress</label>
-              <select class="form-control select2" name="currentProgress" style="width: 100%;">
-                <option value="Initial Requirement" selected="selected">Initial Requirement</option>
-                <option value="Initial Solusi">Initial Solusi</option>
-                <option value="Waiting Feedback & Requirement Gathering">Waiting Feedback & Requirement Gathering</option>
-                <option value="Solution Design">Solution Design</option>
-                <option value="Solution Development">Solution Development</option>
-                <option value="POC">POC</option>
-                <option value="Proposal Ready">Proposal Ready</option>
-              </select>
+              <label>Progress</label>
+              <input type="text" class="form-control pull-right" placeholder="Enter ..." id="progress" name="progress">
+            </div>
+
+            <div class="form-group">
+              <input type="hidden" class="form-control" name="currentProgress" id="currentProgress">
             </div>
 
           <div class="form-group">

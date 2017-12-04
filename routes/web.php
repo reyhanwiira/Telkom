@@ -86,7 +86,7 @@ Route::get('downloadRaisa/{type}', 'ExcelRaisaController@ExportRaisa');
 Route::get('uploadActRaisa/{id}','RaisaController@uploadIndexRaisa');
 Route::post('uploadActRaisa/{id}','RaisaController@uploadRaisa');
 
-Route::get('downloadRaisa/{filename}','RaisaController@downloadRaisa');
+Route::get('downloadRaisa/{original_filename}','RaisaController@downloadRaisa');
 
 //======================================================================
 
