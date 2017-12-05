@@ -1,10 +1,10 @@
-@extends('layouts.detail_layout')
+@extends('layouts.detaillay_layout')
 
 @section('content')
 <section class="content">
   <div class="row">
     <div class="col-md-12">
-      <div class="box box-primary">
+      <div class="box box-danger">
         <div class="box-header with-border">
           <i class="fa fa-bar-chart-o"></i>
           <h3 class="box-title">PROACTIVE Chart</h3>
@@ -157,7 +157,7 @@
 
     <div class="col-md-12">
       <!-- TABLE: LATEST ORDERS -->
-      <div class="box box-primary">
+      <div class="box box-danger">
         <div class="box-header with-border">
           <h3 class="box-title"><i class="fa fa-table"></i> Data Table</h3>
           <div class="box-tools pull-right">
@@ -170,45 +170,45 @@
              <table id="example2" class="table table-striped table-bordered" style="border-color: black">
               <thead>
                 <tr>
-                  <th rowspan="2" style="text-align: center; vertical-align: middle; border-color: black;">No</th>
-                  <th rowspan="2" style="text-align: center; vertical-align: middle; width: 350px; border-color: black">Solusi</th>
-                  <th rowspan="2" style="text-align: center; vertical-align: middle; border-color: black">Segment</th>
-                  <th rowspan="2" style="text-align: center; vertical-align: middle; width: 200px; border-color: black">Current Progress</th>
-                  <th style="text-align: center;border-color: black;">Last Progress</th>
-                  <th style="text-align: center;border-color: black;">Current Progress</th>
-                  <th rowspan="2" style="text-align: center; vertical-align: middle; border-color: black;">Progress Summary</th>
-                  <th rowspan="2" style="text-align: center; vertical-align: middle; border-color: black">Status</th>  
+                  <th style="text-align: center; vertical-align: middle; border-color: black; border-bottom-width: 0px; background-color:#ff3333; color: #ffffff">No</th>
+                  <th style="text-align: center; vertical-align: middle; width: 350px; border-color: black; border-bottom-width: 0px; background-color:#ff3333; color: #ffffff">Solusi</th>
+                  <th style="text-align: center; vertical-align: middle; border-color: black; border-bottom-width: 0px; background-color:#ff3333; color: #ffffff">Segment</th>
+                  <th style="text-align: center; vertical-align: middle; width: 200px; border-color: black; border-bottom-width: 0px; background-color:#ff3333; color: #ffffff">Current Progress</th>
+                  <th style="text-align: center;border-color: black; border-bottom-width: 0px; background-color:#ff3333; color: #ffffff">Last Progress</th>
+                  <th style="text-align: center;border-color: black; border-bottom-width: 0px; background-color:#ff3333; color: #ffffff">Current Progress</th>
+                  <th style="text-align: center; vertical-align: middle; border-color: black; border-bottom-width: 0px; background-color:#ff3333; color: #ffffff">Progress Summary</th>
+                  <th style="text-align: center; vertical-align: middle; border-color: black; border-bottom-width: 0px; background-color:#ff3333; color: #ffffff">Status</th>  
                 </tr>
               </thead>
               <tbody style="border-color: black">
                <?php $no=1; ?>
                @foreach($proactive as $proactive)
                <tr style="border-color: black">                  
-                <td style="text-align: center; border-color: black">{{ $no++ }}</td>
-                <td style="text-align: center; border-color: black">{{ $proactive->projectName }}</td>
-                <td style="text-align: center; border-color: black">{{ $proactive->segment }}</td>
-                <td style="text-align: center; border-color: black">{{ $proactive->currentProgress }}</td>
-                <td style="text-align: center; border-color: black">{{ $proactive->last }} %</td>
-                <td style="text-align: center; border-color: black">{{ $proactive->progress }} %</td>
-                <td style="text-align: center; border-color: black">
-                  @if($proactive->current < $proactive->last)
-                  <span class="text-green">
-                    <i class="fa fa-chevron-down"></i>
-                  </span>
-                  @elseif($proactive->current > $proactive->last )
+                <td style="text-align: center; border-color: black; border-top-width: 1px">{{ $no++ }}</td>
+                <td style="text-align: center; border-color: black; border-top-width: 1px">{{ $proactive->projectName }}</td>
+                <td style="text-align: center; border-color: black; border-top-width: 1px">{{ $proactive->segment }}</td>
+                <td style="text-align: center; border-color: black; border-top-width: 1px">{{ $proactive->currentProgress }}</td>
+                <td style="text-align: center; border-color: black; border-top-width: 1px">{{ $proactive->last }} %</td>
+                <td style="text-align: center; border-color: black; border-top-width: 1px">{{ $proactive->progress }} %</td>
+                <td style="text-align: center; border-color: black; border-top-width: 1px">
+                  @if($proactive->progress > $proactive->last)
                   <span class="text-green">
                     <i class="fa fa-chevron-up"></i>
                   </span>
-                  @elseif($proactive->current == $proactive->last)
+                  @elseif($proactive->progress < $proactive->last )
+                  <span class="text-green">
+                    <i class="fa fa-chevron-down"></i>
+                  </span>
+                  @elseif($proactive->progress == $proactive->last)
                   <span class="text-green">
                     <i class="fa fa-chevron-right"></i>
                   </span>
                   @endif
                 </td>
 
-                <td style="text-align: center; border-color: black">
-                  @if($proactive->updated_at->subDays(14) >= $current_time) <i>merah</i>
-                  @elseif($proactive->updated_at->subDays(14) <= $current_time) <i>ijo</i>
+                <td style="text-align: center; border-color: black; border-top-width: 1px">
+                  @if($proactive->updated_at->subDays(14) >= $current_time) <i class="fa fa-circle" style="color: #ff3333"></i>
+                  @elseif($proactive->updated_at->subDays(14) <= $current_time) <i class="fa fa-circle" style="color: #1aff1a"></i>
                   @endif
                 </td>
               </tr>
@@ -216,27 +216,71 @@
             </tbody>
           </table>
         </div>
-      </div><!-- /.table-responsive -->
+      </div><!-- /.table-responsive -->  
+    </div><!-- /.box-body -->
+  </div><!-- /.box -->
+</div><!-- /.col -->
+</div>
 
-      <!-- jQuery 3 -->
-        <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
-        <!-- Bootstrap 3.3.7 -->
-        <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script src="../../bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-        <!-- SlimScroll -->
-        <script src="../../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-        <!-- FastClick -->
-        <script src="../../bower_components/fastclick/lib/fastclick.js"></script>
-        <!-- AdminLTE App -->
-        <script src="../../dist/js/adminlte.min.js"></script>
-        <!-- AdminLTE for demo purposes -->
-        <script src="../../dist/js/demo.js"></script>
-        <!-- ChartJS -->
-        <script src="../../bower_components/Chart.js/Chart.js"></script>
-        <!-- page script -->
-      
-      <script>
-        $(function () {
+<!-- jQuery 3 -->
+<script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- DataTables -->
+<script src="../../bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="../../bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<!-- SlimScroll -->
+<script src="../../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../../bower_components/fastclick/lib/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../../dist/js/demo.js"></script>
+<!-- page script -->
+<!-- ChartJS -->
+<script src="../../bower_components/Chart.js/Chart.js"></script>
+
+<script>
+  $(function () {
+    $('#example1').DataTable()
+    $('#example2').DataTable({
+      'paging'      : true,
+      'lengthChange': true,
+      'searching'   : true,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : true
+    })
+    $('#example3').DataTable({
+      'paging'      : true,
+      'lengthChange': true,
+      'searching'   : true,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : true
+    })
+    $('#example4').DataTable({
+      'paging'      : true,
+      'lengthChange': true,
+      'searching'   : true,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : true
+    })
+    $('#example5').DataTable({
+      'paging'      : true,
+      'lengthChange': true,
+      'searching'   : true,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : true
+    })
+  })
+</script>
+
+<script>
+  $(function () {
           /* ChartJS
            * -------
            * Here we will create a few charts using ChartJS
@@ -412,11 +456,6 @@
             pieChart.Doughnut(PieData, pieOptions)
           })
         </script>
-        
-      </div><!-- /.box-body -->
-    </div><!-- /.box -->
-  </div><!-- /.col -->
-</div>
 
-</section>
-@endsection
+      </section>
+      @endsection

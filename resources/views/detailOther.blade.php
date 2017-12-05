@@ -1,10 +1,10 @@
-@extends('layouts.detail_layout')
+@extends('layouts.detaillay_layout')
 
 @section('content')
 <section class="content">
   <div class="row">
     <div class="col-md-12">
-      <div class="box box-primary">
+      <div class="box box-success">
         <div class="box-header with-border">
           <i class="fa fa-bar-chart-o"></i>
           <h3 class="box-title">OTHERS Chart</h3>
@@ -162,7 +162,7 @@
 
     <div class="col-md-12">
       <!-- TABLE: LATEST ORDERS -->
-      <div class="box box-primary">
+      <div class="box box-success">
         <div class="box-header with-border">
           <h3 class="box-title"><i class="fa fa-table"></i> Data Table</h3>
           <div class="box-tools pull-right">
@@ -172,71 +172,119 @@
         <div class="box-body">
           <div class="table-responsive">
             <div class="col-md-12">
-             <table id="example4" class="table table-bordered table-striped" style="border-color: black">
+             <table id="example2" class="table table-striped table-bordered" style="border-color: black">
               <thead>
                 <tr>
-                  <th rowspan="2" style="text-align: center; vertical-align: middle; border-color: black;">No</th>
-                  <th rowspan="2" style="text-align: center; vertical-align: middle; width: 350px; border-color: black">Solusi</th>
-                  <th rowspan="2" style="text-align: center; vertical-align: middle; border-color: black">Segment</th>
-                  <th rowspan="2" style="text-align: center; vertical-align: middle; width: 200px; border-color: black">Current Progress</th>
-                  <th style="text-align: center;border-color: black;">Last Progress</th>
-                  <th style="text-align: center;border-color: black;">Current Progress</th>
-                  <th rowspan="2" style="text-align: center; vertical-align: middle; border-color: black;">Progress Summary</th>
-                  <th rowspan="2" style="text-align: center; vertical-align: middle; border-color: black">Status</th>  
+                  <th style="text-align: center; vertical-align: middle; border-color: black; border-bottom-width: 0px; background-color:#ff3333; color: #ffffff">No</th>
+                  <th style="text-align: center; vertical-align: middle; width: 350px; border-color: black; border-bottom-width: 0px; background-color:#ff3333; color: #ffffff">Solusi</th>
+                  <th style="text-align: center; vertical-align: middle; border-color: black; border-bottom-width: 0px; background-color:#ff3333; color: #ffffff">Segment</th>
+                  <th style="text-align: center; vertical-align: middle; width: 200px; border-color: black; border-bottom-width: 0px; background-color:#ff3333; color: #ffffff">Current Progress</th>
+                  <th style="text-align: center;border-color: black; border-bottom-width: 0px; background-color:#ff3333; color: #ffffff">Last Progress</th>
+                  <th style="text-align: center;border-color: black; border-bottom-width: 0px; background-color:#ff3333; color: #ffffff">Current Progress</th>
+                  <th style="text-align: center; vertical-align: middle; border-color: black; border-bottom-width: 0px; background-color:#ff3333; color: #ffffff">Progress Summary</th>
+                  <th style="text-align: center; vertical-align: middle; border-color: black; border-bottom-width: 0px; background-color:#ff3333; color: #ffffff">Status</th>  
                 </tr>
               </thead>
-              <tbody>
-                 <?php $no=1; ?>
-                 @foreach($other as $other)
-                 <tr>                  
-                  <td style="text-align: center; border-color: black">{{ $no++ }}</td>
-                  <td style="text-align: center; border-color: black">{{ $other->projectName }}</td>
-                  <td style="text-align: center; border-color: black">{{ $other->segment }}</td>
-                  <td style="text-align: center; border-color: black">{{ $other->currentProgress }}</td>
-                  <td style="text-align: center; border-color: black">{{ $other->last }} %</td>
-                  <td style="text-align: center; border-color: black">{{ $other->current }} %</td>
-                  <td style="text-align: center; border-color: black">
-                    @if($other->current < $other->last)
+              <tbody style="border-color: black">
+                <?php $no=1; ?>
+                @foreach($other as $other)
+                <tr style="border-color: black">                  
+                  <td style="text-align: center; border-color: black; border-top-width: 1px">{{ $no++ }}</td>
+                  <td style="text-align: center; border-color: black; border-top-width: 1px">{{ $other->projectName }}</td>
+                  <td style="text-align: center; border-color: black; border-top-width: 1px">{{ $other->segment }}</td>
+                  <td style="text-align: center; border-color: black; border-top-width: 1px">{{ $other->currentProgress }}</td>
+                  <td style="text-align: center; border-color: black; border-top-width: 1px">{{ $other->last }} %</td>
+                  <td style="text-align: center; border-color: black; border-top-width: 1px">{{ $other->progress }} %</td>
+                  <td style="text-align: center; border-color: black; border-top-width: 1px">
+                    @if($other->progress > $other->last)
                     <span class="text-green">
-                      <i class="fa fa-arrow-down"></i>
+                      <i class="fa fa-chevron-up"></i>
                     </span>
-                    @elseif($other->current > $other->last )
+                    @elseif($other->progress < $other->last )
                     <span class="text-green">
-                      <i class="fa fa-arrow-up"></i>
+                      <i class="fa fa-chevron-down"></i>
                     </span>
-                    @elseif($other->last == $other->current)
+                    @elseif($other->progress == $other->last)
                     <span class="text-green">
-                      <i class="fa fa-arrow-right"></i>
+                      <i class="fa fa-chevron-right"></i>
                     </span>
                     @endif
                   </td>
-                  <td style="text-align: center; border-color: black">Status</td>
+
+                  <td style="text-align: center; border-color: black; border-top-width: 1px">Status
+
+                  </td>
                 </tr>
                 @endforeach
               </tbody>
             </table>
           </div>
         </div><!-- /.table-responsive -->
+      </div><!-- /.box-body -->
+    </div><!-- /.box -->
+  </div><!-- /.col -->
+</div>
 
-        <!-- jQuery 3 -->
-        <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
-        <!-- Bootstrap 3.3.7 -->
-        <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script src="../../bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-        <!-- SlimScroll -->
-        <script src="../../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-        <!-- FastClick -->
-        <script src="../../bower_components/fastclick/lib/fastclick.js"></script>
-        <!-- AdminLTE App -->
-        <script src="../../dist/js/adminlte.min.js"></script>
-        <!-- AdminLTE for demo purposes -->
-        <script src="../../dist/js/demo.js"></script>
-        <!-- ChartJS -->
-        <script src="../../bower_components/Chart.js/Chart.js"></script>
-        <!-- page script -->
+<!-- jQuery 3 -->
+<script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- DataTables -->
+<script src="../../bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="../../bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<!-- SlimScroll -->
+<script src="../../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../../bower_components/fastclick/lib/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../../dist/js/demo.js"></script>
+<!-- page script -->
+<!-- ChartJS -->
+<script src="../../bower_components/Chart.js/Chart.js"></script>
+<!-- page script -->
 
-      <script>
-        $(function () {
+<script>
+  $(function () {
+    $('#example1').DataTable()
+    $('#example2').DataTable({
+      'paging'      : true,
+      'lengthChange': true,
+      'searching'   : true,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : true
+    })
+    $('#example3').DataTable({
+      'paging'      : true,
+      'lengthChange': true,
+      'searching'   : true,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : true
+    })
+    $('#example4').DataTable({
+      'paging'      : true,
+      'lengthChange': true,
+      'searching'   : true,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : true
+    })
+    $('#example5').DataTable({
+      'paging'      : true,
+      'lengthChange': true,
+      'searching'   : true,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : true
+    })
+  })
+</script>
+
+<script>
+  $(function () {
           /* ChartJS
            * -------
            * Here we will create a few charts using ChartJS
@@ -322,8 +370,8 @@
             // You can switch between pie and douhnut using the method below.
             pieChart.Doughnut(PieData, pieOptions)
           })
-      </script>
-      <script>
+        </script>
+        <script>
           $(function () {
             /* ChartJS
              * -------
@@ -411,12 +459,7 @@
             // You can switch between pie and douhnut using the method below.
             pieChart.Doughnut(PieData, pieOptions)
           })
-      </script>
+        </script>
 
-      </div><!-- /.box-body -->
-    </div><!-- /.box -->
-    </div><!-- /.col -->
-  </div>
-
-</section>
-@endsection
+      </section>
+      @endsection

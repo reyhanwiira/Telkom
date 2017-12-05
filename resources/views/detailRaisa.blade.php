@@ -1,4 +1,4 @@
-@extends('layouts.detail_layout')
+@extends('layouts.detaillay_layout')
 
 @section('content')
 <section class="content">
@@ -173,71 +173,117 @@
         <div class="box-body">
           <div class="table-responsive">
             <div class="col-md-12">
-             <table id="example2" class="table table-bordered table-striped" style="border-color: black">
+              <table id="example2" class="table table-striped table-bordered" style="border-color: black">
               <thead>
                 <tr>
-                  <th rowspan="2" style="text-align: center; vertical-align: middle; border-color: black;">No</th>
-                  <th rowspan="2" style="text-align: center; vertical-align: middle; width: 350px; border-color: black">Solusi</th>
-                  <th rowspan="2" style="text-align: center; vertical-align: middle; border-color: black">Segment</th>
-                  <th rowspan="2" style="text-align: center; vertical-align: middle; width: 200px; border-color: black">Current Progress</th>
-                  <th style="text-align: center;border-color: black;">Last Progress</th>
-                  <th style="text-align: center;border-color: black;">Current Progress</th>
-                  <th rowspan="2" style="text-align: center; vertical-align: middle; border-color: black;">Progress Summary</th>
-                  <th rowspan="2" style="text-align: center; vertical-align: middle; border-color: black">Status</th>  
+                  <th style="text-align: center; vertical-align: middle; border-color: black; border-bottom-width: 0px; background-color:#ff3333; color: #ffffff">No</th>
+                  <th style="text-align: center; vertical-align: middle; width: 350px; border-color: black; border-bottom-width: 0px; background-color:#ff3333; color: #ffffff">Solusi</th>
+                  <th style="text-align: center; vertical-align: middle; border-color: black; border-bottom-width: 0px; background-color:#ff3333; color: #ffffff">Segment</th>
+                  <th style="text-align: center; vertical-align: middle; width: 200px; border-color: black; border-bottom-width: 0px; background-color:#ff3333; color: #ffffff">Current Progress</th>
+                  <th style="text-align: center;border-color: black; border-bottom-width: 0px; background-color:#ff3333; color: #ffffff">Last Progress</th>
+                  <th style="text-align: center;border-color: black; border-bottom-width: 0px; background-color:#ff3333; color: #ffffff">Current Progress</th>
+                  <th style="text-align: center; vertical-align: middle; border-color: black; border-bottom-width: 0px; background-color:#ff3333; color: #ffffff">Progress Summary</th>
+                  <th style="text-align: center; vertical-align: middle; border-color: black; border-bottom-width: 0px; background-color:#ff3333; color: #ffffff">Status</th>  
                 </tr>
               </thead>
-              <tbody>
+              <tbody style="border-color: black">
                 <?php $no=1; ?>
                 @foreach($raisa as $raisa)
-                <tr>                  
-                  <td style="text-align: center; border-color: black">{{ $no++ }}</td>
-                  <td style="text-align: center; border-color: black">{{ $raisa->projectName }}</td>
-                  <td style="text-align: center; border-color: black">{{ $raisa->segment }}</td>
-                  <td style="text-align: center; border-color: black">{{ $raisa->currentProgress }}</td>
-                  <td style="text-align: center; border-color: black">{{ $raisa->last }} %</td>
-                  <td style="text-align: center; border-color: black">{{ $raisa->current }} %</td>
-                  <td style="text-align: center; border-color: black">
-                    @if($raisa->current < $raisa->last)
+                <tr style="border-color: black">                  
+                  <td style="text-align: center; border-color: black; border-top-width: 1px">{{ $no++ }}</td>
+                  <td style="text-align: center; border-color: black; border-top-width: 1px">{{ $raisa->projectName }}</td>
+                  <td style="text-align: center; border-color: black; border-top-width: 1px">{{ $raisa->segment }}</td>
+                  <td style="text-align: center; border-color: black; border-top-width: 1px">{{ $raisa->currentProgress }}</td>
+                  <td style="text-align: center; border-color: black; border-top-width: 1px">{{ $raisa->last }} %</td>
+                  <td style="text-align: center; border-color: black; border-top-width: 1px">{{ $raisa->progress }} %</td>
+                  <td style="text-align: center; border-color: black; border-top-width: 1px">
+                    @if($raisa->progress > $raisa->last)
                     <span class="text-green">
-                      <i class="fa fa-arrow-down"></i>
+                      <i class="fa fa-chevron-up"></i>
                     </span>
-                    @elseif($raisa->current > $raisa->last )
+                    @elseif($raisa->progress < $raisa->last )
                     <span class="text-green">
-                      <i class="fa fa-arrow-up"></i>
+                      <i class="fa fa-chevron-down"></i>
                     </span>
-                    @elseif($raisa->last == $raisa->current)
+                    @elseif($raisa->progress == $raisa->last)
                     <span class="text-green">
-                      <i class="fa fa-arrow-right"></i>
+                      <i class="fa fa-chevron-right"></i>
                     </span>
                     @endif
                   </td>
-                  <td style="text-align: center; border-color: black">Status</td>
+
+                  <td style="text-align: center; border-color: black; border-top-width: 1px">Status
+
+                  </td>
                 </tr>
                 @endforeach
               </tbody>
             </table>
           </div>
-        </div><!-- /.table-responsive -->
+        </div><!-- /.box -->
+      </div><!-- /.col -->
+    </div>
 
-        <!-- jQuery 3 -->
-        <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
-        <!-- Bootstrap 3.3.7 -->
-        <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script src="../../bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-        <!-- SlimScroll -->
-        <script src="../../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-        <!-- FastClick -->
-        <script src="../../bower_components/fastclick/lib/fastclick.js"></script>
-        <!-- AdminLTE App -->
-        <script src="../../dist/js/adminlte.min.js"></script>
-        <!-- AdminLTE for demo purposes -->
-        <script src="../../dist/js/demo.js"></script>
-        <!-- ChartJS -->
-        <script src="../../bower_components/Chart.js/Chart.js"></script>
-        <!-- page script -->
+    <!-- jQuery 3 -->
+    <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- DataTables -->
+    <script src="../../bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../../bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <!-- SlimScroll -->
+    <script src="../../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <!-- FastClick -->
+    <script src="../../bower_components/fastclick/lib/fastclick.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../../dist/js/adminlte.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="../../dist/js/demo.js"></script>
+    <!-- page script -->
+    <!-- ChartJS -->
+    <script src="../../bower_components/Chart.js/Chart.js"></script>
+    <!-- page script -->
 
-        <script>
-          $(function () {
+    <script>
+      $(function () {
+        $('#example1').DataTable()
+        $('#example2').DataTable({
+          'paging'      : true,
+          'lengthChange': true,
+          'searching'   : true,
+          'ordering'    : true,
+          'info'        : true,
+          'autoWidth'   : true
+        })
+        $('#example3').DataTable({
+          'paging'      : true,
+          'lengthChange': true,
+          'searching'   : true,
+          'ordering'    : true,
+          'info'        : true,
+          'autoWidth'   : true
+        })
+        $('#example4').DataTable({
+          'paging'      : true,
+          'lengthChange': true,
+          'searching'   : true,
+          'ordering'    : true,
+          'info'        : true,
+          'autoWidth'   : true
+        })
+        $('#example5').DataTable({
+          'paging'      : true,
+          'lengthChange': true,
+          'searching'   : true,
+          'ordering'    : true,
+          'info'        : true,
+          'autoWidth'   : true
+        })
+      })
+    </script>
+
+    <script>
+      $(function () {
           /* ChartJS
            * -------
            * Here we will create a few charts using ChartJS
@@ -414,10 +460,5 @@
           })
         </script>
 
-      </div><!-- /.box-body -->
-    </div><!-- /.box -->
-  </div><!-- /.col -->
-</div>
-
-</section>
-@endsection
+      </section>
+      @endsection

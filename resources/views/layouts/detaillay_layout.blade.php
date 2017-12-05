@@ -18,10 +18,35 @@
   <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
    folder instead of downloading all of them to reduce the load. -->
-  <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
-  <!-- Google Font -->
-  <link rel="stylesheet"
-  href="../../bower_components/googlefont/googlefont.css">
+   <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+
+   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<!-- Google Font -->
+<link rel="stylesheet"
+href="../../bower_components/googlefont/googlefont.css">
+
+<style>
+.example-modal .modal {
+  position: relative;
+  top: auto;
+  bottom: auto;
+  right: auto;
+  left: auto;
+  display: block;
+  z-index: 1;
+}
+
+.example-modal .modal {
+  background: transparent !important;
+}
+</style>
+
 </head>
 <!-- ADD THE CLASS sidebar-collapse TO HIDE THE SIDEBAR PRIOR TO LOADING THE SITE -->
 <body class="hold-transition skin-blue sidebar-collapse sidebar-mini">
@@ -164,198 +189,55 @@
           </ul>
         </li>
         
-      </li>
-    </section>
-    <!-- /.sidebar -->
-  </aside>
+      </section>
+      <!-- /.sidebar -->
+    </aside>
 
-  <!-- =============================================== -->
+    <!-- =============================================== -->
 
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <h1>
-        Project Overview
-        <small></small>
-      </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Project Overview</li>
-      </ol>
-    </section>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <h1>
+          Detail
+          <small>Project</small>
+        </h1>
+        <ol class="breadcrumb">
+          <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+          <li class="active">Detail Project</li>
+        </ol>
+      </section>
 
-    <!-- Main content -->
-    <section>@yield('content')</section>
-    
-    
-  </div>
-  <!-- /.content-wrapper -->
-
-  <footer class="main-footer">
-    <div class="pull-right hidden-xs">
-      <b>Version</b> 1.1
+      <!-- Main content -->
+      <section class="content">
+        @yield('content')
+      </section><!-- /.content -->
+      <!-- /.content -->
     </div>
-    <strong>Copyright &copy; 2017 <a href="#">Telkom Indonesia By R.A.R</a>.</strong> All rights reserved.
-  </footer>
+    <!-- /.content-wrapper -->
 
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Create the tabs -->
-    <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-      <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
-      <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
-    </ul>
-  </aside>
-  <!-- /.control-sidebar -->
+    <footer class="main-footer">
+      <div class="pull-right hidden-xs">
+        <b>Version</b> 1.1
+      </div>
+      <strong>Copyright &copy; 2017 <a href="#">Telkom Indonesia By R.A.R</a>.</strong> All rights reserved.
+    </footer>
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+      <!-- Create the tabs -->
+      <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+        <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+        <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+      </ul>
+    </aside>
+    <!-- /.control-sidebar -->
   <!-- Add the sidebar's background. This div must be placed
     immediately after the control sidebar -->
     <div class="control-sidebar-bg"></div>
   </div>
   <!-- ./wrapper -->
 
-  <!-- jQuery 3 -->
-  <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
-  <!-- Bootstrap 3.3.7 -->
-  <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-  <!-- DataTables -->
-  <script src="../../bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
-  <script src="../../bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-  <!-- SlimScroll -->
-  <script src="../../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-  <!-- FastClick -->
-  <script src="../../bower_components/fastclick/lib/fastclick.js"></script>
-  <!-- AdminLTE App -->
-  <script src="../../dist/js/adminlte.min.js"></script>
-  <!-- AdminLTE for demo purposes -->
-  <script src="../../dist/js/demo.js"></script>
-  <!-- ChartJS -->
-  <script src="../../bower_components/Chart.js/Chart.js"></script>
-  <!-- page script -->
-
-  <script>
-    $(function () {
-    /* ChartJS
-     * -------
-     * Here we will create a few charts using ChartJS
-     */
-
-    //-------------
-    //- PIE CHART -
-    //-------------
-    // Get context with jQuery - using jQuery's .get() method.
-    var pieChartCanvas = $('#pieChart7').get(0).getContext('2d')
-    var pieChart       = new Chart(pieChartCanvas)
-    var PieData        = [
-    {
-      value    : 2,
-      color    : '#fff5cc',
-      highlight: '#fffae6',
-      label    : 'Initial Requirement'
-    },
-    {
-      value    : 3,
-      color    : '#ffd1b3',
-      highlight: '#ffe0cc',
-      label    : 'Initial Solution'
-    },
-    {
-      value    : 4,
-      color    : '#ff9999',
-      highlight: '#ffcccc',
-      label    : 'Menunggu Feedback & Gathering Req'
-    },
-    {
-      value    : 1,
-      color    : '#730099',
-      highlight: '#9900cc',
-      label    : 'Solution Design'
-    }
-    {
-      value    : 2,
-      color    : '#2ea4bc',
-      highlight: '#98d9e6',
-      label    : 'Solution Development'
-    }
-    {
-      value    : 5,
-      color    : '#40bf80',
-      highlight: '#9fdfbf',
-      label    : 'POC'
-    }
-    {
-      value    : 4,
-      color    : '#1aff1a',
-      highlight: '#99ff99',
-      label    : 'Proposal Ready'
-    }
-    ]
-    var pieOptions     = {
-      //Boolean - Whether we should show a stroke on each segment
-      segmentShowStroke    : true,
-      //String - The colour of each segment stroke
-      segmentStrokeColor   : '#fff',
-      //Number - The width of each segment stroke
-      segmentStrokeWidth   : 2,
-      //Number - The percentage of the chart that we cut out of the middle
-      percentageInnerCutout: 50, // This is 0 for Pie charts
-      //Number - Amount of animation steps
-      animationSteps       : 100,
-      //String - Animation easing effect
-      animationEasing      : 'easeOutBounce',
-      //Boolean - Whether we animate the rotation of the Doughnut
-      animateRotate        : true,
-      //Boolean - Whether we animate scaling the Doughnut from the centre
-      animateScale         : false,
-      //Boolean - whether to make the chart responsive to window resizing
-      responsive           : true,
-      // Boolean - whether to maintain the starting aspect ratio or not when responsive, if set to false, will take up entire container
-      maintainAspectRatio  : true,
-      //String - A legend template
-      legendTemplate       : '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<segments.length; i++){%><li><span style="background-color:<%=segments[i].fillColor%>"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>'
-    }
-    //Create pie or douhnut chart
-    // You can switch between pie and douhnut using the method below.
-    pieChart.Doughnut(PieData, pieOptions)
-
-  })
-</script>
-<script>
-  $(function () {
-    $('#example2').DataTable({
-      'paging'      : true,
-      'lengthChange': true,
-      'searching'   : true,
-      'ordering'    : false,
-      'info'        : true,
-      'autoWidth'   : true
-    })
-    $('#example3').DataTable({
-      'paging'      : true,
-      'lengthChange': true,
-      'searching'   : true,
-      'ordering'    : false,
-      'info'        : true,
-      'autoWidth'   : true
-    })
-    $('#example4').DataTable({
-      'paging'      : true,
-      'lengthChange': true,
-      'searching'   : true,
-      'ordering'    : false,
-      'info'        : true,
-      'autoWidth'   : true
-    })
-    $('#example5').DataTable({
-      'paging'      : true,
-      'lengthChange': true,
-      'searching'   : true,
-      'ordering'    : false,
-      'info'        : true,
-      'autoWidth'   : true
-    })
-  })
-</script>
 </body>
 </html>
-
