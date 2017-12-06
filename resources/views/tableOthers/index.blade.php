@@ -88,7 +88,7 @@
     <div class="box-footer clearfix">
       <div class="row">
         <div class="col-xs-2 text-center">
-          <a href="{{ url('tableOthers/createOthers') }}" class="btn btn-block btn-social btn-linkedin"><i class="fa fa-plus-square-o"></i> New Project</a>
+          <a href="{{ url('tableOthers/createOthers') }}" class="btn btn-block btn-social btn-linkedin"><i class="fa fa-plus-square-o"></i> Add Project</a>
         </div>
         <div class="col-xs-2 text-center">
          

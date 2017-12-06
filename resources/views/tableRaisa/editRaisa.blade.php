@@ -20,8 +20,8 @@
             {!! csrf_field() !!}
 
             <div class="box-body">
-
-              <div class="form-group">
+              <div class="col-md-6">
+               <div class="form-group">
                 <label>Project</label>
                 <input type="text" class="form-control" placeholder="Enter ..." name="projectName" value="{{$raisa ->projectName}}" />
               </div>
@@ -57,15 +57,6 @@
                 <textarea class="form-control" rows="3" placeholder="Enter ..." name="nextAction"><?php echo $raisa['nextAction'] ?></textarea>
               </div>
 
-               <div class="form-group">
-              <label>Progress</label>
-              <input type="text" class="form-control pull-right" placeholder="Enter ..." id="progress" name="progress" value="{{$raisa->progress}}">
-            </div>
-
-            <div class="form-group">
-              <input type="hidden" class="form-control" name="currentProgress" id="currentProgress">
-            </div>
-
               <div class="form-group">
                 <label>Status</label>
                 <select class="form-control select2" name="status" style="width: 100%;">
@@ -86,7 +77,16 @@
                   <option value="P3" <?php if($raisa['lastStatus']=="P3") echo 'selected="selected"'; ?>>P3</option>
                 </select>
               </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Progress</label>
+                <input type="text" class="form-control pull-right" placeholder="Enter ..." id="progress" name="progress" value="{{$raisa->progress}}">
+              </div>
 
+              <div class="form-group">
+                <input type="hidden" class="form-control" name="currentProgress" id="currentProgress">
+              </div>
 
               <div class="form-group">
                 <label>Information</label>
@@ -142,88 +142,89 @@
               <label>Support AP</label>
               <input type="text" class="form-control" placeholder="Enter ..." name="supportAP" value="{{$raisa ->supportAP}}" />
             </div>
-
-          </div><!-- /.box-body -->
-
-          <div class="box-footer">
-            <button type="submit" class="btn btn-primary">Submit</button>
           </div>
-        </form>
-      </div><!-- /.box -->
 
-      <!-- TABLE: LATEST ORDERS -->
-      <div class="box box-primary">
-        <div class="box-header with-border">
-          <h3 class="box-title">Activity Record</h3>
-          <div class="box-tools pull-right">
-            <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-          </div>
-        </div><!-- /.box-header -->
-        <div class="box-body">
-          <div class="table-responsive">
-           <table id="example2" class="table table-bordered table-striped">
-            <thead>
-              <tr>
-                <th style="width: : 50px">No</th>
-                <th>Tanggal</th>
-                <th>Agenda</th>
-                <th>Action Plan</th>
-                <th>Evidence</th>
-                <th>Lampiran</th>
-                <th style="width: : 150px">Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              <?php $no=1; ?>
-              @foreach ($activitys as $activity)
-              <tr>
-                <td>{{ $no++ }}</td>
-                <td>{{ $activity->tanggal }}</td>
-                <td>{{ $activity->agenda }}</td>
-                <td>{{ $activity->actionPlan }}</td>
-                <td>{{ $activity->evidence }}</td>
-                <td>{{ $activity->original_filename }}</td>
-                <td>
+        </div><!-- /.box-body -->
 
-                  <div class="btn-group">
-                    <a href="{{ url('/uploadActRaisa/'.$activity->id) }}">
-                      <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Upload File">
-                        <i class='glyphicon glyphicon-floppy-open' style="font-size: 12px"></i>
-                      </button>
-                    </a>
-
-                    <a href="{{ url('/downloadPro/'.$activity->original_filename) }}"  download="{{ $activity->original_filename }}">
-                      <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Download File">
-                        <i class='glyphicon glyphicon-floppy-save' style="font-size: 12px"></i>
-                      </button>
-                    </a>
-
-                    <a href="{{ url('/tableRaisa'.'/editActRaisa/'.$activity->id) }}">
-                      <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Edit File">
-                        <i class='glyphicon glyphicon-edit' style="font-size: 12px"></i>
-                      </button>
-                    </a>
-
-                    <a href="{{ url('/deleteActRaisa/'.$activity->id) }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="right" title="Delete"><i class='glyphicon glyphicon-trash' style="font-size: 12px"></i></button></a>
-
-                  </div>
-                </td>
-              </tr>
-              @endforeach
-            </tbody>
-
-          </table>
-        </div><!-- /.table-responsive -->
-
-
-      </div><!-- /.box-body -->
-      <div class="box-footer clearfix">
-
-        <a href="{{ url('tableRaisa/addActRaisa') }}" class="btn btn-primary pull-left">New Activity</a>
-
-      </div><!-- /.box-footer -->
+        <div class="box-footer">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
     </div><!-- /.box -->
-  </div><!--/.col (left) -->
+
+    <!-- TABLE: LATEST ORDERS -->
+    <div class="box box-primary">
+      <div class="box-header with-border">
+        <h3 class="box-title">Activity Record</h3>
+        <div class="box-tools pull-right">
+          <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+        </div>
+      </div><!-- /.box-header -->
+      <div class="box-body">
+        <div class="table-responsive">
+         <table id="example2" class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th style="width: : 50px">No</th>
+              <th>Tanggal</th>
+              <th>Agenda</th>
+              <th>Action Plan</th>
+              <th>Evidence</th>
+              <th>Lampiran</th>
+              <th style="width: : 150px">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php $no=1; ?>
+            @foreach ($activitys as $activity)
+            <tr>
+              <td>{{ $no++ }}</td>
+              <td>{{ $activity->tanggal }}</td>
+              <td>{{ $activity->agenda }}</td>
+              <td>{{ $activity->actionPlan }}</td>
+              <td>{{ $activity->evidence }}</td>
+              <td>{{ $activity->original_filename }}</td>
+              <td>
+
+                <div class="btn-group">
+                  <a href="{{ url('/uploadActRaisa/'.$activity->id) }}">
+                    <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Upload File">
+                      <i class='glyphicon glyphicon-floppy-open' style="font-size: 12px"></i>
+                    </button>
+                  </a>
+
+                  <a href="{{ url('/downloadPro/'.$activity->original_filename) }}"  download="{{ $activity->original_filename }}">
+                    <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Download File">
+                      <i class='glyphicon glyphicon-floppy-save' style="font-size: 12px"></i>
+                    </button>
+                  </a>
+
+                  <a href="{{ url('/tableRaisa'.'/editActRaisa/'.$activity->id) }}">
+                    <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Edit File">
+                      <i class='glyphicon glyphicon-edit' style="font-size: 12px"></i>
+                    </button>
+                  </a>
+
+                  <a href="{{ url('/deleteActRaisa/'.$activity->id) }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="right" title="Delete"><i class='glyphicon glyphicon-trash' style="font-size: 12px"></i></button></a>
+
+                </div>
+              </td>
+            </tr>
+            @endforeach
+          </tbody>
+
+        </table>
+      </div><!-- /.table-responsive -->
+
+
+    </div><!-- /.box-body -->
+    <div class="box-footer clearfix">
+
+      <a href="{{ url('tableRaisa/addActRaisa') }}" class="btn btn-primary pull-left">New Activity</a>
+
+    </div><!-- /.box-footer -->
+  </div><!-- /.box -->
+</div><!--/.col (left) -->
 </div>   <!-- /.row -->
 </section><!-- /.content -->
 

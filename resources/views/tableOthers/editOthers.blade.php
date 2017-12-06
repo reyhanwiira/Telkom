@@ -20,43 +20,120 @@
             {!! csrf_field() !!}
 
             <div class="box-body">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Project</label>
+                  <input type="text" class="form-control" placeholder="Enter ..." name="projectName" value="{{$other ->projectName}}" />
+                </div>
 
-              <div class="form-group">
-                <label>Project</label>
-                <input type="text" class="form-control" placeholder="Enter ..." name="projectName" value="{{$other ->projectName}}" />
+                <div class="form-group">
+                  <label>Segment</label>
+                  <select class="form-control select2"\ name="segment">
+                    <option value="CGS" <?php if($other['segment']=="CGS") echo 'selected="selected"'; ?>>CGS</option>
+                    <option value="GAS" <?php if($other['segment']=="GAS") echo 'selected="selected"'; ?>>GAS</option>
+                    <option value="LGS" <?php if($other['segment']=="LGS") echo 'selected="selected"'; ?>>LGS</option>
+                    <option value="MPS" <?php if($other['segment']=="MPS") echo 'selected="selected"'; ?>>MPS</option>
+                    <option value="Segment Gabungan" <?php if($other['segment']=="Segment Gabungan") echo 'selected="selected"'; ?>>Segment Gabungan</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label>Description</label>
+                  <textarea class="form-control" rows="3" placeholder="Enter ..." name="description" ><?php echo $other['description'] ?></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label>Customer</label>
+                  <input type="text" class="form-control" placeholder="Enter ..." name="customer" value="{{$other->customer}}"/>
+                </div>
+
+                <div class="form-group">
+                  <label>Last Action</label>
+                  <textarea class="form-control" rows="3" placeholder="Enter ..." name="lastAction"><?php echo $other['lastAction'] ?></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label>Next Action</label>
+                  <textarea class="form-control" rows="3" placeholder="Enter ..." name="nextAction"><?php echo $other['nextAction'] ?></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label>Status</label>
+                  <select class="form-control select2" name="status" style="width: 100%;">
+                    <option value="P0" <?php if($other['status']=="P0") echo 'selected="selected"'; ?>>P0</option>
+                    <option value="P1" <?php if($other['status']=="P1") echo 'selected="selected"'; ?>>P1</option>
+                    <option value="P2" <?php if($other['status']=="P2") echo 'selected="selected"'; ?>>P2</option>
+                    <option value="P3" <?php if($other['status']=="P3") echo 'selected="selected"'; ?>>P3</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label>Last Status</label>
+                  <select class="form-control select2" name="lastStatus" style="width: 100%;">
+                    <option value="0" <?php if($other['lastStatus']=="0") echo 'selected="selected"'; ?>>0</option>
+                    <option value="P0" <?php if($other['lastStatus']=="P0") echo 'selected="selected"'; ?>>P0</option>
+                    <option value="P1" <?php if($other['lastStatus']=="P1") echo 'selected="selected"'; ?>>P1</option>
+                    <option value="P2" <?php if($other['lastStatus']=="P2") echo 'selected="selected"'; ?>>P2</option>
+                    <option value="P3" <?php if($other['lastStatus']=="P3") echo 'selected="selected"'; ?>>P3</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Progress</label>
+                  <input type="text" class="form-control pull-right" placeholder="Enter ..." id="progress" name="progress" value="{{$other->progress}}">
+                </div>
+
+                <div class="form-group">
+                  <input type="hidden" class="form-control" name="currentProgress" id="currentProgress">
+                </div>
+
+                <div class="form-group">
+                  <label>Information</label>
+                  <textarea class="form-control" rows="3" placeholder="Enter ..." name="information"><?php echo $other['information'] ?></textarea>
+                </div>
+
+                <div class="form-group">
+                 <label>Start Project</label>
+                 <div class="input-group">
+                   <div class="input-group-addon">
+                     <i class="fa fa-calendar"></i>
+                   </div>
+                   <input type="date" class="form-control pull-right" id="reservation" name="startProject" value="{{ $other->startProject }}">
+                 </div><!-- /.input group -->
+               </div><!-- /.form group -->
+
+               <div class="form-group">
+                 <label>Finish Project</label>
+                 <div class="input-group">
+                   <div class="input-group-addon">
+                     <i class="fa fa-calendar"></i>
+                   </div>
+                   <input type="date" class="form-control pull-right" id="reservation" name="finishProject" value="{{ $other->finishProject }}">
+                 </div><!-- /.input group -->
+               </div><!-- /.form group -->
+
+               <div class="form-group">
+                <label>AM Segment</label>
+                <input type="text" class="form-control" placeholder="Enter ..." name="AMSegment" value="{{$other ->AMSegment}}" />
               </div>
 
               <div class="form-group">
-                <label>Segment</label>
-                <select class="form-control select2"\ name="segment">
-                  <option value="CGS" <?php if($other['segment']=="CGS") echo 'selected="selected"'; ?>>CGS</option>
-                  <option value="GAS" <?php if($other['segment']=="GAS") echo 'selected="selected"'; ?>>GAS</option>
-                  <option value="LGS" <?php if($other['segment']=="LGS") echo 'selected="selected"'; ?>>LGS</option>
-                  <option value="MPS" <?php if($other['segment']=="MPS") echo 'selected="selected"'; ?>>MPS</option>
-                  <option value="Segment Gabungan" <?php if($other['segment']=="Segment Gabungan") echo 'selected="selected"'; ?>>Segment Gabungan</option>
-                </select>
+                <label>Keahlian</label>
+                <input type="text" class="form-control" placeholder="Enter ..." name="keahlian" value="{{$other ->keahlian}}" />
               </div>
 
               <div class="form-group">
-                <label>Description</label>
-                <textarea class="form-control" rows="3" placeholder="Enter ..." name="description" ><?php echo $other['description'] ?></textarea>
+                <label>Est Revenue</label>
+                <input type="text" class="form-control" placeholder="Enter ..." name="EstRevenue" value="{{$other ->EstRevenue}}" />
               </div>
 
               <div class="form-group">
-                <label>Customer</label>
-                <input type="text" class="form-control" placeholder="Enter ..." name="customer" value="{{$other->customer}}"/>
+                <label>Deliverable</label>
+                <input type="text" class="form-control" placeholder="Enter ..." name="deliverable" value="{{$other ->deliverable}}" />
               </div>
 
-              <div class="form-group">
-                <label>Last Action</label>
-                <textarea class="form-control" rows="3" placeholder="Enter ..." name="lastAction"><?php echo $other['lastAction'] ?></textarea>
-              </div>
-
-              <div class="form-group">
-                <label>Next Action</label>
-                <textarea class="form-control" rows="3" placeholder="Enter ..." name="nextAction"><?php echo $other['nextAction'] ?></textarea>
-              </div>
-
+<<<<<<< HEAD
             <div class="form-group">
               <label>Progress</label>
               <input type="text" class="form-control pull-right" placeholder="Enter ..." id="progress" name="progress" value="{{$other->progress}}">
@@ -66,16 +143,14 @@
               <input type="hidden" class="form-control" name="currentProgress" id="currentProgress">
             </div>
 
+=======
+>>>>>>> 9324a4505e1d92dccd1bbfad37a5ecff1334bdf6
               <div class="form-group">
-                <label>Status</label>
-                <select class="form-control select2" name="status" style="width: 100%;">
-                  <option value="P0" <?php if($other['status']=="P0") echo 'selected="selected"'; ?>>P0</option>
-                  <option value="P1" <?php if($other['status']=="P1") echo 'selected="selected"'; ?>>P1</option>
-                  <option value="P2" <?php if($other['status']=="P2") echo 'selected="selected"'; ?>>P2</option>
-                  <option value="P3" <?php if($other['status']=="P3") echo 'selected="selected"'; ?>>P3</option>
-                </select>
+                <label>Benefit</label>
+                <input type="text" class="form-control" placeholder="Enter ..." name="benefit" value="{{$other ->benefit}}" />
               </div>
 
+<<<<<<< HEAD
                 <div class="form-group">
                 <label>Last Status</label>
                 <select class="form-control select2" name="lastStatus" style="width: 100%;">
@@ -144,6 +219,15 @@
               </div>
 
            </div><!-- /.box-body -->
+=======
+              <div class="form-group">
+                <label>Support AP</label>
+                <input type="text" class="form-control" placeholder="Enter ..." name="supportAP" value="{{$other ->supportAP}}" />
+              </div>
+            </div>
+            
+          </div><!-- /.box-body -->
+>>>>>>> 9324a4505e1d92dccd1bbfad37a5ecff1334bdf6
 
            <div class="box-footer">
             <button type="submit" class="btn btn-primary">Submit</button>
