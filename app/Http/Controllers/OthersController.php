@@ -39,10 +39,9 @@ class OthersController extends Controller
     }
  
  
-    public function storeOthers(Request $request)
-    {
-          
-         if($request->input('progress')>=0&&$request->input('progress')<=10){
+     public function storeOthers(Request $request)
+  {   
+    if($request->input('progress')>=0&&$request->input('progress')<=10){
         Other::create([  
             'projectName'=>$request->input('projectName'),
             'segment'=>$request->input('segment'),
@@ -63,10 +62,9 @@ class OthersController extends Controller
             'deliverable'=>$request->input('deliverable'),
             'benefit'=>$request->input('benefit'),
             'supportAP'=>$request->input('supportAP')
-
             ]);
 }else if($request->input('progress')>=11&&$request->input('progress')<=20){
-    Other::create([  
+    Others::create([  
         'projectName'=>$request->input('projectName'),
         'segment'=>$request->input('segment'),
         'description'=>$request->input('description'),
@@ -89,7 +87,7 @@ class OthersController extends Controller
 
         ]);
 }else if($request->input('progress')>=21&&$request->input('progress')<=30){
-    Other::create([  
+    Others::create([  
         'projectName'=>$request->input('projectName'),
         'segment'=>$request->input('segment'),
         'description'=>$request->input('description'),
@@ -112,7 +110,7 @@ class OthersController extends Controller
 
         ]);
 }else if($request->input('progress')>=31&&$request->input('progress')<=60){
-    Other::create([  
+    Others::create([  
         'projectName'=>$request->input('projectName'),
         'segment'=>$request->input('segment'),
         'description'=>$request->input('description'),
@@ -135,7 +133,7 @@ class OthersController extends Controller
 
         ]);
 }else if($request->input('progress')>=61&&$request->input('progress')<=90){
-    Other::create([  
+    Others::create([  
         'projectName'=>$request->input('projectName'),
         'segment'=>$request->input('segment'),
         'description'=>$request->input('description'),
@@ -158,7 +156,7 @@ class OthersController extends Controller
 
         ]);
 }else if($request->input('progress')>=91&&$request->input('progress')<=99){
-    Other::create([  
+    Others::create([  
         'projectName'=>$request->input('projectName'),
         'segment'=>$request->input('segment'),
         'description'=>$request->input('description'),
@@ -181,7 +179,7 @@ class OthersController extends Controller
 
         ]);
 }else if($request->input('progress')==100){
-    Other::create([  
+    Others::create([  
         'projectName'=>$request->input('projectName'),
         'segment'=>$request->input('segment'),
         'description'=>$request->input('description'),
@@ -204,26 +202,16 @@ class OthersController extends Controller
 
         ]);
 }
-      return Redirect::to('/tableOthers');
 
-    }
-
-    public function editOthers($id)
-    {
-        $other = other::find($id);
-        $activitys= Activity::all();
+return Redirect::to('/tableOthers');
+}
 
 
-      return view('tableOthers.editOthers',compact('other','activitys','other'));
-    }
+public function updateOthers(Request $request, $id)
+{
+    $other = Other::find($id);
 
-
-    public function updateOthers(Request $request, $id)
-    {
-        $other = other::find($id);
-
-        
-       $other->last=$other->progress;
+    $other->last=$other->progress;
     if($request->input('progress')>=0&&$request->input('progress')<=10){
         $other->projectName=$request->input('projectName');
         $other->segment=$request->input('segment');
@@ -232,6 +220,7 @@ class OthersController extends Controller
         $other->lastAction=$request->input('lastAction');
         $other->nextAction=$request->input('nextAction');
         $other->progress=$request->input('progress');
+        $other->lastCurrentProgress = $other->currentProgress;
         $other->currentProgress='Initial Requirement';
         $other->status=$request->input('status');
         $other->lastStatus=$request->input('lastStatus');
@@ -253,6 +242,7 @@ class OthersController extends Controller
         $other->lastAction=$request->input('lastAction');
         $other->nextAction=$request->input('nextAction');
         $other->progress=$request->input('progress');
+        $other->lastCurrentProgress = $other->currentProgress;
         $other->currentProgress='Initial Solution';
         $other->status=$request->input('status');
         $other->lastStatus=$request->input('lastStatus');
@@ -273,6 +263,7 @@ class OthersController extends Controller
         $other->lastAction=$request->input('lastAction');
         $other->nextAction=$request->input('nextAction');
         $other->progress=$request->input('progress');
+        $other->lastCurrentProgress = $other->currentProgress;
         $other->currentProgress='Menunggu Feedback & Gathering Req';
         $other->status=$request->input('status');
         $other->lastStatus=$request->input('lastStatus');
@@ -293,6 +284,7 @@ class OthersController extends Controller
         $other->lastAction=$request->input('lastAction');
         $other->nextAction=$request->input('nextAction');
         $other->progress=$request->input('progress');
+        $other->lastCurrentProgress = $other->currentProgress;
         $other->currentProgress='Solution Design';
         $other->status=$request->input('status');
         $other->lastStatus=$request->input('lastStatus');
@@ -313,6 +305,7 @@ class OthersController extends Controller
         $other->lastAction=$request->input('lastAction');
         $other->nextAction=$request->input('nextAction');
         $other->progress=$request->input('progress');
+        $other->lastCurrentProgress = $other->currentProgress;
         $other->currentProgress='Solution Development';
         $other->status=$request->input('status');
         $other->lastStatus=$request->input('lastStatus');
@@ -333,6 +326,7 @@ class OthersController extends Controller
         $other->lastAction=$request->input('lastAction');
         $other->nextAction=$request->input('nextAction');
         $other->progress=$request->input('progress');
+        $other->lastCurrentProgress = $other->currentProgress;
         $other->currentProgress='POC';
         $other->status=$request->input('status');
         $other->lastStatus=$request->input('lastStatus');
@@ -353,6 +347,7 @@ class OthersController extends Controller
         $other->lastAction=$request->input('lastAction');
         $other->nextAction=$request->input('nextAction');
         $other->progress=$request->input('progress');
+        $other->lastCurrentProgress = $other->currentProgress;
         $other->currentProgress='Proposal Ready';
         $other->status=$request->input('status');
         $other->lastStatus=$request->input('lastStatus');
@@ -366,11 +361,17 @@ class OthersController extends Controller
         $other->benefit=$request->input('benefit');
         $other->supportAP=$request->input('supportAP');
     }
+    $other->update();
+    return redirect::to('/tableOthers');
+}
 
-        
-        $other->update();
+    public function editOthers($id)
+    {
+        $other = other::find($id);
+        $activitys= Activity::all();
 
-      return redirect::to('/tableOthers');
+
+      return view('tableOthers.editOthers',compact('other','activitys','other'));
     }
 
 

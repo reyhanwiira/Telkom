@@ -17,55 +17,7 @@
           </div>
         </div>
         <div class="box-body">
-          <div class="col-md-4">
-            <div class="box-body">
-              <div class="box-header with-border">
-                <h3 class="box-title">Last Week</h3>
-              </div>
-              <!-- /.box-header -->
-              <div class="box-body">
-                <div class="row">
-                  <div class="col-md-8">
-                    <div class="chart-responsive">
-                      <canvas id="pieChart5" height="220"></canvas>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <ul class="chart-legend clearfix">
-                      <li><i class="fa fa-circle" style="color: #fff5cc"></i> : {{ $other->where('currentProgress','Like','Initial Requirement')->count() }}</li>
-                      <li><i class="fa fa-circle" style="color: #ffd1b3"></i> : {{ $other->where('currentProgress','Like','Initial Solution')->count() }}</li>
-                      <li><i class="fa fa-circle" style="color: #ff9999"></i> : {{ $other->where('currentProgress','Like','Menunggu Feedback & Gathering Req')->count() }}</li>
-                      <li><i class="fa fa-circle" style="color: #730099"></i> : {{ $other->where('currentProgress','Like','Solution Design')->count() }}</li>
-                      <li><i class="fa fa-circle" style="color: #2ea4bc"></i> : {{ $other->where('currentProgress','Like','Solution Development')->count() }}</li>
-                      <li><i class="fa fa-circle" style="color: #40bf80"></i> : {{ $other->where('currentProgress','Like','POC')->count() }}</li>
-                      <li><i class="fa fa-circle" style="color: #66ff66"></i> : {{ $other->where('currentProgress','Like','Proposal Ready')->count() }}</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="box-footer no-padding">
-                <ul class="nav nav-pills nav-stacked">
-                  <li>
-                    <a href="#">Active
-                      <span class="pull-right text-green" style="font-size: medium;"> 4</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">Idle (tdk berprogress >2 Minggu) 
-                      <span class="pull-right text-red" style="font-size: medium;"> 4</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">Persentase
-                      <span class="pull-right text-primary" style="font-size: medium;"> 40%</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>  
-            </div>
-          </div>
-
-          <div class="col-md-4">
+          <div class="col-md-8">
             <div class="box-body">
               <div class="box-header with-border">
                 <h3 class="box-title">Current Week</h3>
@@ -75,11 +27,11 @@
                 <div class="row">
                   <div class="col-md-8">
                     <div class="chart-responsive">
-                      <canvas id="pieChart6" height="220"></canvas>
+                      <canvas id="pieChart6"></canvas>
                     </div>
                   </div>
                   <div class="col-md-4">
-                    <ul class="chart-legend clearfix">
+                    <ul class="chart-legend clearfix pull-right">
                       <li><i class="fa fa-circle" style="color: #fff5cc"></i> : {{ $other->where('currentProgress','Like','Initial Requirement')->count() }}</li>
                       <li><i class="fa fa-circle" style="color: #ffd1b3"></i> : {{ $other->where('currentProgress','Like','Initial Solution')->count() }}</li>
                       <li><i class="fa fa-circle" style="color: #ff9999"></i> : {{ $other->where('currentProgress','Like','Menunggu Feedback & Gathering Req')->count() }}</li>
@@ -90,25 +42,6 @@
                     </ul>
                   </div>
                 </div>
-              </div>
-              <div class="box-footer no-padding">
-                <ul class="nav nav-pills nav-stacked">
-                  <li>
-                    <a href="#">Active
-                      <span class="pull-right text-green" style="font-size: medium;"> 4</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">Idle (tdk berprogress >2 Minggu) 
-                      <span class="pull-right text-red" style="font-size: medium;"></i> 4</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">Persentase
-                      <span class="pull-right text-primary" style="font-size: medium;"> 42%</span>
-                    </a>
-                  </li>
-                </ul>
               </div>  
             </div>
           </div>
@@ -212,7 +145,10 @@
                   </td>
 
                   <td style="text-align: center; border-color: black; border-top-width: 1px">Status
-
+                    @if($other->updated_at->addDays(14) <= $current_time) <i>Kuning</i>
+                    @elseif($other->finishProject <= $current_time) <i>Merah</i>  
+                    @elseif($other->updated_at->addDays(14) >= $current_time) <i>hijau</i>
+                    @endif
                   </td>
                 </tr>
                 @endforeach

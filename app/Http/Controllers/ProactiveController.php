@@ -37,10 +37,6 @@ class ProactiveController extends Controller
 
   public function storePro(Request $request)
   {   
-
-    $activeProject = Proactive::where('status','=','P1')->where('updated_at','<=',$deadline)->count();
-    $inactiveProject = Proactive::where('status','=','P1')->where('updated_at','>=',$deadline)->count();
-
     if($request->input('progress')>=0&&$request->input('progress')<=10){
         Proactive::create([  
             'projectName'=>$request->input('projectName'),

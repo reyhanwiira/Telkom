@@ -4,7 +4,7 @@
 <section class="content">
   <div class="row">
     <div class="col-md-12">
-      <div class="box box-danger">
+      <div class="box box-primary">
         <div class="box-header with-border">
           <i class="fa fa-bar-chart-o"></i>
           <h3 class="box-title">PROACTIVE Chart</h3>
@@ -17,54 +17,7 @@
           </div>
         </div>
         <div class="box-body">
-          <div class="col-md-4">
-            <div class="box-body">
-              <div class="box-header with-border">
-                <h3 class="box-title">Last Week</h3>
-              </div>
-              <!-- /.box-header -->
-              <div class="box-body">
-                <div class="row">
-                  <div class="col-md-8">
-                    <div class="chart-responsive">
-                      <canvas id="pieChart5" height="220"></canvas>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <ul class="chart-legend clearfix">
-                      <li><i class="fa fa-circle" style="color: #fff5cc"></i> : {{ $proactive->where('lastCurrentProgress','Like','Initial Requirement')->count() }}</li>
-                      <li><i class="fa fa-circle" style="color: #ffd1b3"></i> : {{ $proactive->where('lastCurrentProgress','Like','Initial Solution')->count() }}</li>
-                      <li><i class="fa fa-circle" style="color: #ff9999"></i> : {{ $proactive->where('lastCurrentProgress','Like','Menunggu Feedback & Gathering Req')->count() }}</li>
-                      <li><i class="fa fa-circle" style="color: #730099"></i> : {{ $proactive->where('lastCurrentProgress','Like','Solution Design')->count() }}</li>
-                      <li><i class="fa fa-circle" style="color: #2ea4bc"></i> : {{ $proactive->where('lastCurrentProgress','Like','Solution Development')->count() }}</li>
-                      <li><i class="fa fa-circle" style="color: #40bf80"></i> : {{ $proactive->where('lastCurrentProgress','Like','POC')->count() }}</li>
-                      <li><i class="fa fa-circle" style="color: #66ff66"></i> : {{ $proactive->where('lastCurrentProgress','Like','Proposal Ready')->count() }}</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="box-footer no-padding">
-                <ul class="nav nav-pills nav-stacked">
-                  <li>
-                    <a href="#">Active
-                      <span class="pull-right text-green" style="font-size: medium;">
-                        {{$activeProject}}
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">Idle (tdk berprogress >2 Minggu) 
-                      <span class="pull-right text-red" style="font-size: medium;">
-                        {{$inactiveProject}}
-                      </span>
-                    </a>
-                  </li>
-                </ul>
-              </div>  
-            </div>
-          </div>
-
-          <div class="col-md-4">
+          <div class="col-md-8">
             <div class="box-body">
               <div class="box-header with-border">
                 <h3 class="box-title">Current Week</h3>
@@ -74,11 +27,11 @@
                 <div class="row">
                   <div class="col-md-8">
                     <div class="chart-responsive">
-                      <canvas id="pieChart6" height="220"></canvas>
+                      <canvas id="pieChart6"></canvas>
                     </div>
                   </div>
                   <div class="col-md-4">
-                    <ul class="chart-legend clearfix">
+                    <ul class="chart-legend clearfix pull-right">
                       <li><i class="fa fa-circle" style="color: #fff5cc"></i> : {{ $proactive->where('currentProgress','Like','Initial Requirement')->count() }}</li>
                       <li><i class="fa fa-circle" style="color: #ffd1b3"></i> : {{ $proactive->where('currentProgress','Like','Initial Solution')->count() }}</li>
                       <li><i class="fa fa-circle" style="color: #ff9999"></i> : {{ $proactive->where('currentProgress','Like','Menunggu Feedback & Gathering Req')->count() }}</li>
@@ -89,20 +42,6 @@
                     </ul>
                   </div>
                 </div>
-              </div>
-              <div class="box-footer no-padding">
-                <ul class="nav nav-pills nav-stacked">
-                  <li>
-                    <a href="#">Active
-                      <span class="pull-right text-green" style="font-size: medium;"> 4</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">Idle (tdk berprogress >2 Minggu) 
-                      <span class="pull-right text-red" style="font-size: medium;"> 4</span>
-                    </a>
-                  </li>
-                </ul>
               </div>  
             </div>
           </div>
@@ -157,7 +96,7 @@
 
     <div class="col-md-12">
       <!-- TABLE: LATEST ORDERS -->
-      <div class="box box-danger">
+      <div class="box box-primary">
         <div class="box-header with-border">
           <h3 class="box-title"><i class="fa fa-table"></i> Data Table</h3>
           <div class="box-tools pull-right">
@@ -170,34 +109,30 @@
              <table id="example2" class="table table-striped table-bordered" style="border-color: black">
               <thead>
                 <tr>
-                  <th style="text-align: center; vertical-align: middle; border-color: black; border-bottom-width: 0px; background-color:#ff3333; color: #ffffff">No</th>
-                  <th style="text-align: center; vertical-align: middle; width: 350px; border-color: black; border-bottom-width: 0px; background-color:#ff3333; color: #ffffff">Solusi</th>
-                  <th style="text-align: center; vertical-align: middle; border-color: black; border-bottom-width: 0px; background-color:#ff3333; color: #ffffff">Segment</th>
-                  <th style="text-align: center; vertical-align: middle; width: 200px; border-color: black; border-bottom-width: 0px; background-color:#ff3333; color: #ffffff">Current Progress</th>
-                  <th style="text-align: center;border-color: black; border-bottom-width: 0px; background-color:#ff3333; color: #ffffff">Last Progress</th>
-                  <th style="text-align: center;border-color: black; border-bottom-width: 0px; background-color:#ff3333; color: #ffffff">Current Progress</th>
-                  <th style="text-align: center; vertical-align: middle; border-color: black; border-bottom-width: 0px; background-color:#ff3333; color: #ffffff">Progress Summary</th>
-                  <th style="text-align: center; vertical-align: middle; border-color: black; border-bottom-width: 0px; background-color:#ff3333; color: #ffffff">Status</th>  
+                  <th rowspan="2" style="text-align: center; vertical-align: middle; border-color: black;">No</th>
+                  <th rowspan="2" style="text-align: center; vertical-align: middle; width: 350px; border-color: black">Solusi</th>
+                  <th rowspan="2" style="text-align: center; vertical-align: middle; border-color: black">Segment</th>
+                  <th rowspan="2" style="text-align: center; vertical-align: middle; width: 200px; border-color: black">Current Progress</th>
+                  <th style="text-align: center;border-color: black;">Last Progress</th>
+                  <th style="text-align: center;border-color: black;">Current Progress</th>
+                  <th rowspan="2" style="text-align: center; vertical-align: middle; border-color: black;">Progress Summary</th>
+                  <th rowspan="2" style="text-align: center; vertical-align: middle; border-color: black">Status</th>  
                 </tr>
               </thead>
               <tbody style="border-color: black">
                <?php $no=1; ?>
                @foreach($proactive as $proactive)
                <tr style="border-color: black">                  
-                <td style="text-align: center; border-color: black; border-top-width: 1px">{{ $no++ }}</td>
-                <td style="text-align: center; border-color: black; border-top-width: 1px">{{ $proactive->projectName }}</td>
-                <td style="text-align: center; border-color: black; border-top-width: 1px">{{ $proactive->segment }}</td>
-                <td style="text-align: center; border-color: black; border-top-width: 1px">{{ $proactive->currentProgress }}</td>
-                <td style="text-align: center; border-color: black; border-top-width: 1px">{{ $proactive->last }} %</td>
-                <td style="text-align: center; border-color: black; border-top-width: 1px">{{ $proactive->progress }} %</td>
-                <td style="text-align: center; border-color: black; border-top-width: 1px">
-                  @if($proactive->progress > $proactive->last)
+                <td style="text-align: center; border-color: black">{{ $no++ }}</td>
+                <td style="text-align: center; border-color: black">{{ $proactive->projectName }}</td>
+                <td style="text-align: center; border-color: black">{{ $proactive->segment }}</td>
+                <td style="text-align: center; border-color: black">{{ $proactive->currentProgress }}</td>
+                <td style="text-align: center; border-color: black">{{ $proactive->last }} %</td>
+                <td style="text-align: center; border-color: black">{{ $proactive->progress }} %</td>
+                <td style="text-align: center; border-color: black">
+                  @if($proactive->progress > $proactive->last )
                   <span class="text-green">
                     <i class="fa fa-chevron-up"></i>
-                  </span>
-                  @elseif($proactive->progress < $proactive->last )
-                  <span class="text-green">
-                    <i class="fa fa-chevron-down"></i>
                   </span>
                   @elseif($proactive->progress == $proactive->last)
                   <span class="text-green">
@@ -206,9 +141,10 @@
                   @endif
                 </td>
 
-                <td style="text-align: center; border-color: black; border-top-width: 1px">
-                  @if($proactive->updated_at->subDays(14) >= $current_time) <i class="fa fa-circle" style="color: #ff3333"></i>
-                  @elseif($proactive->updated_at->subDays(14) <= $current_time) <i class="fa fa-circle" style="color: #1aff1a"></i>
+                <td style="text-align: center; border-color: black">
+                  @if($proactive->updated_at->addDays(14) <= $current_time) <i>Kuning</i>
+                  @elseif($proactive->finishProject <= $current_time) <i>Merah</i>  
+                  @elseif($proactive->updated_at->addDays(14) >= $current_time) <i>hijau</i>
                   @endif
                 </td>
               </tr>
@@ -216,71 +152,27 @@
             </tbody>
           </table>
         </div>
-      </div><!-- /.table-responsive -->  
-    </div><!-- /.box-body -->
-  </div><!-- /.box -->
-</div><!-- /.col -->
-</div>
+      </div><!-- /.table-responsive -->
 
-<!-- jQuery 3 -->
-<script src="../../bower_components/jquery/dist/jquery.min.js"></script>
-<!-- Bootstrap 3.3.7 -->
-<script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<!-- DataTables -->
-<script src="../../bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
-<script src="../../bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-<!-- SlimScroll -->
-<script src="../../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-<!-- FastClick -->
-<script src="../../bower_components/fastclick/lib/fastclick.js"></script>
-<!-- AdminLTE App -->
-<script src="../../dist/js/adminlte.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="../../dist/js/demo.js"></script>
-<!-- page script -->
-<!-- ChartJS -->
-<script src="../../bower_components/Chart.js/Chart.js"></script>
-
-<script>
-  $(function () {
-    $('#example1').DataTable()
-    $('#example2').DataTable({
-      'paging'      : true,
-      'lengthChange': true,
-      'searching'   : true,
-      'ordering'    : true,
-      'info'        : true,
-      'autoWidth'   : true
-    })
-    $('#example3').DataTable({
-      'paging'      : true,
-      'lengthChange': true,
-      'searching'   : true,
-      'ordering'    : true,
-      'info'        : true,
-      'autoWidth'   : true
-    })
-    $('#example4').DataTable({
-      'paging'      : true,
-      'lengthChange': true,
-      'searching'   : true,
-      'ordering'    : true,
-      'info'        : true,
-      'autoWidth'   : true
-    })
-    $('#example5').DataTable({
-      'paging'      : true,
-      'lengthChange': true,
-      'searching'   : true,
-      'ordering'    : true,
-      'info'        : true,
-      'autoWidth'   : true
-    })
-  })
-</script>
-
-<script>
-  $(function () {
+      <!-- jQuery 3 -->
+        <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+        <!-- Bootstrap 3.3.7 -->
+        <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="../../bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <!-- SlimScroll -->
+        <script src="../../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../../bower_components/fastclick/lib/fastclick.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../../dist/js/adminlte.min.js"></script>
+        <!-- AdminLTE for demo purposes -->
+        <script src="../../dist/js/demo.js"></script>
+        <!-- ChartJS -->
+        <script src="../../bower_components/Chart.js/Chart.js"></script>
+        <!-- page script -->
+      
+      <script>
+        $(function () {
           /* ChartJS
            * -------
            * Here we will create a few charts using ChartJS
@@ -398,7 +290,7 @@
               value    : {{ $proactive->where('currentProgress','Like','Menunggu Feedback & Gathering Req')->count() }},
               color    : '#ff9999',
               highlight: '#ffb3b3',
-              label    : 'Menunggu Feedback & Gathering Req'
+              label    : 'Menunggu Feedback'
             },
             {
               value    : {{ $proactive->where('currentProgress','Like','Solution Design')->count() }},
@@ -456,6 +348,11 @@
             pieChart.Doughnut(PieData, pieOptions)
           })
         </script>
+        
+      </div><!-- /.box-body -->
+    </div><!-- /.box -->
+  </div><!-- /.col -->
+</div>
 
-      </section>
-      @endsection
+</section>
+@endsection
