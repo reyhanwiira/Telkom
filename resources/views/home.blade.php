@@ -42,27 +42,27 @@
 
                       </td>
                       <td style=" max-width: 17px ; text-align: left; background-color: #ECF0F5">
-                        <span style="font-size: 16px; color: #b3b3b3">{{ $lastProactives0 }} %</span>
+                        <span style="font-size: 15px; color: #b3b3b3">{{ $lastProactives0 }} %</span>
                       </td>
                       <td style=" max-width: 5px ; text-align: center; ; background-color: #ECF0F5">
                         <span style="font-size: 18px;"> | </span>
                       </td>
                       <td style="max-width: 17px; text-align: left; background-color: #ECF0F5">
-                        <span style="font-size: 16px; color: #1394ba; background-color: #ECF0F5">{{ $proactives0 }} %
+                        <span style="font-size: 15px; color: #1394ba; background-color: #ECF0F5">{{ $proactives0 }} %
                           @if($proactives0  > $lastProactives0)
-                          <td  style=" max-width: 5px ; text-align: left; background-color: #ECF0F5">
+                          <td  style=" max-width: 7px ; text-align: left; background-color: #ECF0F5">
                             <span class="text-green">
                               <i class="fa fa-chevron-up" style="font-size: 13px"></i>
                             </span>
                           </td>                             
                           @elseif($proactives0  < $lastProactives0)
-                          <td  style=" max-width: 5px; text-align: left; background-color: #ECF0F5">
+                          <td  style=" max-width: 7px; text-align: left; background-color: #ECF0F5">
                             <span class="text-green"> 
                               <i class="fa fa-minus" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="Terjadi perpindahan dari P0 ke P1"> </i>
                             </span>
                           </td>
                           @elseif($proactives0 = $lastProactives0 )
-                          <td style=" max-width: 5px; text-align: left; background-color: #ECF0F5">
+                          <td style=" max-width: 7px; text-align: left; background-color: #ECF0F5">
                             <span class="text-yellow">
                               <i class="fa fa-chevron-right" style="font-size: 13px"></i>
                             </span>
@@ -334,28 +334,28 @@
 
                         </td>
                         <td style="max-width: 17px ; text-align: left; background-color: #ECF0F5">
-                          <span style="font-size: 16px; color: #b3b3b3"><span id="presentaseRaisaLast"></span> % </span>
+                          <span style="font-size: 15px; color: #b3b3b3"><span id="presentaseRaisaLast"></span> % </span>
                         </td>
                         <td style="max-width: 5px; text-align: center; background-color: #ECF0F5">
                           <span style="font-size: 18px;"> | </span>
                         </td>
                         <td style="max-width: 17px ; text-align: left; background-color: #ECF0F5">
-                          <span style="font-size: 16px; color: #1394ba">@if($raisa1!=0 || $raisa2!=0 || $raisa3!=0 || $raisa0!=0)<span id="presentaseRaisa"></span>@elseif($raisa1==0 || $raisa2==0 || $raisa3==0 || $raisa0==0) ?> %@endif 
+                          <span style="font-size: 15px; color: #1394ba">@if($raisa1!=0 || $raisa2!=0 || $raisa3!=0 || $raisa0!=0)<span id="presentaseRaisa"></span>@elseif($raisa1==0 || $raisa2==0 || $raisa3==0 || $raisa0==0) ?> %@endif 
                           @if($raisa1!=0 || $raisa2!=0 || $raisa3!=0 || $raisa0!=0)
                           @if( ($raisa2 + $raisa3) / ($lastRaisa0 + $lastRaisa1 + $lastRaisa2 + $lastRaisa3)*100 >  ($lastRaisa2 + $lastRaisa3) / ($lastRaisa0 + $lastRaisa1 + $lastRaisa2 + $lastRaisa3)*100) %
-                          <td  style="max-width: 5px; text-align: left; background-color: #ECF0F5">
+                          <td  style="max-width: 7px; text-align: left; background-color: #ECF0F5">
                             <span class="text-green">
                               <i class="fa fa-chevron-up" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="test"></i>
                             </span>
                           </td>                             
                           @elseif(($raisa2 + $raisa3) / ($raisa0 + $raisa1 + $raisa2 + $raisa3)*100 <  ($lastRaisa2 + $lastRaisa3) / ($lastRaisa0 + $lastRaisa1 + $lastRaisa2 + $lastRaisa3)*100) %
-                          <td  style="max-width: 5px; text-align: left; background-color: #ECF0F5">
+                          <td  style="max-width: 7px; text-align: left; background-color: #ECF0F5">
                             <span class="text-green"> 
                               <i class="fa fa-minus" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="Terjadi perpindahan dari P0 ke P1"> </i>
                             </span>
                           </td>
                           @elseif(($raisa2 + $raisa3) / ($raisa0 + $raisa1 + $raisa2 + $raisa3)*100 == ($lastRaisa2 + $lastRaisa3) / ($lastRaisa0 + $lastRaisa1 + $lastRaisa2 + $lastRaisa3)*100) %
-                          <td style="max-width: 5px; text-align: left; background-color: #ECF0F5">
+                          <td style="max-width: 7px; text-align: left; background-color: #ECF0F5">
                             <span class="text-yellow">
                               <i class="fa fa-chevron-right" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="test"></i>
                             </span>
@@ -621,27 +621,27 @@
 
               </td>
               <td style=" max-width: 17px; text-align: left; background-color: #ECF0F5">
-                <span style="font-size: 16px; color: #b3b3b3">{{ $lastOthers3 }} %</span>
+                <span style="font-size: 15px; color: #b3b3b3">{{ $lastOthers3 }} %</span>
               </td>
               <td style=" max-width: 5px; text-align: center; background-color: #ECF0F5">
                 <span style="font-size: 18px;"> | </span>
               </td>
               <td style=" max-width: 17px; text-align: left; background-color: #ECF0F5">
-                <span style="font-size: 16px; color: #1394ba">{{ $others1 }} %
+                <span style="font-size: 15px; color: #1394ba">{{ $others1 }} %
                   @if($others3 > $lastOthers3)
-                  <td  style=" max-width: 5px; text-align: left; background-color: #ECF0F5">
+                  <td style=" max-width: 7px; text-align: left; background-color: #ECF0F5">
                     <span class="text-green">
                       <i class="fa fa-chevron-up" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="test"></i>
                     </span>
                   </td>                             
                   @elseif($others3 < $lastOthers3)
-                  <td  style=" max-width: 5px; text-align: left; background-color: #ECF0F5">
+                  <td style=" max-width: 7px; text-align: left; background-color: #ECF0F5">
                     <span class="text-green"> 
                       <i class="fa fa-minus" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="Terjadi perpindahan dari P0 ke P1"> </i>
                     </span>
                   </td>
                   @elseif($others3 = $lastOthers3 )
-                  <td style=" max-width: 5px; text-align: left; background-color: #ECF0F5">
+                  <td style=" max-width: 7px; text-align: left; background-color: #ECF0F5">
                     <span class="text-yellow">
                       <i class="fa fa-chevron-right" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="test"></i>
                     </span>
