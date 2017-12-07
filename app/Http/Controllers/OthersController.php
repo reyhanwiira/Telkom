@@ -38,8 +38,6 @@ class OthersController extends Controller
       return view('tableOthers.createOthers');
     }
  
- 
-<<<<<<< HEAD
     public function storeOthers(Request $request)
     {
             $validator = Validator::make(request()->all(), [
@@ -72,13 +70,9 @@ if ($validator->fails()) {
         return back()->withErrors($validator->errors());
             
  }else{
-
-         if($request->input('progress')>=0&&$request->input('progress')<=10){
-=======
-     public function storeOthers(Request $request)
-  {   
+  
     if($request->input('progress')>=0&&$request->input('progress')<=10){
->>>>>>> fe9b0f26c2a02745b315f70d78b0c2cc3b521cd5
+
         Other::create([  
             'projectName'=>$request->input('projectName'),
             'segment'=>$request->input('segment'),
@@ -239,21 +233,10 @@ if ($validator->fails()) {
 
         ]);
 }
-<<<<<<< HEAD
+
       return Redirect::to('/tableOthers');
 }
     }
-
-    public function editOthers($id)
-    {
-        $other = other::find($id);
-        $activitys= Activity::all();
-
-=======
->>>>>>> fe9b0f26c2a02745b315f70d78b0c2cc3b521cd5
-
-return Redirect::to('/tableOthers');
-}
 
 
 public function updateOthers(Request $request, $id)
