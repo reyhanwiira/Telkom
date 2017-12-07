@@ -63,7 +63,7 @@ href="../../bower_components/googlefont/googlefont.css">
             <li class="dropdown notifications-menu">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <i class="fa fa-bell-o"></i>
-                <span class="label label-warning">10</span>
+                <span class="label label-warning">2</span>
               </a>
               <ul class="dropdown-menu">
                 <li class="header">You have 2 notifications</li>
@@ -72,10 +72,10 @@ href="../../bower_components/googlefont/googlefont.css">
                   <ul class="menu">
                     <li>
                       <a href="#">
-                        <i class="fa fa-newspaper-o text-red"></i> 2 Project idle sudah melebihi batas
+                        <i class="fa fa-table text-red"></i> 2 Project idle sudah melebihi 2 Minggu
                       </a>
                       <a href="#">
-                        <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                        <i class="fa fa-table text-yellow"></i> 2 Project idle sudah melebihi deadline
                       </a>
                     </li>
                   </ul>
