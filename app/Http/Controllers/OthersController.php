@@ -38,7 +38,6 @@ class OthersController extends Controller
       return view('tableOthers.createOthers');
     }
  
- 
     public function storeOthers(Request $request)
     {
             $validator = Validator::make(request()->all(), [
@@ -71,8 +70,9 @@ if ($validator->fails()) {
         return back()->withErrors($validator->errors());
             
  }else{
+  
+    if($request->input('progress')>=0&&$request->input('progress')<=10){
 
-         if($request->input('progress')>=0&&$request->input('progress')<=10){
         Other::create([  
             'projectName'=>$request->input('projectName'),
             'segment'=>$request->input('segment'),
@@ -93,7 +93,6 @@ if ($validator->fails()) {
             'deliverable'=>$request->input('deliverable'),
             'benefit'=>$request->input('benefit'),
             'supportAP'=>$request->input('supportAP')
-
             ]);
 }else if($request->input('progress')>=11&&$request->input('progress')<=20){
     Other::create([  
@@ -234,26 +233,17 @@ if ($validator->fails()) {
 
         ]);
 }
+
       return Redirect::to('/tableOthers');
 }
     }
 
-    public function editOthers($id)
-    {
-        $other = other::find($id);
-        $activitys= Activity::all();
 
+public function updateOthers(Request $request, $id)
+{
+    $other = Other::find($id);
 
-      return view('tableOthers.editOthers',compact('other','activitys','other'));
-    }
-
-
-    public function updateOthers(Request $request, $id)
-    {
-        $other = other::find($id);
-
-        
-       $other->last=$other->progress;
+    $other->last=$other->progress;
     if($request->input('progress')>=0&&$request->input('progress')<=10){
         $other->projectName=$request->input('projectName');
         $other->segment=$request->input('segment');
@@ -396,11 +386,17 @@ if ($validator->fails()) {
         $other->benefit=$request->input('benefit');
         $other->supportAP=$request->input('supportAP');
     }
+    $other->update();
+    return redirect::to('/tableOthers');
+}
 
-        
-        $other->update();
+    public function editOthers($id)
+    {
+        $other = other::find($id);
+        $activitys= Activity::all();
 
-      return redirect::to('/tableOthers');
+
+      return view('tableOthers.editOthers',compact('other','activitys','other'));
     }
 
 
