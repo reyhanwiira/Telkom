@@ -38,8 +38,37 @@ class ProactiveController extends Controller
   public function storePro(Request $request)
   {   
 
-    $activeProject = Proactive::where('status','=','P1')->where('updated_at','<=',$deadline)->count();
-    $inactiveProject = Proactive::where('status','=','P1')->where('updated_at','>=',$deadline)->count();
+
+          $validator = Validator::make(request()->all(), [
+            'projectName' => 'required',
+            'segment'  => 'required',
+            'description'  => 'required',
+            'customer'  => 'required',
+            'lastAction'  => 'required',
+            'nextAction'  => 'required',
+            'status'  => 'required',
+            'information'  => 'required',
+            'progress' => 'required|numeric'
+
+            ],[
+
+            'projectName.required' => 'Nama Project is required.',
+            'segment.required' => 'Segment is required.',
+            'description.required' => 'Description is required.',
+            'customer.required' => 'Customer is required',
+            'lastAction.required' => 'Last Action is required.',
+            'nextAction.required' => 'Next Action is required.',
+            'status.required' => 'Status is required.',
+            'information.required' => 'Information is required.',
+            'progress.required' => 'progress is required.',
+            'progress.numeric' => 'progress must be numeric.'
+        
+        ]);
+        
+if ($validator->fails()) {
+        return back()->withErrors($validator->errors());
+            
+ }else{
 
     if($request->input('progress')>=0&&$request->input('progress')<=10){
         Proactive::create([  
@@ -201,9 +230,11 @@ class ProactiveController extends Controller
         'supportAP'=>$request->input('supportAP')
 
         ]);
+        
 }
-
 return Redirect::to('/tableProactive');
+
+    }
 }
 
 

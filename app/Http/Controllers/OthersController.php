@@ -41,7 +41,37 @@ class OthersController extends Controller
  
     public function storeOthers(Request $request)
     {
-          
+            $validator = Validator::make(request()->all(), [
+            'projectName' => 'required',
+            'segment'  => 'required',
+            'description'  => 'required',
+            'customer'  => 'required',
+            'lastAction'  => 'required',
+            'nextAction'  => 'required',
+            'status'  => 'required',
+            'information'  => 'required',
+            'progress' => 'required|numeric'
+
+            ],[
+
+            'projectName.required' => 'Nama Project is required.',
+            'segment.required' => 'Segment is required.',
+            'description.required' => 'Description is required.',
+            'customer.required' => 'Customer is required',
+            'lastAction.required' => 'Last Action is required.',
+            'nextAction.required' => 'Next Action is required.',
+            'status.required' => 'Status is required.',
+            'information.required' => 'Information is required.',
+            'progress.required' => 'progress is required.',
+            'progress.numeric' => 'progress must be numeric.'
+        
+        ]);
+        
+if ($validator->fails()) {
+        return back()->withErrors($validator->errors());
+            
+ }else{
+
          if($request->input('progress')>=0&&$request->input('progress')<=10){
         Other::create([  
             'projectName'=>$request->input('projectName'),
@@ -205,7 +235,7 @@ class OthersController extends Controller
         ]);
 }
       return Redirect::to('/tableOthers');
-
+}
     }
 
     public function editOthers($id)
@@ -437,37 +467,5 @@ class OthersController extends Controller
 
         return redirect::to('/tableOthers');
     }
-
-     public function uploadIndexOthers()
-    {
-        return view('/uploadActOthers');
-    }
-
-    public function uploadOthers(Request $request, $id)
-    {
-        $file = $request->file('filename');
-        $extension = $file->getClientOriginalExtension();
-        Storage::disk('local')->put($file->getFilename().'.'.$extension,  File::get($file));
-        $entry = Activity::find($id);
-        $entry->mime = $file->getClientMimeType();
-        $entry->original_filename = $file->getClientOriginalName();
-        $entry->filename = $file->getFilename().'.'.$extension;
- 
-        $entry->update();
-
-
-        return redirect::to('/tableOthers');
-    }
-
-    
-
-    public function downloadOthers($filename)
-    {
-       $entry = Activity::where('filename', '=', $filename)->firstOrFail();
-        $file = Storage::disk('local')->get($entry->filename);
- 
-        return (new Response($file, 200))
-              ->header('Content-Type', $entry->mime);
-   }
 
 }
