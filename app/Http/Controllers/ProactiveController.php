@@ -37,6 +37,39 @@ class ProactiveController extends Controller
 
   public function storePro(Request $request)
   {   
+
+
+          $validator = Validator::make(request()->all(), [
+            'projectName' => 'required',
+            'segment'  => 'required',
+            'description'  => 'required',
+            'customer'  => 'required',
+            'lastAction'  => 'required',
+            'nextAction'  => 'required',
+            'status'  => 'required',
+            'information'  => 'required',
+            'progress' => 'required|numeric'
+
+            ],[
+
+            'projectName.required' => 'Nama Project is required.',
+            'segment.required' => 'Segment is required.',
+            'description.required' => 'Description is required.',
+            'customer.required' => 'Customer is required',
+            'lastAction.required' => 'Last Action is required.',
+            'nextAction.required' => 'Next Action is required.',
+            'status.required' => 'Status is required.',
+            'information.required' => 'Information is required.',
+            'progress.required' => 'progress is required.',
+            'progress.numeric' => 'progress must be numeric.'
+        
+        ]);
+        
+if ($validator->fails()) {
+        return back()->withErrors($validator->errors());
+            
+ }else{
+
     if($request->input('progress')>=0&&$request->input('progress')<=10){
         Proactive::create([  
             'projectName'=>$request->input('projectName'),
@@ -197,9 +230,11 @@ class ProactiveController extends Controller
         'supportAP'=>$request->input('supportAP')
 
         ]);
+        
 }
-
 return Redirect::to('/tableProactive');
+
+    }
 }
 
 
@@ -225,7 +260,6 @@ public function updatePro(Request $request, $id)
         $proactive->lastAction=$request->input('lastAction');
         $proactive->nextAction=$request->input('nextAction');
         $proactive->progress=$request->input('progress');
-        $proactive->lastCurrentProgress = $proactive->currentProgress;
         $proactive->currentProgress='Initial Requirement';
         $proactive->status=$request->input('status');
         $proactive->lastStatus=$request->input('lastStatus');
@@ -247,7 +281,6 @@ public function updatePro(Request $request, $id)
         $proactive->lastAction=$request->input('lastAction');
         $proactive->nextAction=$request->input('nextAction');
         $proactive->progress=$request->input('progress');
-        $proactive->lastCurrentProgress = $proactive->currentProgress;
         $proactive->currentProgress='Initial Solution';
         $proactive->status=$request->input('status');
         $proactive->lastStatus=$request->input('lastStatus');
@@ -268,7 +301,6 @@ public function updatePro(Request $request, $id)
         $proactive->lastAction=$request->input('lastAction');
         $proactive->nextAction=$request->input('nextAction');
         $proactive->progress=$request->input('progress');
-        $proactive->lastCurrentProgress = $proactive->currentProgress;
         $proactive->currentProgress='Menunggu Feedback & Gathering Req';
         $proactive->status=$request->input('status');
         $proactive->lastStatus=$request->input('lastStatus');
@@ -289,7 +321,6 @@ public function updatePro(Request $request, $id)
         $proactive->lastAction=$request->input('lastAction');
         $proactive->nextAction=$request->input('nextAction');
         $proactive->progress=$request->input('progress');
-        $proactive->lastCurrentProgress = $proactive->currentProgress;
         $proactive->currentProgress='Solution Design';
         $proactive->status=$request->input('status');
         $proactive->lastStatus=$request->input('lastStatus');
@@ -310,7 +341,6 @@ public function updatePro(Request $request, $id)
         $proactive->lastAction=$request->input('lastAction');
         $proactive->nextAction=$request->input('nextAction');
         $proactive->progress=$request->input('progress');
-        $proactive->lastCurrentProgress = $proactive->currentProgress;
         $proactive->currentProgress='Solution Development';
         $proactive->status=$request->input('status');
         $proactive->lastStatus=$request->input('lastStatus');
@@ -331,7 +361,6 @@ public function updatePro(Request $request, $id)
         $proactive->lastAction=$request->input('lastAction');
         $proactive->nextAction=$request->input('nextAction');
         $proactive->progress=$request->input('progress');
-        $proactive->lastCurrentProgress = $proactive->currentProgress;
         $proactive->currentProgress='POC';
         $proactive->status=$request->input('status');
         $proactive->lastStatus=$request->input('lastStatus');
@@ -352,7 +381,6 @@ public function updatePro(Request $request, $id)
         $proactive->lastAction=$request->input('lastAction');
         $proactive->nextAction=$request->input('nextAction');
         $proactive->progress=$request->input('progress');
-        $proactive->lastCurrentProgress = $proactive->currentProgress;
         $proactive->currentProgress='Proposal Ready';
         $proactive->status=$request->input('status');
         $proactive->lastStatus=$request->input('lastStatus');

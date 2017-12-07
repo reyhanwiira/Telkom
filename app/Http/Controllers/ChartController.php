@@ -26,29 +26,27 @@ class ChartController extends Controller
     }
 
     public function readChartDetailProact()
-    {   
+    {
         $current_time = Carbon::now();
-        $deadline = Carbon::now()->addDays(14);
+        $deadline = Carbon::now()->addWeeks(2);
         $proactive = Proactive::where('status','=','P1')->get();
 
-        return view('detailProact', compact('proactive','current_time','deadline'));
+        $activeProject = Proactive::where('status','=','P1')->where('updated_at','<=',$deadline)->count();
+        $inactiveProject = Proactive::where('status','=','P1')->where('updated_at','>=',$deadline)->count();
+    	return view('detailProact', compact('proactive','current_time','activeProject','inactiveProject'));
     }
 
     public function readChartDetailRaisa()
     {
-        $current_time = Carbon::now();
-        $deadline = Carbon::now()->addDays(14);
         $raisa = Raisa::where('status','=','P1')->get();
 
-        return view('detailRaisa', compact('raisa','current_time','deadline'));
+        return view('detailRaisa', compact('raisa'));
     }
 
     public function readChartDetail()
     {
-        $current_time = Carbon::now();
-        $deadline = Carbon::now()->addDays(14);
         $other = Other::where('status','=','P1')->get();
 
-        return view('detailOther', compact('other','current_time','deadline'));
+        return view('detailOther', compact('other'));
     }
 }

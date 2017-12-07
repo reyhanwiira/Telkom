@@ -103,7 +103,7 @@
           <a href="{{ url('importOthers') }}" target="_blank" class="btn btn-block btn-social btn-linkedin"><i class="fa fa-upload"></i> Import</a>
         </div>
         <div class="col-xs-2 text-center">
-          <a href="{{ url('downloadOthers','xlsx') }}" target="_blank" class="btn btn-block btn-social btn-linkedin"><i class="fa fa-download"></i> Export</a> 
+          <a href="{{ url('downloadOthersExcel','xlsx') }}" target="_blank" class="btn btn-block btn-social btn-linkedin"><i class="fa fa-download"></i> Export</a> 
         </div>
       </div>
     </div><!-- /.box-footer -->

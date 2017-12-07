@@ -33,6 +33,9 @@ Auth::routes();
 
 Route::group(['middleware'=>'auth'], function(){
 	
+	Route::get('/', function () {
+		return view('home');
+	});
 
 	//HOME DASBOARD
 
@@ -143,7 +146,7 @@ Route::get('downloadOthers/{filename}','OthersController@downloadOthers');
 Route::get('importOthers', 'ExcelOthersController@importOthersRead');
 
 Route::post('importOthers', 'ExcelOthersController@importOthers')->name('importOthers');
-Route::get('downloadOthers/{type}', 'ExcelOthersController@ExportOthers');
+Route::get('downloadOthersExcel/{type}', 'ExcelOthersController@ExportOthers');
 //======================================================================
 
 
@@ -230,24 +233,6 @@ Route::get('/detailOther','ChartController@readChartDetail');
 
 
 
-Route::get('importExport', 'MaatWebsiteController@importExport');
-Route::get('downloadExcel/{type}', 'MaatWebsiteController@downloadExcel');
-Route::post('importExcel', 'MaatWebsiteController@importExcel');
 });
 
-
-Route::get('importExport', 'MaatWebsiteController@importExport');
-Route::get('downloadExcel/{type}', 'MaatWebsiteController@downloadExcel');
-Route::post('importExcel', 'MaatWebsiteController@importExcel');
-
-
-Route::group(['middleware' => 'web'], function () {
-	Route::get('fileUpload', function () {
-		return view('fileUpload');
-	});
-	Route::post('fileUpload', 'FileUploadOthers@upload');
-});
-
-Route::get('/upload','CobaUpload@index');
-Route::post('/upload','CobaUpload@upload');
 

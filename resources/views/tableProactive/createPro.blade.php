@@ -14,12 +14,17 @@
           {!! csrf_field() !!}
           <div class="box-body">
             <div class="col-md-6">
-              <div class="form-group">
+              <div class="form-group{{ $errors->has('projectName') ? ' has-error' : '' }}">
                 <label>Project</label>
-                <input type="text" class="form-control" placeholder="Enter ..." name="projectName" />
+                <input type="text" class="form-control" placeholder="Enter ..." name="projectName" value="{{ old('projectName') }}" />
+                 @if ($errors->has('projectName'))
+                      <span class="help-block">
+                      <strong>{{ $errors->first('projectName') }}</strong>
+                      </span>
+                 @endif
               </div>
 
-              <div class="form-group">
+              <div class="form-group{{ $errors->has('segment') ? ' has-error' : '' }}">
                 <label>Segment</label>
                 <select name="segment" class="form-control select2" multiple>
                   <option value="CGS">CGS</option>
@@ -27,38 +32,68 @@
                   <option value="LGS">LGS</option>
                   <option value="MPS">MPS</option>
                 </select>
+                 @if ($errors->has('segment'))
+                      <span class="help-block">
+                      <strong>{{ $errors->first('segment') }}</strong>
+                      </span>
+                 @endif
               </div>
 
-              <div class="form-group">
+              <div class="form-group{{ $errors->has('descriptiom') ? ' has-error' : '' }}">
                 <label>Description</label>
                 <textarea class="form-control" rows="3" placeholder="Enter ..." name="description"></textarea>
+                 @if ($errors->has('description'))
+                      <span class="help-block">
+                      <strong>{{ $errors->first('description') }}</strong>
+                      </span>
+                 @endif
               </div>
 
-              <div class="form-group">
+              <div class="form-group{{ $errors->has('customer') ? ' has-error' : '' }}">
                 <label>Customer</label>
                 <input type="text" class="form-control" placeholder="Enter ..." name="customer" />
+                 @if ($errors->has('customer'))
+                      <span class="help-block">
+                      <strong>{{ $errors->first('customer') }}</strong>
+                      </span>
+                 @endif
               </div>
 
-              <div class="form-group">
+              <div class="form-group{{ $errors->has('lastAction') ? ' has-error' : '' }}">
                 <label>Last Action</label>
                 <textarea class="form-control" rows="3" placeholder="Enter ..." name="lastAction"></textarea>
+                 @if ($errors->has('lastAction'))
+                      <span class="help-block">
+                      <strong>{{ $errors->first('lastAction') }}</strong>
+                      </span>
+                 @endif
               </div>
 
-              <div class="form-group">
+              <div class="form-group{{ $errors->has('nextAction') ? ' has-error' : '' }}">
                 <label>Next Action</label>
                 <textarea class="form-control" rows="3" placeholder="Enter ..." name="nextAction"></textarea>
+                 @if ($errors->has('nextAction'))
+                      <span class="help-block">
+                      <strong>{{ $errors->first('nextAction') }}</strong>
+                      </span>
+                 @endif
               </div>
 
-              <div class="form-group">
+              <div class="form-group{{ $errors->has('progress') ? ' has-error' : '' }}">
                 <label>Progress</label>
-                <input type="text" class="form-control pull-right" placeholder="Enter ..." id="progress" name="progress">
+                <input type="text" class="form-control pull-right" placeholder="Enter ..." id="progress" name="progress" value="{{ old('progress') }}">
+                 @if ($errors->has('progress'))
+                      <span class="help-block">
+                      <strong>{{ $errors->first('progress') }}</strong>
+                      </span>
+                 @endif
               </div>
 
               <div class="form-group">
                 <input type="hidden" class="form-control" name="currentProgress" id="currentProgress">
               </div>        
 
-              <div class="form-group">
+              <div class="form-group{{ $errors->has('status') ? ' has-error' : '' }}">
                 <label>Status</label>
                 <select class="form-control select2" name="status">
                   <option value="P0">P0</option>
@@ -71,9 +106,14 @@
 
             <div class="col-md-6">
 
-              <div class="form-group">
+              <div class="form-group{{ $errors->has('information') ? ' has-error' : '' }}">
                 <label>Information</label>
                 <textarea class="form-control" rows="3" placeholder="Enter ..." name="information"></textarea>
+                 @if ($errors->has('information'))
+                      <span class="help-block">
+                      <strong>{{ $errors->first('information') }}</strong>
+                      </span>
+                 @endif
               </div>
 
               <div class="form-group">

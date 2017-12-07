@@ -133,93 +133,11 @@
                 <input type="text" class="form-control" placeholder="Enter ..." name="deliverable" value="{{$other ->deliverable}}" />
               </div>
 
-<<<<<<< HEAD
-            <div class="form-group">
-              <label>Progress</label>
-              <input type="text" class="form-control pull-right" placeholder="Enter ..." id="progress" name="progress" value="{{$other->progress}}">
-            </div>
-
-            <div class="form-group">
-              <input type="hidden" class="form-control" name="currentProgress" id="currentProgress">
-            </div>
-
-=======
->>>>>>> 9324a4505e1d92dccd1bbfad37a5ecff1334bdf6
               <div class="form-group">
                 <label>Benefit</label>
                 <input type="text" class="form-control" placeholder="Enter ..." name="benefit" value="{{$other ->benefit}}" />
               </div>
 
-<<<<<<< HEAD
-                <div class="form-group">
-                <label>Last Status</label>
-                <select class="form-control select2" name="lastStatus" style="width: 100%;">
-                  <option value="0" <?php if($other['lastStatus']=="0") echo 'selected="selected"'; ?>>0</option>
-                  <option value="P0" <?php if($other['lastStatus']=="P0") echo 'selected="selected"'; ?>>P0</option>
-                  <option value="P1" <?php if($other['lastStatus']=="P1") echo 'selected="selected"'; ?>>P1</option>
-                  <option value="P2" <?php if($other['lastStatus']=="P2") echo 'selected="selected"'; ?>>P2</option>
-                  <option value="P3" <?php if($other['lastStatus']=="P3") echo 'selected="selected"'; ?>>P3</option>
-                </select>
-              </div>
-
-
-              <div class="form-group">
-                <label>Information</label>
-                <textarea class="form-control" rows="3" placeholder="Enter ..." name="information"><?php echo $other['information'] ?></textarea>
-              </div>
-
-              <div class="form-group">
-               <label>Start Project</label>
-               <div class="input-group">
-                 <div class="input-group-addon">
-                   <i class="fa fa-calendar"></i>
-                 </div>
-                 <input type="date" class="form-control pull-right" id="reservation" name="startProject" value="{{ $other->startProject }}">
-               </div><!-- /.input group -->
-             </div><!-- /.form group -->
-
-             <div class="form-group">
-               <label>Finish Project</label>
-               <div class="input-group">
-                 <div class="input-group-addon">
-                   <i class="fa fa-calendar"></i>
-                 </div>
-                 <input type="date" class="form-control pull-right" id="reservation" name="finishProject" value="{{ $other->finishProject }}">
-               </div><!-- /.input group -->
-             </div><!-- /.form group -->
-
-             <div class="form-group">
-                <label>AM Segment</label>
-                <input type="text" class="form-control" placeholder="Enter ..." name="AMSegment" value="{{$other ->AMSegment}}" />
-              </div>
-
-              <div class="form-group">
-                <label>Keahlian</label>
-                <input type="text" class="form-control" placeholder="Enter ..." name="keahlian" value="{{$other ->keahlian}}" />
-              </div>
-
-              <div class="form-group">
-                <label>Est Revenue</label>
-                <input type="text" class="form-control" placeholder="Enter ..." name="EstRevenue" value="{{$other ->EstRevenue}}" />
-              </div>
-
-              <div class="form-group">
-                <label>Deliverable</label>
-                <input type="text" class="form-control" placeholder="Enter ..." name="deliverable" value="{{$other ->deliverable}}" />
-              </div>
-
-              <div class="form-group">
-                <label>Benefit</label>
-                <input type="text" class="form-control" placeholder="Enter ..." name="benefit" value="{{$other ->benefit}}" />
-              </div>
-
-              <div class="form-group">
-                <label>Support AP</label>
-                <input type="text" class="form-control" placeholder="Enter ..." name="supportAP" value="{{$other ->supportAP}}" />
-              </div>
-
-           </div><!-- /.box-body -->
-=======
               <div class="form-group">
                 <label>Support AP</label>
                 <input type="text" class="form-control" placeholder="Enter ..." name="supportAP" value="{{$other ->supportAP}}" />
@@ -227,9 +145,8 @@
             </div>
             
           </div><!-- /.box-body -->
->>>>>>> 9324a4505e1d92dccd1bbfad37a5ecff1334bdf6
 
-           <div class="box-footer">
+          <div class="box-footer">
             <button type="submit" class="btn btn-primary">Submit</button>
           </div>
         </form>
@@ -245,15 +162,16 @@
         </div><!-- /.box-header -->
         <div class="box-body">
           <div class="table-responsive">
-           <table id="example3" class="table table-bordered table-striped">
+           <table id="example2" class="table table-bordered table-striped">
             <thead>
               <tr>
-                <th style="width: 20px">No</th>
+                <th style="width: : 50px">No</th>
                 <th>Tanggal</th>
                 <th>Agenda</th>
                 <th>Action Plan</th>
+                <th>Evidence</th>
                 <th>Lampiran</th>
-                <th style="width: 150px">Action</th>
+                <th style="width: : 150px">Action</th>
               </tr>
             </thead>
             <tbody>
@@ -264,40 +182,45 @@
                 <td>{{ $activity->tanggal }}</td>
                 <td>{{ $activity->agenda }}</td>
                 <td>{{ $activity->actionPlan }}</td>
+                <td>{{ $activity->evidence }}</td>
                 <td>{{ $activity->original_filename }}</td>
                 <td>
+
                   <div class="btn-group">
-                    <a href="{{ url('/uploadActPro/'.$activity->id) }}">
+                    <a href="{{ url('/uploadActOthers/'.$activity->id) }}">
                       <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Upload File">
                         <i class='glyphicon glyphicon-floppy-open' style="font-size: 12px"></i>
                       </button>
                     </a>
-                  
-                    <a href="{{ url('/downloadPro/'.$activity->original_filename) }}"  download="{{ $activity->original_filename }}">
+
+                    <a href="{{ url('/downloadPro/'.$activity->filename) }}"  download="{{ $activity->filename }}">
                       <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Download File">
                         <i class='glyphicon glyphicon-floppy-save' style="font-size: 12px"></i>
                       </button>
                     </a>
 
-                    <a href="{{ url('/tableOthers'.'/editActPro/'.$activity->id) }}">
+                    <a href="{{ url('/tableOthers'.'/editActOthers/'.$activity->id) }}">
                       <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Edit File">
                         <i class='glyphicon glyphicon-edit' style="font-size: 12px"></i>
                       </button>
                     </a>
 
-                    <a href="{{ url('/deleteOthers/'.$activity->id) }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="right" title="Delete"><i class='glyphicon glyphicon-trash' style="font-size: 12px"></i></button></a>
+                    <a href="{{ url('/deleteActOthers/'.$activity->id) }}" onclick="return confirm('Are you sure?')"><button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="right" title="Delete"><i class='glyphicon glyphicon-trash' style="font-size: 12px"></i></button></a>
 
                   </div>
                 </td>
               </tr>
               @endforeach
             </tbody>
+
           </table>
         </div><!-- /.table-responsive -->
+
+
       </div><!-- /.box-body -->
       <div class="box-footer clearfix">
 
-        <a href="{{ url('/tableOthers/addActOthers') }}" class="btn btn-primary pull-left">New Activity</a>
+        <a href="{{ url('tableOthers/addActOthers') }}" class="btn btn-primary pull-left">New Activity</a>
 
       </div><!-- /.box-footer -->
     </div><!-- /.box -->

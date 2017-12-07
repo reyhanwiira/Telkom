@@ -38,10 +38,41 @@ class OthersController extends Controller
       return view('tableOthers.createOthers');
     }
  
- 
-     public function storeOthers(Request $request)
-  {   
+    public function storeOthers(Request $request)
+    {
+            $validator = Validator::make(request()->all(), [
+            'projectName' => 'required',
+            'segment'  => 'required',
+            'description'  => 'required',
+            'customer'  => 'required',
+            'lastAction'  => 'required',
+            'nextAction'  => 'required',
+            'status'  => 'required',
+            'information'  => 'required',
+            'progress' => 'required|numeric'
+
+            ],[
+
+            'projectName.required' => 'Nama Project is required.',
+            'segment.required' => 'Segment is required.',
+            'description.required' => 'Description is required.',
+            'customer.required' => 'Customer is required',
+            'lastAction.required' => 'Last Action is required.',
+            'nextAction.required' => 'Next Action is required.',
+            'status.required' => 'Status is required.',
+            'information.required' => 'Information is required.',
+            'progress.required' => 'progress is required.',
+            'progress.numeric' => 'progress must be numeric.'
+        
+        ]);
+        
+if ($validator->fails()) {
+        return back()->withErrors($validator->errors());
+            
+ }else{
+  
     if($request->input('progress')>=0&&$request->input('progress')<=10){
+
         Other::create([  
             'projectName'=>$request->input('projectName'),
             'segment'=>$request->input('segment'),
@@ -64,7 +95,7 @@ class OthersController extends Controller
             'supportAP'=>$request->input('supportAP')
             ]);
 }else if($request->input('progress')>=11&&$request->input('progress')<=20){
-    Others::create([  
+    Other::create([  
         'projectName'=>$request->input('projectName'),
         'segment'=>$request->input('segment'),
         'description'=>$request->input('description'),
@@ -87,7 +118,7 @@ class OthersController extends Controller
 
         ]);
 }else if($request->input('progress')>=21&&$request->input('progress')<=30){
-    Others::create([  
+    Other::create([  
         'projectName'=>$request->input('projectName'),
         'segment'=>$request->input('segment'),
         'description'=>$request->input('description'),
@@ -110,7 +141,7 @@ class OthersController extends Controller
 
         ]);
 }else if($request->input('progress')>=31&&$request->input('progress')<=60){
-    Others::create([  
+    Other::create([  
         'projectName'=>$request->input('projectName'),
         'segment'=>$request->input('segment'),
         'description'=>$request->input('description'),
@@ -133,7 +164,7 @@ class OthersController extends Controller
 
         ]);
 }else if($request->input('progress')>=61&&$request->input('progress')<=90){
-    Others::create([  
+    Other::create([  
         'projectName'=>$request->input('projectName'),
         'segment'=>$request->input('segment'),
         'description'=>$request->input('description'),
@@ -156,7 +187,7 @@ class OthersController extends Controller
 
         ]);
 }else if($request->input('progress')>=91&&$request->input('progress')<=99){
-    Others::create([  
+    Other::create([  
         'projectName'=>$request->input('projectName'),
         'segment'=>$request->input('segment'),
         'description'=>$request->input('description'),
@@ -179,7 +210,7 @@ class OthersController extends Controller
 
         ]);
 }else if($request->input('progress')==100){
-    Others::create([  
+    Other::create([  
         'projectName'=>$request->input('projectName'),
         'segment'=>$request->input('segment'),
         'description'=>$request->input('description'),
@@ -203,8 +234,9 @@ class OthersController extends Controller
         ]);
 }
 
-return Redirect::to('/tableOthers');
+      return Redirect::to('/tableOthers');
 }
+    }
 
 
 public function updateOthers(Request $request, $id)
@@ -220,7 +252,6 @@ public function updateOthers(Request $request, $id)
         $other->lastAction=$request->input('lastAction');
         $other->nextAction=$request->input('nextAction');
         $other->progress=$request->input('progress');
-        $other->lastCurrentProgress = $other->currentProgress;
         $other->currentProgress='Initial Requirement';
         $other->status=$request->input('status');
         $other->lastStatus=$request->input('lastStatus');
@@ -242,7 +273,6 @@ public function updateOthers(Request $request, $id)
         $other->lastAction=$request->input('lastAction');
         $other->nextAction=$request->input('nextAction');
         $other->progress=$request->input('progress');
-        $other->lastCurrentProgress = $other->currentProgress;
         $other->currentProgress='Initial Solution';
         $other->status=$request->input('status');
         $other->lastStatus=$request->input('lastStatus');
@@ -263,7 +293,6 @@ public function updateOthers(Request $request, $id)
         $other->lastAction=$request->input('lastAction');
         $other->nextAction=$request->input('nextAction');
         $other->progress=$request->input('progress');
-        $other->lastCurrentProgress = $other->currentProgress;
         $other->currentProgress='Menunggu Feedback & Gathering Req';
         $other->status=$request->input('status');
         $other->lastStatus=$request->input('lastStatus');
@@ -284,7 +313,6 @@ public function updateOthers(Request $request, $id)
         $other->lastAction=$request->input('lastAction');
         $other->nextAction=$request->input('nextAction');
         $other->progress=$request->input('progress');
-        $other->lastCurrentProgress = $other->currentProgress;
         $other->currentProgress='Solution Design';
         $other->status=$request->input('status');
         $other->lastStatus=$request->input('lastStatus');
@@ -305,7 +333,6 @@ public function updateOthers(Request $request, $id)
         $other->lastAction=$request->input('lastAction');
         $other->nextAction=$request->input('nextAction');
         $other->progress=$request->input('progress');
-        $other->lastCurrentProgress = $other->currentProgress;
         $other->currentProgress='Solution Development';
         $other->status=$request->input('status');
         $other->lastStatus=$request->input('lastStatus');
@@ -326,7 +353,6 @@ public function updateOthers(Request $request, $id)
         $other->lastAction=$request->input('lastAction');
         $other->nextAction=$request->input('nextAction');
         $other->progress=$request->input('progress');
-        $other->lastCurrentProgress = $other->currentProgress;
         $other->currentProgress='POC';
         $other->status=$request->input('status');
         $other->lastStatus=$request->input('lastStatus');
@@ -347,7 +373,6 @@ public function updateOthers(Request $request, $id)
         $other->lastAction=$request->input('lastAction');
         $other->nextAction=$request->input('nextAction');
         $other->progress=$request->input('progress');
-        $other->lastCurrentProgress = $other->currentProgress;
         $other->currentProgress='Proposal Ready';
         $other->status=$request->input('status');
         $other->lastStatus=$request->input('lastStatus');
@@ -438,37 +463,5 @@ public function updateOthers(Request $request, $id)
 
         return redirect::to('/tableOthers');
     }
-
-     public function uploadIndexOthers()
-    {
-        return view('/uploadActOthers');
-    }
-
-    public function uploadOthers(Request $request, $id)
-    {
-        $file = $request->file('filename');
-        $extension = $file->getClientOriginalExtension();
-        Storage::disk('local')->put($file->getFilename().'.'.$extension,  File::get($file));
-        $entry = Activity::find($id);
-        $entry->mime = $file->getClientMimeType();
-        $entry->original_filename = $file->getClientOriginalName();
-        $entry->filename = $file->getFilename().'.'.$extension;
- 
-        $entry->update();
-
-
-        return redirect::to('/tableOthers');
-    }
-
-    
-
-    public function downloadOthers($filename)
-    {
-       $entry = Activity::where('filename', '=', $filename)->firstOrFail();
-        $file = Storage::disk('local')->get($entry->filename);
- 
-        return (new Response($file, 200))
-              ->header('Content-Type', $entry->mime);
-   }
 
 }
