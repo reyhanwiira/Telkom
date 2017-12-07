@@ -37,7 +37,6 @@ class ProactiveController extends Controller
 
   public function storePro(Request $request)
   {   
-<<<<<<< HEAD
 
 
           $validator = Validator::make(request()->all(), [
@@ -71,8 +70,6 @@ if ($validator->fails()) {
             
  }else{
 
-=======
->>>>>>> fe9b0f26c2a02745b315f70d78b0c2cc3b521cd5
     if($request->input('progress')>=0&&$request->input('progress')<=10){
         Proactive::create([  
             'projectName'=>$request->input('projectName'),
