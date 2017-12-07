@@ -42,7 +42,7 @@
 
                       </td>
                       <td style=" max-width: 17px ; text-align: left; background-color: #ECF0F5">
-                        @if($lastProactives0 !=0 || $lastProactives1 !=0 || $lastProactives2 !=0 || $lastProactives3 !=0)
+                        @if($lastProactives2 !=0 || $lastProactives3 !=0)
                         {{($lastProactives2 + $lastProactives3) / ($lastProactives0 + $lastProactives1 + $lastProactives2 + $lastProactives3)*100}}
                         @else
                         <span>0</span>
@@ -54,7 +54,7 @@
                       </td>
                       <td style="max-width: 17px; text-align: left; background-color: #ECF0F5">
                         <span style="font-size: 16px; color: #1394ba; background-color: #ECF0F5">
-                          @if($proactives0 !=0 || $proactives1 !=0 || $proactives2 !=0 || $proactives3 !=0)
+                          @if($proactives2 !=0 || $proactives3 !=0)
                         {{($proactives2 + $proactives3) / ($proactives0 + $proactives1 + $proactives2 + $proactives3)*100}}
                         @else
                         <span>0</span>
@@ -346,7 +346,7 @@
                       </td>
                       <td style="max-width: 17px ; text-align: left; background-color: #ECF0F5">
 
-                        @if($lastRaisa0 !=0 || $lastRaisa1 !=0 || $lastRaisa2 !=0 || $lastRaisa3 !=0)
+                        @if($lastRaisa2 !=0 || $lastRaisa3 !=0)
                         <span>{{($lastRaisa2 + $lastRaisa3) / ($lastRaisa0 + $lastRaisa1 + $lastRaisa2 + $lastRaisa3)*100}}</span>
                         @else
                         <span>0</span>
@@ -358,7 +358,7 @@
                       </td>
                       <td style="max-width: 17px ; text-align: left; background-color: #ECF0F5">
                         <span style="font-size: 16px; color: #1394ba">
-                          @if($raisa0 !=0 || $raisa1 !=0 || $raisa2 !=0 || $raisa3 !=0)
+                          @if($raisa2 !=0 || $raisa3 !=0)
                         <span>{{($raisa2 + $raisa3) / ($raisa0 + $raisa1 + $raisa2 + $raisa3)*100}}</span>
                         @else
                         <span>0</span>
@@ -642,7 +642,7 @@
 
                     </td>
                     <td style=" max-width: 17px; text-align: left; background-color: #ECF0F5">
-                      @if($lastOthers0 !=0 || $lastOthers1 !=0 || $lastOthers2 !=0 || $lastOthers3 !=0)
+                      @if($lastOthers2 !=0 || $lastOthers3 !=0)
                       {{($lastOthers2 + $lastOthers3) / ($lastOthers0 + $lastOthers1 + $lastOthers2 + $lastOthers3)*100}}
                       @else
                       <span>0</span>
@@ -654,8 +654,8 @@
                     </td>
                     <td style=" max-width: 17px; text-align: left; background-color: #ECF0F5">
                       <span style="font-size: 16px; color: #1394ba">
-                        @if($others0 !=0 || $others1 !=0 || $others2 !=0 || $others3 !=0)
-                        <span id="presentaseOthers"></span>
+                        @if($others2 !=0 || $others3 !=0)
+                        {{($others2 + $others3) / ($others0 + $others1 + $others2 + $others3)*100}}
                         @else
                         <span>0</span>
                         @endif
