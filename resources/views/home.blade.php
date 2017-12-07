@@ -364,12 +364,16 @@
                         <span>0</span>
                         @endif
                         </span>
+                        @if($lastRaisa2 !=0 || $lastRaisa3 !=0)
                         @if(($raisa2 + $raisa3) / ($raisa0 + $raisa1 + $raisa2 + $raisa3)*100 >  ($lastRaisa2 + $lastRaisa3) / ($lastRaisa0 + $lastRaisa1 + $lastRaisa2 + $lastRaisa3)*100) 
                         <td  style="max-width: 5px; text-align: left; background-color: #ECF0F5">
                           <span class="text-green">
                             <i class="fa fa-chevron-up" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="test2"></i>
                           </span>
-                        </td>                             
+                        </td>
+                        @else
+                        <span>0</span>
+                        @endif                             
                         @elseif(($raisa2 + $raisa3) / ($raisa0 + $raisa1 + $raisa2 + $raisa3)*100 <  ($lastRaisa2 + $lastRaisa3) / ($lastRaisa0 + $lastRaisa1 + $lastRaisa2 + $lastRaisa3)*100) %
                         <td  style="max-width: 5px; text-align: left; background-color: #ECF0F5">
                           <span class="text-green"> 
@@ -1208,17 +1212,6 @@ $(function () {
 </script>
 
 <script>
-var presentaseRaisa = {{ ($raisa2 + $raisa3) / ($raisa0 + $raisa1 + $raisa2 + $raisa3)*100}}
-var presentaseRaisaLast = {{ ($lastRaisa2 + $lastRaisa3) / ($lastRaisa0 + $lastRaisa1 + $lastRaisa2 + $lastRaisa3)*100 }}
-
-var presentaseOthers = {{ ($others2 + $others3) / ($others0 + $others1 + $others2 + $others3)*100}}
-var presentaseOthersLast = {{ ($lastOthers2 + $lastOthers3) / ($lastOthers0 + $lastOthers1 + $lastOthers2 + $lastOthers3)*100 }}
-
-document.getElementById("presentaseOthers").innerHTML = presentaseOthers.toFixed(2);
-document.getElementById("presentaseOthersLast").innerHTML = presentaseOthersLast.toFixed(2);
-document.getElementById("presentaseRaisa").innerHTML = presentaseRaisa.toFixed(2);
-document.getElementById("presentaseRaisaLast").innerHTML = presentaseRaisaLast.toFixed(2);
-
 </script>
 </section>
 @endsection
