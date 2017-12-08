@@ -375,7 +375,7 @@
                         <span>0</span>
                         @endif
                       </span>
-                      @if($raisa2 !=0 || $raisa3 !=0 || $lastRaisa2 !=0 || $lastRaisa3 !=0)
+                      @if(($raisa2 !=0 || $raisa3 !=0) && ($lastRaisa2 !=0 || $lastRaisa3 !=0))
                       @if((($raisa2 + $raisa3) / ($raisa0 + $raisa1 + $raisa2 + $raisa3)*100) >  (($lastRaisa2 + $lastRaisa3) / ($lastRaisa0 + $lastRaisa1 + $lastRaisa2 + $lastRaisa3)*100)) 
                       <td  style="max-width: 5px; text-align: left; background-color: #ECF0F5">
                         <span class="text-green">
