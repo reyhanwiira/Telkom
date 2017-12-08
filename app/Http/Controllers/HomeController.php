@@ -7,6 +7,9 @@ use App\proactive;
 use App\raisa;
 use App\scn;
 use App\other;
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
+
 
 class HomeController extends Controller
 {
@@ -26,6 +29,10 @@ class HomeController extends Controller
      * @return \Illuminate\Http\Response
      */
 
+    public function read()
+    {
+        return redirect::to('home');
+    }
     public function donutPro()
     {
         $proactives0 = Proactive::where('status','=', 'P0')->count();
