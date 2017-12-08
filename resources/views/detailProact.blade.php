@@ -207,8 +207,9 @@
                 </td>
 
                 <td style="text-align: center; border-color: black; border-top-width: 1px">
-                  @if($proactive->updated_at->subDays(14) >= $current_time) <i class="fa fa-circle" style="color: #ff3333"></i>
-                  @elseif($proactive->updated_at->subDays(14) <= $current_time) <i class="fa fa-circle" style="color: #1aff1a"></i>
+                  {{$proactive->updated_at->addDays(14)}} | {{$current_time}}
+                  @if($proactive->updated_at->addDays(14) <= $current_time) <i>merah</i>
+                  @elseif($proactive->updated_at->addDays(14) >= $current_time) <i>ijo</i>
                   @endif
                 </td>
               </tr>

@@ -167,6 +167,12 @@
                         <i class="fa fa-minus" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="Terjadi perpindahan dari P0 ke P1"> </i>
                       </span>
                     </td>
+                    @elseif($proactives1 ==0 && $lastProactives1==0)
+                    <td  style="max-width: 5px; text-align: left; background-color: #ECF0F5">
+                        <span class="text-green">
+                          <i class="fa fa-minus" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="test2"></i>
+                        </span>
+                      </td> 
                     @elseif($proactives1 == $lastProactives1 )
                     <td style=" max-width: 5px; text-align: left;">
                       <span class="text-yellow">
@@ -210,6 +216,12 @@
                         <i class="fa fa-minus" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="Terjadi perpindahan dari P0 ke P1"> </i>
                       </span>
                     </td>
+                     @elseif($proactives1 ==0 && $lastProactives1==0)
+                    <td  style="max-width: 5px; text-align: left; background-color: #ECF0F5">
+                        <span class="text-green">
+                          <i class="fa fa-minus" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="test2"></i>
+                        </span>
+                      </td> 
                     @elseif($proactives2 == $lastProactives2 )
                     <td style=" max-width: 5px; text-align: left;">
                       <span class="text-yellow">
@@ -747,6 +759,12 @@
                           <i class="fa fa-chevron-right" style="font-size: 15px" data-toggle="tooltip" data-placement="right" title="test"></i>
                         </span>
                       </td>
+                      @elseif($others0 ==0 && $lastOthers0 ==0)
+                      <td  style="max-width: 5px; text-align: left; background-color: #ECF0F5">
+                        <span class="text-green">
+                          <i class="fa fa-chevron-up" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="test2"></i>
+                        </span>
+                      </td>
                       @endif
                     </span>
                   </td>
@@ -815,19 +833,19 @@
                   </td>
                   <td style=" max-width: 9px; text-align: left">
                     <span style="font-size: 16px; color: #c02e1d">{{ $proactives2 }} 
-                      @if($proactives2  > $lastOthers2)
+                      @if($others2  > $lastOthers2)
                       <td  style=" max-width: 5px; text-align: left">
                         <span class="text-green">
                           <i class="fa fa-chevron-up" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="test"></i>
                         </span>
                       </td>                             
-                      @elseif($proactives2  < $lastOthers2)
+                      @elseif($others2  < $lastOthers2)
                       <td  style=" max-width: 5px; text-align: left">
                         <span class="text-green"> 
                           <i class="fa fa-minus" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="Terjadi perpindahan dari P0 ke P1"> </i>
                         </span>
                       </td>
-                      @elseif($proactives2 = $lastOthers2 )
+                      @elseif($others2 = $lastOthers2 )
                       <td style=" max-width: 5px; text-align: left">
                         <span class="text-yellow">
                           <i class="fa fa-chevron-right" style="font-size: 15px" data-toggle="tooltip" data-placement="right" title="test"></i>
