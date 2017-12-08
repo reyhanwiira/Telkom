@@ -166,7 +166,6 @@
                       </td>
                       <td style=" max-width: 35px; text-align: right">
 
-<<<<<<< HEAD
                       </td>
                       <td style=" max-width: 9px; text-align: left;">
                         <span style="font-size: 16px; color: #b3b3b3">{{ $lastProactives1 }} </span>
@@ -264,106 +263,103 @@
                         P3
                       </td>
                       <td style=" max-width: 35px; text-align: right">
-=======
-                </td>
-                <td style=" max-width: 9px; text-align: left;">
-                  <span style="font-size: 16px; color: #b3b3b3">{{ $lastProactives1 }} </span>
-                </td>
-                <td style=" max-width: 5px; text-align: center;">
-                  <span style="font-size: 18px;"> | </span>
-                </td>
-                <td style=" max-width: 9px; text-align: left;">
-                  <span style="font-size: 16px; color: #0c3c55">{{ $proactives1 }} 
-                    @if($proactives1  > $lastProactives1)
-                    <td  style=" max-width: 5px; text-align: left;">
-                      <span class="text-green">
-                        <i class="fa fa-chevron-up" style="font-size: 13px"></i>
-                      </span>
-                    </td>                             
-                    @elseif($proactives1  < $lastProactives1)
-                    <td  style=" max-width: 5px; text-align: center;">
-                      <span class="text-green"> 
-                        <i class="fa fa-minus" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="Terjadi perpindahan dari P0 ke P1"> </i>
-                      </span>
-                    </td>
-                    @elseif($proactives1 ==0 && $lastProactives1==0)
-                    <td  style="max-width: 5px; text-align: left; background-color: #ECF0F5">
-                        <span class="text-green">
-                          <i class="fa fa-minus" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="test2"></i>
+                      </td>
+                      <td style=" max-width: 9px; text-align: left;">
+                        <span style="font-size: 16px; color: #b3b3b3">{{ $lastProactives1 }} </span>
+                      </td>
+                      <td style=" max-width: 5px; text-align: center;">
+                        <span style="font-size: 18px;"> | </span>
+                      </td>
+                      <td style=" max-width: 9px; text-align: left;">
+                        <span style="font-size: 16px; color: #0c3c55">{{ $proactives1 }} 
+                          @if($proactives1  > $lastProactives1)
+                          <td  style=" max-width: 5px; text-align: left;">
+                            <span class="text-green">
+                              <i class="fa fa-chevron-up" style="font-size: 13px"></i>
+                            </span>
+                          </td>                             
+                          @elseif($proactives1  < $lastProactives1)
+                          <td  style=" max-width: 5px; text-align: center;">
+                            <span class="text-green"> 
+                              <i class="fa fa-minus" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="Terjadi perpindahan dari P0 ke P1"> </i>
+                            </span>
+                          </td>
+                          @elseif($proactives1 ==0 && $lastProactives1==0)
+                          <td  style="max-width: 5px; text-align: left; background-color: #ECF0F5">
+                            <span class="text-green">
+                              <i class="fa fa-minus" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="test2"></i>
+                            </span>
+                          </td> 
+                          @elseif($proactives1 == $lastProactives1 )
+                          <td style=" max-width: 5px; text-align: left;">
+                            <span class="text-yellow">
+                              <i class="fa fa-chevron-right" style="font-size: 13px"></i>
+                            </span>
+                          </td>
+                          @endif
                         </span>
-                      </td> 
-                    @elseif($proactives1 == $lastProactives1 )
-                    <td style=" max-width: 5px; text-align: left;">
-                      <span class="text-yellow">
-                        <i class="fa fa-chevron-right" style="font-size: 13px"></i>
-                      </span>
-                    </td>
-                    @endif
-                  </span>
-                </td>
-              </tbody>
-            </table>
-          </div>
-        </li>
-        <li>
-          <div class="table-responsive">
-            <table class="table table-bordered">
-              <tbody>
-                <td style=" max-width: 30px; text-align: left">
-                  P2
-                </td>
-                <td style=" max-width: 35px; text-align: right">
+                      </td>
+                    </tbody>
+                  </table>
+                </div>
+              </li>
+              <li>
+                <div class="table-responsive">
+                  <table class="table table-bordered">
+                    <tbody>
+                      <td style=" max-width: 30px; text-align: left">
+                        P2
+                      </td>
+                      <td style=" max-width: 35px; text-align: right">
 
-                </td>
-                <td style=" max-width: 9px; text-align: left;">
-                  <span style="font-size: 16px; color: #b3b3b3">{{ $lastProactives2 }} </span>
-                </td>
-                <td style=" max-width: 5px; text-align: center;">
-                  <span style="font-size: 18px;"> | </span>
-                </td>
-                <td style=" max-width: 9px; text-align: left;">
-                  <span style="font-size: 16px; color: #c02e1d">{{ $proactives2 }} 
-                    @if($proactives2  > $lastProactives2)
-                    <td  style=" max-width: 5px; text-align: left;">
-                      <span class="text-green">
-                        <i class="fa fa-chevron-up" style="font-size: 13px"></i>
-                      </span>
-                    </td>                             
-                    @elseif($proactives2  < $lastProactives2)
-                    <td  style=" max-width: 5px; text-align: center;">
-                      <span class="text-green"> 
-                        <i class="fa fa-minus" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="Terjadi perpindahan dari P0 ke P1"> </i>
-                      </span>
-                    </td>
-                     @elseif($proactives1 ==0 && $lastProactives1==0)
-                    <td  style="max-width: 5px; text-align: left; background-color: #ECF0F5">
-                        <span class="text-green">
-                          <i class="fa fa-minus" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="test2"></i>
+                      </td>
+                      <td style=" max-width: 9px; text-align: left;">
+                        <span style="font-size: 16px; color: #b3b3b3">{{ $lastProactives2 }} </span>
+                      </td>
+                      <td style=" max-width: 5px; text-align: center;">
+                        <span style="font-size: 18px;"> | </span>
+                      </td>
+                      <td style=" max-width: 9px; text-align: left;">
+                        <span style="font-size: 16px; color: #c02e1d">{{ $proactives2 }} 
+                          @if($proactives2  > $lastProactives2)
+                          <td  style=" max-width: 5px; text-align: left;">
+                            <span class="text-green">
+                              <i class="fa fa-chevron-up" style="font-size: 13px"></i>
+                            </span>
+                          </td>                             
+                          @elseif($proactives2  < $lastProactives2)
+                          <td  style=" max-width: 5px; text-align: center;">
+                            <span class="text-green"> 
+                              <i class="fa fa-minus" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="Terjadi perpindahan dari P0 ke P1"> </i>
+                            </span>
+                          </td>
+                          @elseif($proactives1 ==0 && $lastProactives1==0)
+                          <td  style="max-width: 5px; text-align: left; background-color: #ECF0F5">
+                            <span class="text-green">
+                              <i class="fa fa-minus" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="test2"></i>
+                            </span>
+                          </td> 
+                          @elseif($proactives2 == $lastProactives2 )
+                          <td style=" max-width: 5px; text-align: left;">
+                            <span class="text-yellow">
+                              <i class="fa fa-chevron-right" style="font-size: 13px"></i>
+                            </span>
+                          </td>
+                          @endif
                         </span>
-                      </td> 
-                    @elseif($proactives2 == $lastProactives2 )
-                    <td style=" max-width: 5px; text-align: left;">
-                      <span class="text-yellow">
-                        <i class="fa fa-chevron-right" style="font-size: 13px"></i>
-                      </span>
-                    </td>
-                    @endif
-                  </span>
-                </td>
-              </tbody>
-            </table>
-          </div>
-        </li>
-        <li>
-          <div class="table-responsive">
-            <table class="table table-bordered">
-              <tbody>
-                <td style=" max-width: 30px; text-align: left">
-                  P3
-                </td>
-                <td style=" max-width: 35px; text-align: right">
->>>>>>> fcd50681ef160848c9d8a5f2bef4888e3f75291a
-
+                      </td>
+                    </tbody>
+                  </table>
+                </div>
+              </li>
+              <li>
+                <div class="table-responsive">
+                  <table class="table table-bordered">
+                    <tbody>
+                      <td style=" max-width: 30px; text-align: left">
+                        P3
+                      </td>
+                      <td style=" max-width: 35px; text-align: right">
                       </td>
                       <td style=" max-width: 9px; text-align: left;">
                         <span style="font-size: 16px; color: #b3b3b3">{{$lastProactives3}} </span>
@@ -898,7 +894,6 @@
                           @endif
                         </span>
                       </td>
-<<<<<<< HEAD
                     </tbody>
                   </table>
                 </div>
@@ -911,74 +906,98 @@
                         P1
                       </td>
                       <td style=" max-width: 35px; text-align: right;">
-=======
-                      @elseif($others0 ==0 && $lastOthers0 ==0)
-                      <td  style="max-width: 5px; text-align: left; background-color: #ECF0F5">
-                        <span class="text-green">
-                          <i class="fa fa-chevron-up" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="test2"></i>
-                        </span>
-                      </td>
-                      @endif
-                    </span>
-                  </td>
-                </tbody>
-              </table>
-            </div>
-          </li>
-          <li>
-            <div class="table-responsive">
-              <table class="table table-bordered">
-                <tbody>
-                  <td style=" max-width: 30px; text-align: left">
-                    P1
-                  </td>
-                  <td style=" max-width: 35px; text-align: right;">
->>>>>>> fcd50681ef160848c9d8a5f2bef4888e3f75291a
+                        @elseif($others0 ==0 && $lastOthers0 ==0)
+                        <td  style="max-width: 5px; text-align: left; background-color: #ECF0F5">
+                          <span class="text-green">
+                            <i class="fa fa-chevron-up" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="test2"></i>
+                          </span>
+                        </td>
+                        @endif
+                      </span>
+                    </td>
+                  </tbody>
+                </table>
+              </div>
+            </li>
+            <li>
+              <div class="table-responsive">
+                <table class="table table-bordered">
+                  <tbody>
+                    <td style=" max-width: 30px; text-align: left">
+                      P1
+                    </td>
+                    <td style=" max-width: 35px; text-align: right;">
+                    </td>
+                    <td style=" max-width: 9px; text-align: left">
+                      <span style="font-size: 16px; color: #b3b3b3">{{ $lastOthers1 }} </span>
+                    </td>
+                    <td style=" max-width: 5px; text-align: center;">
+                      <span style="font-size: 18px;"> | </span>
+                    </td>
+                    <td style=" max-width: 9px; text-align: left">
+                      <span style="font-size: 16px; color: #0c3c55">{{ $others1 }} 
+                        @if($others1  > $lastOthers1)
+                        <td  style=" max-width: 5px; text-align: left">
+                          <span class="text-green">
+                            <i class="fa fa-chevron-up" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="test"></i>
+                          </span>
+                        </td>                             
+                        @elseif($others1  < $lastOthers1)
+                        <td  style=" max-width: 5px; text-align: left">
+                          <span class="text-green"> 
+                            <i class="fa fa-minus" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="Terjadi perpindahan dari P0 ke P1"> </i>
+                          </span>
+                        </td>
+                        @elseif($others1 = $lastOthers1 )
+                        <td style=" max-width: 5px; text-align: left">
+                          <span class="text-green">
+                            <i class="fa fa-chevron-right" style="font-size: 15px" data-toggle="tooltip" data-placement="right" title="test"></i>
+                          </span>
+                        </td>
+                        @endif
+                      </span>
+                    </td>
+                  </tbody>
+                </table>
+              </div>
+            </li>
+            <li>
+              <div class="table-responsive">
+                <table class="table ">
+                  <tbody>
+                    <td style=" max-width: 30px; text-align: left">
+                      P2
+                    </td>
+                    <td style=" max-width: 35px; text-align: right;">
 
-                      </td>
-                      <td style=" max-width: 9px; text-align: left">
-                        <span style="font-size: 16px; color: #b3b3b3">{{ $lastOthers1 }} </span>
-                      </td>
-                      <td style=" max-width: 5px; text-align: center;">
-                        <span style="font-size: 18px;"> | </span>
-                      </td>
-                      <td style=" max-width: 9px; text-align: left">
-                        <span style="font-size: 16px; color: #0c3c55">{{ $others1 }} 
-                          @if($others1  > $lastOthers1)
-                          <td  style=" max-width: 5px; text-align: left">
-                            <span class="text-green">
-                              <i class="fa fa-chevron-up" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="test"></i>
-                            </span>
-                          </td>                             
-                          @elseif($others1  < $lastOthers1)
-                          <td  style=" max-width: 5px; text-align: left">
-                            <span class="text-green"> 
-                              <i class="fa fa-minus" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="Terjadi perpindahan dari P0 ke P1"> </i>
-                            </span>
-                          </td>
-                          @elseif($others1 = $lastOthers1 )
-                          <td style=" max-width: 5px; text-align: left">
-                            <span class="text-green">
-                              <i class="fa fa-chevron-right" style="font-size: 15px" data-toggle="tooltip" data-placement="right" title="test"></i>
-                            </span>
-                          </td>
-                          @endif
-                        </span>
-                      </td>
-                    </tbody>
-                  </table>
-                </div>
-              </li>
-              <li>
-                <div class="table-responsive">
-                  <table class="table ">
-                    <tbody>
-                      <td style=" max-width: 30px; text-align: left">
-                        P2
-                      </td>
-                      <td style=" max-width: 35px; text-align: right;">
-
-<<<<<<< HEAD
+                    </td>
+                    <td style=" max-width: 9px; text-align: left">
+                      <span style="font-size: 16px; color: #b3b3b3">{{ $lastOthers2 }} </span>
+                    </td>
+                    <td style=" max-width: 5px; text-align: center;">
+                      <span style="font-size: 18px;"> | </span>
+                    </td>
+                    <td style=" max-width: 9px; text-align: left">
+                      <span style="font-size: 16px; color: #c02e1d">{{ $others2 }} 
+                        @if($others2  > $lastOthers2)
+                        <td  style=" max-width: 5px; text-align: left">
+                          <span class="text-green">
+                            <i class="fa fa-chevron-up" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="test"></i>
+                          </span>
+                        </td>                             
+                        @elseif($others2  < $lastOthers2)
+                        <td  style=" max-width: 5px; text-align: left">
+                          <span class="text-green"> 
+                            <i class="fa fa-minus" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="Terjadi perpindahan dari P0 ke P1"> </i>
+                          </span>
+                        </td>
+                        @elseif($others2 == $lastOthers2 )
+                        <td style=" max-width: 5px; text-align: left">
+                          <span class="text-green">
+                            <i class="fa fa-chevron-right" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="test"></i>
+                          </span>
+                        </td>
+                        @endif
                       </td>
                       <td style=" max-width: 9px; text-align: left">
                         <span style="font-size: 16px; color: #b3b3b3">{{ $lastOthers2 }} </span>
@@ -987,7 +1006,7 @@
                         <span style="font-size: 18px;"> | </span>
                       </td>
                       <td style=" max-width: 9px; text-align: left">
-                        <span style="font-size: 16px; color: #c02e1d">{{ $others2 }} 
+                        <span style="font-size: 16px; color: #c02e1d">{{ $proactives2 }} 
                           @if($others2  > $lastOthers2)
                           <td  style=" max-width: 5px; text-align: left">
                             <span class="text-green">
@@ -1000,159 +1019,129 @@
                               <i class="fa fa-minus" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="Terjadi perpindahan dari P0 ke P1"> </i>
                             </span>
                           </td>
-                          @elseif($others2 == $lastOthers2 )
+                          @elseif($others2 = $lastOthers2 )
                           <td style=" max-width: 5px; text-align: left">
-                            <span class="text-green">
-                              <i class="fa fa-chevron-right" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="test"></i>
-                            </span>
-                          </td>
-                          @endif
-=======
-                  </td>
-                  <td style=" max-width: 9px; text-align: left">
-                    <span style="font-size: 16px; color: #b3b3b3">{{ $lastOthers2 }} </span>
-                  </td>
-                  <td style=" max-width: 5px; text-align: center;">
-                    <span style="font-size: 18px;"> | </span>
-                  </td>
-                  <td style=" max-width: 9px; text-align: left">
-                    <span style="font-size: 16px; color: #c02e1d">{{ $proactives2 }} 
-                      @if($others2  > $lastOthers2)
-                      <td  style=" max-width: 5px; text-align: left">
-                        <span class="text-green">
-                          <i class="fa fa-chevron-up" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="test"></i>
-                        </span>
-                      </td>                             
-                      @elseif($others2  < $lastOthers2)
-                      <td  style=" max-width: 5px; text-align: left">
-                        <span class="text-green"> 
-                          <i class="fa fa-minus" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="Terjadi perpindahan dari P0 ke P1"> </i>
-                        </span>
-                      </td>
-                      @elseif($others2 = $lastOthers2 )
-                      <td style=" max-width: 5px; text-align: left">
-                        <span class="text-yellow">
-                          <i class="fa fa-chevron-right" style="font-size: 15px" data-toggle="tooltip" data-placement="right" title="test"></i>
->>>>>>> fcd50681ef160848c9d8a5f2bef4888e3f75291a
-                        </span>
-                      </td>
-                    </tbody>
-                  </table>
-                </div>
-              </li>
-              <li>
-                <div class="table-responsive">
-                  <table class="table ">
-                    <tbody>
-                      <td style=" max-width: 30px; text-align: left">
-                        P3
-                      </td>
-                      <td style=" max-width: 35px; text-align: right;">
-
-                      </td>
-                      <td style=" max-width: 9px; text-align: left">
-                        <span style="font-size: 16px; color: #b3b3b3">{{ $lastOthers3 }} </span>
-                      </td>
-                      <td style=" max-width: 5px; text-align: center;">
-                        <span style="font-size: 18px;"> | </span>
-                      </td>
-                      <td style=" max-width: 9px; text-align: left">
-                        <span style="font-size: 16px; color: #f16b20">{{ $others3 }} 
-                          @if($others3  > $lastOthers3)
-                          <td  style=" max-width: 5px; text-align: left">
-                            <span class="text-green">
-                              <i class="fa fa-chevron-up" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="test"></i>
-                            </span>
-                          </td>                             
-                          @elseif($others3  < $lastOthers3)
-                          <td  style=" max-width: 5px; text-align: left">
-                            <span class="text-green"> 
-                              <i class="fa fa-minus" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="Terjadi perpindahan dari P0 ke P1"> </i>
-                            </span>
-                          </td>
-                          @elseif($others3 = $lastOthers3 )
-                          <td style=" max-width: 5px; text-align: left">
-                            <span class="text-green">
+                            <span class="text-yellow">
                               <i class="fa fa-chevron-right" style="font-size: 15px" data-toggle="tooltip" data-placement="right" title="test"></i>
                             </span>
                           </td>
-                          @endif
-                        </span>
-                      </td>
-                    </tbody>
-                  </table>
-                </div>
-              </li>
-              <li>
-                <div class="table-responsive">
-                  <table class="table ">
-                    <tbody>
-                      <td style=" max-width: 30px; text-align: left">
-                        Total
-                      </td>
-                      <td style=" max-width: 35px; text-align: right;">
+                        </tbody>
+                      </table>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="table-responsive">
+                      <table class="table ">
+                        <tbody>
+                          <td style=" max-width: 30px; text-align: left">
+                            P3
+                          </td>
+                          <td style=" max-width: 35px; text-align: right;">
 
-                      </td>
-                      <td style=" max-width: 9px; text-align: left">
-                        <span style="font-size: 16px; color: #b3b3b3;"> {{$lastOthers0 + $lastOthers1 + $lastOthers2 + $lastOthers3}} </span>
-                      </td>
-                      <td style=" max-width: 5px; text-align: center;">
-                        <span style="font-size: 18px;"> | </span>
-                      </td>
-                      <td style=" max-width: 9px; text-align: left">
-                        <span style="font-size: 16px; color: #cc00cc">  {{$proactives0 + $proactives1 + $proactives2 + $proactives3}} 
-                          @if($proactives0 + $proactives1 + $proactives2 + $proactives3 > $lastOthers0 + $lastOthers1 + $lastOthers2 + $lastOthers3)
+                          </td>
+                          <td style=" max-width: 9px; text-align: left">
+                            <span style="font-size: 16px; color: #b3b3b3">{{ $lastOthers3 }} </span>
+                          </td>
                           <td style=" max-width: 5px; text-align: center;">
-                            <span class="text-green">
-                              <i class="fa fa-chevron-up" style="font-size: 13px"></i>
+                            <span style="font-size: 18px;"> | </span>
+                          </td>
+                          <td style=" max-width: 9px; text-align: left">
+                            <span style="font-size: 16px; color: #f16b20">{{ $others3 }} 
+                              @if($others3  > $lastOthers3)
+                              <td  style=" max-width: 5px; text-align: left">
+                                <span class="text-green">
+                                  <i class="fa fa-chevron-up" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="test"></i>
+                                </span>
+                              </td>                             
+                              @elseif($others3  < $lastOthers3)
+                              <td  style=" max-width: 5px; text-align: left">
+                                <span class="text-green"> 
+                                  <i class="fa fa-minus" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="Terjadi perpindahan dari P0 ke P1"> </i>
+                                </span>
+                              </td>
+                              @elseif($others3 = $lastOthers3 )
+                              <td style=" max-width: 5px; text-align: left">
+                                <span class="text-green">
+                                  <i class="fa fa-chevron-right" style="font-size: 15px" data-toggle="tooltip" data-placement="right" title="test"></i>
+                                </span>
+                              </td>
+                              @endif
                             </span>
-                          </td>  
-                          @elseif($proactives0 + $proactives1 + $proactives2 + $proactives3 < $lastOthers0 + $lastOthers1 + $lastOthers2 + $lastOthers3)
-                          <td style=" max-width: 5px; text-align: left">
-                            <span class="text-green">
-                              <i class="fa fa-minus" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="Terdapat project yang sudah selesai">
-                              </i>
+                          </td>
+                        </tbody>
+                      </table>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="table-responsive">
+                      <table class="table ">
+                        <tbody>
+                          <td style=" max-width: 30px; text-align: left">
+                            Total
+                          </td>
+                          <td style=" max-width: 35px; text-align: right;">
+
+                          </td>
+                          <td style=" max-width: 9px; text-align: left">
+                            <span style="font-size: 16px; color: #b3b3b3;"> {{$lastOthers0 + $lastOthers1 + $lastOthers2 + $lastOthers3}} </span>
+                          </td>
+                          <td style=" max-width: 5px; text-align: center;">
+                            <span style="font-size: 18px;"> | </span>
+                          </td>
+                          <td style=" max-width: 9px; text-align: left">
+                            <span style="font-size: 16px; color: #cc00cc">  {{$proactives0 + $proactives1 + $proactives2 + $proactives3}} 
+                              @if($proactives0 + $proactives1 + $proactives2 + $proactives3 > $lastOthers0 + $lastOthers1 + $lastOthers2 + $lastOthers3)
+                              <td style=" max-width: 5px; text-align: center;">
+                                <span class="text-green">
+                                  <i class="fa fa-chevron-up" style="font-size: 13px"></i>
+                                </span>
+                              </td>  
+                              @elseif($proactives0 + $proactives1 + $proactives2 + $proactives3 < $lastOthers0 + $lastOthers1 + $lastOthers2 + $lastOthers3)
+                              <td style=" max-width: 5px; text-align: left">
+                                <span class="text-green">
+                                  <i class="fa fa-minus" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="Terdapat project yang sudah selesai">
+                                  </i>
+                                </span>
+                              </td>  
+                              @elseif($proactives0 + $proactives1 + $proactives2 + $proactives3 = $lastOthers0 + $lastOthers1 + $lastOthers2 + $lastOthers3)
+                              <td style=" max-width: 5px; text-align: left">
+                                <span class="text-green">
+                                  <i class="fa fa-chevron-right" style="font-size: 13px"></i>
+                                </span>
+                              </td> 
+                              @endif
                             </span>
-                          </td>  
-                          @elseif($proactives0 + $proactives1 + $proactives2 + $proactives3 = $lastOthers0 + $lastOthers1 + $lastOthers2 + $lastOthers3)
-                          <td style=" max-width: 5px; text-align: left">
-                            <span class="text-green">
-                              <i class="fa fa-chevron-right" style="font-size: 13px"></i>
-                            </span>
-                          </td> 
-                          @endif
-                        </span>
-                      </td>
-                    </tbody>
-                  </table>
-                </div>
-              </li>
-            </ul>
-          </div>                                             
+                          </td>
+                        </tbody>
+                      </table>
+                    </div>
+                  </li>
+                </ul>
+              </div>                                             
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <!-- jQuery 3 -->
-  <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
-  <!-- Bootstrap 3.3.7 -->
-  <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="../../bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-  <!-- SlimScroll -->
-  <script src="../../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-  <!-- FastClick -->
-  <script src="../../bower_components/fastclick/lib/fastclick.js"></script>
-  <!-- AdminLTE App -->
-  <script src="../../dist/js/adminlte.min.js"></script>
-  <!-- AdminLTE for demo purposes -->
-  <script src="../../dist/js/demo.js"></script>
-  <!-- page script -->
-  <!-- ChartJS -->
-  <script src="../../bower_components/Chart.js/Chart.js"></script>
+      <!-- jQuery 3 -->
+      <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+      <!-- Bootstrap 3.3.7 -->
+      <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+      <script src="../../bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+      <!-- SlimScroll -->
+      <script src="../../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+      <!-- FastClick -->
+      <script src="../../bower_components/fastclick/lib/fastclick.js"></script>
+      <!-- AdminLTE App -->
+      <script src="../../dist/js/adminlte.min.js"></script>
+      <!-- AdminLTE for demo purposes -->
+      <script src="../../dist/js/demo.js"></script>
+      <!-- page script -->
+      <!-- ChartJS -->
+      <script src="../../bower_components/Chart.js/Chart.js"></script>
 
-  <script>
-    $(function () {
+      <script>
+        $(function () {
         /* ChartJS
          * -------
          * Here we will create a few charts using ChartJS
