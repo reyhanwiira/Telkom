@@ -17,18 +17,18 @@
          <table id="example4" class="table table-bordered table-striped" style="border-color: black">
           <thead>
             <tr>
-              <th style="border-color: black; border-bottom-width: 0px">No</th>
-              <th style="border-color: black; border-bottom-width: 0px">Project</th>
-              <th style="border-color: black; border-bottom-width: 0px">Segment</th>
-              <th style="border-color: black; border-bottom-width: 0px">Description</th>
-              <th style="border-color: black; border-bottom-width: 0px">Customer</th>
-              <th style="border-color: black; border-bottom-width: 0px">Last Action</th>
-              <th style="border-color: black; border-bottom-width: 0px">Next Action</th>
-              <th style="border-color: black; border-bottom-width: 0px">Status</th>
-              <th style="border-color: black; border-bottom-width: 0px">Information</th>
-              <th style="border-color: black; border-bottom-width: 0px">Start Project</th>
-              <th style="border-color: black; border-bottom-width: 0px">Finish Project</th>
-              <th style="border-color: black; border-bottom-width: 0px">Action</th> 
+              <th style="border-color: black; border-bottom-width: 0px; background-color:#ff3333; color: #ffffff">No</th>
+              <th style="border-color: black; border-bottom-width: 0px; background-color:#ff3333; color: #ffffff">Project</th>
+              <th style="border-color: black; border-bottom-width: 0px; background-color:#ff3333; color: #ffffff">Segment</th>
+              <th style="border-color: black; border-bottom-width: 0px; background-color:#ff3333; color: #ffffff">Description</th>
+              <th style="border-color: black; border-bottom-width: 0px; background-color:#ff3333; color: #ffffff">Customer</th>
+              <th style="border-color: black; border-bottom-width: 0px; background-color:#ff3333; color: #ffffff">Last Action</th>
+              <th style="border-color: black; border-bottom-width: 0px; background-color:#ff3333; color: #ffffff">Next Action</th>
+              <th style="border-color: black; border-bottom-width: 0px; background-color:#ff3333; color: #ffffff">Status</th>
+              <th style="border-color: black; border-bottom-width: 0px; background-color:#ff3333; color: #ffffff">Information</th>
+              <th style="border-color: black; border-bottom-width: 0px; background-color:#ff3333; color: #ffffff">Start Project</th>
+              <th style="border-color: black; border-bottom-width: 0px; background-color:#ff3333; color: #ffffff">Finish Project</th>
+              <th style="border-color: black; border-bottom-width: 0px; background-color:#ff3333; color: #ffffff">Action</th> 
             </tr>
           </thead>
           <tbody>

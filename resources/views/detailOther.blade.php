@@ -211,8 +211,10 @@
                     @endif
                   </td>
 
-                  <td style="text-align: center; border-color: black; border-top-width: 1px">Status
-
+                  <td style="text-align: center; border-color: black; border-top-width: 1px">
+                    <i class="fa fa-circle" style="color: #ff3333"></i>
+                    <i class="fa fa-circle" style="color: #ffff66"></i>
+                    <i class="fa fa-circle" style="color: #1aff1a"></i>
                   </td>
                 </tr>
                 @endforeach
