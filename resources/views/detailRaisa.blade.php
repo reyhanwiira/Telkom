@@ -197,25 +197,18 @@
                   <td style="text-align: center; border-color: black; border-top-width: 1px">{{ $raisa->last }} %</td>
                   <td style="text-align: center; border-color: black; border-top-width: 1px">{{ $raisa->progress }} %</td>
                   <td style="text-align: center; border-color: black; border-top-width: 1px">
-                    @if($raisa->progress > $raisa->last)
-                    <span class="text-green">
-                      <i class="fa fa-chevron-up"></i>
-                    </span>
-                    @elseif($raisa->progress < $raisa->last )
-                    <span class="text-green">
-                      <i class="fa fa-chevron-down"></i>
-                    </span>
-                    @elseif($raisa->progress == $raisa->last)
-                    <span class="text-green">
-                      <i class="fa fa-chevron-right"></i>
-                    </span>
+                    {{$raisa->updated_at->addDays(14)}} | {{$current_time}}
+                  @if($raisa->updated_at->addDays(14) <= $current_time) <i>merah</i>
+                  @elseif($raisa->updated_at->addDays(14) >= $current_time) <i>ijo</i>
                     @endif
                   </td>
 
-                  <td style="text-align: center; border-color: black; border-top-width: 1px">Status
-                    <i class="fa fa-circle" style="color: #ff3333"></i>
-                    <i class="fa fa-circle" style="color: #ffff66"></i>
-                    <i class="fa fa-circle" style="color: #1aff1a"></i>
+                  <td style="text-align: center; border-color: black; border-top-width: 1px">
+                    @if($raisa->updated_at->addDays(14) <= $current_time) <i>kuning</i>
+                  @elseif($current_time >= $raisa->finish_project)
+                  <i>merah</i>
+                  @elseif($raisa->updated_at->addDays(14) >= $current_time) <i>ijo</i>
+                  @endif
                   </td>
                 </tr>
                 @endforeach
