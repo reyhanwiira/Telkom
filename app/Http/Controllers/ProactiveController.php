@@ -19,6 +19,11 @@ use Illuminate\Http\Response;
 class ProactiveController extends Controller
 {
 
+    public function readhome()
+    {
+        return redirect::to('home');
+    }
+
     //PROACTIVE
 
     public function readPro()
