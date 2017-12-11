@@ -133,7 +133,7 @@
                             </span>
                           </td>                             
                           @elseif($proactives0  < $lastProactives0)
-                          <td  style=" max-width: 5px; text-align: center;">
+                          <td  style=" max-width: 5px; text-align: left;">
                             <span class="text-green"> 
                               <i class="fa fa-minus" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="Terjadi perpindahan dari P0 ke P1"> </i>
                             </span>
@@ -182,7 +182,7 @@
                             </span>
                           </td>                             
                           @elseif($proactives1  < $lastProactives1)
-                          <td  style=" max-width: 5px; text-align: center;">
+                          <td  style=" max-width: 5px; text-align: left;">
                             <span class="text-green"> 
                               <i class="fa fa-minus" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="Terjadi perpindahan dari P0 ke P1"> </i>
                             </span>
@@ -231,7 +231,7 @@
                             </span>
                           </td>                             
                           @elseif($proactives2  < $lastProactives2)
-                          <td  style=" max-width: 5px; text-align: center;">
+                          <td  style=" max-width: 5px; text-align: left;">
                             <span class="text-green"> 
                               <i class="fa fa-minus" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="Terjadi perpindahan dari P0 ke P1"> </i>
                             </span>
@@ -280,7 +280,7 @@
                             </span>
                           </td>                             
                           @elseif($proactives3  < $lastProactives3)
-                          <td  style=" max-width: 5px; text-align: center;">
+                          <td  style=" max-width: 5px; text-align: left;">
                             <span class="text-green"> 
                               <i class="fa fa-minus" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="Terjadi perpindahan dari P0 ke P1"> </i>
                             </span>
@@ -329,7 +329,7 @@
                             </span>
                           </td>  
                           @elseif($proactives0 + $proactives1 + $proactives2 + $proactives3 < $lastProactives0 + $lastProactives1 + $lastProactives2 + $lastProactives3)
-                          <td style="max-width: 5px; text-align: center; ">
+                          <td style="max-width: 5px; text-align: left; ">
                             <span class="text-green">
                               <i class="fa fa-minus" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="Terdapat project yang sudah selesai">
                               </i>
@@ -647,7 +647,7 @@
                             </span>
                           </td>  
                           @elseif($raisa0 + $raisa1 + $raisa2 + $raisa3 < $lastRaisa0 + $lastRaisa1 + $lastRaisa2 + $lastRaisa3)
-                          <td style=" max-width: 5px; text-align: center;">
+                          <td style=" max-width: 5px; text-align: left;">
                             <span class="text-green">
                               <i class="fa fa-minus" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="Terdapat project yang sudah selesai">
                               </i>
@@ -951,7 +951,7 @@
                       <td style=" max-width: 9px; text-align: left">
                         <span style="font-size: 16px; color: #cc00cc">  {{$proactives0 + $proactives1 + $proactives2 + $proactives3}} 
                           @if($proactives0 + $proactives1 + $proactives2 + $proactives3 > $lastOthers0 + $lastOthers1 + $lastOthers2 + $lastOthers3)
-                          <td style=" max-width: 5px; text-align: center;">
+                          <td style=" max-width: 5px; text-align: left;">
                             <span class="text-green">
                               <i class="fa fa-chevron-up" style="font-size: 13px"></i>
                             </span>
