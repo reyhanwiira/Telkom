@@ -207,8 +207,9 @@
                 </td>
 
                 <td style="text-align: center; border-color: black; border-top-width: 1px">
-                  {{$proactive->updated_at->addDays(14)}} | {{$current_time}}
-                  @if($proactive->updated_at->addDays(14) <= $current_time) <i>merah</i>
+                  @if($proactive->updated_at->addDays(14) <= $current_time) <i>kuning</i>
+                  @elseif($current_time >= $proactive->finish_project)
+                  <i>merah</i>
                   @elseif($proactive->updated_at->addDays(14) >= $current_time) <i>ijo</i>
                   @endif
                 </td>

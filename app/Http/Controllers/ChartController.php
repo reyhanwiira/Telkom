@@ -38,9 +38,13 @@ class ChartController extends Controller
 
     public function readChartDetailRaisa()
     {
+        $current_time = Carbon::now();
+        $deadline = Carbon::now()->addWeeks(2);
         $raisa = Raisa::where('status','=','P1')->get();
 
-        return view('detailRaisa', compact('raisa'));
+        $activeProject = Raisa::where('status','=','P1')->where('updated_at','<=',$deadline)->count();
+        $inactiveProject = Raisa::where('status','=','P1')->where('updated_at','>=',$deadline)->count();
+        return view('detailRaisa', compact('raisa','current_time','activeProject','inactiveProject'));
     }
 
     public function readChartDetail()

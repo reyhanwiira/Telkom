@@ -414,7 +414,7 @@
                           <span><?php echo number_format(($raisa2 + $raisa3) / ($raisa0 + $raisa1 + $raisa2 + $raisa3)*100,2, '.', '')?> %
                           </span>
                           @else
-                          <span>0</span>
+                          <span>0 %</span>
                           @endif
                           
                           @if(($raisa2 !=0 || $raisa3 !=0) && ($lastRaisa2 !=0 || $lastRaisa3 !=0))
@@ -440,7 +440,7 @@
                           @else
                           <td  style="max-width: 6px; text-align: left; background-color: #ECF0F5">
                             <span class="text-green">
-                              <i class="fa fa-chevron-up" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="test2"></i>
+                              <i class="fa fa-minus" style="font-size: 13px" data-toggle="tooltip" data-placement="right" title="test2"></i>
                             </span>
                           </td>
                           @endif
