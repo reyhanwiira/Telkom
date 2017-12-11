@@ -51,12 +51,12 @@
             <ul class="nav nav-pills nav-stacked">
               <li>
                 <div class="table-responsive">
-                  <table class="table ">
+                  <table class="table">
                     <tbody>
-                      <td style=" max-width: 35px; text-align: left; background-color: #ECF0F5">
+                      <td style=" max-width: 25px; text-align: left; background-color: #ECF0F5">
                         Persentase
                       </td>
-                      <td style="max-width: 5px; text-align: right; background-color: #ECF0F5">
+                      <td style="max-width: 1px; text-align: right; background-color: #ECF0F5">
 
                       </td>
                       <td style="max-width: 20px ; text-align: left; background-color: #ECF0F5">
@@ -389,11 +389,10 @@
                 <div class="table-responsive">
                   <table class="table ">
                     <tbody>
-                      <td style="max-width: 35px; text-align: left; background-color: #ECF0F5">
+                      <td style=" max-width: 25px; text-align: left; background-color: #ECF0F5">
                         Persentase
                       </td>
-                      <td style="max-width: 5px; text-align: right; background-color: #ECF0F5">
-
+                      <td style="max-width: 1px; text-align: right; background-color: #ECF0F5">
                       </td>
                       <td style="max-width: 20px ; text-align: left; background-color: #ECF0F5">
                         <span style="font-size: 16px; color: #b3b3b3"> 
@@ -701,11 +700,10 @@
                 <div class="table-responsive">
                   <table class="table ">
                     <tbody>
-                      <td style=" max-width: 35px; text-align: left; background-color: #ECF0F5">
+                      <td style=" max-width: 25px; text-align: left; background-color: #ECF0F5">
                         Persentase
                       </td>
-                      <td style=" max-width: 5px; text-align: right; background-color: #ECF0F5">
-
+                      <td style="max-width: 1px; text-align: right; background-color: #ECF0F5">
                       </td>
                       <td style=" max-width: 20px; text-align: left; background-color: #ECF0F5">
                         <span style="font-size: 16px; color: #b3b3b3">
